@@ -60,6 +60,10 @@ plt.ylabel('Frecuencia')
 plt.show()
 '''
 
+########################################################################################################################
+################################## LO QUE HAY AQUI DENTRO NO ESTA BIEN #################################################
+########################################################################################################################
+
 '''
 # Enfrentar ClaseReal con ClasePred y/o ClasePredPrime (con heatmap)
 # Sacar todos los valores unicos de todas las columnas de clase, ya que pueden repetirse o no y ser totalmente distintos
@@ -84,7 +88,6 @@ df_valores_unicos = pd.DataFrame(list(valores_unicos_totales), columns=['Clases'
 
 # (df_valores_unicos.shape)
 '''
-########################################################################################################################
 
 '''
 # Crear un gráfico de dispersión
@@ -128,3 +131,59 @@ plt.title('Relación entre ClaseReal y ClasePred (Filtrado)')
 # Mostrar el gráfico
 plt.show()
 '''
+########################################################################################################################
+########################################################################################################################
+
+
+'''
+# Porcentaje de acierto, es decir, (Real == Pred) / Real
+
+# Sacar todos los valores unicos de todas las columnas de clase, ya que pueden repetirse o no y ser totalmente distintos
+# Obtener los valores únicos de cada columna
+valores_ClasePred = df['ClasePred'].unique()
+valores_ClaseReal = df['ClaseReal'].unique()
+valores_ClasePredPrime = df['ClasePredPrime'].unique()
+
+# Combina todos los valores únicos sin repetición
+valores_unicos_totales = set(valores_ClaseReal) | set(valores_ClasePred) | set(valores_ClasePredPrime)
+
+# Puedes imprimir o trabajar con la variable valores_unicos_totales según tus necesidades
+# print(valores_unicos_totales)
+
+# Crear un DataFrame a partir del conjunto de valores únicos
+df_Porcentaje1 = pd.DataFrame(list(valores_unicos_totales), columns=['Clases'])
+
+
+coincidencias_por_fila = (df['ClaseReal'].eq(df['ClasePred'])).sum(axis=1)
+
+df_Porcentaje['Aciertos'] =
+df_Porcentaje1['Total'] = df.groupby('ClaseReal')['ClasePred'].count()
+df_Porcentaje1['Porcentaje'] = (df_Porcentaje1['Aciertos'] / df_Porcentaje1['Total']) * 100
+
+df_Porcentaje1 = df_Porcentaje1.dropna()
+
+print(df_Porcentaje1)
+'''
+
+print("################################################################################################################")
+# print(df_filtered)
+
+# Filtrar las filas donde ClaseReal y ClasePred no son iguales
+df_filtered = df[df['ClaseReal'] == df['ClasePred']]
+
+# Agrupar las que son iguales y contarlas
+df_1 = df_filtered.groupby('ClaseReal')['ClasePred'].count().reset_index(name='Aciertos')
+df_2 = df.groupby('ClaseReal')['ClasePred'].count().reset_index(name='Total')
+
+df_Res = pd.merge(df_1, df_2, on='ClaseReal', how='left')
+
+df_Res['Porcentaje'] = ((df_Res['Aciertos'] / df_Res['Total']) * 100).__round__(2)
+
+print(df_Res)
+
+# Ahora hacer una grafica que ponga la ClaseReal respecto al Porcentaje
+sns.barplot(df_Res, x=df_Res['ClaseReal'], y=df_Res['Porcentaje'])
+plt.show()
+
+# Eso es demasiado grande, asi que mejor hacer la grafica de los 20 mas precisos por ejemplo o los 20 menos
+
