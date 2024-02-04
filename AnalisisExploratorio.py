@@ -133,7 +133,7 @@ plt.show()
 '''
 ########################################################################################################################
 ########################################################################################################################
-
+########################################################################################################################
 
 '''
 # Porcentaje de acierto, es decir, (Real == Pred) / Real
@@ -166,9 +166,12 @@ print(df_Porcentaje1)
 '''
 
 print("################################################################################################################")
+'''
+# CLASE REAL RESPECTO A CLASE PREDICHA
+
 # print(df_filtered)
 
-# Filtrar las filas donde ClaseReal y ClasePred no son iguales
+# Filtrar las filas donde ClaseReal y ClasePred son iguales
 df_filtered = df[df['ClaseReal'] == df['ClasePred']]
 
 # Agrupar las que son iguales y contarlas
@@ -177,13 +180,21 @@ df_2 = df.groupby('ClaseReal')['ClasePred'].count().reset_index(name='Total')
 
 df_Res = pd.merge(df_1, df_2, on='ClaseReal', how='left')
 
+#
 df_Res['Porcentaje'] = ((df_Res['Aciertos'] / df_Res['Total']) * 100).__round__(2)
 
 print(df_Res)
 
 # Ahora hacer una grafica que ponga la ClaseReal respecto al Porcentaje
-sns.barplot(df_Res, x=df_Res['ClaseReal'], y=df_Res['Porcentaje'])
-plt.show()
+# sns.barplot(df_Res, x=df_Res['ClaseReal'], y=df_Res['Porcentaje'])
+# plt.show()
 
-# Eso es demasiado grande, asi que mejor hacer la grafica de los 20 mas precisos por ejemplo o los 20 menos
+# Eso es demasiado grande, asi que mejor hacer la grafica con los que tienen mas porcentaje
+mayores30 = df_Res[df_Res['Porcentaje'] > 70]
+sns.barplot(mayores30, x='ClaseReal', y='Porcentaje')
+plt.show()
+'''
+
+# ClasePred vs ClasePredPrime
+# Contar cuantos cambian y que algoritmo estan usando
 
