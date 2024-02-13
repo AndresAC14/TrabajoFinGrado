@@ -98,7 +98,7 @@ print("#########################################################################
 
 # Filtrar las filas donde ClaseReal y ClasePred son iguales
 df_filtered = df[df['ClaseReal'] == df['ClasePred']]
-print(df_filtered)
+# print(df_filtered)
 
 # Agrupar las que son iguales y contarlas
 df_1 = df_filtered.groupby('ClaseReal')['ClasePred'].count().reset_index(name='Aciertos')
@@ -112,7 +112,7 @@ df_Res = pd.merge(df_1, df_2, on='ClaseReal', how='left')
 # Crea la columna resultado
 df_Res['Porcentaje'] = ((df_Res['Aciertos'] / df_Res['Total']) * 100).__round__(2)
 
-print(df_Res)
+# print(df_Res)
 
 # Ahora hacer una grafica que ponga la ClaseReal respecto al Porcentaje
 # sns.barplot(df_Res, x=df_Res['ClaseReal'], y=df_Res['Porcentaje'])
@@ -123,7 +123,7 @@ print(df_Res)
 # sns.barplot(mayores, x='ClaseReal', y='Porcentaje')
 # plt.show()
 
-
+'''
 print("################################################################################################################")
 # Algoritmos que manejamos:  ['Ecualización del histograma (EH)'
 #  'Ecualización del histograma adaptativa limitada por contraste (EHALC)'
@@ -144,82 +144,64 @@ print(df_EH.head(5))
 # print('Aciertos totales', df_EH['EH'].sum())
 # print('TOTAL', df_EH['Porcentaje'].sum())
 
+# Algunas graficas que pueden servir, pero hay que buscarle algun uso
 # sns.barplot(df_EH[df_EH['Porcentaje'] > 1.5], x='ClaseReal', y='EH')
 # sns.scatterplot(df_EH, x='ClaseReal', y='EH')
 # sns.scatterplot(df_EH, x='EH', y='Porcentaje')
 # plt.show()
-print("################################################################################################################")
 
+# TOP 10 con EH
 sns.barplot(df_EH.head(10), x='ClaseReal', y='EH')
 plt.title('Top 10 Clases Más Predichas con EH')
 plt.xlabel('Clase')
 plt.xlabel('Cantidad')
 plt.show()
+'''
 
+'''
 print("################################################################################################################")
+print("################################################################################################################")
+
+df_EHALC = df_filtered[df_filtered['Algoritmo'] == 'Ecualización del histograma adaptativa limitada por contraste']
+df_EHALC = df_EHALC.groupby('ClaseReal')['ClasePred'].count().reset_index(name='EHALC')
+
+# Representa como de importante es cada clase respecto a ese algoritmo
+df_EHALC['Porcentaje'] = ((df_EHALC['EHALC'] / df_EHALC['EHALC'].sum()) * 100).__round__(3)
+df_EHALC = df_EHALC.sort_values(by='EHALC', ascending=False)
+
+# Mostrar el DataFrame resultante
+print(df_EHALC.head(5))
+print('Aciertos totales', df_EHALC['EHALC'].sum())
+print('TOTAL', df_EHALC['Porcentaje'].sum())
+
+# TOP 10 con EHALC
+sns.barplot(df_EHALC.head(10), x='ClaseReal', y='EHALC')
+plt.title('Top 10 Clases Más Predichas con EHALC')
+plt.xlabel('Clase')
+plt.xlabel('Cantidad')
+plt.show()
 '''
-def aciertosAlgoritmos(df):
-    algoritmos = df['Algoritmo'].unique()
-    df_resultado = pd.DataFrame()
+print("################################################################################################################")
+print("################################################################################################################")
+# 'Corrección de gamma (CG)'
+df_filtrado = df[df['Algoritmo'] == 'Corrección de gamma']
+df_CG = df_filtrado[df_filtrado['ClaseReal'] == df_filtrado['ClasePred']]
+print(df_CG)
 
-    for alg in algoritmos:
-        # Filtrar las filas donde claseReal es igual a clasePred y Algoritmo es igual al valor actual
-        df_algoritmo_aciertos = df[(df['ClaseReal'] == df['ClasePred']) & (df['Algoritmo'] == alg)]
+df_CG = df_CG.groupby('ClaseReal')['ClasePred'].count().reset_index(name='CG')
 
-        # Contar los aciertos para cada clase y reiniciar el índice
-        df_aciertos = df_algoritmo_aciertos.groupby('ClaseReal')['ClasePred'].count().reset_index(name='Aciertos '+alg)
+# Representa como de importante es cada clase respecto a ese algoritmo
+df_CG['Porcentaje'] = ((df_CG['CG'] / df_CG['CG'].sum()) * 100).__round__(3)
+df_CG = df_CG.sort_values(by='CG', ascending=False)
 
-        # Concatenar el DataFrame resultante al DataFrame general
-        df_resultado = pd.concat([df_resultado, df_aciertos], axis=1)
+# Mostrar el DataFrame resultante
+print(df_CG.head(5))
+print('Aciertos totales', df_CG['CG'].sum())
+print('TOTAL', df_CG['Porcentaje'].sum())
 
-    return df_resultado
-
-
-def aciertosAlgoritmos(df, algoritmos):
-    df_resultado = pd.DataFrame()
-
-    for alg in algoritmos:
-        # Filtrar las filas donde claseReal es igual a clasePred y Algoritmo es igual al valor actual
-        df_algoritmo_aciertos = df[(df['ClaseReal'] == df['ClasePred']) & (df['Algoritmo'] == alg)]
-
-        # Contar los aciertos para cada clase y reiniciar el índice
-        df_aciertos = df_algoritmo_aciertos.groupby('ClaseReal').size().reset_index(name='Aciertos '+alg)
-
-        # Concatenar el DataFrame resultante al DataFrame general
-        if df_resultado.empty:
-            df_resultado = df_aciertos
-        else:
-            df_resultado = pd.concat([df_resultado, df_aciertos['Aciertos '+alg]])
-
-    return df_resultado
-
-
-# No se por que al poner el codigo este dentro de la otra funcion no funciona, es raro
-def aciertos(df):
-    algoritmos = df['Algoritmo'].unique()
-    df_aciertos = aciertosAlgoritmos(df, algoritmos)
-    df_aciertos = df_aciertos.replace(np.nan, 0)
-
-    for alg in algoritmos:
-            df_aciertos['Aciertos ' + alg] = df_aciertos['Aciertos ' + alg].astype(int)
-
-    return df_aciertos
-
-
-df_aciertos = aciertos(df)
-print(df_aciertos.head(10))
-print("###############################################################################################################")
-# Ahora quiero sumar los valores de cada columna y ponerlos en una grafica, es decir barplot con los algoritmos
- # NO FUNCIONA
-def suma(df, aciertos):
-    algoritmos = df['Algoritmo'].unique()
-    suma = pd.DataFrame()
-
-    for alg in algoritmos:
-        suma[alg] = aciertos['Aciertos ' + alg].sum()
-
-    return suma
-
-gr = suma(df, df_aciertos)
-print(gr.head(5))
-'''
+# TOP 10 con EHALC
+sns.barplot(df_CG.head(10), x='ClaseReal', y='CG')
+plt.title('Top 10 Clases Más Predichas con CG')
+plt.xlabel('Clase')
+plt.xlabel('Cantidad')
+plt.show()
