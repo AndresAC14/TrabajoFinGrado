@@ -8,8 +8,9 @@ pd.set_option('display.max_columns', 15)
 # Importar el dataframe
 df = pd.read_csv('Conjunto_Entrenamiento_10000.csv')
 
-# Eliminar primera columna porque se pone al importar el csv pero no nos sirve
+# Eliminar primera columna y la r porque no nos sirven
 df.drop(df.columns[0], axis=1, inplace=True)
+df.drop(df.columns[12], axis=1, inplace=True)
 
 # Filas y columnas (40000 filas y 13 columnas)
 # print(df.shape)
@@ -95,14 +96,16 @@ print("#########################################################################
 
 # CLASE REAL RESPECTO A CLASE PREDICHA
 
-# print(df_filtered)
-
 # Filtrar las filas donde ClaseReal y ClasePred son iguales
 df_filtered = df[df['ClaseReal'] == df['ClasePred']]
+print(df_filtered)
 
 # Agrupar las que son iguales y contarlas
 df_1 = df_filtered.groupby('ClaseReal')['ClasePred'].count().reset_index(name='Aciertos')
+# print('df1',df_1.head(2))
+
 df_2 = df.groupby('ClaseReal')['ClasePred'].count().reset_index(name='Total')
+# print('df2',df_2.head(2))
 
 df_Res = pd.merge(df_1, df_2, on='ClaseReal', how='left')
 
@@ -121,24 +124,40 @@ print(df_Res)
 # plt.show()
 
 
-# ClasePred vs ClasePredPrime
-# Contar cuantos cambian y que algoritmo estan usando
-
 print("################################################################################################################")
-# Algoritmos que manejamos:  ['Ecualización del histograma'
-#  'Ecualización del histograma adaptativa limitada por contraste'
-#  'Corrección de gamma' 'Transformación logarítmica']
-'''
-# Aciertos para el algoritmo Ecualizacion del histograma
-df_ecualizacion1 = df[(df['ClaseReal'] == df['ClasePred']) & (df['Algoritmo'] == 'Ecualización del histograma')]
+# Algoritmos que manejamos:  ['Ecualización del histograma (EH)'
+#  'Ecualización del histograma adaptativa limitada por contraste (EHALC)'
+#  'Corrección de gamma (CG)' 'Transformación logarítmica (TL)']
+print("################################################################################################################")
 
-df_ecualizacion1 = df_ecualizacion1.groupby('ClaseReal')['ClasePred'].count().reset_index(name='Aciertos')
+# Aciertos para el algoritmo Ecualizacion del histograma con ClasePred
+#df_EH = df[(df['ClaseReal'] == df['ClasePred']) & (df['Algoritmo'] == 'Ecualización del histograma')]
+df_EH = df_filtered[df_filtered['Algoritmo'] == 'Ecualización del histograma']
+df_EH = df_EH.groupby('ClaseReal')['ClasePred'].count().reset_index(name='EH')
+
+# Representa como de importante es cada clase respecto a ese algoritmo
+df_EH['Porcentaje'] = ((df_EH['EH'] / df_EH['EH'].sum()) * 100).__round__(3)
+df_EH = df_EH.sort_values(by='EH', ascending=False)
 
 # Mostrar el DataFrame resultante
-print(df_ecualizacion1.head(5))
-print(df_ecualizacion1['Aciertos'].sum())
+print(df_EH.head(5))
+# print('Aciertos totales', df_EH['EH'].sum())
+# print('TOTAL', df_EH['Porcentaje'].sum())
 
+# sns.barplot(df_EH[df_EH['Porcentaje'] > 1.5], x='ClaseReal', y='EH')
+# sns.scatterplot(df_EH, x='ClaseReal', y='EH')
+# sns.scatterplot(df_EH, x='EH', y='Porcentaje')
+# plt.show()
+print("################################################################################################################")
 
+sns.barplot(df_EH.head(10), x='ClaseReal', y='EH')
+plt.title('Top 10 Clases Más Predichas con EH')
+plt.xlabel('Clase')
+plt.xlabel('Cantidad')
+plt.show()
+
+print("################################################################################################################")
+'''
 def aciertosAlgoritmos(df):
     algoritmos = df['Algoritmo'].unique()
     df_resultado = pd.DataFrame()
@@ -154,7 +173,7 @@ def aciertosAlgoritmos(df):
         df_resultado = pd.concat([df_resultado, df_aciertos], axis=1)
 
     return df_resultado
-'''
+
 
 def aciertosAlgoritmos(df, algoritmos):
     df_resultado = pd.DataFrame()
@@ -203,3 +222,4 @@ def suma(df, aciertos):
 
 gr = suma(df, df_aciertos)
 print(gr.head(5))
+'''
