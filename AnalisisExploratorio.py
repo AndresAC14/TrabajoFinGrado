@@ -129,7 +129,7 @@ print("#########################################################################
 #  'Ecualización del histograma adaptativa limitada por contraste (EHALC)'
 #  'Corrección de gamma (CG)' 'Transformación logarítmica (TL)']
 print("################################################################################################################")
-
+'''
 # Aciertos para el algoritmo Ecualizacion del histograma con ClasePred
 #df_EH = df[(df['ClaseReal'] == df['ClasePred']) & (df['Algoritmo'] == 'Ecualización del histograma')]
 df_EH = df_filtered[df_filtered['Algoritmo'] == 'Ecualización del histograma']
@@ -150,6 +150,7 @@ print(df_EH.head(5))
 # sns.scatterplot(df_EH, x='EH', y='Porcentaje')
 # plt.show()
 
+'''
 # TOP 10 con EH
 sns.barplot(df_EH.head(10), x='ClaseReal', y='EH')
 plt.title('Top 10 Clases Más Predichas con EH')
@@ -157,6 +158,17 @@ plt.xlabel('Clase')
 plt.xlabel('Cantidad')
 plt.show()
 '''
+print("################################ ")
+# Aqui va un grafico circular
+df_circularEH = df_EH.groupby('EH').count().reset_index()
+df_circularEH.drop(df_circularEH.columns[2], axis=1, inplace=True)
+print(df_circularEH)
+
+fig, ax = plt.subplots()
+ax.pie(df_circularEH['ClaseReal'], labels=df_circularEH['EH'], autopct='%1.1f%%')
+plt.title('Porcentaje de predicciones con EH')
+plt.show()
+
 
 '''
 print("################################################################################################################")
@@ -174,12 +186,23 @@ print(df_EHALC.head(5))
 print('Aciertos totales', df_EHALC['EHALC'].sum())
 print('TOTAL', df_EHALC['Porcentaje'].sum())
 
+
 # TOP 10 con EHALC
 sns.barplot(df_EHALC.head(10), x='ClaseReal', y='EHALC')
 plt.title('Top 10 Clases Más Predichas con EHALC')
 plt.xlabel('Clase')
 plt.xlabel('Cantidad')
 plt.show()
+'''
+
+'''
+sns.barplot(df_EHALC.tail(10), x='ClaseReal', y='EHALC')
+plt.title('Top 10 Clases Menos Predichas con EHALC')
+plt.xlabel('Clase')
+plt.xlabel('Cantidad')
+plt.show()
+'''
+
 '''
 print("################################################################################################################")
 print("################################################################################################################")
@@ -199,9 +222,28 @@ print(df_CG.head(5))
 print('Aciertos totales', df_CG['CG'].sum())
 print('TOTAL', df_CG['Porcentaje'].sum())
 
-# TOP 10 con EHALC
+# Algunas graficas que pueden servir, pero hay que buscarle algun uso
+# sns.barplot(df_CG[df_CG['Porcentaje'] > 1.5], x='ClaseReal', y='CG')
+# sns.scatterplot(df_CG, x='ClaseReal', y='CG')
+# sns.scatterplot(df_CG, x='CG', y='Porcentaje')
+# plt.show()
+
+'''
+
+'''
+# TOP 10 con GC
 sns.barplot(df_CG.head(10), x='ClaseReal', y='CG')
 plt.title('Top 10 Clases Más Predichas con CG')
 plt.xlabel('Clase')
 plt.xlabel('Cantidad')
 plt.show()
+'''
+
+'''
+sns.barplot(df_CG.tail(10), x='ClaseReal', y='CG')
+plt.title('Top 10 Clases Menos Predichas con CG')
+plt.xlabel('Clase')
+plt.xlabel('Cantidad')
+plt.show()
+'''
+
