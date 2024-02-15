@@ -61,56 +61,25 @@ plt.ylabel('Frecuencia')
 plt.show()
 '''
 
-
-'''
-# Porcentaje de acierto, es decir, (Real == Pred) / Real
-
-# Sacar todos los valores unicos de todas las columnas de clase, ya que pueden repetirse o no y ser totalmente distintos
-# Obtener los valores únicos de cada columna
-valores_ClasePred = df['ClasePred'].unique()
-valores_ClaseReal = df['ClaseReal'].unique()
-valores_ClasePredPrime = df['ClasePredPrime'].unique()
-
-# Combina todos los valores únicos sin repetición
-valores_unicos_totales = set(valores_ClaseReal) | set(valores_ClasePred) | set(valores_ClasePredPrime)
-
-# Puedes imprimir o trabajar con la variable valores_unicos_totales según tus necesidades
-# print(valores_unicos_totales)
-
-# Crear un DataFrame a partir del conjunto de valores únicos
-df_Porcentaje1 = pd.DataFrame(list(valores_unicos_totales), columns=['Clases'])
-
-
-coincidencias_por_fila = (df['ClaseReal'].eq(df['ClasePred'])).sum(axis=1)
-
-df_Porcentaje['Aciertos'] =
-df_Porcentaje1['Total'] = df.groupby('ClaseReal')['ClasePred'].count()
-df_Porcentaje1['Porcentaje'] = (df_Porcentaje1['Aciertos'] / df_Porcentaje1['Total']) * 100
-
-df_Porcentaje1 = df_Porcentaje1.dropna()
-
-print(df_Porcentaje1)
-'''
-
 print("################################################################################################################")
 
-# CLASE REAL RESPECTO A CLASE PREDICHA
+# CLASE REAL RESPECTO A CLASE PREDICHA PRIME ya que es la que interviene en la mejora de la imagen, la clasePred normal solo es clasificacion, por eso da todas igual
 
-# Filtrar las filas donde ClaseReal y ClasePred son iguales
-df_filtered = df[df['ClaseReal'] == df['ClasePred']]
-# print(df_filtered)
+# Filtrar las filas donde ClaseReal y ClasePredPrime son iguales
+coincidencias = df[df['ClaseReal'] == df['ClasePredPrime']]
+# print(coincidencias)
 
 # Agrupar las que son iguales y contarlas
-df_1 = df_filtered.groupby('ClaseReal')['ClasePred'].count().reset_index(name='Aciertos')
+df_1 = coincidencias.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='Hit')
 # print('df1',df_1.head(2))
 
-df_2 = df.groupby('ClaseReal')['ClasePred'].count().reset_index(name='Total')
+df_2 = df.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='Total')
 # print('df2',df_2.head(2))
 
 df_Res = pd.merge(df_1, df_2, on='ClaseReal', how='left')
 
 # Crea la columna resultado
-df_Res['Porcentaje'] = ((df_Res['Aciertos'] / df_Res['Total']) * 100).__round__(2)
+df_Res['Porcentaje'] = ((df_Res['Hit'] / df_Res['Total']) * 100).__round__(2)
 
 # print(df_Res)
 
@@ -119,8 +88,9 @@ df_Res['Porcentaje'] = ((df_Res['Aciertos'] / df_Res['Total']) * 100).__round__(
 # plt.show()
 
 # Eso es demasiado grande, asi que mejor hacer la grafica con los que tienen mas porcentaje
-# mayores = df_Res[df_Res['Porcentaje'] > 70]
-# sns.barplot(mayores, x='ClaseReal', y='Porcentaje')
+# mayores = df_Res[df_Res['Porcentaje'] > 50]
+# sns.barplot(mayores.head(10), x='ClaseReal', y='Porcentaje')
+# plt.title('Top 10 Clases Más Predichas (GLOBAL)')
 # plt.show()
 
 '''
@@ -130,70 +100,73 @@ print("#########################################################################
 #  'Corrección de gamma (CG)' 'Transformación logarítmica (TL)']
 print("################################################################################################################")
 '''
-# Aciertos para el algoritmo Ecualizacion del histograma con ClasePred
-#df_EH = df[(df['ClaseReal'] == df['ClasePred']) & (df['Algoritmo'] == 'Ecualización del histograma')]
-df_EH = df_filtered[df_filtered['Algoritmo'] == 'Ecualización del histograma']
-df_EH = df_EH.groupby('ClaseReal')['ClasePred'].count().reset_index(name='EH')
+
+'''
+# Aciertos para el algoritmo Ecualizacion del histograma con ClasePredPrime
+df_EH = coincidencias[coincidencias['Algoritmo'] == 'Ecualización del histograma']
+df_EH = df_EH.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='Hit')
 
 # Representa como de importante es cada clase respecto a ese algoritmo
-df_EH['Porcentaje'] = ((df_EH['EH'] / df_EH['EH'].sum()) * 100).__round__(3)
-df_EH = df_EH.sort_values(by='EH', ascending=False)
+df_EH['Porcentaje'] = ((df_EH['Hit'] / df_EH['Hit'].sum()) * 100).__round__(3)
+df_EH = df_EH.sort_values(by='Hit', ascending=False)
 
 # Mostrar el DataFrame resultante
 print(df_EH.head(5))
-# print('Aciertos totales', df_EH['EH'].sum())
-# print('TOTAL', df_EH['Porcentaje'].sum())
+print('Aciertos totales', df_EH['Hit'].sum())
+print('TOTAL', df_EH['Porcentaje'].sum())
+'''
 
-# Algunas graficas que pueden servir, pero hay que buscarle algun uso
-# sns.barplot(df_EH[df_EH['Porcentaje'] > 1.5], x='ClaseReal', y='EH')
-# sns.scatterplot(df_EH, x='ClaseReal', y='EH')
-# sns.scatterplot(df_EH, x='EH', y='Porcentaje')
+# Solo sirve la primera grafica, la otra no le veo mucho sentido
+# sns.barplot(df_EH[df_EH['Hit'] > 10], x='ClaseReal', y='Hit')
+# sns.scatterplot(df_EH, x='ClaseReal', y='Hit')
 # plt.show()
 
 '''
-# TOP 10 con EH
-sns.barplot(df_EH.head(10), x='ClaseReal', y='EH')
+# TOP 10 con EH -- Falta recortar, es decir, que la grafica empiece con el valor minimo
+sns.barplot(df_EH.head(10), x='ClaseReal', y='Hit')
 plt.title('Top 10 Clases Más Predichas con EH')
 plt.xlabel('Clase')
 plt.xlabel('Cantidad')
 plt.show()
 '''
+
+'''
 print("################################ ")
-# Aqui va un grafico circular
-df_circularEH = df_EH.groupby('EH').count().reset_index()
+# Grafico circular, falta perfilar la explicacion de realmente lo que sucede aqui
+df_circularEH = df_EH.groupby('Hit').count().reset_index()
 df_circularEH.drop(df_circularEH.columns[2], axis=1, inplace=True)
 print(df_circularEH)
 
 fig, ax = plt.subplots()
-ax.pie(df_circularEH['ClaseReal'], labels=df_circularEH['EH'], autopct='%1.1f%%')
+ax.pie(df_circularEH['ClaseReal'], labels=df_circularEH['Hit'], autopct='%1.1f%%')
 plt.title('Porcentaje de predicciones con EH')
 plt.show()
-
-
 '''
+
 print("################################################################################################################")
 print("################################################################################################################")
 
-df_EHALC = df_filtered[df_filtered['Algoritmo'] == 'Ecualización del histograma adaptativa limitada por contraste']
-df_EHALC = df_EHALC.groupby('ClaseReal')['ClasePred'].count().reset_index(name='EHALC')
+# Aciertos para el algoritmo Ecualizacion del histograma adaptativa limitada por contraste
+df_EHALC = coincidencias[coincidencias['Algoritmo'] == 'Ecualización del histograma adaptativa limitada por contraste']
+df_EHALC = df_EHALC.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='Hit')
 
 # Representa como de importante es cada clase respecto a ese algoritmo
-df_EHALC['Porcentaje'] = ((df_EHALC['EHALC'] / df_EHALC['EHALC'].sum()) * 100).__round__(3)
-df_EHALC = df_EHALC.sort_values(by='EHALC', ascending=False)
+df_EHALC['Porcentaje'] = ((df_EHALC['Hit'] / df_EHALC['Hit'].sum()) * 100).__round__(3)
+df_EHALC = df_EHALC.sort_values(by='Hit', ascending=False)
 
 # Mostrar el DataFrame resultante
 print(df_EHALC.head(5))
-print('Aciertos totales', df_EHALC['EHALC'].sum())
+print('Aciertos totales', df_EHALC['Hit'].sum())
 print('TOTAL', df_EHALC['Porcentaje'].sum())
 
 
 # TOP 10 con EHALC
-sns.barplot(df_EHALC.head(10), x='ClaseReal', y='EHALC')
+sns.barplot(df_EHALC.head(10), x='ClaseReal', y='Hit')
 plt.title('Top 10 Clases Más Predichas con EHALC')
 plt.xlabel('Clase')
 plt.xlabel('Cantidad')
 plt.show()
-'''
+
 
 '''
 sns.barplot(df_EHALC.tail(10), x='ClaseReal', y='EHALC')
