@@ -143,6 +143,7 @@ plt.title('Porcentaje de predicciones con EH')
 plt.show()
 '''
 
+'''
 print("################################################################################################################")
 print("################################################################################################################")
 
@@ -166,7 +167,7 @@ plt.title('Top 10 Clases Más Predichas con EHALC')
 plt.xlabel('Clase')
 plt.xlabel('Cantidad')
 plt.show()
-
+'''
 
 '''
 sns.barplot(df_EHALC.tail(10), x='ClaseReal', y='EHALC')
@@ -179,38 +180,29 @@ plt.show()
 '''
 print("################################################################################################################")
 print("################################################################################################################")
-# 'Corrección de gamma (CG)'
-df_filtrado = df[df['Algoritmo'] == 'Corrección de gamma']
-df_CG = df_filtrado[df_filtrado['ClaseReal'] == df_filtrado['ClasePred']]
-print(df_CG)
+'''
 
-df_CG = df_CG.groupby('ClaseReal')['ClasePred'].count().reset_index(name='CG')
+# 'Corrección de gamma (CG)'
+df_CG = coincidencias[coincidencias['Algoritmo'] == 'Corrección de gamma']
+df_CG = df_CG.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='Hit')
 
 # Representa como de importante es cada clase respecto a ese algoritmo
-df_CG['Porcentaje'] = ((df_CG['CG'] / df_CG['CG'].sum()) * 100).__round__(3)
-df_CG = df_CG.sort_values(by='CG', ascending=False)
+df_CG['Porcentaje'] = ((df_CG['Hit'] / df_CG['Hit'].sum()) * 100).__round__(3)
+df_CG = df_CG.sort_values(by='Hit', ascending=False)
 
 # Mostrar el DataFrame resultante
 print(df_CG.head(5))
-print('Aciertos totales', df_CG['CG'].sum())
+print('Aciertos totales', df_CG['Hit'].sum())
 print('TOTAL', df_CG['Porcentaje'].sum())
 
-# Algunas graficas que pueden servir, pero hay que buscarle algun uso
-# sns.barplot(df_CG[df_CG['Porcentaje'] > 1.5], x='ClaseReal', y='CG')
-# sns.scatterplot(df_CG, x='ClaseReal', y='CG')
-# sns.scatterplot(df_CG, x='CG', y='Porcentaje')
-# plt.show()
 
-'''
-
-'''
 # TOP 10 con GC
-sns.barplot(df_CG.head(10), x='ClaseReal', y='CG')
+sns.barplot(df_CG.head(10), x='ClaseReal', y='Hit')
 plt.title('Top 10 Clases Más Predichas con CG')
 plt.xlabel('Clase')
 plt.xlabel('Cantidad')
 plt.show()
-'''
+
 
 '''
 sns.barplot(df_CG.tail(10), x='ClaseReal', y='CG')
