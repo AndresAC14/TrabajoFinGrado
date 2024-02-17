@@ -29,7 +29,6 @@ print(df.head(5))
 # algoritmos = df['Algoritmo'].unique()
 # print("Algoritmos que manejamos: ", algoritmos)
 
-# ClaseReal, ClasePred, ProbClasePred, ClasePredPrime, ProbClasePredPrime
 
 '''
 # ClaseReal mas comun grafico
@@ -63,7 +62,7 @@ plt.show()
 
 print("################################################################################################################")
 
-# CLASE REAL RESPECTO A CLASE PREDICHA PRIME ya que es la que interviene en la mejora de la imagen, la clasePred normal solo es clasificacion, por eso da todas igual
+# CLASE REAL RESPECTO A CLASE PREDICHA PRIME ya que es la que interviene en la mejora de la imagen
 
 # Filtrar las filas donde ClaseReal y ClasePredPrime son iguales
 coincidencias = df[df['ClaseReal'] == df['ClasePredPrime']]
@@ -76,32 +75,26 @@ df_1 = coincidencias.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(
 df_2 = df.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='Total')
 # print('df2',df_2.head(2))
 
-df_Res = pd.merge(df_1, df_2, on='ClaseReal', how='left')
+df_clases = pd.merge(df_1, df_2, on='ClaseReal', how='left')
 
 # Crea la columna resultado
-df_Res['Porcentaje'] = ((df_Res['Hit'] / df_Res['Total']) * 100).__round__(2)
-
-# print(df_Res)
+df_clases['Porcentaje'] = ((df_clases['Hit'] / df_clases['Total']) * 100).__round__(3)
+df_clases = df_clases.sort_values(by='Porcentaje', ascending=False)
+print(df_clases.head(5))
 
 # Ahora hacer una grafica que ponga la ClaseReal respecto al Porcentaje
-# sns.barplot(df_Res, x=df_Res['ClaseReal'], y=df_Res['Porcentaje'])
-# plt.show()
-
-# Eso es demasiado grande, asi que mejor hacer la grafica con los que tienen mas porcentaje
-# mayores = df_Res[df_Res['Porcentaje'] > 50]
-# sns.barplot(mayores.head(10), x='ClaseReal', y='Porcentaje')
+# sns.barplot(df_clases.head(10), x='ClaseReal', y='Porcentaje')
 # plt.title('Top 10 Clases Más Predichas (GLOBAL)')
 # plt.show()
 
-'''
+
 print("################################################################################################################")
 # Algoritmos que manejamos:  ['Ecualización del histograma (EH)'
 #  'Ecualización del histograma adaptativa limitada por contraste (EHALC)'
 #  'Corrección de gamma (CG)' 'Transformación logarítmica (TL)']
 print("################################################################################################################")
-'''
 
-'''
+
 # Aciertos para el algoritmo Ecualizacion del histograma con ClasePredPrime
 df_EH = coincidencias[coincidencias['Algoritmo'] == 'Ecualización del histograma']
 df_EH = df_EH.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='Hit')
@@ -110,11 +103,11 @@ df_EH = df_EH.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='H
 df_EH['Porcentaje'] = ((df_EH['Hit'] / df_EH['Hit'].sum()) * 100).__round__(3)
 df_EH = df_EH.sort_values(by='Hit', ascending=False)
 
+
 # Mostrar el DataFrame resultante
 print(df_EH.head(5))
 print('Aciertos totales', df_EH['Hit'].sum())
-print('TOTAL', df_EH['Porcentaje'].sum())
-'''
+
 
 # Solo sirve la primera grafica, la otra no le veo mucho sentido
 # sns.barplot(df_EH[df_EH['Hit'] > 10], x='ClaseReal', y='Hit')
@@ -143,7 +136,6 @@ plt.title('Porcentaje de predicciones con EH')
 plt.show()
 '''
 
-'''
 print("################################################################################################################")
 print("################################################################################################################")
 
@@ -158,9 +150,8 @@ df_EHALC = df_EHALC.sort_values(by='Hit', ascending=False)
 # Mostrar el DataFrame resultante
 print(df_EHALC.head(5))
 print('Aciertos totales', df_EHALC['Hit'].sum())
-print('TOTAL', df_EHALC['Porcentaje'].sum())
 
-
+'''
 # TOP 10 con EHALC
 sns.barplot(df_EHALC.head(10), x='ClaseReal', y='Hit')
 plt.title('Top 10 Clases Más Predichas con EHALC')
@@ -177,10 +168,8 @@ plt.xlabel('Cantidad')
 plt.show()
 '''
 
-'''
 print("################################################################################################################")
 print("################################################################################################################")
-'''
 
 # 'Corrección de gamma (CG)'
 df_CG = coincidencias[coincidencias['Algoritmo'] == 'Corrección de gamma']
@@ -193,22 +182,68 @@ df_CG = df_CG.sort_values(by='Hit', ascending=False)
 # Mostrar el DataFrame resultante
 print(df_CG.head(5))
 print('Aciertos totales', df_CG['Hit'].sum())
-print('TOTAL', df_CG['Porcentaje'].sum())
 
-
+'''
 # TOP 10 con GC
 sns.barplot(df_CG.head(10), x='ClaseReal', y='Hit')
 plt.title('Top 10 Clases Más Predichas con CG')
 plt.xlabel('Clase')
 plt.xlabel('Cantidad')
 plt.show()
-
+'''
 
 '''
-sns.barplot(df_CG.tail(10), x='ClaseReal', y='CG')
+sns.barplot(df_CG.tail(10), x='ClaseReal', y='Hit')
 plt.title('Top 10 Clases Menos Predichas con CG')
 plt.xlabel('Clase')
 plt.xlabel('Cantidad')
 plt.show()
 '''
+
+
+print("################################################################################################################")
+print("################################################################################################################")
+
+
+# 'Transformación logarítmica (TL)'
+df_TL = coincidencias[coincidencias['Algoritmo'] == 'Transformación logarítmica']
+df_TL = df_TL.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='Hit')
+
+# Representa como de importante es cada clase respecto a ese algoritmo
+df_TL['Porcentaje'] = ((df_TL['Hit'] / df_TL['Hit'].sum()) * 100).__round__(3)
+df_TL = df_TL.sort_values(by='Hit', ascending=False)
+
+# Mostrar el DataFrame resultante
+print(df_TL.head(5))
+print('Aciertos totales', df_TL['Hit'].sum())
+
+'''
+# TOP 10 con TL
+sns.barplot(df_TL.head(10), x='ClaseReal', y='Hit')
+plt.title('Top 10 Clases Más Predichas con TL')
+plt.xlabel('Clase')
+plt.xlabel('Cantidad')
+plt.show()
+'''
+
+print("################################################################################################################")
+print("################################################################################################################")
+
+# Algoritmo con más aciertos
+col_aciertos = ['EH', 'EHALC', 'CG', 'TL']
+val_aciertos = [df_EH['Hit'].sum(), df_EHALC['Hit'].sum(), df_CG['Hit'].sum(), df_TL['Hit'].sum()]
+df_aciertos = pd.DataFrame([val_aciertos], columns=col_aciertos, index=['Aciertos'])
+
+print(df_aciertos)
+
+'''
+# Gráfico circular que muestra el porcentaje de acierto por algoritmo
+plt.figure(figsize=(8, 8))
+plt.pie(df_aciertos.iloc[0].values, labels=df_aciertos.columns, autopct='%1.1f%%', startangle=90)
+plt.title('Aciertos por Algoritmo')
+plt.show()
+'''
+
+print("################################################################################################################")
+print("################################################################################################################")
 
