@@ -247,3 +247,9 @@ plt.show()
 print("################################################################################################################")
 print("################################################################################################################")
 
+# Ver cuanto mejora cada clase con Ecualizacion del histograma
+mejoras_EC = df[df['Algoritmo'] == 'Ecualización del histograma']
+mejoras_EC = mejoras_EC.drop(['Algoritmo', 'ClasePred', 'ProbClasePred', 'ProbClasePredPrime'], axis=1)
+
+mejoras_EC['% Media'] = (((mejoras_EC['MediaPrime'] - mejoras_EC['Media']) / mejoras_EC['Media']) * 100).__round__(3)
+print(mejoras_EC)
