@@ -60,6 +60,7 @@ plt.ylabel('Frecuencia')
 plt.show()
 '''
 
+'''
 print("################################################################################################################")
 
 # CLASE REAL RESPECTO A CLASE PREDICHA PRIME ya que es la que interviene en la mejora de la imagen
@@ -113,6 +114,7 @@ print('Aciertos totales', df_EH['Hit'].sum())
 # sns.barplot(df_EH[df_EH['Hit'] > 10], x='ClaseReal', y='Hit')
 # sns.scatterplot(df_EH, x='ClaseReal', y='Hit')
 # plt.show()
+aqui '''
 
 '''
 # TOP 10 con EH -- Falta recortar, es decir, que la grafica empiece con el valor minimo
@@ -136,6 +138,7 @@ plt.title('Porcentaje de predicciones con EH')
 plt.show()
 '''
 
+'''
 print("################################################################################################################")
 print("################################################################################################################")
 
@@ -150,6 +153,8 @@ df_EHALC = df_EHALC.sort_values(by='Hit', ascending=False)
 # Mostrar el DataFrame resultante
 print(df_EHALC.head(5))
 print('Aciertos totales', df_EHALC['Hit'].sum())
+
+aqui'''
 
 '''
 # TOP 10 con EHALC
@@ -168,6 +173,7 @@ plt.xlabel('Cantidad')
 plt.show()
 '''
 
+'''
 print("################################################################################################################")
 print("################################################################################################################")
 
@@ -182,6 +188,7 @@ df_CG = df_CG.sort_values(by='Hit', ascending=False)
 # Mostrar el DataFrame resultante
 print(df_CG.head(5))
 print('Aciertos totales', df_CG['Hit'].sum())
+aqui'''
 
 '''
 # TOP 10 con GC
@@ -200,7 +207,7 @@ plt.xlabel('Cantidad')
 plt.show()
 '''
 
-
+'''
 print("################################################################################################################")
 print("################################################################################################################")
 
@@ -216,6 +223,7 @@ df_TL = df_TL.sort_values(by='Hit', ascending=False)
 # Mostrar el DataFrame resultante
 print(df_TL.head(5))
 print('Aciertos totales', df_TL['Hit'].sum())
+aqui'''
 
 '''
 # TOP 10 con TL
@@ -226,6 +234,7 @@ plt.xlabel('Cantidad')
 plt.show()
 '''
 
+'''
 print("################################################################################################################")
 print("################################################################################################################")
 
@@ -235,6 +244,7 @@ val_aciertos = [df_EH['Hit'].sum(), df_EHALC['Hit'].sum(), df_CG['Hit'].sum(), d
 df_aciertos = pd.DataFrame([val_aciertos], columns=col_aciertos, index=['Aciertos'])
 
 print(df_aciertos)
+aqui'''
 
 '''
 # Gráfico circular que muestra el porcentaje de acierto por algoritmo
@@ -247,9 +257,55 @@ plt.show()
 print("################################################################################################################")
 print("################################################################################################################")
 
-# Ver cuanto mejora cada clase con Ecualizacion del histograma
-mejoras_EC = df[df['Algoritmo'] == 'Ecualización del histograma']
-mejoras_EC = mejoras_EC.drop(['Algoritmo', 'ClasePred', 'ProbClasePred', 'ProbClasePredPrime'], axis=1)
+# Ver cuanto mejora la imagen/clase con Ecualizacion del histograma
+mejora_EC = df[df['Algoritmo'] == 'Ecualización del histograma']
+mejora_EC = mejora_EC.drop(['Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred', 'ProbClasePred', 'ProbClasePredPrime'], axis=1)
 
-mejoras_EC['% Media'] = (((mejoras_EC['MediaPrime'] - mejoras_EC['Media']) / mejoras_EC['Media']) * 100).__round__(3)
-print(mejoras_EC)
+# Porcentaje de mejora = ((nuevo - antiguo) / antiguo) * 100 )
+mejora_EC['% Mejora Media'] = (((mejora_EC['MediaPrime'] - mejora_EC['Media']) / mejora_EC['Media']) * 100).__round__(3)
+mejora_EC['¿Cambia?'] = mejora_EC.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
+print(mejora_EC)
+
+print(mejora_EC['¿Cambia?'].value_counts())
+
+'''
+# En este grafico muestra que cuanta menos media mas mejora
+# Crear una figura y un eje
+fig, ax = plt.subplots()
+
+# Asignar colores según los valores de '¿Cambia?'
+colores = ['green' if valor == 1 else 'red' for valor in mejora_EC['¿Cambia?']]
+
+# Crear el gráfico de dispersión
+scatter = ax.scatter(mejora_EC['MediaPrime'], mejora_EC['% Mejora Media'], c=colores)
+
+# Etiquetas y título
+ax.set_xlabel('Media')
+ax.set_ylabel('% Mejora Media')
+ax.set_title('Mejora Respecto a la Media')
+
+# Leyenda
+ax.legend(*scatter.legend_elements(), title='¿Cambia?')
+
+# Mostrar el gráfico
+plt.show()
+'''
+
+# ¿Qué clase mejora más?
+clase_EC = mejora_EC.groupby('ClaseReal')['% Mejora Media'].mean().__round__(3).reset_index(name='% Mejora Media Clase')
+clase_EC = clase_EC.sort_values(by='% Mejora Media Clase', ascending=False)
+
+print(clase_EC)
+
+
+# Grafico 10 clases mas mejoradas con EC
+sns.barplot(clase_EC.head(10), x='ClaseReal', y='% Mejora Media Clase')
+plt.xlabel('Clase Real')
+plt.ylabel('% Mejora')
+plt.title('Top 10 Clases Más Mejoradas Con EC')
+
+# Rotar las etiquetas del eje x para mejorar la legibilidad
+plt.xticks(rotation=45, ha='right')
+
+# Mostrar el gráfico
+plt.show()
