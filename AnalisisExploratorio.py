@@ -253,7 +253,7 @@ plt.pie(df_aciertos.iloc[0].values, labels=df_aciertos.columns, autopct='%1.1f%%
 plt.title('Aciertos por Algoritmo')
 plt.show()
 '''
-
+'''
 print("################################################################################################################")
 print("################################################################################################################")
 
@@ -267,7 +267,7 @@ mejora_EC['¿Cambia?'] = mejora_EC.apply(lambda fila: 0 if fila['ClaseReal'] == 
 print(mejora_EC)
 
 print(mejora_EC['¿Cambia?'].value_counts())
-
+'''
 '''
 # En este grafico muestra que cuanta menos media mas mejora
 # Crear una figura y un eje
@@ -289,14 +289,13 @@ ax.legend(*scatter.legend_elements(), title='¿Cambia?')
 
 # Mostrar el gráfico
 plt.show()
-'''
+
 
 # ¿Qué clase mejora más?
 clase_EC = mejora_EC.groupby('ClaseReal')['% Mejora Media'].mean().__round__(3).reset_index(name='% Mejora Media Clase')
 clase_EC = clase_EC.sort_values(by='% Mejora Media Clase', ascending=False)
 
 print(clase_EC)
-
 
 # Grafico 10 clases mas mejoradas con EC
 sns.barplot(clase_EC.head(10), x='ClaseReal', y='% Mejora Media Clase')
@@ -309,3 +308,150 @@ plt.xticks(rotation=45, ha='right')
 
 # Mostrar el gráfico
 plt.show()
+'''
+'''
+print("################################################################################################################")
+print("################################################################################################################")
+
+# Ver cuanto mejora la imagen/clase con 'Ecualización del histograma adaptativa limitada por contraste'
+mejora_EHALC = df[df['Algoritmo'] == 'Ecualización del histograma adaptativa limitada por contraste']
+mejora_EHALC = mejora_EHALC.drop(['Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred', 'ProbClasePred', 'ProbClasePredPrime'], axis=1)
+
+# Porcentaje de mejora = ((nuevo - antiguo) / antiguo) * 100 )
+mejora_EHALC['% Mejora Media'] = (((mejora_EHALC['MediaPrime'] - mejora_EHALC['Media']) / mejora_EHALC['Media']) * 100).__round__(3)
+mejora_EHALC['¿Cambia?'] = mejora_EHALC.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
+print(mejora_EHALC)
+
+print(mejora_EHALC['¿Cambia?'].value_counts())
+'''
+'''
+# En este grafico muestra que cuanta menos media mas mejora
+# Crear una figura y un eje
+fig, ax = plt.subplots()
+# Asignar colores según los valores de '¿Cambia?'
+colores = ['green' if valor == 1 else 'red' for valor in mejora_EHALC['¿Cambia?']]
+# Crear el gráfico de dispersión
+scatter = ax.scatter(mejora_EHALC['MediaPrime'], mejora_EHALC['% Mejora Media'], c=colores)
+# Etiquetas y título
+ax.set_xlabel('Media')
+ax.set_ylabel('% Mejora Media')
+ax.set_title('Mejora Respecto a la Media')
+ax.legend(*scatter.legend_elements(), title='¿Cambia?')
+# Mostrar el gráfico -> Este algoritmo mejora en menor porcentaje que el EH pero produce mas cambios
+plt.show()
+
+
+# ¿Qué clase mejora más?
+clase_EHALC = mejora_EHALC.groupby('ClaseReal')['% Mejora Media'].mean().__round__(3).reset_index(name='% Mejora Media Clase')
+clase_EHALC = clase_EHALC.sort_values(by='% Mejora Media Clase', ascending=False)
+
+print(clase_EHALC)
+
+# Grafico 10 clases mas mejoradas con EHALC
+sns.barplot(clase_EHALC.head(10), x='ClaseReal', y='% Mejora Media Clase')
+plt.xlabel('Clase Real')
+plt.ylabel('% Mejora')
+plt.title('Top 10 Clases Más Mejoradas Con EHALC')
+
+# Rotar las etiquetas del eje x para mejorar la legibilidad
+plt.xticks(rotation=45, ha='right')
+
+# Mostrar el gráfico
+plt.show()
+'''
+'''
+print("################################################################################################################")
+print("################################################################################################################")
+
+# Ver cuanto mejora la imagen/clase con 'Corrección de gamma (CG)'
+mejora_CG = df[df['Algoritmo'] == 'Corrección de gamma']
+mejora_CG = mejora_CG.drop(['Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred', 'ProbClasePred', 'ProbClasePredPrime'], axis=1)
+
+# Porcentaje de mejora = ((nuevo - antiguo) / antiguo) * 100 )
+mejora_CG['% Mejora Media'] = (((mejora_CG['MediaPrime'] - mejora_CG['Media']) / mejora_CG['Media']) * 100).__round__(3)
+mejora_CG['¿Cambia?'] = mejora_CG.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
+print(mejora_CG)
+
+print(mejora_CG['¿Cambia?'].value_counts())
+'''
+'''
+# En este grafico muestra que cuanta menos media mas mejora
+# Crear una figura y un eje
+fig, ax = plt.subplots()
+# Asignar colores según los valores de '¿Cambia?'
+colores = ['green' if valor == 1 else 'red' for valor in mejora_CG['¿Cambia?']]
+# Crear el gráfico de dispersión
+scatter = ax.scatter(mejora_CG['MediaPrime'], mejora_CG['% Mejora Media'], c=colores)
+# Etiquetas y título
+ax.set_xlabel('Media')
+ax.set_ylabel('% Mejora Media')
+ax.set_title('Mejora Respecto a la Media')
+ax.legend(*scatter.legend_elements(), title='¿Cambia?')
+# Mostrar el gráfico -> Cuanto mejor se ve la imagen menos mejora
+plt.show()
+
+
+# ¿Qué clase mejora más?
+clase_CG = mejora_CG.groupby('ClaseReal')['% Mejora Media'].mean().__round__(3).reset_index(name='% Mejora Media Clase')
+clase_CG = clase_CG.sort_values(by='% Mejora Media Clase', ascending=False)
+
+print(clase_CG)
+
+# Grafico 10 clases mas mejoradas con CG
+sns.barplot(clase_CG.head(10), x='ClaseReal', y='% Mejora Media Clase')
+plt.xlabel('Clase Real')
+plt.ylabel('% Mejora')
+plt.title('Top 10 Clases Más Mejoradas Con CG')
+
+# Rotar las etiquetas del eje x para mejorar la legibilidad
+plt.xticks(rotation=45, ha='right')
+
+# Mostrar el gráfico -> ¿Se podria decir que es mas estable que los anteriores?
+plt.show()
+'''
+
+print("################################################################################################################")
+print("################################################################################################################")
+
+# Ver cuanto mejora la imagen/clase con 'Transformación logarítmica (TL)'
+mejora_TL = df[df['Algoritmo'] == 'Transformación logarítmica']
+mejora_TL = mejora_TL.drop(['Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred', 'ProbClasePred', 'ProbClasePredPrime'], axis=1)
+
+# Porcentaje de mejora = ((nuevo - antiguo) / antiguo) * 100 )
+mejora_TL['% Mejora Media'] = (((mejora_TL['MediaPrime'] - mejora_TL['Media']) / mejora_TL['Media']) * 100).__round__(3)
+mejora_TL['¿Cambia?'] = mejora_TL.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
+print(mejora_TL)
+
+print(mejora_TL['¿Cambia?'].value_counts())
+
+'''
+# Crear una figura y un eje
+fig, ax = plt.subplots()
+# Asignar colores según los valores de '¿Cambia?'
+colores = ['green' if valor == 1 else 'red' for valor in mejora_TL['¿Cambia?']]
+# Crear el gráfico de dispersión
+scatter = ax.scatter(mejora_TL['MediaPrime'], mejora_TL['% Mejora Media'], c=colores)
+# Etiquetas y título
+ax.set_xlabel('Media')
+ax.set_ylabel('% Mejora Media')
+ax.set_title('Mejora Respecto a la Media')
+ax.legend(*scatter.legend_elements(), title='¿Cambia?')
+# Mostrar el gráfico -> Mejora menos% de calidad pero mejora mas imagenes en cantidad?
+plt.show()
+
+
+# ¿Qué clase mejora más?
+clase_TL = mejora_TL.groupby('ClaseReal')['% Mejora Media'].mean().__round__(3).reset_index(name='% Mejora Media Clase')
+clase_TL = clase_TL.sort_values(by='% Mejora Media Clase', ascending=False)
+print(clase_TL)
+
+# Grafico 10 clases mas mejoradas con TL
+sns.barplot(clase_TL.head(10), x='ClaseReal', y='% Mejora Media Clase')
+plt.xlabel('Clase Real')
+plt.ylabel('% Mejora')
+plt.title('Top 10 Clases Más Mejoradas Con TL')
+# Rotar las etiquetas del eje x para mejorar la legibilidad
+plt.xticks(rotation=45, ha='right')
+# Mostrar el gráfico -> Bastante parecido a CG
+plt.show()
+'''
