@@ -60,9 +60,10 @@ plt.ylabel('Frecuencia')
 plt.show()
 '''
 
-'''
+
 print("################################################################################################################")
 
+print('Porcentaje acierto total (Todos algoritmos)')
 # CLASE REAL RESPECTO A CLASE PREDICHA PRIME ya que es la que interviene en la mejora de la imagen
 
 # Filtrar las filas donde ClaseReal y ClasePredPrime son iguales
@@ -95,7 +96,6 @@ print("#########################################################################
 #  'Corrección de gamma (CG)' 'Transformación logarítmica (TL)']
 print("################################################################################################################")
 
-
 # Aciertos para el algoritmo Ecualizacion del histograma con ClasePredPrime
 df_EH = coincidencias[coincidencias['Algoritmo'] == 'Ecualización del histograma']
 df_EH = df_EH.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='Hit')
@@ -107,14 +107,13 @@ df_EH = df_EH.sort_values(by='Hit', ascending=False)
 
 # Mostrar el DataFrame resultante
 print(df_EH.head(5))
-print('Aciertos totales', df_EH['Hit'].sum())
-
+print('Aciertos totales EH', df_EH['Hit'].sum())
 
 # Solo sirve la primera grafica, la otra no le veo mucho sentido
 # sns.barplot(df_EH[df_EH['Hit'] > 10], x='ClaseReal', y='Hit')
 # sns.scatterplot(df_EH, x='ClaseReal', y='Hit')
 # plt.show()
-aqui '''
+
 
 '''
 # TOP 10 con EH -- Falta recortar, es decir, que la grafica empiece con el valor minimo
@@ -138,7 +137,7 @@ plt.title('Porcentaje de predicciones con EH')
 plt.show()
 '''
 
-'''
+
 print("################################################################################################################")
 print("################################################################################################################")
 
@@ -152,9 +151,8 @@ df_EHALC = df_EHALC.sort_values(by='Hit', ascending=False)
 
 # Mostrar el DataFrame resultante
 print(df_EHALC.head(5))
-print('Aciertos totales', df_EHALC['Hit'].sum())
+print('Aciertos totales EHALC', df_EHALC['Hit'].sum())
 
-aqui'''
 
 '''
 # TOP 10 con EHALC
@@ -173,7 +171,7 @@ plt.xlabel('Cantidad')
 plt.show()
 '''
 
-'''
+
 print("################################################################################################################")
 print("################################################################################################################")
 
@@ -187,8 +185,8 @@ df_CG = df_CG.sort_values(by='Hit', ascending=False)
 
 # Mostrar el DataFrame resultante
 print(df_CG.head(5))
-print('Aciertos totales', df_CG['Hit'].sum())
-aqui'''
+print('Aciertos totales CG', df_CG['Hit'].sum())
+
 
 '''
 # TOP 10 con GC
@@ -207,10 +205,9 @@ plt.xlabel('Cantidad')
 plt.show()
 '''
 
-'''
-print("################################################################################################################")
-print("################################################################################################################")
 
+print("################################################################################################################")
+print("################################################################################################################")
 
 # 'Transformación logarítmica (TL)'
 df_TL = coincidencias[coincidencias['Algoritmo'] == 'Transformación logarítmica']
@@ -222,8 +219,8 @@ df_TL = df_TL.sort_values(by='Hit', ascending=False)
 
 # Mostrar el DataFrame resultante
 print(df_TL.head(5))
-print('Aciertos totales', df_TL['Hit'].sum())
-aqui'''
+print('Aciertos totales TL', df_TL['Hit'].sum())
+
 
 '''
 # TOP 10 con TL
@@ -234,7 +231,7 @@ plt.xlabel('Cantidad')
 plt.show()
 '''
 
-'''
+
 print("################################################################################################################")
 print("################################################################################################################")
 
@@ -244,40 +241,40 @@ val_aciertos = [df_EH['Hit'].sum(), df_EHALC['Hit'].sum(), df_CG['Hit'].sum(), d
 df_aciertos = pd.DataFrame([val_aciertos], columns=col_aciertos, index=['Aciertos'])
 
 print(df_aciertos)
-aqui'''
 
-'''
+
 # Gráfico circular que muestra el porcentaje de acierto por algoritmo
 plt.figure(figsize=(8, 8))
 plt.pie(df_aciertos.iloc[0].values, labels=df_aciertos.columns, autopct='%1.1f%%', startangle=90)
 plt.title('Aciertos por Algoritmo')
 plt.show()
-'''
-'''
+
+
 print("################################################################################################################")
 print("################################################################################################################")
 
+print('Ecualizacion del histograma (EH)')
 # Ver cuanto mejora la imagen/clase con Ecualizacion del histograma
-mejora_EC = df[df['Algoritmo'] == 'Ecualización del histograma']
-mejora_EC = mejora_EC.drop(['Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred', 'ProbClasePred', 'ProbClasePredPrime'], axis=1)
+mejora_EH = df[df['Algoritmo'] == 'Ecualización del histograma']
+mejora_EH = mejora_EH.drop(['Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred', 'ProbClasePred', 'ProbClasePredPrime'], axis=1)
 
 # Porcentaje de mejora = ((nuevo - antiguo) / antiguo) * 100 )
-mejora_EC['% Mejora Media'] = (((mejora_EC['MediaPrime'] - mejora_EC['Media']) / mejora_EC['Media']) * 100).__round__(3)
-mejora_EC['¿Cambia?'] = mejora_EC.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
-print(mejora_EC)
+mejora_EH['% Mejora Media'] = (((mejora_EH['MediaPrime'] - mejora_EH['Media']) / mejora_EH['Media']) * 100).__round__(3)
+mejora_EH['¿Cambia?'] = mejora_EH.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
+print(mejora_EH)
 
-print(mejora_EC['¿Cambia?'].value_counts())
+print(mejora_EH['¿Cambia?'].value_counts())
+
 '''
-'''
-# En este grafico muestra que cuanta menos media mas mejora
+# Cuanto influye la iluminacion en la mejora -> En este grafico muestra que cuanta menos media mas mejora
 # Crear una figura y un eje
 fig, ax = plt.subplots()
 
 # Asignar colores según los valores de '¿Cambia?'
-colores = ['green' if valor == 1 else 'red' for valor in mejora_EC['¿Cambia?']]
+colores = ['green' if valor == 1 else 'red' for valor in mejora_EH['¿Cambia?']]
 
 # Crear el gráfico de dispersión
-scatter = ax.scatter(mejora_EC['MediaPrime'], mejora_EC['% Mejora Media'], c=colores)
+scatter = ax.scatter(mejora_EH['MediaPrime'], mejora_EH['% Mejora Media'], c=colores)
 
 # Etiquetas y título
 ax.set_xlabel('Media')
@@ -292,16 +289,16 @@ plt.show()
 
 
 # ¿Qué clase mejora más?
-clase_EC = mejora_EC.groupby('ClaseReal')['% Mejora Media'].mean().__round__(3).reset_index(name='% Mejora Media Clase')
-clase_EC = clase_EC.sort_values(by='% Mejora Media Clase', ascending=False)
+clase_EH = mejora_EH.groupby('ClaseReal')['% Mejora Media'].mean().__round__(3).reset_index(name='% Mejora Media Clase')
+clase_EH = clase_EH.sort_values(by='% Mejora Media Clase', ascending=False)
 
-print(clase_EC)
+print(clase_EH)
 
-# Grafico 10 clases mas mejoradas con EC
-sns.barplot(clase_EC.head(10), x='ClaseReal', y='% Mejora Media Clase')
+# Grafico 10 clases mas mejoradas con EH
+sns.barplot(clase_EH.head(10), x='ClaseReal', y='% Mejora Media Clase')
 plt.xlabel('Clase Real')
 plt.ylabel('% Mejora')
-plt.title('Top 10 Clases Más Mejoradas Con EC')
+plt.title('Top 10 Clases Más Mejoradas Con EH')
 
 # Rotar las etiquetas del eje x para mejorar la legibilidad
 plt.xticks(rotation=45, ha='right')
@@ -309,10 +306,11 @@ plt.xticks(rotation=45, ha='right')
 # Mostrar el gráfico
 plt.show()
 '''
-'''
+
 print("################################################################################################################")
 print("################################################################################################################")
 
+print('Ecualización del histograma adaptativa limitada por contraste (EHALC)')
 # Ver cuanto mejora la imagen/clase con 'Ecualización del histograma adaptativa limitada por contraste'
 mejora_EHALC = df[df['Algoritmo'] == 'Ecualización del histograma adaptativa limitada por contraste']
 mejora_EHALC = mejora_EHALC.drop(['Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred', 'ProbClasePred', 'ProbClasePredPrime'], axis=1)
@@ -323,9 +321,9 @@ mejora_EHALC['¿Cambia?'] = mejora_EHALC.apply(lambda fila: 0 if fila['ClaseReal
 print(mejora_EHALC)
 
 print(mejora_EHALC['¿Cambia?'].value_counts())
+
 '''
-'''
-# En este grafico muestra que cuanta menos media mas mejora
+# Cuanto influye la iluminacion en la mejora -> En este grafico muestra que cuanta menos media mas mejora
 # Crear una figura y un eje
 fig, ax = plt.subplots()
 # Asignar colores según los valores de '¿Cambia?'
@@ -359,10 +357,11 @@ plt.xticks(rotation=45, ha='right')
 # Mostrar el gráfico
 plt.show()
 '''
-'''
+
 print("################################################################################################################")
 print("################################################################################################################")
 
+print('Corrección de gamma (CG)')
 # Ver cuanto mejora la imagen/clase con 'Corrección de gamma (CG)'
 mejora_CG = df[df['Algoritmo'] == 'Corrección de gamma']
 mejora_CG = mejora_CG.drop(['Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred', 'ProbClasePred', 'ProbClasePredPrime'], axis=1)
@@ -373,9 +372,9 @@ mejora_CG['¿Cambia?'] = mejora_CG.apply(lambda fila: 0 if fila['ClaseReal'] == 
 print(mejora_CG)
 
 print(mejora_CG['¿Cambia?'].value_counts())
+
 '''
-'''
-# En este grafico muestra que cuanta menos media mas mejora
+# Cuanto influye la iluminacion en la mejora -> En este grafico muestra que cuanta menos media mas mejora
 # Crear una figura y un eje
 fig, ax = plt.subplots()
 # Asignar colores según los valores de '¿Cambia?'
@@ -413,6 +412,7 @@ plt.show()
 print("################################################################################################################")
 print("################################################################################################################")
 
+print('Transformación logarítmica (TL)')
 # Ver cuanto mejora la imagen/clase con 'Transformación logarítmica (TL)'
 mejora_TL = df[df['Algoritmo'] == 'Transformación logarítmica']
 mejora_TL = mejora_TL.drop(['Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred', 'ProbClasePred', 'ProbClasePredPrime'], axis=1)
@@ -425,6 +425,7 @@ print(mejora_TL)
 print(mejora_TL['¿Cambia?'].value_counts())
 
 '''
+# Cuanto influye la iluminacion en la mejora
 # Crear una figura y un eje
 fig, ax = plt.subplots()
 # Asignar colores según los valores de '¿Cambia?'
