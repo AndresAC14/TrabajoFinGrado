@@ -242,13 +242,13 @@ df_aciertos = pd.DataFrame([val_aciertos], columns=col_aciertos, index=['Acierto
 
 print(df_aciertos)
 
-
+'''
 # Gráfico circular que muestra el porcentaje de acierto por algoritmo
 plt.figure(figsize=(8, 8))
 plt.pie(df_aciertos.iloc[0].values, labels=df_aciertos.columns, autopct='%1.1f%%', startangle=90)
 plt.title('Aciertos por Algoritmo')
 plt.show()
-
+'''
 
 print("################################################################################################################")
 print("################################################################################################################")
