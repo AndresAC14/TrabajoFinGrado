@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
+import matplotlib.patches as mpatches
 pd.set_option('display.max_columns', 15)
 
 # Importar el dataframe
@@ -256,53 +257,48 @@ print("#########################################################################
 print('Ecualizacion del histograma (EH)')
 # Ver cuanto mejora la imagen/clase con Ecualizacion del histograma
 mejora_EH = df[df['Algoritmo'] == 'Ecualización del histograma']
-mejora_EH = mejora_EH.drop(['Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred', 'ProbClasePred', 'ProbClasePredPrime'], axis=1)
+mejora_EH = mejora_EH.drop(['MediaPrime', 'Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred'], axis=1)
 
 # Porcentaje de mejora = ((nuevo - antiguo) / antiguo) * 100 )
-mejora_EH['% Mejora Media'] = (((mejora_EH['MediaPrime'] - mejora_EH['Media']) / mejora_EH['Media']) * 100).__round__(3)
-mejora_EH['¿Cambia?'] = mejora_EH.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
+mejora_EH['% Mejora'] = (((mejora_EH['ProbClasePredPrime'] - mejora_EH['ProbClasePred']) / mejora_EH['ProbClasePred']) * 100).__round__(3)
+mejora_EH['¿Cambia?'] = mejora_EH.apply(lambda fila: 1 if fila['ClaseReal'] == fila['ClasePredPrime'] else 0, axis=1)
 print(mejora_EH)
-
 print(mejora_EH['¿Cambia?'].value_counts())
 
+
 '''
-# Cuanto influye la iluminacion en la mejora -> En este grafico muestra que cuanta menos media mas mejora
+# Este grafico compara en una nube de puntos el % de mejora respecto de la iluminacion (media original de la imagen)
 # Crear una figura y un eje
 fig, ax = plt.subplots()
-
 # Asignar colores según los valores de '¿Cambia?'
 colores = ['green' if valor == 1 else 'red' for valor in mejora_EH['¿Cambia?']]
-
 # Crear el gráfico de dispersión
-scatter = ax.scatter(mejora_EH['MediaPrime'], mejora_EH['% Mejora Media'], c=colores)
-
+scatter = ax.scatter(mejora_EH['Media'], mejora_EH['% Mejora'], c=colores)
 # Etiquetas y título
-ax.set_xlabel('Media')
-ax.set_ylabel('% Mejora Media')
-ax.set_title('Mejora Respecto a la Media')
-
-# Leyenda
-ax.legend(*scatter.legend_elements(), title='¿Cambia?')
-
+ax.set_xlabel('Media Original')
+ax.set_ylabel('% Mejora')
+ax.set_title('Mejora Con EH')
+# Crear manualmente las leyendas
+legend_labels = [mpatches.Patch(color='green', label='Si'), mpatches.Patch(color='red', label='No')]
+ax.legend(handles=legend_labels, title='¿Cambia?')
 # Mostrar el gráfico
 plt.show()
+'''
 
-
-# ¿Qué clase mejora más?
-clase_EH = mejora_EH.groupby('ClaseReal')['% Mejora Media'].mean().__round__(3).reset_index(name='% Mejora Media Clase')
-clase_EH = clase_EH.sort_values(by='% Mejora Media Clase', ascending=False)
-
+'''
+# ¿Qué clase mejora más? -> Es decir, que sea más probable de ser predicha
+# Se hace la media de todos los elementos que tengan la misma clase
+clase_EH = mejora_EH.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
+clase_EH = clase_EH.sort_values(by='% Mejora Por Clase', ascending=False)
 print(clase_EH)
 
-# Grafico 10 clases mas mejoradas con EH
-sns.barplot(clase_EH.head(10), x='ClaseReal', y='% Mejora Media Clase')
+# Grafico 10 clases mas mejoradas con TL
+sns.barplot(clase_EH.head(10), x='ClaseReal', y='% Mejora Por Clase')
 plt.xlabel('Clase Real')
-plt.ylabel('% Mejora')
+plt.ylabel('% Mejora Media Por Clase')
 plt.title('Top 10 Clases Más Mejoradas Con EH')
-
-# Rotar las etiquetas del eje x para mejorar la legibilidad
+# Rotar las etiquetas
 plt.xticks(rotation=45, ha='right')
-
 # Mostrar el gráfico
 plt.show()
 '''
@@ -313,47 +309,48 @@ print("#########################################################################
 print('Ecualización del histograma adaptativa limitada por contraste (EHALC)')
 # Ver cuanto mejora la imagen/clase con 'Ecualización del histograma adaptativa limitada por contraste'
 mejora_EHALC = df[df['Algoritmo'] == 'Ecualización del histograma adaptativa limitada por contraste']
-mejora_EHALC = mejora_EHALC.drop(['Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred', 'ProbClasePred', 'ProbClasePredPrime'], axis=1)
+mejora_EHALC = mejora_EHALC.drop(['MediaPrime', 'Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred'], axis=1)
 
 # Porcentaje de mejora = ((nuevo - antiguo) / antiguo) * 100 )
-mejora_EHALC['% Mejora Media'] = (((mejora_EHALC['MediaPrime'] - mejora_EHALC['Media']) / mejora_EHALC['Media']) * 100).__round__(3)
-mejora_EHALC['¿Cambia?'] = mejora_EHALC.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
+mejora_EHALC['% Mejora'] = (((mejora_EHALC['ProbClasePredPrime'] - mejora_EHALC['ProbClasePred']) / mejora_EHALC['ProbClasePred']) * 100).__round__(3)
+mejora_EHALC['¿Cambia?'] = mejora_EHALC.apply(lambda fila: 1 if fila['ClaseReal'] == fila['ClasePredPrime'] else 0, axis=1)
 print(mejora_EHALC)
-
 print(mejora_EHALC['¿Cambia?'].value_counts())
 
+
 '''
-# Cuanto influye la iluminacion en la mejora -> En este grafico muestra que cuanta menos media mas mejora
+# Este grafico compara en una nube de puntos el % de mejora respecto de la iluminacion (media original de la imagen)
 # Crear una figura y un eje
 fig, ax = plt.subplots()
 # Asignar colores según los valores de '¿Cambia?'
 colores = ['green' if valor == 1 else 'red' for valor in mejora_EHALC['¿Cambia?']]
 # Crear el gráfico de dispersión
-scatter = ax.scatter(mejora_EHALC['MediaPrime'], mejora_EHALC['% Mejora Media'], c=colores)
+scatter = ax.scatter(mejora_EHALC['Media'], mejora_EHALC['% Mejora'], c=colores)
 # Etiquetas y título
-ax.set_xlabel('Media')
-ax.set_ylabel('% Mejora Media')
-ax.set_title('Mejora Respecto a la Media')
-ax.legend(*scatter.legend_elements(), title='¿Cambia?')
-# Mostrar el gráfico -> Este algoritmo mejora en menor porcentaje que el EH pero produce mas cambios
+ax.set_xlabel('Media Original')
+ax.set_ylabel('% Mejora')
+ax.set_title('Mejora Con EHALC')
+# Crear manualmente las leyendas
+legend_labels = [mpatches.Patch(color='green', label='Si'), mpatches.Patch(color='red', label='No')]
+ax.legend(handles=legend_labels, title='¿Cambia?')
+# Mostrar el gráfico
 plt.show()
+'''
 
-
-# ¿Qué clase mejora más?
-clase_EHALC = mejora_EHALC.groupby('ClaseReal')['% Mejora Media'].mean().__round__(3).reset_index(name='% Mejora Media Clase')
-clase_EHALC = clase_EHALC.sort_values(by='% Mejora Media Clase', ascending=False)
-
+'''
+# ¿Qué clase mejora más? -> Es decir, que sea más probable de ser predicha
+# Se hace la media de todos los elementos que tengan la misma clase
+clase_EHALC = mejora_EHALC.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
+clase_EHALC = clase_EHALC.sort_values(by='% Mejora Por Clase', ascending=False)
 print(clase_EHALC)
 
-# Grafico 10 clases mas mejoradas con EHALC
-sns.barplot(clase_EHALC.head(10), x='ClaseReal', y='% Mejora Media Clase')
+# Grafico 10 clases mas mejoradas con TL
+sns.barplot(clase_EHALC.head(10), x='ClaseReal', y='% Mejora Por Clase')
 plt.xlabel('Clase Real')
-plt.ylabel('% Mejora')
+plt.ylabel('% Mejora Media Por Clase')
 plt.title('Top 10 Clases Más Mejoradas Con EHALC')
-
-# Rotar las etiquetas del eje x para mejorar la legibilidad
+# Rotar las etiquetas
 plt.xticks(rotation=45, ha='right')
-
 # Mostrar el gráfico
 plt.show()
 '''
@@ -364,48 +361,49 @@ print("#########################################################################
 print('Corrección de gamma (CG)')
 # Ver cuanto mejora la imagen/clase con 'Corrección de gamma (CG)'
 mejora_CG = df[df['Algoritmo'] == 'Corrección de gamma']
-mejora_CG = mejora_CG.drop(['Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred', 'ProbClasePred', 'ProbClasePredPrime'], axis=1)
+mejora_CG = mejora_CG.drop(['MediaPrime', 'Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred'], axis=1)
 
 # Porcentaje de mejora = ((nuevo - antiguo) / antiguo) * 100 )
-mejora_CG['% Mejora Media'] = (((mejora_CG['MediaPrime'] - mejora_CG['Media']) / mejora_CG['Media']) * 100).__round__(3)
-mejora_CG['¿Cambia?'] = mejora_CG.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
+mejora_CG['% Mejora'] = (((mejora_CG['ProbClasePredPrime'] - mejora_CG['ProbClasePred']) / mejora_CG['ProbClasePred']) * 100).__round__(3)
+mejora_CG['¿Cambia?'] = mejora_CG.apply(lambda fila: 1 if fila['ClaseReal'] == fila['ClasePredPrime'] else 0, axis=1)
 print(mejora_CG)
-
 print(mejora_CG['¿Cambia?'].value_counts())
 
+
 '''
-# Cuanto influye la iluminacion en la mejora -> En este grafico muestra que cuanta menos media mas mejora
+# Este grafico compara en una nube de puntos el % de mejora respecto de la iluminacion (media original de la imagen)
 # Crear una figura y un eje
 fig, ax = plt.subplots()
 # Asignar colores según los valores de '¿Cambia?'
 colores = ['green' if valor == 1 else 'red' for valor in mejora_CG['¿Cambia?']]
 # Crear el gráfico de dispersión
-scatter = ax.scatter(mejora_CG['MediaPrime'], mejora_CG['% Mejora Media'], c=colores)
+scatter = ax.scatter(mejora_CG['Media'], mejora_CG['% Mejora'], c=colores)
 # Etiquetas y título
-ax.set_xlabel('Media')
-ax.set_ylabel('% Mejora Media')
-ax.set_title('Mejora Respecto a la Media')
-ax.legend(*scatter.legend_elements(), title='¿Cambia?')
-# Mostrar el gráfico -> Cuanto mejor se ve la imagen menos mejora
+ax.set_xlabel('Media Original')
+ax.set_ylabel('% Mejora')
+ax.set_title('Mejora Con CG')
+# Crear manualmente las leyendas
+legend_labels = [mpatches.Patch(color='green', label='Si'), mpatches.Patch(color='red', label='No')]
+ax.legend(handles=legend_labels, title='¿Cambia?')
+# Mostrar el gráfico
 plt.show()
+'''
 
-
-# ¿Qué clase mejora más?
-clase_CG = mejora_CG.groupby('ClaseReal')['% Mejora Media'].mean().__round__(3).reset_index(name='% Mejora Media Clase')
-clase_CG = clase_CG.sort_values(by='% Mejora Media Clase', ascending=False)
-
+'''
+# ¿Qué clase mejora más? -> Es decir, que sea más probable de ser predicha
+# Se hace la media de todos los elementos que tengan la misma clase
+clase_CG = mejora_CG.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
+clase_CG = clase_CG.sort_values(by='% Mejora Por Clase', ascending=False)
 print(clase_CG)
 
-# Grafico 10 clases mas mejoradas con CG
-sns.barplot(clase_CG.head(10), x='ClaseReal', y='% Mejora Media Clase')
+# Grafico 10 clases mas mejoradas con TL
+sns.barplot(clase_CG.head(10), x='ClaseReal', y='% Mejora Por Clase')
 plt.xlabel('Clase Real')
-plt.ylabel('% Mejora')
+plt.ylabel('% Mejora Media Por Clase')
 plt.title('Top 10 Clases Más Mejoradas Con CG')
-
-# Rotar las etiquetas del eje x para mejorar la legibilidad
+# Rotar las etiquetas
 plt.xticks(rotation=45, ha='right')
-
-# Mostrar el gráfico -> ¿Se podria decir que es mas estable que los anteriores?
+# Mostrar el gráfico
 plt.show()
 '''
 
@@ -415,44 +413,47 @@ print("#########################################################################
 print('Transformación logarítmica (TL)')
 # Ver cuanto mejora la imagen/clase con 'Transformación logarítmica (TL)'
 mejora_TL = df[df['Algoritmo'] == 'Transformación logarítmica']
-mejora_TL = mejora_TL.drop(['Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred', 'ProbClasePred', 'ProbClasePredPrime'], axis=1)
+mejora_TL = mejora_TL.drop(['MediaPrime', 'Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred'], axis=1)
 
 # Porcentaje de mejora = ((nuevo - antiguo) / antiguo) * 100 )
-mejora_TL['% Mejora Media'] = (((mejora_TL['MediaPrime'] - mejora_TL['Media']) / mejora_TL['Media']) * 100).__round__(3)
-mejora_TL['¿Cambia?'] = mejora_TL.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
+mejora_TL['% Mejora'] = (((mejora_TL['ProbClasePredPrime'] - mejora_TL['ProbClasePred']) / mejora_TL['ProbClasePred']) * 100).__round__(3)
+mejora_TL['¿Cambia?'] = mejora_TL.apply(lambda fila: 1 if fila['ClaseReal'] == fila['ClasePredPrime'] else 0, axis=1)
 print(mejora_TL)
-
 print(mejora_TL['¿Cambia?'].value_counts())
 
 '''
-# Cuanto influye la iluminacion en la mejora
+# Este grafico compara en una nube de puntos el % de mejora respecto de la iluminacion (media original de la imagen)
 # Crear una figura y un eje
 fig, ax = plt.subplots()
 # Asignar colores según los valores de '¿Cambia?'
 colores = ['green' if valor == 1 else 'red' for valor in mejora_TL['¿Cambia?']]
 # Crear el gráfico de dispersión
-scatter = ax.scatter(mejora_TL['MediaPrime'], mejora_TL['% Mejora Media'], c=colores)
+scatter = ax.scatter(mejora_TL['Media'], mejora_TL['% Mejora'], c=colores)
 # Etiquetas y título
-ax.set_xlabel('Media')
-ax.set_ylabel('% Mejora Media')
-ax.set_title('Mejora Respecto a la Media')
-ax.legend(*scatter.legend_elements(), title='¿Cambia?')
-# Mostrar el gráfico -> Mejora menos% de calidad pero mejora mas imagenes en cantidad?
+ax.set_xlabel('Media Original')
+ax.set_ylabel('% Mejora')
+ax.set_title('Mejora Con TL')
+# Crear manualmente las leyendas
+legend_labels = [mpatches.Patch(color='green', label='Si'), mpatches.Patch(color='red', label='No')]
+ax.legend(handles=legend_labels, title='¿Cambia?')
+# Mostrar el gráfico
 plt.show()
+'''
 
-
-# ¿Qué clase mejora más?
-clase_TL = mejora_TL.groupby('ClaseReal')['% Mejora Media'].mean().__round__(3).reset_index(name='% Mejora Media Clase')
-clase_TL = clase_TL.sort_values(by='% Mejora Media Clase', ascending=False)
+'''
+# ¿Qué clase mejora más? -> Es decir, que sea más probable de ser predicha
+# Se hace la media de todos los elementos que tengan la misma clase
+clase_TL = mejora_TL.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
+clase_TL = clase_TL.sort_values(by='% Mejora Por Clase', ascending=False)
 print(clase_TL)
 
 # Grafico 10 clases mas mejoradas con TL
-sns.barplot(clase_TL.head(10), x='ClaseReal', y='% Mejora Media Clase')
+sns.barplot(clase_TL.head(10), x='ClaseReal', y='% Mejora Por Clase')
 plt.xlabel('Clase Real')
-plt.ylabel('% Mejora')
+plt.ylabel('% Mejora Media Por Clase')
 plt.title('Top 10 Clases Más Mejoradas Con TL')
-# Rotar las etiquetas del eje x para mejorar la legibilidad
+# Rotar las etiquetas
 plt.xticks(rotation=45, ha='right')
-# Mostrar el gráfico -> Bastante parecido a CG
+# Mostrar el gráfico
 plt.show()
 '''

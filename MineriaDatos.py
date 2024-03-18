@@ -1,13 +1,18 @@
+# Importar librerias
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 import pandas as pd
+import matplotlib.patches as mpatches
 import json
 pd.set_option('display.max_columns', 15)
 
-# Reemplaza 'tu_archivo.json' con la ruta de tu archivo JSON
+# Abre el fichero .json
 with open('data.json') as json_file:
     data = json.load(json_file)
 
 
-# Función para aplanar la estructura 'children'
+# Función para aplanar la estructura
 def flatten_children(item, parent_id=None, parent_name=None):
     result = []
     if 'children' in item:
@@ -33,4 +38,19 @@ flattened_data = flatten_children(data)
 df_flat = pd.DataFrame(flattened_data)
 
 # Muestra el DataFrame resultante
-print(df_flat)
+# print(df_flat)
+
+# Informacion del dataframe
+# Filas y columnas (2155 filas y 6 columnas)
+print(df_flat.shape)
+
+# Informacion/tipo de las columnas del df
+print(df_flat.info())
+
+# Primeras filas
+# print(df_flat.head(5))
+
+# Columnas -> sift index se pueden quitar
+columnas = df_flat.columns
+print(columnas)
+
