@@ -38,7 +38,7 @@ flattened_data = flatten_children(data)
 df_flat = pd.DataFrame(flattened_data)
 
 # Muestra el DataFrame resultante
-# print(df_flat)
+print(df_flat)
 
 # Informacion del dataframe
 # Filas y columnas (2155 filas y 6 columnas)
@@ -53,4 +53,18 @@ print(df_flat.info())
 # Columnas -> sift index se pueden quitar
 columnas = df_flat.columns
 print(columnas)
+
+# print(df_flat[df_flat['id'] == 'n03770679'])
+
+# Contar la frecuencia de cada valor en la columna 'id'
+frecuencia_id = df_flat['id'].value_counts()
+
+# Filtrar las filas donde el valor de 'id' aparezca más de una vez
+filas_repetidas = df_flat[df_flat['id'].isin(frecuencia_id[frecuencia_id > 1].index)]
+print(filas_repetidas)
+
+# 743 cosas hay repetidas
+
+
+
 
