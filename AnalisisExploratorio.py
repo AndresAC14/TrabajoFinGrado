@@ -104,11 +104,11 @@ df_EH = df_EH.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='H
 # Representa como de importante es cada clase respecto a ese algoritmo
 df_EH['Porcentaje'] = ((df_EH['Hit'] / df_EH['Hit'].sum()) * 100).__round__(3)
 df_EH = df_EH.sort_values(by='Hit', ascending=False)
-
+aciertos_EH = df_EH['Hit'].sum()
 
 # Mostrar el DataFrame resultante
 print(df_EH.head(5))
-print('Aciertos totales EH', df_EH['Hit'].sum())
+print('Aciertos totales EH', aciertos_EH)
 
 # Solo sirve la primera grafica, la otra no le veo mucho sentido
 # sns.barplot(df_EH[df_EH['Hit'] > 10], x='ClaseReal', y='Hit')
@@ -149,10 +149,11 @@ df_EHALC = df_EHALC.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(n
 # Representa como de importante es cada clase respecto a ese algoritmo
 df_EHALC['Porcentaje'] = ((df_EHALC['Hit'] / df_EHALC['Hit'].sum()) * 100).__round__(3)
 df_EHALC = df_EHALC.sort_values(by='Hit', ascending=False)
+aciertos_EHALC = df_EHALC['Hit'].sum()
 
 # Mostrar el DataFrame resultante
 print(df_EHALC.head(5))
-print('Aciertos totales EHALC', df_EHALC['Hit'].sum())
+print('Aciertos totales EHALC', aciertos_EHALC)
 
 
 '''
@@ -183,10 +184,11 @@ df_CG = df_CG.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='H
 # Representa como de importante es cada clase respecto a ese algoritmo
 df_CG['Porcentaje'] = ((df_CG['Hit'] / df_CG['Hit'].sum()) * 100).__round__(3)
 df_CG = df_CG.sort_values(by='Hit', ascending=False)
+aciertos_CG = df_CG['Hit'].sum()
 
 # Mostrar el DataFrame resultante
 print(df_CG.head(5))
-print('Aciertos totales CG', df_CG['Hit'].sum())
+print('Aciertos totales CG', aciertos_CG)
 
 
 '''
@@ -217,10 +219,11 @@ df_TL = df_TL.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='H
 # Representa como de importante es cada clase respecto a ese algoritmo
 df_TL['Porcentaje'] = ((df_TL['Hit'] / df_TL['Hit'].sum()) * 100).__round__(3)
 df_TL = df_TL.sort_values(by='Hit', ascending=False)
+aciertos_TL = df_TL['Hit'].sum()
 
 # Mostrar el DataFrame resultante
 print(df_TL.head(5))
-print('Aciertos totales TL', df_TL['Hit'].sum())
+print('Aciertos totales TL', aciertos_TL)
 
 
 '''
@@ -238,7 +241,7 @@ print("#########################################################################
 
 # Algoritmo con más aciertos
 col_aciertos = ['EH', 'EHALC', 'CG', 'TL']
-val_aciertos = [df_EH['Hit'].sum(), df_EHALC['Hit'].sum(), df_CG['Hit'].sum(), df_TL['Hit'].sum()]
+val_aciertos = [aciertos_EH, aciertos_EHALC, aciertos_CG, aciertos_TL]
 df_aciertos = pd.DataFrame([val_aciertos], columns=col_aciertos, index=['Aciertos'])
 
 print(df_aciertos)
@@ -259,10 +262,10 @@ print('Ecualizacion del histograma (EH)')
 mejora_EH = df[df['Algoritmo'] == 'Ecualización del histograma']
 mejora_EH = mejora_EH.drop(['MediaPrime', 'Mediana', 'DesvTipica', 'MedianaPrime', 'DesvTipicaPrime', 'Algoritmo', 'ClasePred'], axis=1)
 
-# Porcentaje de mejora = ((nuevo - antiguo) / antiguo) * 100 )
+# Porcentaje de mejora de probabilidad de ser predicha correctamente = ((nuevo - antiguo) / antiguo) * 100 )
 mejora_EH['% Mejora'] = (((mejora_EH['ProbClasePredPrime'] - mejora_EH['ProbClasePred']) / mejora_EH['ProbClasePred']) * 100).__round__(3)
-mejora_EH['¿Cambia?'] = mejora_EH.apply(lambda fila: 1 if fila['ClaseReal'] == fila['ClasePredPrime'] else 0, axis=1)
-print(mejora_EH)
+mejora_EH['¿Cambia?'] = mejora_EH.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
+print(mejora_EH.head(10))
 print(mejora_EH['¿Cambia?'].value_counts())
 
 
@@ -271,7 +274,7 @@ print(mejora_EH['¿Cambia?'].value_counts())
 # Crear una figura y un eje
 fig, ax = plt.subplots()
 # Asignar colores según los valores de '¿Cambia?'
-colores = ['green' if valor == 1 else 'red' for valor in mejora_EH['¿Cambia?']]
+colores = ['green' if valor == 0 else 'red' for valor in mejora_EH['¿Cambia?']]
 # Crear el gráfico de dispersión
 scatter = ax.scatter(mejora_EH['Media'], mejora_EH['% Mejora'], c=colores)
 # Etiquetas y título
@@ -290,7 +293,8 @@ plt.show()
 # Se hace la media de todos los elementos que tengan la misma clase
 clase_EH = mejora_EH.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
 clase_EH = clase_EH.sort_values(by='% Mejora Por Clase', ascending=False)
-print(clase_EH)
+print('Top 10 mejores clases')
+print(clase_EH.head(10))
 
 # Grafico 10 clases mas mejoradas con TL
 sns.barplot(clase_EH.head(10), x='ClaseReal', y='% Mejora Por Clase')
@@ -313,8 +317,8 @@ mejora_EHALC = mejora_EHALC.drop(['MediaPrime', 'Mediana', 'DesvTipica', 'Median
 
 # Porcentaje de mejora = ((nuevo - antiguo) / antiguo) * 100 )
 mejora_EHALC['% Mejora'] = (((mejora_EHALC['ProbClasePredPrime'] - mejora_EHALC['ProbClasePred']) / mejora_EHALC['ProbClasePred']) * 100).__round__(3)
-mejora_EHALC['¿Cambia?'] = mejora_EHALC.apply(lambda fila: 1 if fila['ClaseReal'] == fila['ClasePredPrime'] else 0, axis=1)
-print(mejora_EHALC)
+mejora_EHALC['¿Cambia?'] = mejora_EHALC.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
+print(mejora_EHALC.head(10))
 print(mejora_EHALC['¿Cambia?'].value_counts())
 
 
@@ -342,7 +346,8 @@ plt.show()
 # Se hace la media de todos los elementos que tengan la misma clase
 clase_EHALC = mejora_EHALC.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
 clase_EHALC = clase_EHALC.sort_values(by='% Mejora Por Clase', ascending=False)
-print(clase_EHALC)
+print('Top 10 mejores clases')
+print(clase_EHALC.head(10))
 
 # Grafico 10 clases mas mejoradas con TL
 sns.barplot(clase_EHALC.head(10), x='ClaseReal', y='% Mejora Por Clase')
@@ -365,8 +370,8 @@ mejora_CG = mejora_CG.drop(['MediaPrime', 'Mediana', 'DesvTipica', 'MedianaPrime
 
 # Porcentaje de mejora = ((nuevo - antiguo) / antiguo) * 100 )
 mejora_CG['% Mejora'] = (((mejora_CG['ProbClasePredPrime'] - mejora_CG['ProbClasePred']) / mejora_CG['ProbClasePred']) * 100).__round__(3)
-mejora_CG['¿Cambia?'] = mejora_CG.apply(lambda fila: 1 if fila['ClaseReal'] == fila['ClasePredPrime'] else 0, axis=1)
-print(mejora_CG)
+mejora_CG['¿Cambia?'] = mejora_CG.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
+print(mejora_CG.head(10))
 print(mejora_CG['¿Cambia?'].value_counts())
 
 
@@ -394,7 +399,8 @@ plt.show()
 # Se hace la media de todos los elementos que tengan la misma clase
 clase_CG = mejora_CG.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
 clase_CG = clase_CG.sort_values(by='% Mejora Por Clase', ascending=False)
-print(clase_CG)
+print('Top 10 mejores clases')
+print(clase_CG.head(10))
 
 # Grafico 10 clases mas mejoradas con TL
 sns.barplot(clase_CG.head(10), x='ClaseReal', y='% Mejora Por Clase')
@@ -417,8 +423,8 @@ mejora_TL = mejora_TL.drop(['MediaPrime', 'Mediana', 'DesvTipica', 'MedianaPrime
 
 # Porcentaje de mejora = ((nuevo - antiguo) / antiguo) * 100 )
 mejora_TL['% Mejora'] = (((mejora_TL['ProbClasePredPrime'] - mejora_TL['ProbClasePred']) / mejora_TL['ProbClasePred']) * 100).__round__(3)
-mejora_TL['¿Cambia?'] = mejora_TL.apply(lambda fila: 1 if fila['ClaseReal'] == fila['ClasePredPrime'] else 0, axis=1)
-print(mejora_TL)
+mejora_TL['¿Cambia?'] = mejora_TL.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
+print(mejora_TL.head(10))
 print(mejora_TL['¿Cambia?'].value_counts())
 
 '''
@@ -445,7 +451,8 @@ plt.show()
 # Se hace la media de todos los elementos que tengan la misma clase
 clase_TL = mejora_TL.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
 clase_TL = clase_TL.sort_values(by='% Mejora Por Clase', ascending=False)
-print(clase_TL)
+print('Top 10 mejores clases')
+print(clase_TL.head(10))
 
 # Grafico 10 clases mas mejoradas con TL
 sns.barplot(clase_TL.head(10), x='ClaseReal', y='% Mejora Por Clase')
