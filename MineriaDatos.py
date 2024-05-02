@@ -75,7 +75,7 @@ print(frecuencia_id.head(10))
 filas_repetidas = df_flat[df_flat['id'].isin(frecuencia_id[frecuencia_id > 3].index)]
 print(filas_repetidas)
 
-# 743 cosas hay repetidas -> misma cosa, distinto padre, aunque las que mas se repiten son 4 veces
+# 743 cosas hay repetidas -> misma cosa, distinto padre, aunque la que mas se repite son 4 veces
 
 
 
