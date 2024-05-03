@@ -5,6 +5,7 @@ import seaborn as sns
 import pandas as pd
 import matplotlib.patches as mpatches
 pd.set_option('display.max_columns', 15)
+pd.set_option('display.width', 300)
 
 # Importar el dataframe
 df = pd.read_csv('Conjunto_Entrenamiento_10000.csv')
