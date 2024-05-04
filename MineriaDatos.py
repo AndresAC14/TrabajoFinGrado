@@ -56,6 +56,8 @@ df_flat.drop(df_flat[df_flat['id'] == 'fall11'].index, inplace=True)
 df_flat.loc[df_flat['parent_id'] == 'fall11', 'parent_id'] = 'root_id'
 df_flat.loc[df_flat['parent_name'] == 'ImageNet 2011 Fall Release', 'parent_name'] = 'root_name'
 df_flat = df_flat.drop(['sift', 'index'], axis=1)
+df_flat['name'] = df_flat['name'].apply(lambda cadena: cadena.split(',')[0])
+df_flat['parent_name'] = df_flat['parent_name'].apply(lambda cadena: cadena.split(',')[0])
 
 #print(df_flat.head(10))
 #print(df_flat.tail(10))
