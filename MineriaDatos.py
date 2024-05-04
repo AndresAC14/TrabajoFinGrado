@@ -18,7 +18,7 @@ def normalize_json(item, level: int, parent_id=None, parent_name=None):
 
     result = [{
         'id': item.get('id'),
-        'name': item.get('name'),
+        'ClaseReal': item.get('name'),
         'level': level,
         'sift': item.get('sift'),
         'index': item.get('index'),
@@ -55,11 +55,16 @@ df_flat = pd.DataFrame(normalized_data)
 df_flat.drop(df_flat[df_flat['id'] == 'fall11'].index, inplace=True)
 df_flat.loc[df_flat['parent_id'] == 'fall11', 'parent_id'] = 'root_id'
 df_flat.loc[df_flat['parent_name'] == 'ImageNet 2011 Fall Release', 'parent_name'] = 'root_name'
-df_flat = df_flat.drop(['sift', 'index'], axis=1)
-df_flat['name'] = df_flat['name'].apply(lambda cadena: cadena.split(',')[0])
-df_flat['parent_name'] = df_flat['parent_name'].apply(lambda cadena: cadena.split(',')[0])
+df_flat = df_flat.drop(['sift', 'index', 'parent_id', 'parent_name'], axis=1)
+df_flat['ClaseReal'] = df_flat['ClaseReal'].apply(lambda cadena: cadena.split(',')[0])
+#df_flat['parent_name'] = df_flat['parent_name'].apply(lambda cadena: cadena.split(',')[0])
 
-#print(df_flat.head(10))
+# HAY QUE QUITAR DUPLICADOS!!!!
+df_flat = df_flat.drop_duplicates(keep='first')
+
+df_flat.to_csv('Jerarquia_Clases.csv', index=False)
+
+print(df_flat.head(10))
 #print(df_flat.tail(10))
 
 '''
@@ -73,13 +78,13 @@ filas_repetidas = df_flat[df_flat['id'].isin(frecuencia_id[frecuencia_id > 3].in
 print(filas_repetidas)
 
 # 743 cosas hay repetidas -> misma cosa, distinto padre, aunque la que mas se repite son 4 veces
-# Por ahora no me importa que se repitan
 '''
 
 
+'''
 # Lista nodos raiz (nivel 1) -> OK || cualquier nivel -> OK
 nodos_raiz = df_flat[df_flat['level'] == 1]
-nodos_raiz = nodos_raiz.drop(['parent_id', 'parent_name'], axis=1)
+# nodos_raiz = nodos_raiz.drop(['parent_id', 'parent_name'], axis=1)
 print('Clases raiz')
 print(nodos_raiz.head(10))
 
@@ -88,11 +93,12 @@ profundidad_max = df_flat['level'].max()
 print('Nivel maximo', profundidad_max)
 
 nodos_hoja = df_flat[df_flat['level'] == profundidad_max]
-nodos_hoja = nodos_hoja.drop(['parent_id', 'parent_name'], axis=1)
+#nodos_hoja = nodos_hoja.drop(['parent_id', 'parent_name'], axis=1)
 print('Clases hoja')
 print(nodos_hoja.head(10))
 
 
 # Empezar por nodos raiz ->  problema hay algunos largos y no se si los pilla bien al cruzarlo con el otro df
-nombres_raiz = nodos_raiz['name'].to_list()
+nombres_raiz = nodos_raiz['ClaseReal'].to_list()
 print(nombres_raiz)
+'''

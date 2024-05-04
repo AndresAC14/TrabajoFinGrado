@@ -9,6 +9,7 @@ pd.set_option('display.width', 350)
 
 # Importar el dataframe
 df = pd.read_csv('Conjunto_Entrenamiento_10000.csv')
+jerarquia = pd.read_csv('Jerarquia_Clases.csv')
 
 # Eliminar primera columna y la r porque no nos sirven
 df.drop(df.columns[0], axis=1, inplace=True)
@@ -61,6 +62,10 @@ plt.xlabel('Clase')
 plt.ylabel('Frecuencia')
 plt.show()
 '''
+print("################################################################################################################")
+# JOIN de DF grande con el de las jerarquias por 'name'
+df = pd.merge(df, jerarquia, on='ClaseReal', how='left')
+df['level'] = df['level'].astype('Int64')
 
 
 print("################################################################################################################")
@@ -465,3 +470,8 @@ plt.xticks(rotation=45, ha='right')
 # Mostrar el gráfico
 plt.show()
 '''
+
+print("################################################################################################################")
+print("################################################################################################################")
+
+# print(jerarquia.head(10))
