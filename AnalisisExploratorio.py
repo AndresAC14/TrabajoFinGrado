@@ -64,8 +64,15 @@ plt.show()
 '''
 print("################################################################################################################")
 # JOIN de DF grande con el de las jerarquias por 'name'
+df['ClaseReal'] = df['ClaseReal'].str.lower()
+df['ClasePred'] = df['ClasePred'].str.lower()
+df['ClasePredPrime'] = df['ClasePredPrime'].str.lower()
 df = pd.merge(df, jerarquia, on='ClaseReal', how='left')
-df['level'] = df['level'].astype('Int64')
+df['Nivel'] = df['Nivel'].astype('Int64')
+
+# Ejemplo mostrar todos los persian cat
+persian = df[df['ClaseReal'] == 'persian cat']
+print(persian)
 
 
 print("################################################################################################################")

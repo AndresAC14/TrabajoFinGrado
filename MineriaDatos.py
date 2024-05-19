@@ -19,7 +19,7 @@ def normalize_json(item, level: int, parent_id=None, parent_name=None):
     result = [{
         'id': item.get('id'),
         'ClaseReal': item.get('name'),
-        'level': level,
+        'Nivel': level,
         'sift': item.get('sift'),
         'index': item.get('index'),
         'parent_id': parent_id,
@@ -55,16 +55,17 @@ df_flat = pd.DataFrame(normalized_data)
 df_flat.drop(df_flat[df_flat['id'] == 'fall11'].index, inplace=True)
 df_flat.loc[df_flat['parent_id'] == 'fall11', 'parent_id'] = 'root_id'
 df_flat.loc[df_flat['parent_name'] == 'ImageNet 2011 Fall Release', 'parent_name'] = 'root_name'
-df_flat = df_flat.drop(['sift', 'index', 'parent_id', 'parent_name'], axis=1)
+df_flat = df_flat.drop(['id', 'sift', 'index', 'parent_id', 'parent_name'], axis=1)
 df_flat['ClaseReal'] = df_flat['ClaseReal'].apply(lambda cadena: cadena.split(',')[0])
+df_flat['ClaseReal'] = df_flat['ClaseReal'].str.lower()
 #df_flat['parent_name'] = df_flat['parent_name'].apply(lambda cadena: cadena.split(',')[0])
 
 # HAY QUE QUITAR DUPLICADOS!!!!
-df_flat = df_flat.drop_duplicates(keep='first')
+df_flat = df_flat.drop_duplicates(subset=['ClaseReal'],keep='first')
 
-df_flat.to_csv('Jerarquia_Clases.csv', index=False)
+#df_flat.to_csv('Jerarquia_Clases.csv', index=False)
 
-print(df_flat.head(10))
+print(df_flat)
 #print(df_flat.tail(10))
 
 '''
