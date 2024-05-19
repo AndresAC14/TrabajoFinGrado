@@ -63,7 +63,7 @@ plt.ylabel('Frecuencia')
 plt.show()
 '''
 print("################################################################################################################")
-# JOIN de DF grande con el de las jerarquias por 'name'
+# JOIN de DF grande con el de las jerarquias por 'ClaseReal'
 df['ClaseReal'] = df['ClaseReal'].str.lower()
 df['ClasePred'] = df['ClasePred'].str.lower()
 df['ClasePredPrime'] = df['ClasePredPrime'].str.lower()
@@ -140,7 +140,7 @@ plt.show()
 
 '''
 print("################################ ")
-# Grafico circular, falta perfilar la explicacion de realmente lo que sucede aqui
+# Grafico circular
 df_circularEH = df_EH.groupby('Hit').count().reset_index()
 df_circularEH.drop(df_circularEH.columns[2], axis=1, inplace=True)
 print(df_circularEH)
@@ -481,4 +481,27 @@ plt.show()
 print("################################################################################################################")
 print("################################################################################################################")
 
-# print(jerarquia.head(10))
+# Que clase es mas predicha segun el nivel
+niveles = df['Nivel'].value_counts().reset_index('Nivel')
+niveles = niveles.sort_values(by='Nivel', ascending=True)
+
+print(niveles)
+
+'''
+# Grafico circular de los niveles y el count por nivel
+fig, ax = plt.subplots()
+ax.pie(niveles['count'], labels=niveles['Nivel'], autopct='%1.1f%%')
+plt.title('Cantidad de Clases Por Nivel')
+plt.show()
+'''
+
+print("################################################################################################################")
+print("################################################################################################################")
+
+# Comparacion RAIZ vs HOJA con EH
+
+raiz1 = mejora_EH[mejora_EH['Nivel'] == 1]
+hojas13 = mejora_EH[mejora_EH['Nivel'] == 13]
+
+print(raiz1)
+print(hojas13)
