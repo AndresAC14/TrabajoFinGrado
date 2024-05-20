@@ -488,9 +488,10 @@ niveles = niveles.sort_values(by='Nivel', ascending=True)
 print(niveles)
 
 '''
-# Grafico circular de los niveles y el count por nivel
-fig, ax = plt.subplots()
-ax.pie(niveles['count'], labels=niveles['Nivel'], autopct='%1.1f%%')
+# Grafico circular de los niveles y el count por nivel -> REVISAR PARA EL TAM DE LOS %
+fig, ax = plt.subplots(figsize=(10, 10))
+ax.pie(niveles['count'], labels=niveles['Nivel'], autopct='%1.1f%%', startangle=0,
+                                  textprops={'fontsize': 10}, pctdistance=0.8)
 plt.title('Cantidad de Clases Por Nivel')
 plt.show()
 '''
@@ -498,10 +499,23 @@ plt.show()
 print("################################################################################################################")
 print("################################################################################################################")
 
-# Comparacion RAIZ vs HOJA con EH
+# Comparacion Mejora por Nivel con Ecualizacion del Histograma
+niveles_mejora_EH = []
+top_clases_nivel = {}
 
-raiz1 = mejora_EH[mejora_EH['Nivel'] == 1]
-hojas13 = mejora_EH[mejora_EH['Nivel'] == 13]
+for i in niveles['Nivel'].values:
+    nodos_EH = mejora_EH[mejora_EH['Nivel'] == i]
+    mejora_EH_ni = nodos_EH['% Mejora'].mean().__round__(2)
+    niveles_mejora_EH.append((i, mejora_EH_ni))
 
-print(raiz1)
-print(hojas13)
+df_mejoras_EH = pd.DataFrame(niveles_mejora_EH, columns=['Nivel', 'Mejora'])
+
+plt.figure(figsize=(10, 10))
+plt.plot(df_mejoras_EH['Nivel'], df_mejoras_EH['Mejora'], marker='o', linestyle='-', color='b')
+plt.title('Mejora por Nivel con Ecualización del Histograma')
+plt.xlabel('Nivel')
+plt.ylabel('% Mejora')
+plt.xticks(niveles['Nivel'].values)
+plt.grid(True)
+plt.show()
+
