@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 import matplotlib.patches as mpatches
+from wordcloud import WordCloud
 pd.set_option('display.max_columns', 15)
 pd.set_option('display.width', 350)
 
@@ -306,8 +307,9 @@ plt.show()
 # Se hace la media de todos los elementos que tengan la misma clase
 clase_EH = mejora_EH.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
 clase_EH = clase_EH.sort_values(by='% Mejora Por Clase', ascending=False)
-print('Top 10 mejores clases')
-print(clase_EH.head(10))
+#print('Top 10 mejores clases')
+#print(clase_EH.head(10))
+
 
 # Grafico 10 clases mas mejoradas con TL
 sns.barplot(clase_EH.head(10), x='ClaseReal', y='% Mejora Por Clase')
@@ -500,13 +502,44 @@ print("#########################################################################
 print("################################################################################################################")
 
 # Comparacion Mejora por Nivel con Ecualizacion del Histograma
-niveles_mejora_EH = []
-top_clases_nivel = {}
+# como cambiar los nombres de variables segun el parametro de entrada
+def comparacion_niveles(algoritmo):
 
-for i in niveles['Nivel'].values:
-    nodos_EH = mejora_EH[mejora_EH['Nivel'] == i]
-    mejora_EH_ni = nodos_EH['% Mejora'].mean().__round__(2)
-    niveles_mejora_EH.append((i, mejora_EH_ni))
+    niveles_mejora = []
+    df_mejora = pd.DataFrame
+    top_clases_nivel = pd.DataFrame(columns=['Nivel', 'ClaseReal', '% Mejora Por Clase'])
+
+    if algoritmo == 'EH':
+        df_mejora = mejora_EH
+
+    elif algoritmo == 'EHALC':
+        df_mejora = mejora_EHALC
+
+    elif algoritmo == 'TL':
+        df_mejora = mejora_TL
+
+    elif algoritmo == 'CG':
+        df_mejora = mejora_CG
+
+    for i in niveles['Nivel'].values:
+        nodos = df_mejora[df_mejora['Nivel'] == i]
+        mejora = nodos['% Mejora'].mean().__round__(2)
+        niveles_mejora.append((i, mejora))
+
+        clases = nodos.groupby('ClaseReal')['% Mejora'].mean().__round__(2).reset_index(name='% Mejora Por Clase')
+        clases = clases.sort_values(by='% Mejora Por Clase', ascending=False).head(5)
+
+        # Añadir el nivel a las clases para el DataFrame final
+        clases['Nivel'] = i
+
+        # Append al DataFrame top_clases_nivel
+        top_clases_nivel = pd.concat([top_clases_nivel, clases])
+
+    return niveles_mejora, top_clases_nivel
+    # print(top_clases_nivel)
+
+
+niveles_mejora_EH, topClases_EH = comparacion_niveles('TL')
 
 df_mejoras_EH = pd.DataFrame(niveles_mejora_EH, columns=['Nivel', 'Mejora'])
 
@@ -519,3 +552,6 @@ plt.xticks(niveles['Nivel'].values)
 plt.grid(True)
 plt.show()
 
+
+print("################################################################################################################")
+print("################################################################################################################")
