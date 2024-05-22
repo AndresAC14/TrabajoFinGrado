@@ -501,8 +501,7 @@ plt.show()
 print("################################################################################################################")
 print("################################################################################################################")
 
-# Comparacion Mejora por Nivel con Ecualizacion del Histograma
-# como cambiar los nombres de variables segun el parametro de entrada
+# Comparacion Mejora por Nivel con Algoritmos de Mejora de Imagen
 def comparacion_niveles(algoritmo):
 
     niveles_mejora = []
@@ -539,8 +538,8 @@ def comparacion_niveles(algoritmo):
     # print(top_clases_nivel)
 
 
-niveles_mejora_EH, topClases_EH = comparacion_niveles('TL')
-
+niveles_mejora_EH, topClases_EH = comparacion_niveles('EH')
+'''
 df_mejoras_EH = pd.DataFrame(niveles_mejora_EH, columns=['Nivel', 'Mejora'])
 
 plt.figure(figsize=(10, 10))
@@ -551,7 +550,53 @@ plt.ylabel('% Mejora')
 plt.xticks(niveles['Nivel'].values)
 plt.grid(True)
 plt.show()
+'''
 
+print(topClases_EH)
+
+# Definir colores para cada nivel del 1 al 13
+colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd',
+          '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf',
+          '#ff5733', '#7a33ff', '#33ff99']
+
+
+# Crear el gráfico con seaborn
+plt.figure(figsize=(15, 8))
+ax = sns.barplot(data=topClases_EH, x='Nivel', y='% Mejora Por Clase', hue='ClaseReal', dodge=True)
+
+# Añadir etiquetas y título
+plt.xlabel('Nivel')
+plt.ylabel('% Mejora')
+ax.get_legend().remove()
+plt.title('% Mejora por Nivel y ClaseReal')
+
+
+# Añadir nombres de ClaseReal en las barras
+for p, (_, row) in zip(ax.patches, topClases_EH.iterrows()):
+    height = p.get_height()
+    ax.annotate(
+        f'{row["ClaseReal"]}',  # Nombre de ClaseReal
+        (p.get_x() + p.get_width() / 2., height),
+        ha='center', va='bottom', fontsize=10, color='black', xytext=(0, 10),  # Desplazamiento vertical
+        textcoords='offset points'
+    )
+'''
+# Añadir texto de ClaseReal dentro de cada barra
+for i, p in enumerate(ax.patches):
+    height = p.get_height()
+    ax.text(
+        p.get_x() + p.get_width() / 2,  # x-coordinate
+        height + 0.5,  # y-coordinate, ajustando un poco más arriba
+        topClases_EH.iloc[i % len(topClases_EH)]["ClaseReal"],  # texto de ClaseReal
+        ha='center',  # horizontal alignment
+        va='bottom'  # vertical alignment
+    )
+'''
+# Ajustar los márgenes para que la leyenda no se corte
+#plt.tight_layout()
+
+# Mostrar el gráfico
+plt.show()
 
 print("################################################################################################################")
 print("################################################################################################################")
