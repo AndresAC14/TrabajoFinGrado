@@ -536,12 +536,22 @@ def comparacion_niveles(algoritmo):
         # Append al DataFrame top_clases_nivel
         top_clases_nivel = pd.concat([top_clases_nivel, clases])
 
+        # Grafico que muestre el top por nivel, es decir, como las de arriba pero añadiendo el nivel y algoritmo
+        sns.barplot(top_clases_nivel[top_clases_nivel['Nivel'] == i], x='ClaseReal', y='% Mejora Por Clase')
+        plt.xlabel('Clase Real')
+        plt.ylabel('% Mejora Media Por Clase')
+        plt.title(f'Top Clases Con {algoritmo} en Nivel {i}')
+        # Rotar las etiquetas
+        plt.xticks(rotation=45, ha='right')
+        # Mostrar el gráfico
+        plt.show()
+
     niveles_mejora = pd.DataFrame(niveles_mejora, columns=['Nivel', 'Mejora'])
-    return niveles_mejora, top_clases_nivel
+    return niveles_mejora # top_clases_nivel
     # print(top_clases_nivel)
 
 
-niveles_mejora_EH, topClases_EH = comparacion_niveles('EH')
+niveles_mejora_EH = comparacion_niveles('EH')
 
 '''
 # Grafico que compara la mejora por niveles, es decir, los 13 niveles y la mejora en cada uno de ellos
@@ -552,43 +562,6 @@ plt.xlabel('Nivel')
 plt.ylabel('% Mejora')
 plt.xticks(niveles['Nivel'].values)
 plt.grid(True)
-plt.show()
-'''
-
-print(topClases_EH[topClases_EH['Nivel'] == 1])
-
-
-'''
-# Definir colores para cada nivel del 1 al 13
-colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd',
-          '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf',
-          '#ff5733', '#7a33ff', '#33ff99']
-
-
-# Crear el gráfico con seaborn
-plt.figure(figsize=(15, 8))
-ax = sns.barplot(data=topClases_EH, x='Nivel', y='% Mejora Por Clase', hue='ClaseReal', dodge=True)
-
-# Añadir etiquetas y título
-plt.xlabel('Nivel')
-plt.ylabel('% Mejora')
-ax.get_legend().remove()
-plt.title('% Mejora por Nivel y ClaseReal')
-
-# Añadir nombres de ClaseReal en las barras
-for p, (_, row) in zip(ax.patches, topClases_EH.iterrows()):
-    height = p.get_height()
-    ax.annotate(
-        f'{row["ClaseReal"]}',  # Nombre de ClaseReal
-        (p.get_x() + p.get_width() / 2., height),
-        ha='center', va='bottom', fontsize=10, color='black', xytext=(0, 10),  # Desplazamiento vertical
-        textcoords='offset points'
-    )
-    
-# Ajustar los márgenes para que la leyenda no se corte
-#plt.tight_layout()
-
-# Mostrar el gráfico
 plt.show()
 '''
 
