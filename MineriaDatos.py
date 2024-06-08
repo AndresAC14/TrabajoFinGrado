@@ -23,7 +23,7 @@ def normalize_json(item, level: int, parent_id=None, parent_name=None):
         'sift': item.get('sift'),
         'index': item.get('index'),
         'parent_id': parent_id,
-        'parent_name': parent_name
+        'ClasePadre': parent_name
     }]
 
     if 'children' in item:
@@ -51,21 +51,45 @@ df_flat = pd.DataFrame(normalized_data)
 # Informacion/tipo de las columnas del df
 # print(df_flat.info())
 
+
 # Transformaciones basicas
 df_flat.drop(df_flat[df_flat['id'] == 'fall11'].index, inplace=True)
-df_flat.loc[df_flat['parent_id'] == 'fall11', 'parent_id'] = 'root_id'
-df_flat.loc[df_flat['parent_name'] == 'ImageNet 2011 Fall Release', 'parent_name'] = 'root_name'
-df_flat = df_flat.drop(['id', 'sift', 'index', 'parent_id', 'parent_name'], axis=1)
+# df_flat.loc[df_flat['parent_id'] == 'fall11', 'parent_id'] = 'root_id'
+df_flat.loc[df_flat['ClasePadre'] == 'ImageNet 2011 Fall Release', 'ClasePadre'] = 'root_name'
+#df_flat = df_flat.drop(['id', 'sift', 'index', 'parent_id'], axis=1)
+df_flat = df_flat.drop(['sift', 'index'], axis=1)
 df_flat['ClaseReal'] = df_flat['ClaseReal'].apply(lambda cadena: cadena.split(',')[0])
 df_flat['ClaseReal'] = df_flat['ClaseReal'].str.lower()
-#df_flat['parent_name'] = df_flat['parent_name'].apply(lambda cadena: cadena.split(',')[0])
+df_flat['ClasePadre'] = df_flat['ClasePadre'].apply(lambda cadena: cadena.split(',')[0])
+df_flat['ClasePadre'] = df_flat['ClasePadre'].str.lower()
 
-# HAY QUE QUITAR DUPLICADOS!!!!
+# print(df_flat.head(30))
+
+# HAY QUE QUITAR DUPLICADOS!!!! -> antes de nada porque sino al buscar los padres o abuelos se puede volver loco y aun asi se puede liar bastante
 df_flat = df_flat.drop_duplicates(subset=['ClaseReal'],keep='first')
+
+# Inicializamos la columna 'ClaseAbuelo' con None
+df_flat['ClaseAbuelo'] = "no_abuelo"
+
+# Iterar sobre cada fila del DataFrame
+for idx, row in df_flat.iterrows():
+    # Obtenemos el id del padre actual
+    parent_id = row['parent_id']
+    #print(f'El parent id \n {parent_id}')
+
+    if pd.notna(parent_id):  # Verificamos que no sea NaN
+        # Buscar el ID del abuelo
+        grandparent_id = df_flat.loc[df_flat['id'] == parent_id, 'parent_id'].values
+        grandparent_name = df_flat.loc[df_flat['id'] == parent_id, 'ClasePadre'].values
+        #print(f'El grandparent id \n {grandparent_id} y {grandparent_name}')
+
+        if grandparent_name.size > 0:
+            df_flat.at[idx, 'ClaseAbuelo'] = grandparent_name
+
 
 #df_flat.to_csv('Jerarquia_Clases.csv', index=False)
 
-print(df_flat)
+print(df_flat.head(30))
 #print(df_flat.tail(10))
 
 '''
