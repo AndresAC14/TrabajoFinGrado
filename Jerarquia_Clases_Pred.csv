@@ -1,0 +1,1741 @@
+ClasePredPrime,ClasePredPadre,ClasePredAbuelo
+menu,root_name,no_abuelo
+carbonara,root_name,no_abuelo
+bubble,root_name,no_abuelo
+pretzel,root_name,no_abuelo
+street sign,root_name,no_abuelo
+toilet tissue,root_name,no_abuelo
+french loaf,root_name,no_abuelo
+traffic light,root_name,no_abuelo
+bun,root_name,no_abuelo
+bagel,bun,root_name
+sauce,root_name,no_abuelo
+chocolate sauce,sauce,root_name
+dip,root_name,no_abuelo
+guacamole,dip,root_name
+feed,root_name,no_abuelo
+fodder,feed,root_name
+hay,fodder,feed
+sandwich,root_name,no_abuelo
+hotdog,sandwich,root_name
+hamburger,sandwich,root_name
+cheeseburger,hamburger,sandwich
+foodstuff,root_name,no_abuelo
+starches,foodstuff,root_name
+potato,starches,foodstuff
+mashed potato,potato,starches
+concoction,foodstuff,root_name
+dough,concoction,foodstuff
+nutriment,root_name,no_abuelo
+dish,nutriment,root_name
+stew,dish,nutriment
+hot pot,stew,dish
+meat loaf,dish,nutriment
+soup,dish,nutriment
+consomme,soup,dish
+potpie,dish,nutriment
+burrito,dish,nutriment
+pizza,dish,nutriment
+course,nutriment,root_name
+entree,course,nutriment
+plate,entree,course
+dessert,course,nutriment
+frozen dessert,dessert,course
+ice lolly,frozen dessert,dessert
+ice cream,frozen dessert,dessert
+pudding,dessert,course
+trifle,pudding,dessert
+geological formation,root_name,no_abuelo
+cliff,geological formation,root_name
+natural depression,geological formation,root_name
+valley,natural depression,geological formation
+natural elevation,geological formation,root_name
+mountain,natural elevation,geological formation
+alp,mountain,natural elevation
+volcano,mountain,natural elevation
+promontory,natural elevation,geological formation
+ridge,natural elevation,geological formation
+bar,ridge,natural elevation
+sandbar,bar,ridge
+reef,ridge,natural elevation
+coral reef,reef,ridge
+shore,geological formation,root_name
+lakeside,shore,geological formation
+seashore,shore,geological formation
+spring,geological formation,root_name
+geyser,spring,geological formation
+beverage,root_name,no_abuelo
+coffee,beverage,root_name
+espresso,coffee,beverage
+alcohol,beverage,root_name
+wine,alcohol,beverage
+red wine,wine,alcohol
+mixed drink,alcohol,beverage
+punch,mixed drink,alcohol
+eggnog,punch,mixed drink
+cup,punch,mixed drink
+vegetable,root_name,no_abuelo
+solanaceous vegetable,vegetable,root_name
+pepper,solanaceous vegetable,vegetable
+sweet pepper,pepper,solanaceous vegetable
+bell pepper,sweet pepper,pepper
+cruciferous vegetable,vegetable,root_name
+cabbage,cruciferous vegetable,vegetable
+head cabbage,cabbage,cruciferous vegetable
+broccoli,cruciferous vegetable,vegetable
+cauliflower,cruciferous vegetable,vegetable
+squash,vegetable,root_name
+winter squash,squash,vegetable
+acorn squash,winter squash,squash
+butternut squash,winter squash,squash
+summer squash,squash,vegetable
+zucchini,summer squash,squash
+spaghetti squash,summer squash,squash
+cucumber,vegetable,root_name
+artichoke,vegetable,root_name
+cardoon,vegetable,root_name
+mushroom,vegetable,root_name
+natural object,root_name,no_abuelo
+mechanism,natural object,root_name
+barrier,mechanism,natural object
+plant part,natural object,root_name
+plant organ,plant part,natural object
+reproductive structure,plant organ,plant part
+fruit,reproductive structure,plant organ
+edible fruit,fruit,reproductive structure
+apple,edible fruit,fruit
+eating apple,apple,edible fruit
+granny smith,eating apple,apple
+berry,edible fruit,fruit
+strawberry,berry,edible fruit
+citrus,edible fruit,fruit
+orange,citrus,edible fruit
+lemon,citrus,edible fruit
+fig,edible fruit,fruit
+pineapple,edible fruit,fruit
+banana,edible fruit,fruit
+jackfruit,edible fruit,fruit
+custard apple,edible fruit,fruit
+pomegranate,edible fruit,fruit
+acorn,fruit,reproductive structure
+hip,fruit,reproductive structure
+ear,fruit,reproductive structure
+seed,fruit,reproductive structure
+oilseed,seed,fruit
+rapeseed,oilseed,seed
+grain,seed,fruit
+kernel,grain,seed
+corn,kernel,grain
+buckeye,seed,fruit
+pome,fruit,reproductive structure
+artifact,root_name,no_abuelo
+instrumentality,artifact,root_name
+device,instrumentality,artifact
+musical instrument,device,instrumentality
+percussion instrument,musical instrument,device
+piano,percussion instrument,musical instrument
+grand piano,piano,percussion instrument
+upright,piano,percussion instrument
+chime,percussion instrument,musical instrument
+drum,percussion instrument,musical instrument
+gong,percussion instrument,musical instrument
+maraca,percussion instrument,musical instrument
+marimba,percussion instrument,musical instrument
+steel drum,percussion instrument,musical instrument
+stringed instrument,musical instrument,device
+banjo,stringed instrument,musical instrument
+bowed stringed instrument,stringed instrument,musical instrument
+cello,bowed stringed instrument,stringed instrument
+violin,bowed stringed instrument,stringed instrument
+chordophone,stringed instrument,musical instrument
+harp,chordophone,stringed instrument
+guitar,stringed instrument,musical instrument
+acoustic guitar,guitar,stringed instrument
+electric guitar,guitar,stringed instrument
+wind instrument,musical instrument,device
+organ,wind instrument,musical instrument
+brass,wind instrument,musical instrument
+cornet,brass,wind instrument
+french horn,brass,wind instrument
+trombone,brass,wind instrument
+free-reed instrument,wind instrument,musical instrument
+accordion,free-reed instrument,wind instrument
+harmonica,free-reed instrument,wind instrument
+ocarina,wind instrument,musical instrument
+pipe,wind instrument,musical instrument
+panpipe,pipe,wind instrument
+woodwind,wind instrument,musical instrument
+beating-reed instrument,woodwind,wind instrument
+double-reed instrument,beating-reed instrument,woodwind
+bassoon,double-reed instrument,beating-reed instrument
+oboe,double-reed instrument,beating-reed instrument
+single-reed instrument,beating-reed instrument,woodwind
+sax,single-reed instrument,beating-reed instrument
+flute,woodwind,wind instrument
+airfoil,device,instrumentality
+wing,airfoil,device
+breathing device,device,instrumentality
+oxygen mask,breathing device,device
+snorkel,breathing device,device
+electrical device,device,instrumentality
+transducer,electrical device,device
+electro-acoustic transducer,transducer,electrical device
+loudspeaker,electro-acoustic transducer,transducer
+microphone,electro-acoustic transducer,transducer
+electronic device,device,instrumentality
+display,electronic device,device
+screen,display,electronic device
+mouse,electronic device,device
+fan,device,instrumentality
+electric fan,fan,device
+filter,device,instrumentality
+oil filter,filter,device
+strainer,filter,device
+heater,device,instrumentality
+space heater,heater,device
+stove,heater,device
+instrument,device,instrumentality
+instrument of execution,instrument,device
+guillotine,instrument of execution,instrument
+measuring instrument,instrument,device
+barometer,measuring instrument,instrument
+measuring stick,measuring instrument,instrument
+rule,measuring stick,measuring instrument
+meter,measuring instrument,instrument
+odometer,meter,measuring instrument
+scale,measuring instrument,instrument
+timepiece,measuring instrument,instrument
+watch,timepiece,measuring instrument
+digital watch,watch,timepiece
+clock,timepiece,measuring instrument
+analog clock,clock,timepiece
+digital clock,clock,timepiece
+wall clock,clock,timepiece
+sandglass,timepiece,measuring instrument
+hourglass,sandglass,timepiece
+sundial,timepiece,measuring instrument
+timer,timepiece,measuring instrument
+parking meter,timer,timepiece
+stopwatch,timer,timepiece
+medical instrument,instrument,device
+stethoscope,medical instrument,instrument
+syringe,medical instrument,instrument
+navigational instrument,instrument,device
+compass,navigational instrument,instrument
+magnetic compass,compass,navigational instrument
+optical instrument,instrument,device
+binoculars,optical instrument,instrument
+projector,optical instrument,instrument
+spectacles,optical instrument,instrument
+sunglasses,spectacles,optical instrument
+scientific instrument,instrument,device
+magnifier,scientific instrument,instrument
+microscope,magnifier,scientific instrument
+light microscope,microscope,magnifier
+hand glass,light microscope,microscope
+loupe,hand glass,light microscope
+telescope,magnifier,scientific instrument
+astronomical telescope,telescope,magnifier
+radio telescope,astronomical telescope,telescope
+weapon,instrument,device
+missile,weapon,instrument
+bow,weapon,instrument
+gun,weapon,instrument
+cannon,gun,weapon
+firearm,gun,weapon
+autoloader,firearm,gun
+automatic firearm,autoloader,firearm
+automatic rifle,automatic firearm,autoloader
+assault rifle,automatic rifle,automatic firearm
+machine gun,automatic firearm,autoloader
+pistol,firearm,gun
+revolver,pistol,firearm
+rifle,firearm,gun
+projectile,weapon,instrument
+keyboard,device,instrumentality
+computer keyboard,keyboard,device
+typewriter keyboard,keyboard,device
+lifting device,device,instrumentality
+crane,lifting device,device
+lighter,device,instrumentality
+machine,device,instrumentality
+power tool,machine,device
+power drill,power tool,machine
+power saw,power tool,machine
+chain saw,power saw,power tool
+calculator,machine,device
+abacus,calculator,machine
+cash machine,machine,device
+computer,machine,device
+analog computer,computer,machine
+slide rule,analog computer,computer
+digital computer,computer,machine
+personal computer,digital computer,computer
+desktop computer,personal computer,digital computer
+portable computer,personal computer,digital computer
+laptop,portable computer,personal computer
+hand-held computer,portable computer,personal computer
+notebook,portable computer,personal computer
+web site,computer,machine
+farm machine,machine,device
+harvester,farm machine,machine
+thresher,farm machine,machine
+slot machine,machine,device
+slot,slot machine,machine
+vending machine,slot machine,machine
+control,mechanism,no_abuelo
+joystick,control,mechanism
+switch,control,mechanism
+mechanical device,mechanism,no_abuelo
+hook,mechanical device,mechanism
+wheel,machine,no_abuelo
+car wheel,wheel,machine
+paddlewheel,wheel,machine
+pinwheel,wheel,machine
+potter's wheel,wheel,machine
+pump,mechanical device,mechanism
+gas pump,pump,mechanical device
+ride,mechanical device,mechanism
+carousel,ride,mechanical device
+swing,mechanical device,mechanism
+winder,mechanical device,mechanism
+reel,winder,mechanical device
+radiator,mechanism,no_abuelo
+memory device,device,instrumentality
+magnetic disk,memory device,device
+hard disc,magnetic disk,memory device
+optical device,device,instrumentality
+lens,optical device,device
+converging lens,lens,optical device
+sunglass,converging lens,lens
+pick,device,instrumentality
+reflector,device,instrumentality
+mirror,reflector,device
+car mirror,mirror,reflector
+solar dish,reflector,device
+remote control,device,instrumentality
+restraint,device,instrumentality
+brake,restraint,device
+brake system,brake,restraint
+hydraulic brake,brake system,brake
+disk brake,hydraulic brake,brake system
+fastener,restraint,device
+buckle,fastener,restraint
+clip,fastener,restraint
+hair slide,clip,fastener
+knot,fastener,restraint
+lock,fastener,restraint
+combination lock,lock,fastener
+padlock,lock,fastener
+nail,fastener,restraint
+pin,fastener,restraint
+safety pin,pin,fastener
+screw,fastener,restraint
+muzzle,restraint,device
+safety belt,restraint,device
+seat belt,safety belt,restraint
+runner,device,instrumentality
+ski,runner,device
+signaling device,device,instrumentality
+whistle,signaling device,device
+source of illumination,device,instrumentality
+lamp,source of illumination,device
+candle,lamp,source of illumination
+lantern,lamp,source of illumination
+jack-o'-lantern,lantern,lamp
+spotlight,lamp,source of illumination
+light,source of illumination,device
+torch,light,source of illumination
+support,device,instrumentality
+brace,support,device
+neck brace,brace,support
+pier,support,device
+rack,support,device
+tripod,rack,support
+structural member,support,device
+post,upright,no_abuelo
+maypole,post,upright
+trap,device,instrumentality
+mousetrap,trap,device
+web,trap,device
+spider web,web,trap
+implement,instrumentality,artifact
+tool,implement,instrumentality
+cutting implement,tool,implement
+cutter,cutting implement,tool
+edge tool,cutter,cutting implement
+ax,edge tool,cutter
+hatchet,ax,edge tool
+knife,edge tool,cutter
+cleaver,knife,edge tool
+letter opener,knife,edge tool
+plane,edge tool,cutter
+garden tool,tool,implement
+lawn mower,garden tool,tool
+hand tool,tool,implement
+hammer,hand tool,tool
+opener,hand tool,tool
+bottle opener,opener,hand tool
+corkscrew,bottle opener,opener
+can opener,opener,hand tool
+plunger,hand tool,tool
+screwdriver,hand tool,tool
+shovel,hand tool,tool
+plow,tool,implement
+utensil,implement,instrumentality
+kitchen utensil,utensil,implement
+cooking utensil,kitchen utensil,utensil
+cooker,cooking utensil,kitchen utensil
+crock pot,cooker,cooking utensil
+pan,cooking utensil,kitchen utensil
+frying pan,pan,cooking utensil
+wok,pan,cooking utensil
+pot,cooking utensil,kitchen utensil
+caldron,pot,cooking utensil
+coffeepot,pot,cooking utensil
+teapot,pot,cooking utensil
+turner,cooking utensil,kitchen utensil
+spatula,turner,cooking utensil
+cleaning implement,implement,instrumentality
+swab,cleaning implement,implement
+broom,cleaning implement,implement
+brush,implement,instrumentality
+paintbrush,brush,implement
+eraser,implement,instrumentality
+rubber eraser,eraser,implement
+sharpener,implement,instrumentality
+pencil sharpener,sharpener,implement
+oar,implement,instrumentality
+paddle,oar,implement
+rod,implement,instrumentality
+pole,rod,implement
+writing implement,implement,instrumentality
+pen,writing implement,implement
+quill,pen,writing implement
+ballpoint,pen,writing implement
+fountain pen,pen,writing implement
+stick,implement,instrumentality
+spindle,stick,implement
+drumstick,stick,implement
+staff,stick,implement
+crutch,staff,stick
+flagpole,staff,stick
+matchstick,stick,implement
+lever,bar,no_abuelo
+key,lever,bar
+space bar,key,lever
+sports implement,implement,instrumentality
+racket,sports implement,implement
+container,instrumentality,artifact
+wheeled vehicle,container,instrumentality
+bicycle,wheeled vehicle,container
+bicycle-built-for-two,bicycle,wheeled vehicle
+mountain bike,bicycle,wheeled vehicle
+car,wheeled vehicle,container
+freight car,car,wheeled vehicle
+passenger car,car,wheeled vehicle
+handcart,wheeled vehicle,container
+barrow,handcart,wheeled vehicle
+shopping cart,handcart,wheeled vehicle
+motor scooter,wheeled vehicle,container
+self-propelled vehicle,wheeled vehicle,container
+forklift,self-propelled vehicle,wheeled vehicle
+locomotive,self-propelled vehicle,wheeled vehicle
+electric locomotive,locomotive,self-propelled vehicle
+steam locomotive,locomotive,self-propelled vehicle
+motor vehicle,self-propelled vehicle,wheeled vehicle
+amphibian,motor vehicle,self-propelled vehicle
+ambulance,car,no_abuelo
+beach wagon,car,no_abuelo
+cab,car,no_abuelo
+convertible,car,no_abuelo
+jeep,car,no_abuelo
+limousine,car,no_abuelo
+minivan,car,no_abuelo
+model t,car,no_abuelo
+racer,car,no_abuelo
+sports car,car,no_abuelo
+go-kart,motor vehicle,self-propelled vehicle
+golfcart,motor vehicle,self-propelled vehicle
+motorcycle,motor vehicle,self-propelled vehicle
+minibike,motorcycle,motor vehicle
+moped,minibike,motorcycle
+snowplow,motor vehicle,self-propelled vehicle
+truck,motor vehicle,self-propelled vehicle
+fire engine,truck,motor vehicle
+garbage truck,truck,motor vehicle
+pickup,truck,motor vehicle
+tow truck,truck,motor vehicle
+trailer truck,truck,motor vehicle
+van,truck,motor vehicle
+moving van,van,truck
+passenger van,van,truck
+police van,van,truck
+recreational vehicle,self-propelled vehicle,wheeled vehicle
+streetcar,self-propelled vehicle,wheeled vehicle
+tracked vehicle,self-propelled vehicle,wheeled vehicle
+half track,tracked vehicle,self-propelled vehicle
+tank,tracked vehicle,self-propelled vehicle
+snowmobile,tracked vehicle,self-propelled vehicle
+tractor,self-propelled vehicle,wheeled vehicle
+tricycle,wheeled vehicle,container
+unicycle,wheeled vehicle,container
+wagon,wheeled vehicle,container
+cart,wagon,wheeled vehicle
+horse cart,cart,wagon
+jinrikisha,cart,wagon
+oxcart,cart,wagon
+basket,container,instrumentality
+hamper,basket,container
+shopping basket,basket,container
+thimble,container,instrumentality
+bag,container,instrumentality
+mailbag,bag,container
+backpack,bag,container
+purse,bag,container
+sleeping bag,bag,container
+plastic bag,bag,container
+spoon,container,instrumentality
+wooden spoon,spoon,container
+savings bank,container,instrumentality
+piggy bank,savings bank,container
+petri dish,dish,no_abuelo
+bowl,dish,no_abuelo
+soup bowl,bowl,dish
+mixing bowl,bowl,dish
+bin,container,instrumentality
+ashcan,bin,container
+shaker,container,instrumentality
+cocktail shaker,shaker,container
+saltshaker,shaker,container
+vessel,container,instrumentality
+basin,vessel,container
+washbasin,basin,vessel
+tub,vessel,container
+jar,vessel,container
+vase,jar,vessel
+beaker,jar,vessel
+bucket,vessel,container
+mortar,vessel,container
+bottle,vessel,container
+beer bottle,bottle,vessel
+pop bottle,bottle,vessel
+wine bottle,bottle,vessel
+pill bottle,bottle,vessel
+water bottle,bottle,vessel
+jug,bottle,vessel
+whiskey jug,jug,bottle
+water jug,jug,bottle
+reservoir,tank,no_abuelo
+water tower,reservoir,tank
+cistern,reservoir,tank
+rain barrel,cistern,reservoir
+bathtub,vessel,container
+ladle,vessel,container
+barrel,vessel,container
+pitcher,vessel,container
+drinking vessel,vessel,container
+mug,drinking vessel,vessel
+coffee mug,mug,drinking vessel
+envelope,container,instrumentality
+can,container,instrumentality
+milk can,can,container
+glass,container,instrumentality
+beer glass,glass,container
+goblet,glass,container
+cassette,container,instrumentality
+receptacle,container,instrumentality
+tray,receptacle,container
+dispenser,container,instrumentality
+soap dispenser,dispenser,container
+package,container,instrumentality
+packet,package,container
+box,container,instrumentality
+carton,box,container
+chest,box,container
+strongbox,box,container
+safe,strongbox,box
+pencil box,box,container
+crate,box,container
+mailbox,box,container
+measure,container,instrumentality
+measuring cup,measure,container
+case,container,instrumentality
+wallet,case,container
+equipment,instrumentality,artifact
+sports equipment,equipment,instrumentality
+gymnastic apparatus,sports equipment,equipment
+balance beam,gymnastic apparatus,sports equipment
+horizontal bar,gymnastic apparatus,sports equipment
+parallel bars,gymnastic apparatus,sports equipment
+weight,sports equipment,equipment
+barbell,weight,sports equipment
+dumbbell,weight,sports equipment
+game equipment,equipment,instrumentality
+pool table,game equipment,equipment
+game,game equipment,equipment
+puzzle,game,game equipment
+crossword puzzle,puzzle,game
+jigsaw puzzle,puzzle,game
+ball,game equipment,equipment
+soccer ball,ball,game equipment
+croquet ball,ball,game equipment
+golf ball,ball,game equipment
+baseball,ball,game equipment
+ping-pong ball,ball,game equipment
+punching bag,ball,game equipment
+rugby ball,ball,game equipment
+basketball,ball,game equipment
+volleyball,ball,game equipment
+tennis ball,ball,game equipment
+photographic equipment,equipment,instrumentality
+camera,photographic equipment,equipment
+polaroid camera,camera,photographic equipment
+reflex camera,camera,photographic equipment
+gear,equipment,instrumentality
+kit,gear,equipment
+carpenter's kit,kit,gear
+rig,gear,equipment
+drill rig,rig,gear
+drilling platform,drill rig,rig
+electronic equipment,equipment,instrumentality
+audio system,electronic equipment,equipment
+reproducer,audio system,electronic equipment
+stereo,reproducer,audio system
+ipod,stereo,reproducer
+modem,electronic equipment,equipment
+monitor,electronic equipment,equipment
+oscilloscope,electronic equipment,equipment
+peripheral,electronic equipment,equipment
+printer,peripheral,electronic equipment
+data input device,peripheral,electronic equipment
+cassette player,electronic equipment,equipment
+telephone,electronic equipment,equipment
+radiotelephone,telephone,electronic equipment
+cellular telephone,radiotelephone,telephone
+pay-phone,telephone,electronic equipment
+dial telephone,telephone,electronic equipment
+tape player,electronic equipment,equipment
+cd player,electronic equipment,equipment
+apparatus,equipment,instrumentality
+duplicator,apparatus,equipment
+photocopier,duplicator,apparatus
+rescue equipment,equipment,instrumentality
+parachute,rescue equipment,equipment
+toiletry,instrumentality,artifact
+cream,toiletry,instrumentality
+sunscreen,cream,toiletry
+perfume,toiletry,instrumentality
+cosmetic,toiletry,instrumentality
+makeup,cosmetic,toiletry
+face powder,makeup,cosmetic
+lipstick,makeup,cosmetic
+lotion,toiletry,instrumentality
+hair spray,toiletry,instrumentality
+conveyance,instrumentality,artifact
+vehicle,conveyance,instrumentality
+craft,vehicle,conveyance
+aircraft,craft,vehicle
+heavier-than-air craft,aircraft,craft
+airplane,heavier-than-air craft,aircraft
+airliner,airplane,heavier-than-air craft
+warplane,heavier-than-air craft,aircraft
+lighter-than-air craft,aircraft,craft
+airship,lighter-than-air craft,aircraft
+balloon,lighter-than-air craft,aircraft
+spacecraft,craft,vehicle
+space shuttle,spacecraft,craft
+boat,vessel,no_abuelo
+fireboat,boat,vessel
+gondola,boat,vessel
+motorboat,boat,vessel
+speedboat,motorboat,boat
+sea boat,boat,vessel
+lifeboat,sea boat,boat
+small boat,boat,vessel
+canoe,small boat,boat
+yawl,small boat,boat
+sailing vessel,vessel,no_abuelo
+schooner,sailing vessel,vessel
+sailboat,sailing vessel,vessel
+catamaran,sailboat,sailing vessel
+trimaran,sailboat,sailing vessel
+ship,vessel,no_abuelo
+cargo ship,ship,vessel
+container ship,cargo ship,ship
+passenger ship,ship,vessel
+liner,passenger ship,ship
+pirate,ship,vessel
+warship,ship,vessel
+aircraft carrier,warship,ship
+submersible,warship,ship
+submarine,submersible,warship
+wreck,ship,vessel
+military vehicle,vehicle,conveyance
+rocket,vehicle,conveyance
+sled,vehicle,conveyance
+bobsled,sled,vehicle
+dogsled,sled,vehicle
+litter,conveyance,instrumentality
+stretcher,litter,conveyance
+public transport,conveyance,instrumentality
+train,public transport,conveyance
+passenger train,train,public transport
+bullet train,passenger train,train
+bus,public transport,conveyance
+trolleybus,bus,public transport
+minibus,bus,public transport
+school bus,bus,public transport
+connection,instrumentality,artifact
+attachment,connection,instrumentality
+ligament,attachment,connection
+chain,ligament,attachment
+furnishing,instrumentality,artifact
+furniture,furnishing,instrumentality
+baby bed,furniture,furnishing
+bassinet,baby bed,furniture
+cradle,baby bed,furniture
+crib,baby bed,furniture
+bedroom furniture,furniture,furnishing
+bed,bedroom furniture,furniture
+four-poster,bed,bedroom furniture
+bookcase,furniture,furnishing
+cabinet,furniture,furnishing
+china cabinet,cabinet,furniture
+medicine chest,cabinet,furniture
+chest of drawers,furniture,furnishing
+chiffonier,chest of drawers,furniture
+table lamp,lamp,no_abuelo
+office furniture,furniture,furnishing
+file,office furniture,furniture
+seat,furniture,furnishing
+bench,seat,furniture
+park bench,bench,seat
+chair,seat,furniture
+barber chair,chair,seat
+chair of state,chair,seat
+throne,chair of state,chair
+folding chair,chair,seat
+rocking chair,chair,seat
+sofa,seat,furniture
+studio couch,convertible,no_abuelo
+toilet seat,seat,furniture
+table,furniture,furnishing
+desk,table,furniture
+dining table,table,no_abuelo
+wall unit,furniture,furnishing
+entertainment center,wall unit,furniture
+wardrobe,furniture,furnishing
+rug,furnishing,instrumentality
+prayer rug,rug,furnishing
+curtain,furnishing,instrumentality
+shower curtain,curtain,furnishing
+theater curtain,curtain,furnishing
+system,instrumentality,artifact
+communication system,system,instrumentality
+radio,communication system,system
+telecommunication system,communication system,system
+television,telecommunication system,communication system
+maze,system,instrumentality
+structure,artifact,root_name
+altar,structure,artifact
+area,structure,artifact
+patio,area,structure
+bridge,structure,artifact
+steel arch bridge,bridge,structure
+suspension bridge,bridge,structure
+viaduct,bridge,structure
+building,structure,artifact
+farm building,building,structure
+barn,farm building,building
+greenhouse,building,structure
+house,building,structure
+residence,house,building
+palace,residence,house
+religious residence,residence,house
+monastery,religious residence,residence
+library,building,structure
+outbuilding,building,structure
+shed,outbuilding,building
+apiary,shed,outbuilding
+boathouse,shed,outbuilding
+place of worship,building,structure
+church,place of worship,building
+mosque,place of worship,building
+shrine,place of worship,building
+stupa,shrine,place of worship
+planetarium,building,structure
+restaurant,building,structure
+theater,building,structure
+cinema,theater,building
+home theater,theater,building
+building complex,structure,artifact
+plant,building complex,structure
+factory,plant,building complex
+lumbermill,factory,plant
+coil,structure,artifact
+column,structure,artifact
+totem pole,column,structure
+obelisk,column,structure
+defensive structure,structure,artifact
+fortification,defensive structure,structure
+castle,fortification,defensive structure
+establishment,structure,artifact
+institution,establishment,structure
+penal institution,institution,establishment
+correctional institution,penal institution,institution
+prison,correctional institution,penal institution
+place of business,establishment,structure
+mercantile establishment,place of business,establishment
+marketplace,mercantile establishment,place of business
+grocery store,marketplace,mercantile establishment
+shop,mercantile establishment,place of business
+bakery,shop,mercantile establishment
+barbershop,shop,mercantile establishment
+bookshop,shop,mercantile establishment
+butcher shop,shop,mercantile establishment
+confectionery,shop,mercantile establishment
+shoe shop,shop,mercantile establishment
+tobacco shop,shop,mercantile establishment
+toyshop,shop,mercantile establishment
+fountain,structure,artifact
+housing,structure,artifact
+mobile home,housing,structure
+dwelling,housing,structure
+cliff dwelling,dwelling,housing
+yurt,dwelling,housing
+landing,structure,artifact
+dock,landing,structure
+memorial,structure,artifact
+triumphal arch,memorial,structure
+megalith,memorial,structure
+obstruction,structure,artifact
+bannister,barrier,no_abuelo
+breakwater,barrier,no_abuelo
+dam,barrier,no_abuelo
+fence,barrier,no_abuelo
+chainlink fence,fence,barrier
+picket fence,fence,barrier
+rail fence,fence,barrier
+worm fence,rail fence,fence
+stone wall,fence,barrier
+grate,barrier,no_abuelo
+grille,grate,barrier
+movable barrier,barrier,no_abuelo
+door,movable barrier,barrier
+sliding door,door,movable barrier
+gate,movable barrier,barrier
+turnstile,gate,movable barrier
+shelter,structure,artifact
+tent,shelter,structure
+mountain tent,tent,shelter
+supporting structure,structure,artifact
+framework,supporting structure,structure
+honeycomb,framework,supporting structure
+plate rack,rack,no_abuelo
+pedestal,support,no_abuelo
+tower,structure,artifact
+beacon,tower,structure
+creation,artifact,root_name
+product,creation,artifact
+work,product,creation
+publication,work,product
+magazine,publication,work
+comic book,magazine,publication
+sheet,artifact,root_name
+board,sheet,artifact
+scoreboard,board,sheet
+disk,plate,no_abuelo
+puck,disk,plate
+fabric,artifact,root_name
+wool,fabric,artifact
+piece of cloth,fabric,artifact
+handkerchief,piece of cloth,fabric
+dishrag,piece of cloth,fabric
+towel,piece of cloth,fabric
+paper towel,towel,piece of cloth
+bath towel,towel,piece of cloth
+bib,piece of cloth,fabric
+velvet,fabric,artifact
+covering,artifact,root_name
+mask,covering,artifact
+cloak,covering,artifact
+wrapping,covering,artifact
+jacket,wrapping,covering
+book jacket,jacket,wrapping
+shoji,screen,no_abuelo
+footwear,covering,artifact
+shoe,footwear,covering
+sandal,shoe,footwear
+running shoe,shoe,footwear
+loafer,shoe,footwear
+boot,footwear,covering
+cowboy boot,boot,footwear
+clog,footwear,covering
+cloth covering,covering,artifact
+dressing,cloth covering,covering
+bandage,dressing,cloth covering
+adhesive bandage,bandage,dressing
+band aid,adhesive bandage,bandage
+bedclothes,cloth covering,covering
+quilt,bedclothes,cloth covering
+floor cover,covering,artifact
+mat,floor cover,covering
+doormat,mat,floor cover
+clothing,covering,artifact
+attire,clothing,covering
+disguise,attire,clothing
+hairpiece,attire,clothing
+wig,hairpiece,attire
+protective garment,clothing,covering
+knee pad,protective garment,clothing
+apron,protective garment,clothing
+accessory,clothing,covering
+belt,accessory,clothing
+outerwear,clothing,covering
+gown,outerwear,clothing
+academic gown,gown,outerwear
+vestment,gown,outerwear
+garment,clothing,covering
+vest,garment,clothing
+bulletproof vest,vest,garment
+swimsuit,garment,clothing
+swimming trunks,swimsuit,garment
+maillot,swimsuit,garment
+bikini,swimsuit,garment
+suit,garment,clothing
+scarf,garment,clothing
+feather boa,scarf,garment
+stole,scarf,garment
+neckwear,garment,clothing
+necktie,neckwear,garment
+bow tie,necktie,neckwear
+windsor tie,necktie,neckwear
+bolo tie,necktie,neckwear
+skirt,garment,clothing
+hoopskirt,skirt,garment
+miniskirt,skirt,garment
+overskirt,skirt,garment
+sarong,skirt,garment
+overgarment,garment,clothing
+poncho,cloak,no_abuelo
+coat,overgarment,garment
+fur coat,coat,overgarment
+raincoat,coat,overgarment
+trench coat,raincoat,coat
+lab coat,coat,overgarment
+sweater,garment,clothing
+pullover,sweater,garment
+sweatshirt,pullover,sweater
+cardigan,sweater,garment
+robe,garment,clothing
+kimono,robe,garment
+abaya,robe,garment
+shirt,garment,clothing
+jersey,shirt,garment
+diaper,garment,clothing
+handwear,clothing,covering
+glove,handwear,clothing
+mitten,glove,handwear
+headdress,clothing,covering
+helmet,headdress,clothing
+crash helmet,helmet,headdress
+football helmet,helmet,headdress
+cap,headdress,clothing
+bathing cap,cap,headdress
+mortarboard,cap,headdress
+shower cap,cap,headdress
+hat,headdress,clothing
+bonnet,hat,headdress
+bearskin,hat,headdress
+cowboy hat,hat,headdress
+sombrero,hat,headdress
+hosiery,footwear,no_abuelo
+tights,hosiery,footwear
+sock,hosiery,footwear
+stocking,hosiery,footwear
+christmas stocking,stocking,hosiery
+uniform,clothing,covering
+military uniform,uniform,clothing
+nightwear,clothing,covering
+pajama,nightwear,clothing
+apparel,clothing,covering
+workwear,apparel,clothing
+jean,workwear,apparel
+woman's clothing,clothing,covering
+dress,woman's clothing,clothing
+brassiere,woman's clothing,clothing
+protective covering,covering,artifact
+shield,protective covering,covering
+armor plate,plate,no_abuelo
+pickelhaube,helmet,no_abuelo
+breastplate,armor plate,plate
+lens cap,cap,no_abuelo
+roof,protective covering,covering
+tile roof,roof,protective covering
+dome,roof,protective covering
+thatch,roof,protective covering
+vault,roof,protective covering
+blind,protective covering,covering
+window blind,blind,protective covering
+window shade,window blind,blind
+binder,protective covering,covering
+shade,protective covering,covering
+lampshade,shade,protective covering
+mosquito net,screen,no_abuelo
+window screen,screen,no_abuelo
+fire screen,screen,no_abuelo
+armor,protective covering,covering
+body armor,armor,protective covering
+cuirass,body armor,armor
+chain mail,body armor,armor
+gasmask,mask,no_abuelo
+face mask,mask,no_abuelo
+ski mask,face mask,mask
+sheath,protective covering,covering
+holster,sheath,protective covering
+scabbard,sheath,protective covering
+birdhouse,shelter,no_abuelo
+bell cote,shelter,no_abuelo
+canopy,shelter,no_abuelo
+umbrella,canopy,shelter
+top,covering,artifact
+manhole cover,top,covering
+bottlecap,cap,no_abuelo
+nipple,cap,no_abuelo
+padding,artifact,root_name
+cushion,padding,artifact
+pillow,cushion,padding
+commodity,artifact,root_name
+consumer goods,commodity,artifact
+durables,consumer goods,commodity
+appliance,durables,consumer goods
+dryer,appliance,durables
+hand blower,dryer,appliance
+home appliance,appliance,durables
+sewing machine,home appliance,appliance
+iron,home appliance,appliance
+kitchen appliance,home appliance,appliance
+coffee maker,kitchen appliance,home appliance
+espresso maker,coffee maker,kitchen appliance
+microwave,kitchen appliance,home appliance
+oven,kitchen appliance,home appliance
+dutch oven,oven,kitchen appliance
+rotisserie,oven,kitchen appliance
+toaster,kitchen appliance,home appliance
+waffle iron,kitchen appliance,home appliance
+vacuum,home appliance,appliance
+white goods,home appliance,appliance
+dishwasher,white goods,home appliance
+refrigerator,white goods,home appliance
+washer,white goods,home appliance
+drygoods,commodity,artifact
+linen,white goods,no_abuelo
+bath linen,linen,white goods
+excavation,artifact,root_name
+pool,excavation,artifact
+decoration,artifact,root_name
+adornment,decoration,artifact
+jewelry,adornment,decoration
+necklace,jewelry,adornment
+design,decoration,artifact
+emblem,design,decoration
+plaything,artifact,root_name
+teddy,plaything,artifact
+article,artifact,root_name
+ware,article,artifact
+tableware,ware,article
+cutlery,tableware,ware
+crockery,tableware,ware
+surface,artifact,root_name
+horizontal surface,surface,artifact
+platform,horizontal surface,surface
+stage,platform,horizontal surface
+organism,root_name,no_abuelo
+vascular plant,plant,no_abuelo
+spermatophyte,vascular plant,plant
+angiosperm,spermatophyte,vascular plant
+flower,angiosperm,spermatophyte
+daisy,flower,angiosperm
+orchid,flower,angiosperm
+lady's slipper,orchid,flower
+yellow lady's slipper,lady's slipper,orchid
+fungus,organism,root_name
+hen-of-the-woods,fungus,organism
+earthstar,fungus,organism
+coral fungus,fungus,organism
+stinkhorn,fungus,organism
+gyromitra,fungus,organism
+bolete,fungus,organism
+basidiomycete,fungus,organism
+agaric,basidiomycete,fungus
+person,organism,root_name
+contestant,person,organism
+athlete,contestant,person
+ballplayer,athlete,contestant
+explorer,person,organism
+diver,explorer,person
+scuba diver,diver,explorer
+peer,person,organism
+associate,peer,person
+participant,associate,peer
+groom,participant,associate
+animal,organism,root_name
+invertebrate,animal,organism
+arthropod,invertebrate,animal
+trilobite,arthropod,invertebrate
+arachnid,arthropod,invertebrate
+harvestman,arachnid,arthropod
+scorpion,arachnid,arthropod
+spider,arachnid,arthropod
+black and gold garden spider,spider,arachnid
+barn spider,spider,arachnid
+garden spider,spider,arachnid
+black widow,spider,arachnid
+tarantula,spider,arachnid
+wolf spider,spider,arachnid
+acarine,arachnid,arthropod
+tick,acarine,arachnid
+centipede,arthropod,invertebrate
+crustacean,arthropod,invertebrate
+malacostracan crustacean,crustacean,arthropod
+isopod,malacostracan crustacean,crustacean
+decapod crustacean,crustacean,arthropod
+crab,decapod crustacean,crustacean
+dungeness crab,crab,decapod crustacean
+rock crab,crab,decapod crustacean
+fiddler crab,crab,decapod crustacean
+king crab,crab,decapod crustacean
+lobster,decapod crustacean,crustacean
+true lobster,lobster,decapod crustacean
+american lobster,true lobster,lobster
+spiny lobster,lobster,decapod crustacean
+crayfish,decapod crustacean,crustacean
+hermit crab,decapod crustacean,crustacean
+insect,arthropod,invertebrate
+beetle,insect,arthropod
+tiger beetle,beetle,insect
+ladybug,beetle,insect
+ground beetle,beetle,insect
+long-horned beetle,beetle,insect
+leaf beetle,beetle,insect
+lamellicorn beetle,beetle,insect
+scarabaeid beetle,lamellicorn beetle,beetle
+dung beetle,scarabaeid beetle,lamellicorn beetle
+rhinoceros beetle,scarabaeid beetle,lamellicorn beetle
+weevil,beetle,insect
+dipterous insect,insect,arthropod
+fly,dipterous insect,insect
+hymenopterous insect,insect,arthropod
+ant,hymenopterous insect,insect
+bee,hymenopterous insect,insect
+orthopterous insect,insect,arthropod
+grasshopper,orthopterous insect,insect
+cricket,orthopterous insect,insect
+phasmid,insect,arthropod
+walking stick,phasmid,insect
+dictyopterous insect,insect,arthropod
+cockroach,dictyopterous insect,insect
+mantis,dictyopterous insect,insect
+homopterous insect,insect,arthropod
+cicada,homopterous insect,insect
+leafhopper,homopterous insect,insect
+neuropteron,insect,arthropod
+lacewing,neuropteron,insect
+odonate,insect,arthropod
+dragonfly,odonate,insect
+damselfly,odonate,insect
+lepidopterous insect,insect,arthropod
+butterfly,lepidopterous insect,insect
+nymphalid,butterfly,lepidopterous insect
+admiral,nymphalid,butterfly
+ringlet,butterfly,lepidopterous insect
+danaid,butterfly,lepidopterous insect
+monarch,danaid,butterfly
+pierid,butterfly,lepidopterous insect
+cabbage butterfly,pierid,butterfly
+sulphur butterfly,butterfly,lepidopterous insect
+lycaenid,butterfly,lepidopterous insect
+coelenterate,invertebrate,animal
+jellyfish,coelenterate,invertebrate
+anthozoan,coelenterate,invertebrate
+sea anemone,anthozoan,coelenterate
+coral,anthozoan,coelenterate
+stony coral,coral,anthozoan
+brain coral,stony coral,coral
+worm,invertebrate,animal
+flatworm,worm,invertebrate
+nematode,worm,invertebrate
+mollusk,invertebrate,animal
+gastropod,mollusk,invertebrate
+conch,gastropod,mollusk
+snail,gastropod,mollusk
+slug,gastropod,mollusk
+sea slug,gastropod,mollusk
+chiton,mollusk,invertebrate
+cephalopod,mollusk,invertebrate
+chambered nautilus,cephalopod,mollusk
+echinoderm,invertebrate,animal
+starfish,echinoderm,invertebrate
+sea urchin,echinoderm,invertebrate
+sea cucumber,echinoderm,invertebrate
+domestic animal,animal,organism
+domestic cat,domestic animal,animal
+egyptian cat,domestic cat,domestic animal
+persian cat,domestic cat,domestic animal
+tiger cat,domestic cat,domestic animal
+siamese cat,domestic cat,domestic animal
+tabby,domestic cat,domestic animal
+dog,domestic animal,animal
+hunting dog,dog,domestic animal
+sporting dog,hunting dog,dog
+pointer,sporting dog,hunting dog
+vizsla,pointer,sporting dog
+german short-haired pointer,pointer,sporting dog
+setter,sporting dog,hunting dog
+english setter,setter,sporting dog
+gordon setter,setter,sporting dog
+irish setter,setter,sporting dog
+spaniel,sporting dog,hunting dog
+water spaniel,spaniel,sporting dog
+irish water spaniel,water spaniel,spaniel
+springer spaniel,spaniel,sporting dog
+welsh springer spaniel,springer spaniel,spaniel
+english springer,springer spaniel,spaniel
+clumber,spaniel,sporting dog
+brittany spaniel,spaniel,sporting dog
+cocker spaniel,spaniel,sporting dog
+sussex spaniel,spaniel,sporting dog
+retriever,sporting dog,hunting dog
+golden retriever,retriever,sporting dog
+chesapeake bay retriever,retriever,sporting dog
+curly-coated retriever,retriever,sporting dog
+flat-coated retriever,retriever,sporting dog
+labrador retriever,retriever,sporting dog
+terrier,hunting dog,dog
+australian terrier,terrier,hunting dog
+fox terrier,terrier,hunting dog
+wire-haired fox terrier,fox terrier,terrier
+soft-coated wheaten terrier,terrier,hunting dog
+wirehair,terrier,hunting dog
+welsh terrier,wirehair,terrier
+sealyham terrier,welsh terrier,wirehair
+lakeland terrier,wirehair,terrier
+dandie dinmont,terrier,hunting dog
+airedale,terrier,hunting dog
+lhasa,terrier,hunting dog
+yorkshire terrier,terrier,hunting dog
+west highland white terrier,terrier,hunting dog
+schnauzer,terrier,hunting dog
+giant schnauzer,schnauzer,terrier
+miniature schnauzer,schnauzer,terrier
+standard schnauzer,schnauzer,terrier
+bullterrier,terrier,hunting dog
+staffordshire bullterrier,bullterrier,terrier
+american staffordshire terrier,bullterrier,terrier
+norfolk terrier,terrier,hunting dog
+cairn,terrier,hunting dog
+kerry blue terrier,terrier,hunting dog
+scotch terrier,terrier,hunting dog
+boston bull,terrier,hunting dog
+bedlington terrier,terrier,hunting dog
+irish terrier,terrier,hunting dog
+silky terrier,terrier,hunting dog
+norwich terrier,terrier,hunting dog
+tibetan terrier,terrier,hunting dog
+border terrier,terrier,hunting dog
+hound,hunting dog,dog
+wolfhound,hound,hunting dog
+borzoi,wolfhound,hound
+irish wolfhound,wolfhound,hound
+scottish deerhound,hound,hunting dog
+coonhound,hound,hunting dog
+black-and-tan coonhound,coonhound,hound
+foxhound,hound,hunting dog
+walker hound,foxhound,hound
+english foxhound,foxhound,hound
+weimaraner,hound,hunting dog
+otterhound,hound,hunting dog
+bloodhound,hound,hunting dog
+norwegian elkhound,hound,hunting dog
+saluki,hound,hunting dog
+afghan hound,hound,hunting dog
+greyhound,hound,hunting dog
+whippet,greyhound,hound
+italian greyhound,greyhound,hound
+beagle,hound,hunting dog
+basset,hound,hunting dog
+bluetick,hound,hunting dog
+redbone,hound,hunting dog
+ibizan hound,hound,hunting dog
+rhodesian ridgeback,hunting dog,dog
+dalmatian,dog,domestic animal
+corgi,dog,domestic animal
+pembroke,corgi,dog
+mexican hairless,dog,domestic animal
+newfoundland,dog,domestic animal
+poodle,dog,domestic animal
+miniature poodle,poodle,dog
+toy poodle,poodle,dog
+standard poodle,poodle,dog
+basenji,dog,domestic animal
+leonberg,dog,domestic animal
+griffon,dog,domestic animal
+brabancon griffon,griffon,dog
+pug,dog,domestic animal
+working dog,dog,domestic animal
+great dane,working dog,dog
+shepherd dog,working dog,dog
+old english sheepdog,shepherd dog,working dog
+bouvier des flandres,shepherd dog,working dog
+rottweiler,shepherd dog,working dog
+komondor,shepherd dog,working dog
+collie,shepherd dog,working dog
+border collie,shepherd dog,working dog
+belgian sheepdog,shepherd dog,working dog
+malinois,belgian sheepdog,shepherd dog
+groenendael,belgian sheepdog,shepherd dog
+shetland sheepdog,shepherd dog,working dog
+kelpie,shepherd dog,working dog
+briard,shepherd dog,working dog
+german shepherd,shepherd dog,working dog
+watchdog,working dog,dog
+schipperke,watchdog,working dog
+pinscher,watchdog,working dog
+doberman,pinscher,watchdog
+affenpinscher,pinscher,watchdog
+miniature pinscher,pinscher,watchdog
+kuvasz,watchdog,working dog
+sled dog,working dog,dog
+siberian husky,sled dog,working dog
+malamute,sled dog,working dog
+boxer,working dog,dog
+bull mastiff,working dog,dog
+eskimo dog,working dog,dog
+sennenhunde,working dog,dog
+entlebucher,sennenhunde,working dog
+bernese mountain dog,sennenhunde,working dog
+greater swiss mountain dog,sennenhunde,working dog
+appenzeller,sennenhunde,working dog
+saint bernard,working dog,dog
+mastiff,working dog,dog
+tibetan mastiff,mastiff,working dog
+bulldog,working dog,dog
+french bulldog,bulldog,working dog
+spitz,dog,domestic animal
+pomeranian,spitz,dog
+keeshond,spitz,dog
+chow,spitz,dog
+samoyed,spitz,dog
+great pyrenees,dog,domestic animal
+toy dog,dog,domestic animal
+toy spaniel,toy dog,dog
+papillon,toy spaniel,toy dog
+english toy spaniel,toy spaniel,toy dog
+blenheim spaniel,english toy spaniel,toy spaniel
+pekinese,toy dog,dog
+maltese dog,toy dog,dog
+toy terrier,toy dog,dog
+japanese spaniel,toy dog,dog
+shih-tzu,toy dog,dog
+chihuahua,toy dog,dog
+chordate,animal,organism
+vertebrate,chordate,animal
+mammal,vertebrate,chordate
+placental,mammal,vertebrate
+lagomorph,placental,mammal
+leporid,lagomorph,placental
+hare,leporid,lagomorph
+rabbit,leporid,lagomorph
+angora,rabbit,leporid
+wood rabbit,rabbit,leporid
+primate,placental,mammal
+lemur,primate,placental
+indri,lemur,primate
+madagascar cat,lemur,primate
+ape,primate,placental
+anthropoid ape,ape,primate
+lesser ape,anthropoid ape,ape
+siamang,lesser ape,anthropoid ape
+gibbon,lesser ape,anthropoid ape
+great ape,anthropoid ape,ape
+orangutan,great ape,anthropoid ape
+chimpanzee,great ape,anthropoid ape
+gorilla,great ape,anthropoid ape
+monkey,primate,placental
+old world monkey,monkey,primate
+colobus,old world monkey,monkey
+guenon,old world monkey,monkey
+proboscis monkey,old world monkey,monkey
+patas,old world monkey,monkey
+baboon,old world monkey,monkey
+macaque,old world monkey,monkey
+langur,old world monkey,monkey
+new world monkey,monkey,primate
+titi,new world monkey,monkey
+squirrel monkey,new world monkey,monkey
+spider monkey,new world monkey,monkey
+capuchin,new world monkey,monkey
+howler monkey,new world monkey,monkey
+marmoset,new world monkey,monkey
+carnivore,placental,mammal
+bear,carnivore,placental
+brown bear,bear,carnivore
+ice bear,bear,carnivore
+american black bear,bear,carnivore
+sloth bear,bear,carnivore
+musteline mammal,carnivore,placental
+badger,musteline mammal,carnivore
+mink,musteline mammal,carnivore
+black-footed ferret,musteline mammal,carnivore
+skunk,musteline mammal,carnivore
+weasel,musteline mammal,carnivore
+polecat,musteline mammal,carnivore
+otter,musteline mammal,carnivore
+procyonid,carnivore,placental
+lesser panda,procyonid,carnivore
+giant panda,procyonid,carnivore
+viverrine,carnivore,placental
+meerkat,viverrine,carnivore
+mongoose,viverrine,carnivore
+canine,carnivore,placental
+wild dog,canine,carnivore
+dhole,wild dog,canine
+dingo,wild dog,canine
+african hunting dog,wild dog,canine
+hyena,canine,carnivore
+fox,canine,carnivore
+kit fox,fox,canine
+red fox,fox,canine
+grey fox,fox,canine
+arctic fox,fox,canine
+wolf,canine,carnivore
+red wolf,wolf,canine
+coyote,wolf,canine
+white wolf,wolf,canine
+timber wolf,wolf,canine
+feline,carnivore,placental
+big cat,feline,carnivore
+jaguar,big cat,feline
+tiger,big cat,feline
+leopard,big cat,feline
+snow leopard,big cat,feline
+lion,big cat,feline
+cheetah,big cat,feline
+cat,feline,carnivore
+wildcat,cat,feline
+cougar,wildcat,cat
+lynx,wildcat,cat
+aquatic mammal,placental,mammal
+sea cow,aquatic mammal,placental
+dugong,sea cow,aquatic mammal
+pinniped mammal,aquatic mammal,placental
+seal,pinniped mammal,aquatic mammal
+eared seal,seal,pinniped mammal
+sea lion,eared seal,seal
+cetacean,aquatic mammal,placental
+whale,cetacean,aquatic mammal
+toothed whale,whale,cetacean
+dolphin,toothed whale,whale
+killer whale,dolphin,toothed whale
+baleen whale,whale,cetacean
+grey whale,baleen whale,whale
+ungulate,placental,mammal
+odd-toed ungulate,ungulate,placental
+equine,odd-toed ungulate,ungulate
+zebra,equine,odd-toed ungulate
+horse,equine,odd-toed ungulate
+sorrel,horse,equine
+even-toed ungulate,ungulate,placental
+camel,even-toed ungulate,ungulate
+arabian camel,camel,even-toed ungulate
+ruminant,even-toed ungulate,ungulate
+bovid,ruminant,even-toed ungulate
+sheep,bovid,ruminant
+ram,sheep,bovid
+antelope,bovid,ruminant
+gazelle,antelope,bovid
+impala,antelope,bovid
+hartebeest,antelope,bovid
+wild sheep,bovid,ruminant
+mountain sheep,wild sheep,bovid
+bighorn,mountain sheep,wild sheep
+goat,bovid,ruminant
+wild goat,goat,bovid
+ibex,wild goat,goat
+bison,bovid,ruminant
+old world buffalo,bovid,ruminant
+water buffalo,old world buffalo,bovid
+bovine,bovid,ruminant
+cattle,bovine,bovid
+ox,cattle,bovine
+hippopotamus,even-toed ungulate,ungulate
+llama,even-toed ungulate,ungulate
+swine,even-toed ungulate,ungulate
+wild boar,swine,even-toed ungulate
+warthog,swine,even-toed ungulate
+hog,swine,even-toed ungulate
+edentate,placental,mammal
+sloth,edentate,placental
+three-toed sloth,sloth,edentate
+armadillo,edentate,placental
+pachyderm,placental,mammal
+elephant,pachyderm,placental
+african elephant,elephant,pachyderm
+indian elephant,elephant,pachyderm
+rodent,placental,mammal
+porcupine,rodent,placental
+cavy,rodent,placental
+guinea pig,cavy,rodent
+hamster,rodent,placental
+squirrel,rodent,placental
+tree squirrel,squirrel,rodent
+fox squirrel,tree squirrel,squirrel
+marmot,rodent,placental
+beaver,rodent,placental
+tusker,mammal,vertebrate
+prototherian,mammal,vertebrate
+monotreme,prototherian,mammal
+echidna,monotreme,prototherian
+platypus,monotreme,prototherian
+metatherian,mammal,vertebrate
+marsupial,metatherian,mammal
+phalanger,marsupial,metatherian
+koala,phalanger,marsupial
+kangaroo,marsupial,metatherian
+wallaby,kangaroo,marsupial
+wombat,marsupial,metatherian
+bird,vertebrate,chordate
+cock,bird,vertebrate
+hen,bird,vertebrate
+ratite,bird,vertebrate
+ostrich,ratite,bird
+passerine,bird,vertebrate
+oscine,passerine,bird
+finch,oscine,passerine
+brambling,finch,oscine
+goldfinch,finch,oscine
+house finch,finch,oscine
+junco,finch,oscine
+bunting,finch,oscine
+indigo bunting,bunting,finch
+thrush,oscine,passerine
+robin,thrush,oscine
+nightingale,thrush,oscine
+bulbul,nightingale,thrush
+corvine bird,oscine,passerine
+jay,corvine bird,oscine
+magpie,corvine bird,oscine
+titmouse,oscine,passerine
+chickadee,titmouse,oscine
+water ouzel,oscine,passerine
+bird of prey,bird,vertebrate
+hawk,bird of prey,bird
+kite,hawk,bird of prey
+eagle,bird of prey,bird
+bald eagle,eagle,bird of prey
+vulture,bird of prey,bird
+owl,bird of prey,bird
+great grey owl,owl,bird of prey
+gallinaceous bird,bird,vertebrate
+game bird,gallinaceous bird,bird
+grouse,game bird,gallinaceous bird
+black grouse,grouse,game bird
+ptarmigan,grouse,game bird
+ruffed grouse,grouse,game bird
+prairie chicken,grouse,game bird
+phasianid,game bird,gallinaceous bird
+pheasant,phasianid,game bird
+peafowl,pheasant,phasianid
+peacock,peafowl,pheasant
+quail,phasianid,game bird
+partridge,phasianid,game bird
+parrot,bird,vertebrate
+african grey,parrot,bird
+macaw,parrot,bird
+cockatoo,parrot,bird
+sulphur-crested cockatoo,cockatoo,parrot
+lory,parrot,bird
+lorikeet,lory,parrot
+cuculiform bird,bird,vertebrate
+cuckoo,cuculiform bird,bird
+coucal,cuckoo,cuculiform bird
+coraciiform bird,bird,vertebrate
+bee eater,coraciiform bird,bird
+hornbill,coraciiform bird,bird
+apodiform bird,bird,vertebrate
+hummingbird,apodiform bird,bird
+piciform bird,bird,vertebrate
+jacamar,piciform bird,bird
+toucan,piciform bird,bird
+aquatic bird,bird,vertebrate
+waterfowl,aquatic bird,bird
+anseriform bird,waterfowl,aquatic bird
+goose,anseriform bird,waterfowl
+duck,anseriform bird,waterfowl
+drake,duck,anseriform bird
+sea duck,duck,anseriform bird
+merganser,sea duck,duck
+red-breasted merganser,merganser,sea duck
+swan,aquatic bird,bird
+black swan,swan,aquatic bird
+wading bird,aquatic bird,bird
+stork,wading bird,aquatic bird
+white stork,stork,wading bird
+black stork,stork,wading bird
+spoonbill,wading bird,aquatic bird
+flamingo,wading bird,aquatic bird
+heron,wading bird,aquatic bird
+egret,heron,wading bird
+american egret,egret,heron
+little blue heron,heron,wading bird
+bittern,heron,wading bird
+limpkin,wading bird,aquatic bird
+rail,wading bird,aquatic bird
+coot,rail,wading bird
+american coot,coot,rail
+bustard,wading bird,aquatic bird
+shorebird,wading bird,aquatic bird
+plover,shorebird,wading bird
+turnstone,plover,shorebird
+ruddy turnstone,turnstone,plover
+sandpiper,shorebird,wading bird
+red-backed sandpiper,sandpiper,shorebird
+redshank,sandpiper,shorebird
+snipe,shorebird,wading bird
+dowitcher,snipe,shorebird
+oystercatcher,shorebird,wading bird
+gallinule,aquatic bird,bird
+purple gallinule,gallinule,aquatic bird
+european gallinule,purple gallinule,gallinule
+seabird,aquatic bird,bird
+pelecaniform seabird,seabird,aquatic bird
+pelican,pelecaniform seabird,seabird
+sphenisciform seabird,seabird,aquatic bird
+penguin,sphenisciform seabird,seabird
+king penguin,penguin,sphenisciform seabird
+pelagic bird,seabird,aquatic bird
+albatross,pelagic bird,seabird
+reptile,vertebrate,chordate
+anapsid,reptile,vertebrate
+chelonian,anapsid,reptile
+turtle,chelonian,anapsid
+sea turtle,turtle,chelonian
+loggerhead,sea turtle,turtle
+leatherback turtle,sea turtle,turtle
+mud turtle,turtle,chelonian
+terrapin,turtle,chelonian
+box turtle,turtle,chelonian
+diapsid,reptile,vertebrate
+saurian,diapsid,reptile
+lizard,saurian,diapsid
+gecko,lizard,saurian
+banded gecko,gecko,lizard
+iguanid,lizard,saurian
+common iguana,iguanid,lizard
+american chameleon,iguanid,lizard
+teiid lizard,lizard,saurian
+whiptail,teiid lizard,lizard
+agamid,lizard,saurian
+agama,agamid,lizard
+frilled lizard,agamid,lizard
+anguid lizard,lizard,saurian
+alligator lizard,anguid lizard,lizard
+venomous lizard,lizard,saurian
+gila monster,venomous lizard,lizard
+lacertid lizard,lizard,saurian
+green lizard,lacertid lizard,lizard
+chameleon,lizard,saurian
+african chameleon,chameleon,lizard
+komodo dragon,monitor,no_abuelo
+archosaur,diapsid,reptile
+dinosaur,archosaur,diapsid
+ornithischian,dinosaur,archosaur
+ceratopsian,ornithischian,dinosaur
+triceratops,ceratopsian,ornithischian
+crocodilian reptile,diapsid,reptile
+alligator,crocodilian reptile,diapsid
+american alligator,alligator,crocodilian reptile
+crocodile,crocodilian reptile,diapsid
+african crocodile,crocodile,crocodilian reptile
+snake,diapsid,reptile
+colubrid snake,snake,diapsid
+thunder snake,colubrid snake,snake
+ringneck snake,colubrid snake,snake
+hognose snake,colubrid snake,snake
+green snake,colubrid snake,snake
+king snake,colubrid snake,snake
+garter snake,colubrid snake,snake
+water snake,colubrid snake,snake
+vine snake,colubrid snake,snake
+night snake,colubrid snake,snake
+constrictor,snake,diapsid
+boa,constrictor,snake
+boa constrictor,boa,constrictor
+python,boa,constrictor
+rock python,python,boa
+elapid,snake,diapsid
+cobra,elapid,snake
+indian cobra,cobra,elapid
+mamba,elapid,snake
+black mamba,mamba,elapid
+green mamba,black mamba,mamba
+sea snake,snake,diapsid
+viper,snake,diapsid
+horned viper,viper,snake
+pit viper,viper,snake
+rattlesnake,pit viper,viper
+diamondback,rattlesnake,pit viper
+sidewinder,rattlesnake,pit viper
+frog,amphibian,no_abuelo
+true frog,frog,amphibian
+bullfrog,true frog,frog
+tree frog,frog,amphibian
+tailed frog,frog,amphibian
+salamander,amphibian,no_abuelo
+european fire salamander,salamander,amphibian
+newt,salamander,amphibian
+common newt,newt,salamander
+eft,newt,salamander
+ambystomid,salamander,amphibian
+spotted salamander,ambystomid,salamander
+axolotl,ambystomid,salamander
+aquatic vertebrate,vertebrate,chordate
+fish,aquatic vertebrate,vertebrate
+cartilaginous fish,fish,aquatic vertebrate
+elasmobranch,cartilaginous fish,fish
+ray,elasmobranch,cartilaginous fish
+electric ray,ray,elasmobranch
+stingray,ray,elasmobranch
+shark,elasmobranch,cartilaginous fish
+mackerel shark,shark,elasmobranch
+great white shark,mackerel shark,shark
+requiem shark,shark,elasmobranch
+tiger shark,requiem shark,shark
+hammerhead,shark,elasmobranch
+food fish,fish,aquatic vertebrate
+barracouta,food fish,fish
+salmon,food fish,fish
+coho,salmon,food fish
+bony fish,fish,aquatic vertebrate
+teleost fish,bony fish,fish
+soft-finned fish,teleost fish,bony fish
+cypriniform fish,soft-finned fish,teleost fish
+cyprinid,cypriniform fish,soft-finned fish
+tench,cyprinid,cypriniform fish
+goldfish,cyprinid,cypriniform fish
+eel,soft-finned fish,teleost fish
+spiny-finned fish,teleost fish,bony fish
+percoid fish,spiny-finned fish,teleost fish
+butterfly fish,percoid fish,spiny-finned fish
+rock beauty,butterfly fish,percoid fish
+damselfish,percoid fish,spiny-finned fish
+anemone fish,damselfish,percoid fish
+scorpaenoid,spiny-finned fish,teleost fish
+scorpaenid,scorpaenoid,spiny-finned fish
+lionfish,scorpaenid,scorpaenoid
+plectognath,spiny-finned fish,teleost fish
+puffer,plectognath,spiny-finned fish
+ganoid,teleost fish,bony fish
+sturgeon,ganoid,teleost fish
+gar,ganoid,teleost fish

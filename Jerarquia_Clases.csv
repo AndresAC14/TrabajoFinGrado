@@ -1,1741 +1,1741 @@
-ClaseReal,Nivel
-menu,1
-carbonara,1
-bubble,1
-pretzel,1
-street sign,1
-toilet tissue,1
-french loaf,1
-traffic light,1
-bun,1
-bagel,2
-sauce,1
-chocolate sauce,2
-dip,1
-guacamole,2
-feed,1
-fodder,2
-hay,3
-sandwich,1
-hotdog,2
-hamburger,2
-cheeseburger,3
-foodstuff,1
-starches,2
-potato,3
-mashed potato,4
-concoction,2
-dough,3
-nutriment,1
-dish,2
-stew,3
-hot pot,4
-meat loaf,3
-soup,3
-consomme,4
-potpie,3
-burrito,3
-pizza,3
-course,2
-entree,3
-plate,4
-dessert,3
-frozen dessert,4
-ice lolly,5
-ice cream,5
-pudding,4
-trifle,5
-geological formation,1
-cliff,2
-natural depression,2
-valley,3
-natural elevation,2
-mountain,3
-alp,4
-volcano,4
-promontory,3
-ridge,3
-bar,4
-sandbar,5
-reef,4
-coral reef,5
-shore,2
-lakeside,3
-seashore,3
-spring,2
-geyser,3
-beverage,1
-coffee,2
-espresso,3
-alcohol,2
-wine,3
-red wine,4
-mixed drink,3
-punch,4
-eggnog,5
-cup,5
-vegetable,1
-solanaceous vegetable,2
-pepper,3
-sweet pepper,4
-bell pepper,5
-cruciferous vegetable,2
-cabbage,3
-head cabbage,4
-broccoli,3
-cauliflower,3
-squash,2
-winter squash,3
-acorn squash,4
-butternut squash,4
-summer squash,3
-zucchini,4
-spaghetti squash,4
-cucumber,2
-artichoke,2
-cardoon,2
-mushroom,2
-natural object,1
-mechanism,2
-barrier,3
-plant part,2
-plant organ,3
-reproductive structure,4
-fruit,5
-edible fruit,6
-apple,7
-eating apple,8
-granny smith,9
-berry,7
-strawberry,8
-citrus,7
-orange,8
-lemon,8
-fig,7
-pineapple,7
-banana,7
-jackfruit,7
-custard apple,7
-pomegranate,7
-acorn,6
-hip,6
-ear,6
-seed,6
-oilseed,7
-rapeseed,8
-grain,7
-kernel,8
-corn,9
-buckeye,7
-pome,6
-artifact,1
-instrumentality,2
-device,3
-musical instrument,4
-percussion instrument,5
-piano,6
-grand piano,7
-upright,7
-chime,6
-drum,6
-gong,6
-maraca,6
-marimba,6
-steel drum,6
-stringed instrument,5
-banjo,6
-bowed stringed instrument,6
-cello,7
-violin,7
-chordophone,6
-harp,7
-guitar,6
-acoustic guitar,7
-electric guitar,7
-wind instrument,5
-organ,6
-brass,6
-cornet,7
-french horn,7
-trombone,7
-free-reed instrument,6
-accordion,7
-harmonica,7
-ocarina,6
-pipe,6
-panpipe,7
-woodwind,6
-beating-reed instrument,7
-double-reed instrument,8
-bassoon,9
-oboe,9
-single-reed instrument,8
-sax,9
-flute,7
-airfoil,4
-wing,5
-breathing device,4
-oxygen mask,5
-snorkel,5
-electrical device,4
-transducer,5
-electro-acoustic transducer,6
-loudspeaker,7
-microphone,7
-electronic device,4
-display,5
-screen,6
-mouse,5
-fan,4
-electric fan,5
-filter,4
-oil filter,5
-strainer,5
-heater,4
-space heater,5
-stove,5
-instrument,4
-instrument of execution,5
-guillotine,6
-measuring instrument,5
-barometer,6
-measuring stick,6
-rule,7
-meter,6
-odometer,7
-scale,6
-timepiece,6
-watch,7
-digital watch,8
-clock,7
-analog clock,8
-digital clock,8
-wall clock,8
-sandglass,7
-hourglass,8
-sundial,7
-timer,7
-parking meter,8
-stopwatch,8
-medical instrument,5
-stethoscope,6
-syringe,6
-navigational instrument,5
-compass,6
-magnetic compass,7
-optical instrument,5
-binoculars,6
-projector,6
-spectacles,6
-sunglasses,7
-scientific instrument,5
-magnifier,6
-microscope,7
-light microscope,8
-hand glass,9
-loupe,10
-telescope,7
-astronomical telescope,8
-radio telescope,9
-weapon,5
-missile,6
-bow,6
-gun,6
-cannon,7
-firearm,7
-autoloader,8
-automatic firearm,9
-automatic rifle,10
-assault rifle,11
-machine gun,10
-pistol,8
-revolver,9
-rifle,8
-projectile,6
-keyboard,4
-computer keyboard,5
-typewriter keyboard,5
-lifting device,4
-crane,5
-lighter,4
-machine,4
-power tool,5
-power drill,6
-power saw,6
-chain saw,7
-calculator,5
-abacus,6
-cash machine,5
-computer,5
-analog computer,6
-slide rule,7
-digital computer,6
-personal computer,7
-desktop computer,8
-portable computer,8
-laptop,9
-hand-held computer,9
-notebook,9
-web site,6
-farm machine,5
-harvester,6
-thresher,6
-slot machine,5
-slot,6
-vending machine,6
-control,5
-joystick,6
-switch,6
-mechanical device,5
-hook,6
-wheel,7
-car wheel,8
-paddlewheel,8
-pinwheel,8
-potter's wheel,8
-pump,6
-gas pump,7
-ride,6
-carousel,7
-swing,6
-winder,6
-reel,7
-radiator,5
-memory device,4
-magnetic disk,5
-hard disc,6
-optical device,4
-lens,5
-converging lens,6
-sunglass,7
-pick,4
-reflector,4
-mirror,5
-car mirror,6
-solar dish,5
-remote control,4
-restraint,4
-brake,5
-brake system,6
-hydraulic brake,7
-disk brake,8
-fastener,5
-buckle,6
-clip,6
-hair slide,7
-knot,6
-lock,6
-combination lock,7
-padlock,7
-nail,6
-pin,6
-safety pin,7
-screw,6
-muzzle,5
-safety belt,5
-seat belt,6
-runner,4
-ski,5
-signaling device,4
-whistle,5
-source of illumination,4
-lamp,5
-candle,6
-lantern,6
-jack-o'-lantern,7
-spotlight,6
-light,5
-torch,6
-support,4
-brace,5
-neck brace,6
-pier,5
-rack,5
-tripod,6
-structural member,5
-post,7
-maypole,8
-trap,4
-mousetrap,5
-web,5
-spider web,6
-implement,3
-tool,4
-cutting implement,5
-cutter,6
-edge tool,7
-ax,8
-hatchet,9
-knife,8
-cleaver,9
-letter opener,9
-plane,8
-garden tool,5
-lawn mower,6
-hand tool,5
-hammer,6
-opener,6
-bottle opener,7
-corkscrew,8
-can opener,7
-plunger,6
-screwdriver,6
-shovel,6
-plow,5
-utensil,4
-kitchen utensil,5
-cooking utensil,6
-cooker,7
-crock pot,8
-pan,7
-frying pan,8
-wok,8
-pot,7
-caldron,8
-coffeepot,8
-teapot,8
-turner,7
-spatula,8
-cleaning implement,4
-swab,5
-broom,5
-brush,4
-paintbrush,5
-eraser,4
-rubber eraser,5
-sharpener,4
-pencil sharpener,5
-oar,4
-paddle,5
-rod,4
-pole,5
-writing implement,4
-pen,5
-quill,6
-ballpoint,6
-fountain pen,6
-stick,4
-spindle,5
-drumstick,5
-staff,5
-crutch,6
-flagpole,6
-matchstick,5
-lever,5
-key,6
-space bar,7
-sports implement,4
-racket,5
-container,3
-wheeled vehicle,4
-bicycle,5
-bicycle-built-for-two,6
-mountain bike,6
-car,5
-freight car,6
-passenger car,6
-handcart,5
-barrow,6
-shopping cart,6
-motor scooter,5
-self-propelled vehicle,5
-forklift,6
-locomotive,6
-electric locomotive,7
-steam locomotive,7
-motor vehicle,6
-amphibian,7
-ambulance,8
-beach wagon,8
-cab,8
-convertible,8
-jeep,8
-limousine,8
-minivan,8
-model t,8
-racer,8
-sports car,8
-go-kart,7
-golfcart,7
-motorcycle,7
-minibike,8
-moped,9
-snowplow,7
-truck,7
-fire engine,8
-garbage truck,8
-pickup,8
-tow truck,8
-trailer truck,8
-van,8
-moving van,9
-passenger van,9
-police van,9
-recreational vehicle,6
-streetcar,6
-tracked vehicle,6
-half track,7
-tank,7
-snowmobile,7
-tractor,6
-tricycle,5
-unicycle,5
-wagon,5
-cart,6
-horse cart,7
-jinrikisha,7
-oxcart,7
-basket,4
-hamper,5
-shopping basket,5
-thimble,4
-bag,4
-mailbag,5
-backpack,5
-purse,5
-sleeping bag,5
-plastic bag,5
-spoon,4
-wooden spoon,5
-savings bank,4
-piggy bank,5
-petri dish,5
-bowl,5
-soup bowl,6
-mixing bowl,6
-bin,4
-ashcan,5
-shaker,4
-cocktail shaker,5
-saltshaker,5
-vessel,4
-basin,5
-washbasin,6
-tub,5
-jar,5
-vase,6
-beaker,6
-bucket,5
-mortar,5
-bottle,5
-beer bottle,6
-pop bottle,6
-wine bottle,6
-pill bottle,6
-water bottle,6
-jug,6
-whiskey jug,7
-water jug,7
-reservoir,6
-water tower,7
-cistern,7
-rain barrel,8
-bathtub,5
-ladle,5
-barrel,5
-pitcher,5
-drinking vessel,5
-mug,6
-coffee mug,7
-envelope,4
-can,4
-milk can,5
-glass,4
-beer glass,5
-goblet,5
-cassette,4
-receptacle,4
-tray,5
-dispenser,4
-soap dispenser,5
-package,4
-packet,5
-box,4
-carton,5
-chest,5
-strongbox,5
-safe,6
-pencil box,5
-crate,5
-mailbox,5
-measure,4
-measuring cup,5
-case,4
-wallet,5
-equipment,3
-sports equipment,4
-gymnastic apparatus,5
-balance beam,6
-horizontal bar,6
-parallel bars,6
-weight,5
-barbell,6
-dumbbell,6
-game equipment,4
-pool table,5
-game,5
-puzzle,6
-crossword puzzle,7
-jigsaw puzzle,7
-ball,5
-soccer ball,6
-croquet ball,6
-golf ball,6
-baseball,6
-ping-pong ball,6
-punching bag,6
-rugby ball,6
-basketball,6
-volleyball,6
-tennis ball,6
-photographic equipment,4
-camera,5
-polaroid camera,6
-reflex camera,6
-gear,4
-kit,5
-carpenter's kit,6
-rig,5
-drill rig,6
-drilling platform,7
-electronic equipment,4
-audio system,5
-reproducer,6
-stereo,7
-ipod,8
-modem,5
-monitor,5
-oscilloscope,5
-peripheral,5
-printer,6
-data input device,6
-cassette player,5
-telephone,5
-radiotelephone,6
-cellular telephone,7
-pay-phone,6
-dial telephone,6
-tape player,5
-cd player,5
-apparatus,4
-duplicator,5
-photocopier,6
-rescue equipment,4
-parachute,5
-toiletry,3
-cream,4
-sunscreen,5
-perfume,4
-cosmetic,4
-makeup,5
-face powder,6
-lipstick,6
-lotion,4
-hair spray,4
-conveyance,3
-vehicle,4
-craft,5
-aircraft,6
-heavier-than-air craft,7
-airplane,8
-airliner,9
-warplane,8
-lighter-than-air craft,7
-airship,8
-balloon,8
-spacecraft,6
-space shuttle,7
-boat,7
-fireboat,8
-gondola,8
-motorboat,8
-speedboat,9
-sea boat,8
-lifeboat,9
-small boat,8
-canoe,9
-yawl,9
-sailing vessel,7
-schooner,8
-sailboat,8
-catamaran,9
-trimaran,9
-ship,7
-cargo ship,8
-container ship,9
-passenger ship,8
-liner,9
-pirate,8
-warship,8
-aircraft carrier,9
-submersible,9
-submarine,10
-wreck,8
-military vehicle,5
-rocket,5
-sled,5
-bobsled,6
-dogsled,6
-litter,4
-stretcher,5
-public transport,4
-train,5
-passenger train,6
-bullet train,7
-bus,5
-trolleybus,6
-minibus,6
-school bus,6
-connection,3
-attachment,4
-ligament,5
-chain,6
-furnishing,3
-furniture,4
-baby bed,5
-bassinet,6
-cradle,6
-crib,6
-bedroom furniture,5
-bed,6
-four-poster,7
-bookcase,5
-cabinet,5
-china cabinet,6
-medicine chest,6
-chest of drawers,5
-chiffonier,6
-table lamp,6
-office furniture,5
-file,6
-seat,5
-bench,6
-park bench,7
-chair,6
-barber chair,7
-chair of state,7
-throne,8
-folding chair,7
-rocking chair,7
-sofa,6
-studio couch,8
-toilet seat,6
-table,5
-desk,6
-dining table,6
-wall unit,5
-entertainment center,6
-wardrobe,5
-rug,4
-prayer rug,5
-curtain,4
-shower curtain,5
-theater curtain,5
-system,3
-communication system,4
-radio,5
-telecommunication system,5
-television,6
-maze,4
-structure,2
-altar,3
-area,3
-patio,4
-bridge,3
-steel arch bridge,4
-suspension bridge,4
-viaduct,4
-building,3
-farm building,4
-barn,5
-greenhouse,4
-house,4
-residence,5
-palace,6
-religious residence,6
-monastery,7
-library,4
-outbuilding,4
-shed,5
-apiary,6
-boathouse,6
-place of worship,4
-church,5
-mosque,5
-shrine,5
-stupa,6
-planetarium,4
-restaurant,4
-theater,4
-cinema,5
-home theater,5
-building complex,3
-plant,4
-factory,5
-lumbermill,6
-coil,3
-column,3
-totem pole,4
-obelisk,4
-defensive structure,3
-fortification,4
-castle,5
-establishment,3
-institution,4
-penal institution,5
-correctional institution,6
-prison,7
-place of business,4
-mercantile establishment,5
-marketplace,6
-grocery store,7
-shop,6
-bakery,7
-barbershop,7
-bookshop,7
-butcher shop,7
-confectionery,7
-shoe shop,7
-tobacco shop,7
-toyshop,7
-fountain,3
-housing,3
-mobile home,4
-dwelling,4
-cliff dwelling,5
-yurt,5
-landing,3
-dock,4
-memorial,3
-triumphal arch,4
-megalith,4
-obstruction,3
-bannister,5
-breakwater,5
-dam,5
-fence,5
-chainlink fence,6
-picket fence,6
-rail fence,6
-worm fence,7
-stone wall,6
-grate,5
-grille,6
-movable barrier,5
-door,6
-sliding door,7
-gate,6
-turnstile,7
-shelter,3
-tent,4
-mountain tent,5
-supporting structure,3
-framework,4
-honeycomb,5
-plate rack,6
-pedestal,5
-tower,3
-beacon,4
-creation,2
-product,3
-work,4
-publication,5
-magazine,6
-comic book,7
-sheet,2
-board,3
-scoreboard,4
-disk,4
-puck,5
-fabric,2
-wool,3
-piece of cloth,3
-handkerchief,4
-dishrag,4
-towel,4
-paper towel,5
-bath towel,5
-bib,4
-velvet,3
-covering,2
-mask,3
-cloak,3
-wrapping,3
-jacket,4
-book jacket,5
-shoji,4
-footwear,3
-shoe,4
-sandal,5
-running shoe,5
-loafer,5
-boot,4
-cowboy boot,5
-clog,4
-cloth covering,3
-dressing,4
-bandage,5
-adhesive bandage,6
-band aid,7
-bedclothes,4
-quilt,5
-floor cover,3
-mat,4
-doormat,5
-clothing,3
-attire,4
-disguise,5
-hairpiece,5
-wig,6
-protective garment,4
-knee pad,5
-apron,5
-accessory,4
-belt,5
-outerwear,4
-gown,5
-academic gown,6
-vestment,6
-garment,4
-vest,5
-bulletproof vest,6
-swimsuit,5
-swimming trunks,6
-maillot,6
-bikini,6
-suit,5
-scarf,5
-feather boa,6
-stole,6
-neckwear,5
-necktie,6
-bow tie,7
-windsor tie,7
-bolo tie,7
-skirt,5
-hoopskirt,6
-miniskirt,6
-overskirt,6
-sarong,6
-overgarment,5
-poncho,7
-coat,6
-fur coat,7
-raincoat,7
-trench coat,8
-lab coat,7
-sweater,5
-pullover,6
-sweatshirt,7
-cardigan,6
-robe,5
-kimono,6
-abaya,6
-shirt,5
-jersey,6
-diaper,5
-handwear,4
-glove,5
-mitten,6
-headdress,4
-helmet,5
-crash helmet,6
-football helmet,6
-cap,5
-bathing cap,6
-mortarboard,6
-shower cap,6
-hat,5
-bonnet,6
-bearskin,6
-cowboy hat,6
-sombrero,6
-hosiery,5
-tights,6
-sock,6
-stocking,6
-christmas stocking,7
-uniform,4
-military uniform,5
-nightwear,4
-pajama,5
-apparel,4
-workwear,5
-jean,6
-woman's clothing,4
-dress,5
-brassiere,5
-protective covering,3
-shield,4
-armor plate,6
-pickelhaube,8
-breastplate,7
-lens cap,5
-roof,4
-tile roof,5
-dome,5
-thatch,5
-vault,5
-blind,4
-window blind,5
-window shade,6
-binder,4
-shade,4
-lampshade,5
-mosquito net,5
-window screen,5
-fire screen,5
-armor,4
-body armor,5
-cuirass,6
-chain mail,6
-gasmask,5
-face mask,5
-ski mask,6
-sheath,4
-holster,5
-scabbard,5
-birdhouse,5
-bell cote,5
-canopy,5
-umbrella,6
-top,3
-manhole cover,4
-bottlecap,5
-nipple,5
-padding,2
-cushion,3
-pillow,4
-commodity,2
-consumer goods,3
-durables,4
-appliance,5
-dryer,6
-hand blower,7
-home appliance,6
-sewing machine,7
-iron,7
-kitchen appliance,7
-coffee maker,8
-espresso maker,9
-microwave,8
-oven,8
-dutch oven,9
-rotisserie,9
-toaster,8
-waffle iron,8
-vacuum,7
-white goods,7
-dishwasher,8
-refrigerator,8
-washer,8
-drygoods,3
-linen,5
-bath linen,6
-excavation,2
-pool,3
-decoration,2
-adornment,3
-jewelry,4
-necklace,5
-design,3
-emblem,4
-plaything,2
-teddy,3
-article,2
-ware,3
-tableware,4
-cutlery,5
-crockery,5
-surface,2
-horizontal surface,3
-platform,4
-stage,5
-organism,1
-vascular plant,3
-spermatophyte,4
-angiosperm,5
-flower,6
-daisy,7
-orchid,7
-lady's slipper,8
-yellow lady's slipper,9
-fungus,2
-hen-of-the-woods,3
-earthstar,3
-coral fungus,3
-stinkhorn,3
-gyromitra,3
-bolete,3
-basidiomycete,3
-agaric,4
-person,2
-contestant,3
-athlete,4
-ballplayer,5
-explorer,3
-diver,4
-scuba diver,5
-peer,3
-associate,4
-participant,5
-groom,6
-animal,2
-invertebrate,3
-arthropod,4
-trilobite,5
-arachnid,5
-harvestman,6
-scorpion,6
-spider,6
-black and gold garden spider,7
-barn spider,7
-garden spider,7
-black widow,7
-tarantula,7
-wolf spider,7
-acarine,6
-tick,7
-centipede,5
-crustacean,5
-malacostracan crustacean,6
-isopod,7
-decapod crustacean,6
-crab,7
-dungeness crab,8
-rock crab,8
-fiddler crab,8
-king crab,8
-lobster,7
-true lobster,8
-american lobster,9
-spiny lobster,8
-crayfish,7
-hermit crab,7
-insect,5
-beetle,6
-tiger beetle,7
-ladybug,7
-ground beetle,7
-long-horned beetle,7
-leaf beetle,7
-lamellicorn beetle,7
-scarabaeid beetle,8
-dung beetle,9
-rhinoceros beetle,9
-weevil,7
-dipterous insect,6
-fly,7
-hymenopterous insect,6
-ant,7
-bee,7
-orthopterous insect,6
-grasshopper,7
-cricket,7
-phasmid,6
-walking stick,7
-dictyopterous insect,6
-cockroach,7
-mantis,7
-homopterous insect,6
-cicada,7
-leafhopper,7
-neuropteron,6
-lacewing,7
-odonate,6
-dragonfly,7
-damselfly,7
-lepidopterous insect,6
-butterfly,7
-nymphalid,8
-admiral,9
-ringlet,8
-danaid,8
-monarch,9
-pierid,8
-cabbage butterfly,9
-sulphur butterfly,8
-lycaenid,8
-coelenterate,4
-jellyfish,5
-anthozoan,5
-sea anemone,6
-coral,6
-stony coral,7
-brain coral,8
-worm,4
-flatworm,5
-nematode,5
-mollusk,4
-gastropod,5
-conch,6
-snail,6
-slug,6
-sea slug,6
-chiton,5
-cephalopod,5
-chambered nautilus,6
-echinoderm,4
-starfish,5
-sea urchin,5
-sea cucumber,5
-domestic animal,3
-domestic cat,4
-egyptian cat,5
-persian cat,5
-tiger cat,5
-siamese cat,5
-tabby,5
-dog,4
-hunting dog,5
-sporting dog,6
-pointer,7
-vizsla,8
-german short-haired pointer,8
-setter,7
-english setter,8
-gordon setter,8
-irish setter,8
-spaniel,7
-water spaniel,8
-irish water spaniel,9
-springer spaniel,8
-welsh springer spaniel,9
-english springer,9
-clumber,8
-brittany spaniel,8
-cocker spaniel,8
-sussex spaniel,8
-retriever,7
-golden retriever,8
-chesapeake bay retriever,8
-curly-coated retriever,8
-flat-coated retriever,8
-labrador retriever,8
-terrier,6
-australian terrier,7
-fox terrier,7
-wire-haired fox terrier,8
-soft-coated wheaten terrier,7
-wirehair,7
-welsh terrier,8
-sealyham terrier,9
-lakeland terrier,8
-dandie dinmont,7
-airedale,7
-lhasa,7
-yorkshire terrier,7
-west highland white terrier,7
-schnauzer,7
-giant schnauzer,8
-miniature schnauzer,8
-standard schnauzer,8
-bullterrier,7
-staffordshire bullterrier,8
-american staffordshire terrier,8
-norfolk terrier,7
-cairn,7
-kerry blue terrier,7
-scotch terrier,7
-boston bull,7
-bedlington terrier,7
-irish terrier,7
-silky terrier,7
-norwich terrier,7
-tibetan terrier,7
-border terrier,7
-hound,6
-wolfhound,7
-borzoi,8
-irish wolfhound,8
-scottish deerhound,7
-coonhound,7
-black-and-tan coonhound,8
-foxhound,7
-walker hound,8
-english foxhound,8
-weimaraner,7
-otterhound,7
-bloodhound,7
-norwegian elkhound,7
-saluki,7
-afghan hound,7
-greyhound,7
-whippet,8
-italian greyhound,8
-beagle,7
-basset,7
-bluetick,7
-redbone,7
-ibizan hound,7
-rhodesian ridgeback,6
-dalmatian,5
-corgi,5
-pembroke,6
-mexican hairless,5
-newfoundland,5
-poodle,5
-miniature poodle,6
-toy poodle,6
-standard poodle,6
-basenji,5
-leonberg,5
-griffon,5
-brabancon griffon,6
-pug,5
-working dog,5
-great dane,6
-shepherd dog,6
-old english sheepdog,7
-bouvier des flandres,7
-rottweiler,7
-komondor,7
-collie,7
-border collie,7
-belgian sheepdog,7
-malinois,8
-groenendael,8
-shetland sheepdog,7
-kelpie,7
-briard,7
-german shepherd,7
-watchdog,6
-schipperke,7
-pinscher,7
-doberman,8
-affenpinscher,8
-miniature pinscher,8
-kuvasz,7
-sled dog,6
-siberian husky,7
-malamute,7
-boxer,6
-bull mastiff,6
-eskimo dog,6
-sennenhunde,6
-entlebucher,7
-bernese mountain dog,7
-greater swiss mountain dog,7
-appenzeller,7
-saint bernard,6
-mastiff,6
-tibetan mastiff,7
-bulldog,6
-french bulldog,7
-spitz,5
-pomeranian,6
-keeshond,6
-chow,6
-samoyed,6
-great pyrenees,5
-toy dog,5
-toy spaniel,6
-papillon,7
-english toy spaniel,7
-blenheim spaniel,8
-pekinese,6
-maltese dog,6
-toy terrier,6
-japanese spaniel,6
-shih-tzu,6
-chihuahua,6
-chordate,3
-vertebrate,4
-mammal,5
-placental,6
-lagomorph,7
-leporid,8
-hare,9
-rabbit,9
-angora,10
-wood rabbit,10
-primate,7
-lemur,8
-indri,9
-madagascar cat,9
-ape,8
-anthropoid ape,9
-lesser ape,10
-siamang,11
-gibbon,11
-great ape,10
-orangutan,11
-chimpanzee,11
-gorilla,11
-monkey,8
-old world monkey,9
-colobus,10
-guenon,10
-proboscis monkey,10
-patas,10
-baboon,10
-macaque,10
-langur,10
-new world monkey,9
-titi,10
-squirrel monkey,10
-spider monkey,10
-capuchin,10
-howler monkey,10
-marmoset,10
-carnivore,7
-bear,8
-brown bear,9
-ice bear,9
-american black bear,9
-sloth bear,9
-musteline mammal,8
-badger,9
-mink,9
-black-footed ferret,9
-skunk,9
-weasel,9
-polecat,9
-otter,9
-procyonid,8
-lesser panda,9
-giant panda,9
-viverrine,8
-meerkat,9
-mongoose,9
-canine,8
-wild dog,9
-dhole,10
-dingo,10
-african hunting dog,10
-hyena,9
-fox,9
-kit fox,10
-red fox,10
-grey fox,10
-arctic fox,10
-wolf,9
-red wolf,10
-coyote,10
-white wolf,10
-timber wolf,10
-feline,8
-big cat,9
-jaguar,10
-tiger,10
-leopard,10
-snow leopard,10
-lion,10
-cheetah,10
-cat,9
-wildcat,10
-cougar,11
-lynx,11
-aquatic mammal,7
-sea cow,8
-dugong,9
-pinniped mammal,8
-seal,9
-eared seal,10
-sea lion,11
-cetacean,8
-whale,9
-toothed whale,10
-dolphin,11
-killer whale,12
-baleen whale,10
-grey whale,11
-ungulate,7
-odd-toed ungulate,8
-equine,9
-zebra,10
-horse,10
-sorrel,11
-even-toed ungulate,8
-camel,9
-arabian camel,10
-ruminant,9
-bovid,10
-sheep,11
-ram,12
-antelope,11
-gazelle,12
-impala,12
-hartebeest,12
-wild sheep,11
-mountain sheep,12
-bighorn,13
-goat,11
-wild goat,12
-ibex,13
-bison,11
-old world buffalo,11
-water buffalo,12
-bovine,11
-cattle,12
-ox,13
-hippopotamus,9
-llama,9
-swine,9
-wild boar,10
-warthog,10
-hog,10
-edentate,7
-sloth,8
-three-toed sloth,9
-armadillo,8
-pachyderm,7
-elephant,8
-african elephant,9
-indian elephant,9
-rodent,7
-porcupine,8
-cavy,8
-guinea pig,9
-hamster,8
-squirrel,8
-tree squirrel,9
-fox squirrel,10
-marmot,8
-beaver,8
-tusker,6
-prototherian,6
-monotreme,7
-echidna,8
-platypus,8
-metatherian,6
-marsupial,7
-phalanger,8
-koala,9
-kangaroo,8
-wallaby,9
-wombat,8
-bird,5
-cock,6
-hen,6
-ratite,6
-ostrich,7
-passerine,6
-oscine,7
-finch,8
-brambling,9
-goldfinch,9
-house finch,9
-junco,9
-bunting,9
-indigo bunting,10
-thrush,8
-robin,9
-nightingale,9
-bulbul,10
-corvine bird,8
-jay,9
-magpie,9
-titmouse,8
-chickadee,9
-water ouzel,8
-bird of prey,6
-hawk,7
-kite,8
-eagle,7
-bald eagle,8
-vulture,7
-owl,7
-great grey owl,8
-gallinaceous bird,6
-game bird,7
-grouse,8
-black grouse,9
-ptarmigan,9
-ruffed grouse,9
-prairie chicken,9
-phasianid,8
-pheasant,9
-peafowl,10
-peacock,11
-quail,9
-partridge,9
-parrot,6
-african grey,7
-macaw,7
-cockatoo,7
-sulphur-crested cockatoo,8
-lory,7
-lorikeet,8
-cuculiform bird,6
-cuckoo,7
-coucal,8
-coraciiform bird,6
-bee eater,7
-hornbill,7
-apodiform bird,6
-hummingbird,7
-piciform bird,6
-jacamar,7
-toucan,7
-aquatic bird,6
-waterfowl,7
-anseriform bird,8
-goose,9
-duck,9
-drake,10
-sea duck,10
-merganser,11
-red-breasted merganser,12
-swan,7
-black swan,8
-wading bird,7
-stork,8
-white stork,9
-black stork,9
-spoonbill,8
-flamingo,8
-heron,8
-egret,9
-american egret,10
-little blue heron,9
-bittern,9
-limpkin,8
-rail,8
-coot,9
-american coot,10
-bustard,8
-shorebird,8
-plover,9
-turnstone,10
-ruddy turnstone,11
-sandpiper,9
-red-backed sandpiper,10
-redshank,10
-snipe,9
-dowitcher,10
-oystercatcher,9
-gallinule,7
-purple gallinule,8
-european gallinule,9
-seabird,7
-pelecaniform seabird,8
-pelican,9
-sphenisciform seabird,8
-penguin,9
-king penguin,10
-pelagic bird,8
-albatross,9
-reptile,5
-anapsid,6
-chelonian,7
-turtle,8
-sea turtle,9
-loggerhead,10
-leatherback turtle,10
-mud turtle,9
-terrapin,9
-box turtle,9
-diapsid,6
-saurian,7
-lizard,8
-gecko,9
-banded gecko,10
-iguanid,9
-common iguana,10
-american chameleon,10
-teiid lizard,9
-whiptail,10
-agamid,9
-agama,10
-frilled lizard,10
-anguid lizard,9
-alligator lizard,10
-venomous lizard,9
-gila monster,10
-lacertid lizard,9
-green lizard,10
-chameleon,9
-african chameleon,10
-komodo dragon,10
-archosaur,7
-dinosaur,8
-ornithischian,9
-ceratopsian,10
-triceratops,11
-crocodilian reptile,7
-alligator,8
-american alligator,9
-crocodile,8
-african crocodile,9
-snake,7
-colubrid snake,8
-thunder snake,9
-ringneck snake,9
-hognose snake,9
-green snake,9
-king snake,9
-garter snake,9
-water snake,9
-vine snake,9
-night snake,9
-constrictor,8
-boa,9
-boa constrictor,10
-python,10
-rock python,11
-elapid,8
-cobra,9
-indian cobra,10
-mamba,9
-black mamba,10
-green mamba,11
-sea snake,8
-viper,8
-horned viper,9
-pit viper,9
-rattlesnake,10
-diamondback,11
-sidewinder,11
-frog,6
-true frog,7
-bullfrog,8
-tree frog,7
-tailed frog,7
-salamander,6
-european fire salamander,7
-newt,7
-common newt,8
-eft,8
-ambystomid,7
-spotted salamander,8
-axolotl,8
-aquatic vertebrate,5
-fish,6
-cartilaginous fish,7
-elasmobranch,8
-ray,9
-electric ray,10
-stingray,10
-shark,9
-mackerel shark,10
-great white shark,11
-requiem shark,10
-tiger shark,11
-hammerhead,10
-food fish,7
-barracouta,8
-salmon,8
-coho,9
-bony fish,7
-teleost fish,8
-soft-finned fish,9
-cypriniform fish,10
-cyprinid,11
-tench,12
-goldfish,12
-eel,10
-spiny-finned fish,9
-percoid fish,10
-butterfly fish,11
-rock beauty,12
-damselfish,11
-anemone fish,12
-scorpaenoid,10
-scorpaenid,11
-lionfish,12
-plectognath,10
-puffer,11
-ganoid,9
-sturgeon,10
-gar,10
+Nivel,id,ClaseReal,parent_id,ClasePadre,grandparent_id,ClaseAbuelo
+1,n07565083,menu,fall11,root_name,no_id,no_abuelo
+1,n07831146,carbonara,fall11,root_name,no_id,no_abuelo
+1,n09229709,bubble,fall11,root_name,no_id,no_abuelo
+1,n07695742,pretzel,fall11,root_name,no_id,no_abuelo
+1,n06794110,street sign,fall11,root_name,no_id,no_abuelo
+1,n15075141,toilet tissue,fall11,root_name,no_id,no_abuelo
+1,n07684084,french loaf,fall11,root_name,no_id,no_abuelo
+1,n06874185,traffic light,fall11,root_name,no_id,no_abuelo
+1,n07680932,bun,fall11,root_name,no_id,no_abuelo
+2,n07693725,bagel,n07680932,bun,fall11,root_name
+1,n07829412,sauce,fall11,root_name,no_id,no_abuelo
+2,n07836838,chocolate sauce,n07829412,sauce,fall11,root_name
+1,n07582609,dip,fall11,root_name,no_id,no_abuelo
+2,n07583066,guacamole,n07582609,dip,fall11,root_name
+1,n07800091,feed,fall11,root_name,no_id,no_abuelo
+2,n07800740,fodder,n07800091,feed,fall11,root_name
+3,n07802026,hay,n07800740,fodder,n07800091,feed
+1,n07695965,sandwich,fall11,root_name,no_id,no_abuelo
+2,n07697537,hotdog,n07695965,sandwich,fall11,root_name
+2,n07697100,hamburger,n07695965,sandwich,fall11,root_name
+3,n07697313,cheeseburger,n07697100,hamburger,n07695965,sandwich
+1,n07566340,foodstuff,fall11,root_name,no_id,no_abuelo
+2,n07566863,starches,n07566340,foodstuff,fall11,root_name
+3,n07710616,potato,n07566863,starches,n07566340,foodstuff
+4,n07711569,mashed potato,n07710616,potato,n07566863,starches
+2,n07882497,concoction,n07566340,foodstuff,fall11,root_name
+3,n07860988,dough,n07882497,concoction,n07566340,foodstuff
+1,n07570720,nutriment,fall11,root_name,no_id,no_abuelo
+2,n07557434,dish,n07570720,nutriment,fall11,root_name
+3,n07588947,stew,n07557434,dish,n07570720,nutriment
+4,n07590611,hot pot,n07588947,stew,n07557434,dish
+3,n07871810,meat loaf,n07557434,dish,n07570720,nutriment
+3,n07583197,soup,n07557434,dish,n07570720,nutriment
+4,n07584110,consomme,n07583197,soup,n07557434,dish
+3,n07875152,potpie,n07557434,dish,n07570720,nutriment
+3,n07880968,burrito,n07557434,dish,n07570720,nutriment
+3,n07873807,pizza,n07557434,dish,n07570720,nutriment
+2,n07556970,course,n07570720,nutriment,fall11,root_name
+3,n07579575,entree,n07556970,course,n07570720,nutriment
+4,n07579787,plate,n07579575,entree,n07556970,course
+3,n07609840,dessert,n07556970,course,n07570720,nutriment
+4,n07611358,frozen dessert,n07609840,dessert,n07556970,course
+5,n07615774,ice lolly,n07611358,frozen dessert,n07609840,dessert
+5,n07614500,ice cream,n07611358,frozen dessert,n07609840,dessert
+4,n07612996,pudding,n07609840,dessert,n07556970,course
+5,n07613480,trifle,n07612996,pudding,n07609840,dessert
+1,n09287968,geological formation,fall11,root_name,no_id,no_abuelo
+2,n09246464,cliff,n09287968,geological formation,fall11,root_name
+2,n09366017,natural depression,n09287968,geological formation,fall11,root_name
+3,n09468604,valley,n09366017,natural depression,n09287968,geological formation
+2,n09366317,natural elevation,n09287968,geological formation,fall11,root_name
+3,n09359803,mountain,n09366317,natural elevation,n09287968,geological formation
+4,n09193705,alp,n09359803,mountain,n09366317,natural elevation
+4,n09472597,volcano,n09359803,mountain,n09366317,natural elevation
+3,n09399592,promontory,n09366317,natural elevation,n09287968,geological formation
+3,n09409512,ridge,n09366317,natural elevation,n09287968,geological formation
+4,n09214060,bar,n09409512,ridge,n09366317,natural elevation
+5,n09421951,sandbar,n09214060,bar,n09409512,ridge
+4,n09406793,reef,n09409512,ridge,n09366317,natural elevation
+5,n09256479,coral reef,n09406793,reef,n09409512,ridge
+2,n09433442,shore,n09287968,geological formation,fall11,root_name
+3,n09332890,lakeside,n09433442,shore,n09287968,geological formation
+3,n09428293,seashore,n09433442,shore,n09287968,geological formation
+2,n09443453,spring,n09287968,geological formation,fall11,root_name
+3,n09288635,geyser,n09443453,spring,n09287968,geological formation
+1,n07881800,beverage,fall11,root_name,no_id,no_abuelo
+2,n07929519,coffee,n07881800,beverage,fall11,root_name
+3,n07920052,espresso,n07929519,coffee,n07881800,beverage
+2,n07884567,alcohol,n07881800,beverage,fall11,root_name
+3,n07891726,wine,n07884567,alcohol,n07881800,beverage
+4,n07892512,red wine,n07891726,wine,n07884567,alcohol
+3,n07911371,mixed drink,n07884567,alcohol,n07881800,beverage
+4,n07930554,punch,n07911371,mixed drink,n07884567,alcohol
+5,n07932039,eggnog,n07930554,punch,n07911371,mixed drink
+5,n07930864,cup,n07930554,punch,n07911371,mixed drink
+1,n07707451,vegetable,fall11,root_name,no_id,no_abuelo
+2,n07710007,solanaceous vegetable,n07707451,vegetable,fall11,root_name
+3,n07720442,pepper,n07710007,solanaceous vegetable,n07707451,vegetable
+4,n07720615,sweet pepper,n07720442,pepper,n07710007,solanaceous vegetable
+5,n07720875,bell pepper,n07720615,sweet pepper,n07720442,pepper
+2,n07713395,cruciferous vegetable,n07707451,vegetable,fall11,root_name
+3,n07713895,cabbage,n07713395,cruciferous vegetable,n07707451,vegetable
+4,n07714571,head cabbage,n07713895,cabbage,n07713395,cruciferous vegetable
+3,n07714990,broccoli,n07713395,cruciferous vegetable,n07707451,vegetable
+3,n07715103,cauliflower,n07713395,cruciferous vegetable,n07707451,vegetable
+2,n07715561,squash,n07707451,vegetable,fall11,root_name
+3,n07717070,winter squash,n07715561,squash,n07707451,vegetable
+4,n07717410,acorn squash,n07717070,winter squash,n07715561,squash
+4,n07717556,butternut squash,n07717070,winter squash,n07715561,squash
+3,n07715721,summer squash,n07715561,squash,n07707451,vegetable
+4,n07716358,zucchini,n07715721,summer squash,n07715561,squash
+4,n07716906,spaghetti squash,n07715721,summer squash,n07715561,squash
+2,n07718472,cucumber,n07707451,vegetable,fall11,root_name
+2,n07718747,artichoke,n07707451,vegetable,fall11,root_name
+2,n07730033,cardoon,n07707451,vegetable,fall11,root_name
+2,n07734744,mushroom,n07707451,vegetable,fall11,root_name
+1,n00019128,natural object,fall11,root_name,no_id,no_abuelo
+2,n09349797,mechanism,n00019128,natural object,fall11,root_name
+3,n09214581,barrier,n09349797,mechanism,n00019128,natural object
+2,n13086908,plant part,n00019128,natural object,fall11,root_name
+3,n13087625,plant organ,n13086908,plant part,n00019128,natural object
+4,n11675842,reproductive structure,n13087625,plant organ,n13086908,plant part
+5,n13134947,fruit,n11675842,reproductive structure,n13087625,plant organ
+6,n07705931,edible fruit,n13134947,fruit,n11675842,reproductive structure
+7,n07739125,apple,n07705931,edible fruit,n13134947,fruit
+8,n07739506,eating apple,n07739125,apple,n07705931,edible fruit
+9,n07742313,granny smith,n07739506,eating apple,n07739125,apple
+7,n07742704,berry,n07705931,edible fruit,n13134947,fruit
+8,n07745940,strawberry,n07742704,berry,n07705931,edible fruit
+7,n07747055,citrus,n07705931,edible fruit,n13134947,fruit
+8,n07747607,orange,n07747055,citrus,n07705931,edible fruit
+8,n07749582,lemon,n07747055,citrus,n07705931,edible fruit
+7,n07753113,fig,n07705931,edible fruit,n13134947,fruit
+7,n07753275,pineapple,n07705931,edible fruit,n13134947,fruit
+7,n07753592,banana,n07705931,edible fruit,n13134947,fruit
+7,n07754684,jackfruit,n07705931,edible fruit,n13134947,fruit
+7,n07760859,custard apple,n07705931,edible fruit,n13134947,fruit
+7,n07768694,pomegranate,n07705931,edible fruit,n13134947,fruit
+6,n12267677,acorn,n13134947,fruit,n11675842,reproductive structure
+6,n12620546,hip,n13134947,fruit,n11675842,reproductive structure
+6,n13133613,ear,n13134947,fruit,n11675842,reproductive structure
+6,n13135832,seed,n13134947,fruit,n11675842,reproductive structure
+7,n11689483,oilseed,n13135832,seed,n13134947,fruit
+8,n11879895,rapeseed,n11689483,oilseed,n13135832,seed
+7,n12156819,grain,n13135832,seed,n13134947,fruit
+8,n12157056,kernel,n12156819,grain,n13135832,seed
+9,n12144580,corn,n12157056,kernel,n12156819,grain
+7,n12768682,buckeye,n13135832,seed,n13134947,fruit
+6,n13138842,pome,n13134947,fruit,n11675842,reproductive structure
+1,n00021939,artifact,fall11,root_name,no_id,no_abuelo
+2,n03575240,instrumentality,n00021939,artifact,fall11,root_name
+3,n03183080,device,n03575240,instrumentality,n00021939,artifact
+4,n03800933,musical instrument,n03183080,device,n03575240,instrumentality
+5,n03915437,percussion instrument,n03800933,musical instrument,n03183080,device
+6,n03928116,piano,n03915437,percussion instrument,n03800933,musical instrument
+7,n03452741,grand piano,n03928116,piano,n03915437,percussion instrument
+7,n04515003,upright,n03928116,piano,n03915437,percussion instrument
+6,n03017168,chime,n03915437,percussion instrument,n03800933,musical instrument
+6,n03249569,drum,n03915437,percussion instrument,n03800933,musical instrument
+6,n03447721,gong,n03915437,percussion instrument,n03800933,musical instrument
+6,n03720891,maraca,n03915437,percussion instrument,n03800933,musical instrument
+6,n03721384,marimba,n03915437,percussion instrument,n03800933,musical instrument
+6,n04311174,steel drum,n03915437,percussion instrument,n03800933,musical instrument
+5,n04338517,stringed instrument,n03800933,musical instrument,n03183080,device
+6,n02787622,banjo,n04338517,stringed instrument,n03800933,musical instrument
+6,n02880546,bowed stringed instrument,n04338517,stringed instrument,n03800933,musical instrument
+7,n02992211,cello,n02880546,bowed stringed instrument,n04338517,stringed instrument
+7,n04536866,violin,n02880546,bowed stringed instrument,n04338517,stringed instrument
+6,n03025886,chordophone,n04338517,stringed instrument,n03800933,musical instrument
+7,n03495258,harp,n03025886,chordophone,n04338517,stringed instrument
+6,n03467517,guitar,n04338517,stringed instrument,n03800933,musical instrument
+7,n02676566,acoustic guitar,n03467517,guitar,n04338517,stringed instrument
+7,n03272010,electric guitar,n03467517,guitar,n04338517,stringed instrument
+5,n04586932,wind instrument,n03800933,musical instrument,n03183080,device
+6,n03854065,organ,n04586932,wind instrument,n03800933,musical instrument
+6,n02891788,brass,n04586932,wind instrument,n03800933,musical instrument
+7,n03110669,cornet,n02891788,brass,n04586932,wind instrument
+7,n03394916,french horn,n02891788,brass,n04586932,wind instrument
+7,n04487394,trombone,n02891788,brass,n04586932,wind instrument
+6,n03393324,free-reed instrument,n04586932,wind instrument,n03800933,musical instrument
+7,n02672831,accordion,n03393324,free-reed instrument,n04586932,wind instrument
+7,n03494278,harmonica,n03393324,free-reed instrument,n04586932,wind instrument
+6,n03840681,ocarina,n04586932,wind instrument,n03800933,musical instrument
+6,n03945615,pipe,n04586932,wind instrument,n03800933,musical instrument
+7,n03884397,panpipe,n03945615,pipe,n04586932,wind instrument
+6,n04598582,woodwind,n04586932,wind instrument,n03800933,musical instrument
+7,n02817799,beating-reed instrument,n04598582,woodwind,n04586932,wind instrument
+8,n03228016,double-reed instrument,n02817799,beating-reed instrument,n04598582,woodwind
+9,n02804610,bassoon,n03228016,double-reed instrument,n02817799,beating-reed instrument
+9,n03838899,oboe,n03228016,double-reed instrument,n02817799,beating-reed instrument
+8,n04222847,single-reed instrument,n02817799,beating-reed instrument,n04598582,woodwind
+9,n04141076,sax,n04222847,single-reed instrument,n02817799,beating-reed instrument
+7,n03372029,flute,n04598582,woodwind,n04586932,wind instrument
+4,n02688443,airfoil,n03183080,device,n03575240,instrumentality
+5,n04592741,wing,n02688443,airfoil,n03183080,device
+4,n02895606,breathing device,n03183080,device,n03575240,instrumentality
+5,n03868863,oxygen mask,n02895606,breathing device,n03183080,device
+5,n04251144,snorkel,n02895606,breathing device,n03183080,device
+4,n03269401,electrical device,n03183080,device,n03575240,instrumentality
+5,n04470953,transducer,n03269401,electrical device,n03183080,device
+6,n03274561,electro-acoustic transducer,n04470953,transducer,n03269401,electrical device
+7,n03691459,loudspeaker,n03274561,electro-acoustic transducer,n04470953,transducer
+7,n03759954,microphone,n03274561,electro-acoustic transducer,n04470953,transducer
+4,n03277771,electronic device,n03183080,device,n03575240,instrumentality
+5,n03211117,display,n03277771,electronic device,n03183080,device
+6,n04152593,screen,n03211117,display,n03277771,electronic device
+5,n03793489,mouse,n03277771,electronic device,n03183080,device
+4,n03320046,fan,n03183080,device,n03575240,instrumentality
+5,n03271574,electric fan,n03320046,fan,n03183080,device
+4,n03339643,filter,n03183080,device,n03575240,instrumentality
+5,n03843555,oil filter,n03339643,filter,n03183080,device
+5,n04332243,strainer,n03339643,filter,n03183080,device
+4,n03508101,heater,n03183080,device,n03575240,instrumentality
+5,n04265275,space heater,n03508101,heater,n03183080,device
+5,n04330267,stove,n03508101,heater,n03183080,device
+4,n03574816,instrument,n03183080,device,n03575240,instrumentality
+5,n03575691,instrument of execution,n03574816,instrument,n03183080,device
+6,n03467068,guillotine,n03575691,instrument of execution,n03574816,instrument
+5,n03733925,measuring instrument,n03574816,instrument,n03183080,device
+6,n02794156,barometer,n03733925,measuring instrument,n03574816,instrument
+6,n03735637,measuring stick,n03733925,measuring instrument,n03574816,instrument
+7,n04118776,rule,n03735637,measuring stick,n03733925,measuring instrument
+6,n03753077,meter,n03733925,measuring instrument,n03574816,instrument
+7,n03841143,odometer,n03753077,meter,n03733925,measuring instrument
+6,n04141975,scale,n03733925,measuring instrument,n03574816,instrument
+6,n04437953,timepiece,n03733925,measuring instrument,n03574816,instrument
+7,n04555897,watch,n04437953,timepiece,n03733925,measuring instrument
+8,n03197337,digital watch,n04555897,watch,n04437953,timepiece
+7,n03046257,clock,n04437953,timepiece,n03733925,measuring instrument
+8,n02708093,analog clock,n03046257,clock,n04437953,timepiece
+8,n03196217,digital clock,n03046257,clock,n04437953,timepiece
+8,n04548280,wall clock,n03046257,clock,n04437953,timepiece
+7,n04134632,sandglass,n04437953,timepiece,n03733925,measuring instrument
+8,n03544143,hourglass,n04134632,sandglass,n04437953,timepiece
+7,n04355338,sundial,n04437953,timepiece,n03733925,measuring instrument
+7,n04438304,timer,n04437953,timepiece,n03733925,measuring instrument
+8,n03891332,parking meter,n04438304,timer,n04437953,timepiece
+8,n04328186,stopwatch,n04438304,timer,n04437953,timepiece
+5,n03739693,medical instrument,n03574816,instrument,n03183080,device
+6,n04317175,stethoscope,n03739693,medical instrument,n03574816,instrument
+6,n04376876,syringe,n03739693,medical instrument,n03574816,instrument
+5,n03813176,navigational instrument,n03574816,instrument,n03183080,device
+6,n03080497,compass,n03813176,navigational instrument,n03574816,instrument
+7,n03706229,magnetic compass,n03080497,compass,n03813176,navigational instrument
+5,n03852280,optical instrument,n03574816,instrument,n03183080,device
+6,n02841315,binoculars,n03852280,optical instrument,n03574816,instrument
+6,n04009552,projector,n03852280,optical instrument,n03574816,instrument
+6,n04272054,spectacles,n03852280,optical instrument,n03574816,instrument
+7,n04356056,sunglasses,n04272054,spectacles,n03852280,optical instrument
+5,n04147495,scientific instrument,n03574816,instrument,n03183080,device
+6,n03709206,magnifier,n04147495,scientific instrument,n03574816,instrument
+7,n03760671,microscope,n03709206,magnifier,n04147495,scientific instrument
+8,n03667829,light microscope,n03760671,microscope,n03709206,magnifier
+9,n03484931,hand glass,n03667829,light microscope,n03760671,microscope
+10,n03692522,loupe,n03484931,hand glass,n03667829,light microscope
+7,n04403638,telescope,n03709206,magnifier,n04147495,scientific instrument
+8,n02751295,astronomical telescope,n04403638,telescope,n03709206,magnifier
+9,n04044716,radio telescope,n02751295,astronomical telescope,n04403638,telescope
+5,n04565375,weapon,n03574816,instrument,n03183080,device
+6,n03773504,missile,n04565375,weapon,n03574816,instrument
+6,n02879718,bow,n04565375,weapon,n03574816,instrument
+6,n03467984,gun,n04565375,weapon,n03574816,instrument
+7,n02950826,cannon,n03467984,gun,n04565375,weapon
+7,n03343853,firearm,n03467984,gun,n04565375,weapon
+8,n02759963,autoloader,n03343853,firearm,n03467984,gun
+9,n02760429,automatic firearm,n02759963,autoloader,n03343853,firearm
+10,n02760855,automatic rifle,n02760429,automatic firearm,n02759963,autoloader
+11,n02749479,assault rifle,n02760855,automatic rifle,n02760429,automatic firearm
+10,n03701391,machine gun,n02760429,automatic firearm,n02759963,autoloader
+8,n03948459,pistol,n03343853,firearm,n03467984,gun
+9,n04086273,revolver,n03948459,pistol,n03343853,firearm
+8,n04090263,rifle,n03343853,firearm,n03467984,gun
+6,n04008634,projectile,n04565375,weapon,n03574816,instrument
+4,n03614007,keyboard,n03183080,device,n03575240,instrumentality
+5,n03085013,computer keyboard,n03614007,keyboard,n03183080,device
+5,n04505470,typewriter keyboard,n03614007,keyboard,n03183080,device
+4,n03664675,lifting device,n03183080,device,n03575240,instrumentality
+5,n03126707,crane,n03664675,lifting device,n03183080,device
+4,n03666591,lighter,n03183080,device,n03575240,instrumentality
+4,n03699975,machine,n03183080,device,n03575240,instrumentality
+5,n03997484,power tool,n03699975,machine,n03183080,device
+6,n03995372,power drill,n03997484,power tool,n03699975,machine
+6,n03996145,power saw,n03997484,power tool,n03699975,machine
+7,n03000684,chain saw,n03996145,power saw,n03997484,power tool
+5,n02938886,calculator,n03699975,machine,n03183080,device
+6,n02666196,abacus,n02938886,calculator,n03699975,machine
+5,n02977058,cash machine,n03699975,machine,n03183080,device
+5,n03082979,computer,n03699975,machine,n03183080,device
+6,n02708224,analog computer,n03082979,computer,n03699975,machine
+7,n04238763,slide rule,n02708224,analog computer,n03082979,computer
+6,n03196324,digital computer,n03082979,computer,n03699975,machine
+7,n03918480,personal computer,n03196324,digital computer,n03082979,computer
+8,n03180011,desktop computer,n03918480,personal computer,n03196324,digital computer
+8,n03985232,portable computer,n03918480,personal computer,n03196324,digital computer
+9,n03642806,laptop,n03985232,portable computer,n03918480,personal computer
+9,n03485407,hand-held computer,n03985232,portable computer,n03918480,personal computer
+9,n03832673,notebook,n03985232,portable computer,n03918480,personal computer
+6,n06359193,web site,n03082979,computer,n03699975,machine
+5,n03322940,farm machine,n03699975,machine,n03183080,device
+6,n03496892,harvester,n03322940,farm machine,n03699975,machine
+6,n04428191,thresher,n03322940,farm machine,n03699975,machine
+5,n04243941,slot machine,n03699975,machine,n03183080,device
+6,n04243546,slot,n04243941,slot machine,n03699975,machine
+6,n04525305,vending machine,n04243941,slot machine,n03699975,machine
+5,n03096960,control,n03738472,mechanism,no_id,no_abuelo
+6,n03602883,joystick,n03096960,control,n03738472,mechanism
+6,n04372370,switch,n03096960,control,n03738472,mechanism
+5,n03736970,mechanical device,n03738472,mechanism,no_id,no_abuelo
+6,n03532672,hook,n03736970,mechanical device,n03738472,mechanism
+7,n04574999,wheel,n03700963,machine,no_id,no_abuelo
+8,n02974003,car wheel,n04574999,wheel,n03700963,machine
+8,n03874293,paddlewheel,n04574999,wheel,n03700963,machine
+8,n03944341,pinwheel,n04574999,wheel,n03700963,machine
+8,n03992509,potter's wheel,n04574999,wheel,n03700963,machine
+6,n04021798,pump,n03736970,mechanical device,n03738472,mechanism
+7,n03425413,gas pump,n04021798,pump,n03736970,mechanical device
+6,n04088797,ride,n03736970,mechanical device,n03738472,mechanism
+7,n02966193,carousel,n04088797,ride,n03736970,mechanical device
+6,n04371774,swing,n03736970,mechanical device,n03738472,mechanism
+6,n04586421,winder,n03736970,mechanical device,n03738472,mechanism
+7,n04067472,reel,n04586421,winder,n03736970,mechanical device
+5,n04040759,radiator,n03738472,mechanism,no_id,no_abuelo
+4,n03744840,memory device,n03183080,device,n03575240,instrumentality
+5,n03706653,magnetic disk,n03744840,memory device,n03183080,device
+6,n03492542,hard disc,n03706653,magnetic disk,n03744840,memory device
+4,n03851341,optical device,n03183080,device,n03575240,instrumentality
+5,n03656484,lens,n03851341,optical device,n03183080,device
+6,n03099771,converging lens,n03656484,lens,n03851341,optical device
+7,n04355933,sunglass,n03099771,converging lens,n03656484,lens
+4,n03929660,pick,n03183080,device,n03575240,instrumentality
+4,n04069276,reflector,n03183080,device,n03575240,instrumentality
+5,n03773035,mirror,n04069276,reflector,n03183080,device
+6,n02965783,car mirror,n03773035,mirror,n04069276,reflector
+5,n04258138,solar dish,n04069276,reflector,n03183080,device
+4,n04074963,remote control,n03183080,device,n03575240,instrumentality
+4,n04081844,restraint,n03183080,device,n03575240,instrumentality
+5,n02889425,brake,n04081844,restraint,n03183080,device
+6,n02891188,brake system,n02889425,brake,n04081844,restraint
+7,n03551084,hydraulic brake,n02891188,brake system,n02889425,brake
+8,n03208938,disk brake,n03551084,hydraulic brake,n02891188,brake system
+5,n03323703,fastener,n04081844,restraint,n03183080,device
+6,n02910353,buckle,n03323703,fastener,n04081844,restraint
+6,n03043958,clip,n03323703,fastener,n04081844,restraint
+7,n03476684,hair slide,n03043958,clip,n03323703,fastener
+6,n03627232,knot,n03323703,fastener,n04081844,restraint
+6,n03682487,lock,n03323703,fastener,n04081844,restraint
+7,n03075370,combination lock,n03682487,lock,n03323703,fastener
+7,n03874599,padlock,n03682487,lock,n03323703,fastener
+6,n03804744,nail,n03323703,fastener,n04081844,restraint
+6,n03940256,pin,n03323703,fastener,n04081844,restraint
+7,n04127249,safety pin,n03940256,pin,n03323703,fastener
+6,n04153751,screw,n03323703,fastener,n04081844,restraint
+5,n03803284,muzzle,n04081844,restraint,n03183080,device
+5,n04125853,safety belt,n04081844,restraint,n03183080,device
+6,n04162706,seat belt,n04125853,safety belt,n04081844,restraint
+4,n04120093,runner,n03183080,device,n03575240,instrumentality
+5,n04228054,ski,n04120093,runner,n03183080,device
+4,n04217718,signaling device,n03183080,device,n03575240,instrumentality
+5,n04579432,whistle,n04217718,signaling device,n03183080,device
+4,n04263760,source of illumination,n03183080,device,n03575240,instrumentality
+5,n03636248,lamp,n04263760,source of illumination,n03183080,device
+6,n02948072,candle,n03636248,lamp,n04263760,source of illumination
+6,n03640988,lantern,n03636248,lamp,n04263760,source of illumination
+7,n03590841,jack-o'-lantern,n03640988,lantern,n03636248,lamp
+6,n04286575,spotlight,n03636248,lamp,n04263760,source of illumination
+5,n03665366,light,n04263760,source of illumination,n03183080,device
+6,n04456115,torch,n03665366,light,n04263760,source of illumination
+4,n04359589,support,n03183080,device,n03575240,instrumentality
+5,n02887209,brace,n04359589,support,n03183080,device
+6,n03814639,neck brace,n02887209,brace,n04359589,support
+5,n03933933,pier,n04359589,support,n03183080,device
+5,n04038440,rack,n04359589,support,n03183080,device
+6,n04485082,tripod,n04038440,rack,n04359589,support
+5,n04341414,structural member,n04359589,support,n03183080,device
+7,n03988170,post,n04515129,upright,no_id,no_abuelo
+8,n03733131,maypole,n03988170,post,n04515129,upright
+4,n04474466,trap,n03183080,device,n03575240,instrumentality
+5,n03794056,mousetrap,n04474466,trap,n03183080,device
+5,n04568557,web,n04474466,trap,n03183080,device
+6,n04275548,spider web,n04568557,web,n04474466,trap
+3,n03563967,implement,n03575240,instrumentality,n00021939,artifact
+4,n04451818,tool,n03563967,implement,n03575240,instrumentality
+5,n03154446,cutting implement,n04451818,tool,n03563967,implement
+6,n03154073,cutter,n03154446,cutting implement,n04451818,tool
+7,n03265032,edge tool,n03154073,cutter,n03154446,cutting implement
+8,n02764044,ax,n03265032,edge tool,n03154073,cutter
+9,n03498962,hatchet,n02764044,ax,n03265032,edge tool
+8,n03623556,knife,n03265032,edge tool,n03154073,cutter
+9,n03041632,cleaver,n03623556,knife,n03265032,edge tool
+9,n03658185,letter opener,n03623556,knife,n03265032,edge tool
+8,n03954731,plane,n03265032,edge tool,n03154073,cutter
+5,n03418242,garden tool,n04451818,tool,n03563967,implement
+6,n03649909,lawn mower,n03418242,garden tool,n04451818,tool
+5,n03489162,hand tool,n04451818,tool,n03563967,implement
+6,n03481172,hammer,n03489162,hand tool,n04451818,tool
+6,n03848348,opener,n03489162,hand tool,n04451818,tool
+7,n02877962,bottle opener,n03848348,opener,n03489162,hand tool
+8,n03109150,corkscrew,n02877962,bottle opener,n03848348,opener
+7,n02951585,can opener,n03848348,opener,n03489162,hand tool
+6,n03970156,plunger,n03489162,hand tool,n04451818,tool
+6,n04154565,screwdriver,n03489162,hand tool,n04451818,tool
+6,n04208210,shovel,n03489162,hand tool,n04451818,tool
+5,n03967562,plow,n04451818,tool,n03563967,implement
+4,n04516672,utensil,n03563967,implement,n03575240,instrumentality
+5,n03621049,kitchen utensil,n04516672,utensil,n03563967,implement
+6,n03101986,cooking utensil,n03621049,kitchen utensil,n04516672,utensil
+7,n03101156,cooker,n03101986,cooking utensil,n03621049,kitchen utensil
+8,n03133878,crock pot,n03101156,cooker,n03101986,cooking utensil
+7,n03880531,pan,n03101986,cooking utensil,n03621049,kitchen utensil
+8,n03400231,frying pan,n03880531,pan,n03101986,cooking utensil
+8,n04596742,wok,n03880531,pan,n03101986,cooking utensil
+7,n03990474,pot,n03101986,cooking utensil,n03621049,kitchen utensil
+8,n02939185,caldron,n03990474,pot,n03101986,cooking utensil
+8,n03063689,coffeepot,n03990474,pot,n03101986,cooking utensil
+8,n04398044,teapot,n03990474,pot,n03101986,cooking utensil
+7,n04500060,turner,n03101986,cooking utensil,n03621049,kitchen utensil
+8,n04270147,spatula,n04500060,turner,n03101986,cooking utensil
+4,n03039947,cleaning implement,n03563967,implement,n03575240,instrumentality
+5,n04367480,swab,n03039947,cleaning implement,n03563967,implement
+5,n02906734,broom,n03039947,cleaning implement,n03563967,implement
+4,n02908217,brush,n03563967,implement,n03575240,instrumentality
+5,n03876231,paintbrush,n02908217,brush,n03563967,implement
+4,n03294833,eraser,n03563967,implement,n03575240,instrumentality
+5,n04116512,rubber eraser,n03294833,eraser,n03563967,implement
+4,n04185071,sharpener,n03563967,implement,n03575240,instrumentality
+5,n03908714,pencil sharpener,n04185071,sharpener,n03563967,implement
+4,n03837422,oar,n03563967,implement,n03575240,instrumentality
+5,n03873416,paddle,n03837422,oar,n03563967,implement
+4,n04100174,rod,n03563967,implement,n03575240,instrumentality
+5,n03976657,pole,n04100174,rod,n03563967,implement
+4,n04608567,writing implement,n03563967,implement,n03575240,instrumentality
+5,n03906997,pen,n04608567,writing implement,n03563967,implement
+6,n04033901,quill,n03906997,pen,n04608567,writing implement
+6,n02783161,ballpoint,n03906997,pen,n04608567,writing implement
+6,n03388183,fountain pen,n03906997,pen,n04608567,writing implement
+4,n04317420,stick,n03563967,implement,n03575240,instrumentality
+5,n04277352,spindle,n04317420,stick,n03563967,implement
+5,n03250847,drumstick,n04317420,stick,n03563967,implement
+5,n04296261,staff,n04317420,stick,n03563967,implement
+6,n03141823,crutch,n04296261,staff,n04317420,stick
+6,n03355925,flagpole,n04296261,staff,n04317420,stick
+5,n03729826,matchstick,n04317420,stick,n03563967,implement
+5,n03659292,lever,n02788689,bar,no_id,no_abuelo
+6,n03613592,key,n03659292,lever,n02788689,bar
+7,n04264628,space bar,n03613592,key,n03659292,lever
+4,n04285622,sports implement,n03563967,implement,n03575240,instrumentality
+5,n04039381,racket,n04285622,sports implement,n03563967,implement
+3,n03094503,container,n03575240,instrumentality,n00021939,artifact
+4,n04576211,wheeled vehicle,n03094503,container,n03575240,instrumentality
+5,n02834778,bicycle,n04576211,wheeled vehicle,n03094503,container
+6,n02835271,bicycle-built-for-two,n02834778,bicycle,n04576211,wheeled vehicle
+6,n03792782,mountain bike,n02834778,bicycle,n04576211,wheeled vehicle
+5,n02959942,car,n04576211,wheeled vehicle,n03094503,container
+6,n03393912,freight car,n02959942,car,n04576211,wheeled vehicle
+6,n03895866,passenger car,n02959942,car,n04576211,wheeled vehicle
+5,n03484083,handcart,n04576211,wheeled vehicle,n03094503,container
+6,n02797295,barrow,n03484083,handcart,n04576211,wheeled vehicle
+6,n04204347,shopping cart,n03484083,handcart,n04576211,wheeled vehicle
+5,n03791053,motor scooter,n04576211,wheeled vehicle,n03094503,container
+5,n04170037,self-propelled vehicle,n04576211,wheeled vehicle,n03094503,container
+6,n03384352,forklift,n04170037,self-propelled vehicle,n04576211,wheeled vehicle
+6,n03684823,locomotive,n04170037,self-propelled vehicle,n04576211,wheeled vehicle
+7,n03272562,electric locomotive,n03684823,locomotive,n04170037,self-propelled vehicle
+7,n04310018,steam locomotive,n03684823,locomotive,n04170037,self-propelled vehicle
+6,n03791235,motor vehicle,n04170037,self-propelled vehicle,n04576211,wheeled vehicle
+7,n02704792,amphibian,n03791235,motor vehicle,n04170037,self-propelled vehicle
+8,n02701002,ambulance,n02958343,car,no_id,no_abuelo
+8,n02814533,beach wagon,n02958343,car,no_id,no_abuelo
+8,n02930766,cab,n02958343,car,no_id,no_abuelo
+8,n03100240,convertible,n02958343,car,no_id,no_abuelo
+8,n03594945,jeep,n02958343,car,no_id,no_abuelo
+8,n03670208,limousine,n02958343,car,no_id,no_abuelo
+8,n03770679,minivan,n02958343,car,no_id,no_abuelo
+8,n03777568,model t,n02958343,car,no_id,no_abuelo
+8,n04037443,racer,n02958343,car,no_id,no_abuelo
+8,n04285008,sports car,n02958343,car,no_id,no_abuelo
+7,n03444034,go-kart,n03791235,motor vehicle,n04170037,self-propelled vehicle
+7,n03445924,golfcart,n03791235,motor vehicle,n04170037,self-propelled vehicle
+7,n03790512,motorcycle,n03791235,motor vehicle,n04170037,self-propelled vehicle
+8,n03769722,minibike,n03790512,motorcycle,n03791235,motor vehicle
+9,n03785016,moped,n03769722,minibike,n03790512,motorcycle
+7,n04252225,snowplow,n03791235,motor vehicle,n04170037,self-propelled vehicle
+7,n04490091,truck,n03791235,motor vehicle,n04170037,self-propelled vehicle
+8,n03345487,fire engine,n04490091,truck,n03791235,motor vehicle
+8,n03417042,garbage truck,n04490091,truck,n03791235,motor vehicle
+8,n03930630,pickup,n04490091,truck,n03791235,motor vehicle
+8,n04461696,tow truck,n04490091,truck,n03791235,motor vehicle
+8,n04467665,trailer truck,n04490091,truck,n03791235,motor vehicle
+8,n04520170,van,n04490091,truck,n03791235,motor vehicle
+9,n03796401,moving van,n04520170,van,n04490091,truck
+9,n03896419,passenger van,n04520170,van,n04490091,truck
+9,n03977966,police van,n04520170,van,n04490091,truck
+6,n04065272,recreational vehicle,n04170037,self-propelled vehicle,n04576211,wheeled vehicle
+6,n04335435,streetcar,n04170037,self-propelled vehicle,n04576211,wheeled vehicle
+6,n04464852,tracked vehicle,n04170037,self-propelled vehicle,n04576211,wheeled vehicle
+7,n03478589,half track,n04464852,tracked vehicle,n04170037,self-propelled vehicle
+7,n04389033,tank,n04464852,tracked vehicle,n04170037,self-propelled vehicle
+7,n04252077,snowmobile,n04464852,tracked vehicle,n04170037,self-propelled vehicle
+6,n04465501,tractor,n04170037,self-propelled vehicle,n04576211,wheeled vehicle
+5,n04482393,tricycle,n04576211,wheeled vehicle,n03094503,container
+5,n04509417,unicycle,n04576211,wheeled vehicle,n03094503,container
+5,n04543158,wagon,n04576211,wheeled vehicle,n03094503,container
+6,n02970849,cart,n04543158,wagon,n04576211,wheeled vehicle
+7,n03538406,horse cart,n02970849,cart,n04543158,wagon
+7,n03599486,jinrikisha,n02970849,cart,n04543158,wagon
+7,n03868242,oxcart,n02970849,cart,n04543158,wagon
+4,n02801938,basket,n03094503,container,n03575240,instrumentality
+5,n03482405,hamper,n02801938,basket,n03094503,container
+5,n04204238,shopping basket,n02801938,basket,n03094503,container
+4,n04423845,thimble,n03094503,container,n03575240,instrumentality
+4,n02773037,bag,n03094503,container,n03575240,instrumentality
+5,n03709823,mailbag,n02773037,bag,n03094503,container
+5,n02769748,backpack,n02773037,bag,n03094503,container
+5,n04026417,purse,n02773037,bag,n03094503,container
+5,n04235860,sleeping bag,n02773037,bag,n03094503,container
+5,n03958227,plastic bag,n02773037,bag,n03094503,container
+4,n04284002,spoon,n03094503,container,n03575240,instrumentality
+5,n04597913,wooden spoon,n04284002,spoon,n03094503,container
+4,n04139859,savings bank,n03094503,container,n03575240,instrumentality
+5,n03935335,piggy bank,n04139859,savings bank,n03094503,container
+5,n03920288,petri dish,n03206908,dish,no_id,no_abuelo
+5,n02880940,bowl,n03206908,dish,no_id,no_abuelo
+6,n04263257,soup bowl,n02880940,bowl,n03206908,dish
+6,n03775546,mixing bowl,n02880940,bowl,n03206908,dish
+4,n02839910,bin,n03094503,container,n03575240,instrumentality
+5,n02747177,ashcan,n02839910,bin,n03094503,container
+4,n04183329,shaker,n03094503,container,n03575240,instrumentality
+5,n03062245,cocktail shaker,n04183329,shaker,n03094503,container
+5,n04131690,saltshaker,n04183329,shaker,n03094503,container
+4,n04531098,vessel,n03094503,container,n03575240,instrumentality
+5,n02801525,basin,n04531098,vessel,n03094503,container
+6,n04553703,washbasin,n02801525,basin,n04531098,vessel
+5,n04493381,tub,n04531098,vessel,n03094503,container
+5,n03593526,jar,n04531098,vessel,n03094503,container
+6,n04522168,vase,n03593526,jar,n04531098,vessel
+6,n02815834,beaker,n03593526,jar,n04531098,vessel
+5,n02909870,bucket,n04531098,vessel,n03094503,container
+5,n03786901,mortar,n04531098,vessel,n03094503,container
+5,n02876657,bottle,n04531098,vessel,n03094503,container
+6,n02823428,beer bottle,n02876657,bottle,n04531098,vessel
+6,n03983396,pop bottle,n02876657,bottle,n04531098,vessel
+6,n04591713,wine bottle,n02876657,bottle,n04531098,vessel
+6,n03937543,pill bottle,n02876657,bottle,n04531098,vessel
+6,n04557648,water bottle,n02876657,bottle,n04531098,vessel
+6,n03603722,jug,n02876657,bottle,n04531098,vessel
+7,n04579145,whiskey jug,n03603722,jug,n02876657,bottle
+7,n04560804,water jug,n03603722,jug,n02876657,bottle
+6,n04078574,reservoir,n04388743,tank,no_id,no_abuelo
+7,n04562935,water tower,n04078574,reservoir,n04388743,tank
+7,n03035510,cistern,n04078574,reservoir,n04388743,tank
+8,n04049303,rain barrel,n03035510,cistern,n04078574,reservoir
+5,n02808440,bathtub,n04531098,vessel,n03094503,container
+5,n03633091,ladle,n04531098,vessel,n03094503,container
+5,n02795169,barrel,n04531098,vessel,n03094503,container
+5,n03950228,pitcher,n04531098,vessel,n03094503,container
+5,n03241496,drinking vessel,n04531098,vessel,n03094503,container
+6,n03797390,mug,n03241496,drinking vessel,n04531098,vessel
+7,n03063599,coffee mug,n03797390,mug,n03241496,drinking vessel
+4,n03291819,envelope,n03094503,container,n03575240,instrumentality
+4,n02946921,can,n03094503,container,n03575240,instrumentality
+5,n03764736,milk can,n02946921,can,n03094503,container
+4,n03438257,glass,n03094503,container,n03575240,instrumentality
+5,n02823750,beer glass,n03438257,glass,n03094503,container
+5,n03443371,goblet,n03438257,glass,n03094503,container
+4,n02978881,cassette,n03094503,container,n03575240,instrumentality
+4,n04060904,receptacle,n03094503,container,n03575240,instrumentality
+5,n04476259,tray,n04060904,receptacle,n03094503,container
+4,n03210683,dispenser,n03094503,container,n03575240,instrumentality
+5,n04254120,soap dispenser,n03210683,dispenser,n03094503,container
+4,n03871083,package,n03094503,container,n03575240,instrumentality
+5,n03871628,packet,n03871083,package,n03094503,container
+4,n02883344,box,n03094503,container,n03575240,instrumentality
+5,n02971356,carton,n02883344,box,n03094503,container
+5,n03014705,chest,n02883344,box,n03094503,container
+5,n04340750,strongbox,n02883344,box,n03094503,container
+6,n04125021,safe,n04340750,strongbox,n02883344,box
+5,n03908618,pencil box,n02883344,box,n03094503,container
+5,n03127925,crate,n02883344,box,n03094503,container
+5,n03710193,mailbox,n02883344,box,n03094503,container
+4,n03733644,measure,n03094503,container,n03575240,instrumentality
+5,n03733805,measuring cup,n03733644,measure,n03094503,container
+4,n02974697,case,n03094503,container,n03575240,instrumentality
+5,n04548362,wallet,n02974697,case,n03094503,container
+3,n03294048,equipment,n03575240,instrumentality,n00021939,artifact
+4,n04285146,sports equipment,n03294048,equipment,n03575240,instrumentality
+5,n03472232,gymnastic apparatus,n04285146,sports equipment,n03294048,equipment
+6,n02777292,balance beam,n03472232,gymnastic apparatus,n04285146,sports equipment
+6,n03535780,horizontal bar,n03472232,gymnastic apparatus,n04285146,sports equipment
+6,n03888605,parallel bars,n03472232,gymnastic apparatus,n04285146,sports equipment
+5,n04571292,weight,n04285146,sports equipment,n03294048,equipment
+6,n02790996,barbell,n04571292,weight,n04285146,sports equipment
+6,n03255030,dumbbell,n04571292,weight,n04285146,sports equipment
+4,n03414162,game equipment,n03294048,equipment,n03575240,instrumentality
+5,n03982430,pool table,n03414162,game equipment,n03294048,equipment
+5,n03413828,game,n03414162,game equipment,n03294048,equipment
+6,n04028315,puzzle,n03413828,game,n03414162,game equipment
+7,n06785654,crossword puzzle,n04028315,puzzle,n03413828,game
+7,n03598930,jigsaw puzzle,n04028315,puzzle,n03413828,game
+5,n02778669,ball,n03414162,game equipment,n03294048,equipment
+6,n04254680,soccer ball,n02778669,ball,n03414162,game equipment
+6,n03134739,croquet ball,n02778669,ball,n03414162,game equipment
+6,n03445777,golf ball,n02778669,ball,n03414162,game equipment
+6,n02799071,baseball,n02778669,ball,n03414162,game equipment
+6,n03942813,ping-pong ball,n02778669,ball,n03414162,game equipment
+6,n04023962,punching bag,n02778669,ball,n03414162,game equipment
+6,n04118538,rugby ball,n02778669,ball,n03414162,game equipment
+6,n02802426,basketball,n02778669,ball,n03414162,game equipment
+6,n04540053,volleyball,n02778669,ball,n03414162,game equipment
+6,n04409515,tennis ball,n02778669,ball,n03414162,game equipment
+4,n03926148,photographic equipment,n03294048,equipment,n03575240,instrumentality
+5,n02942699,camera,n03926148,photographic equipment,n03294048,equipment
+6,n03976467,polaroid camera,n02942699,camera,n03926148,photographic equipment
+6,n04069434,reflex camera,n02942699,camera,n03926148,photographic equipment
+4,n03430959,gear,n03294048,equipment,n03575240,instrumentality
+5,n03619396,kit,n03430959,gear,n03294048,equipment
+6,n02966687,carpenter's kit,n03619396,kit,n03430959,gear
+5,n04091097,rig,n03430959,gear,n03294048,equipment
+6,n03241093,drill rig,n04091097,rig,n03430959,gear
+7,n03240683,drilling platform,n03241093,drill rig,n04091097,rig
+4,n03278248,electronic equipment,n03294048,equipment,n03575240,instrumentality
+5,n02757462,audio system,n03278248,electronic equipment,n03294048,equipment
+6,n04077430,reproducer,n02757462,audio system,n03278248,electronic equipment
+7,n04315948,stereo,n04077430,reproducer,n02757462,audio system
+8,n03584254,ipod,n04315948,stereo,n04077430,reproducer
+5,n03777754,modem,n03278248,electronic equipment,n03294048,equipment
+5,n03782006,monitor,n03278248,electronic equipment,n03294048,equipment
+5,n03857828,oscilloscope,n03278248,electronic equipment,n03294048,equipment
+5,n03916720,peripheral,n03278248,electronic equipment,n03294048,equipment
+6,n04004767,printer,n03916720,peripheral,n03278248,electronic equipment
+6,n03163973,data input device,n03916720,peripheral,n03278248,electronic equipment
+5,n02979186,cassette player,n03278248,electronic equipment,n03294048,equipment
+5,n04401088,telephone,n03278248,electronic equipment,n03294048,equipment
+6,n04044498,radiotelephone,n04401088,telephone,n03278248,electronic equipment
+7,n02992529,cellular telephone,n04044498,radiotelephone,n04401088,telephone
+6,n03902125,pay-phone,n04401088,telephone,n03278248,electronic equipment
+6,n03187595,dial telephone,n04401088,telephone,n03278248,electronic equipment
+5,n04392985,tape player,n03278248,electronic equipment,n03294048,equipment
+5,n02988304,cd player,n03278248,electronic equipment,n03294048,equipment
+4,n02727825,apparatus,n03294048,equipment,n03575240,instrumentality
+5,n03257586,duplicator,n02727825,apparatus,n03294048,equipment
+6,n03924679,photocopier,n03257586,duplicator,n02727825,apparatus
+4,n04077734,rescue equipment,n03294048,equipment,n03575240,instrumentality
+5,n03888257,parachute,n04077734,rescue equipment,n03294048,equipment
+3,n04447443,toiletry,n03575240,instrumentality,n00021939,artifact
+4,n03128519,cream,n04447443,toiletry,n03575240,instrumentality
+5,n04357314,sunscreen,n03128519,cream,n04447443,toiletry
+4,n03916031,perfume,n04447443,toiletry,n03575240,instrumentality
+4,n03113152,cosmetic,n04447443,toiletry,n03575240,instrumentality
+5,n03714235,makeup,n03113152,cosmetic,n04447443,toiletry
+6,n03314780,face powder,n03714235,makeup,n03113152,cosmetic
+6,n03676483,lipstick,n03714235,makeup,n03113152,cosmetic
+4,n03690938,lotion,n04447443,toiletry,n03575240,instrumentality
+4,n03476991,hair spray,n04447443,toiletry,n03575240,instrumentality
+3,n03100490,conveyance,n03575240,instrumentality,n00021939,artifact
+4,n04524313,vehicle,n03100490,conveyance,n03575240,instrumentality
+5,n03125870,craft,n04524313,vehicle,n03100490,conveyance
+6,n02686568,aircraft,n03125870,craft,n04524313,vehicle
+7,n03510583,heavier-than-air craft,n02686568,aircraft,n03125870,craft
+8,n02691156,airplane,n03510583,heavier-than-air craft,n02686568,aircraft
+9,n02690373,airliner,n02691156,airplane,n03510583,heavier-than-air craft
+8,n04552348,warplane,n03510583,heavier-than-air craft,n02686568,aircraft
+7,n03666917,lighter-than-air craft,n02686568,aircraft,n03125870,craft
+8,n02692877,airship,n03666917,lighter-than-air craft,n02686568,aircraft
+8,n02782093,balloon,n03666917,lighter-than-air craft,n02686568,aircraft
+6,n04264914,spacecraft,n03125870,craft,n04524313,vehicle
+7,n04266014,space shuttle,n04264914,spacecraft,n03125870,craft
+7,n02858304,boat,n04530566,vessel,no_id,no_abuelo
+8,n03344393,fireboat,n02858304,boat,n04530566,vessel
+8,n03447447,gondola,n02858304,boat,n04530566,vessel
+8,n03790230,motorboat,n02858304,boat,n04530566,vessel
+9,n04273569,speedboat,n03790230,motorboat,n02858304,boat
+8,n04158807,sea boat,n02858304,boat,n04530566,vessel
+9,n03662601,lifeboat,n04158807,sea boat,n02858304,boat
+8,n04244997,small boat,n02858304,boat,n04530566,vessel
+9,n02951358,canoe,n04244997,small boat,n02858304,boat
+9,n04612504,yawl,n04244997,small boat,n02858304,boat
+7,n04128837,sailing vessel,n04530566,vessel,no_id,no_abuelo
+8,n04147183,schooner,n04128837,sailing vessel,n04530566,vessel
+8,n04128499,sailboat,n04128837,sailing vessel,n04530566,vessel
+9,n02981792,catamaran,n04128499,sailboat,n04128837,sailing vessel
+9,n04483307,trimaran,n04128499,sailboat,n04128837,sailing vessel
+7,n04194289,ship,n04530566,vessel,no_id,no_abuelo
+8,n02965300,cargo ship,n04194289,ship,n04530566,vessel
+9,n03095699,container ship,n02965300,cargo ship,n04194289,ship
+8,n03896103,passenger ship,n04194289,ship,n04530566,vessel
+9,n03673027,liner,n03896103,passenger ship,n04194289,ship
+8,n03947888,pirate,n04194289,ship,n04530566,vessel
+8,n04552696,warship,n04194289,ship,n04530566,vessel
+9,n02687172,aircraft carrier,n04552696,warship,n04194289,ship
+9,n04348184,submersible,n04552696,warship,n04194289,ship
+10,n04347754,submarine,n04348184,submersible,n04552696,warship
+8,n04606251,wreck,n04194289,ship,n04530566,vessel
+5,n03764276,military vehicle,n04524313,vehicle,n03100490,conveyance
+5,n04099429,rocket,n04524313,vehicle,n03100490,conveyance
+5,n04235291,sled,n04524313,vehicle,n03100490,conveyance
+6,n02860847,bobsled,n04235291,sled,n04524313,vehicle
+6,n03218198,dogsled,n04235291,sled,n04524313,vehicle
+4,n03678362,litter,n03100490,conveyance,n03575240,instrumentality
+5,n04336792,stretcher,n03678362,litter,n03100490,conveyance
+4,n04019101,public transport,n03100490,conveyance,n03575240,instrumentality
+5,n04468005,train,n04019101,public transport,n03100490,conveyance
+6,n03896233,passenger train,n04468005,train,n04019101,public transport
+7,n02917067,bullet train,n03896233,passenger train,n04468005,train
+5,n02924116,bus,n04019101,public transport,n03100490,conveyance
+6,n04487081,trolleybus,n02924116,bus,n04019101,public transport
+6,n03769881,minibus,n02924116,bus,n04019101,public transport
+6,n04146614,school bus,n02924116,bus,n04019101,public transport
+3,n03091374,connection,n03575240,instrumentality,n00021939,artifact
+4,n02755352,attachment,n03091374,connection,n03575240,instrumentality
+5,n03664943,ligament,n02755352,attachment,n03091374,connection
+6,n02999410,chain,n03664943,ligament,n02755352,attachment
+3,n03405265,furnishing,n03575240,instrumentality,n00021939,artifact
+4,n03405725,furniture,n03405265,furnishing,n03575240,instrumentality
+5,n02766320,baby bed,n03405725,furniture,n03405265,furnishing
+6,n02804414,bassinet,n02766320,baby bed,n03405725,furniture
+6,n03125729,cradle,n02766320,baby bed,n03405725,furniture
+6,n03131574,crib,n02766320,baby bed,n03405725,furniture
+5,n02821943,bedroom furniture,n03405725,furniture,n03405265,furnishing
+6,n02818832,bed,n02821943,bedroom furniture,n03405725,furniture
+7,n03388549,four-poster,n02818832,bed,n02821943,bedroom furniture
+5,n02870880,bookcase,n03405725,furniture,n03405265,furnishing
+5,n02933112,cabinet,n03405725,furniture,n03405265,furnishing
+6,n03018349,china cabinet,n02933112,cabinet,n03405725,furniture
+6,n03742115,medicine chest,n02933112,cabinet,n03405725,furniture
+5,n03015254,chest of drawers,n03405725,furniture,n03405265,furnishing
+6,n03016953,chiffonier,n03015254,chest of drawers,n03405725,furniture
+6,n04380533,table lamp,n03636649,lamp,no_id,no_abuelo
+5,n03842156,office furniture,n03405725,furniture,n03405265,furnishing
+6,n03337140,file,n03842156,office furniture,n03405725,furniture
+5,n04161981,seat,n03405725,furniture,n03405265,furnishing
+6,n02828884,bench,n04161981,seat,n03405725,furniture
+7,n03891251,park bench,n02828884,bench,n04161981,seat
+6,n03001627,chair,n04161981,seat,n03405725,furniture
+7,n02791124,barber chair,n03001627,chair,n04161981,seat
+7,n03002210,chair of state,n03001627,chair,n04161981,seat
+8,n04429376,throne,n03002210,chair of state,n03001627,chair
+7,n03376595,folding chair,n03001627,chair,n04161981,seat
+7,n04099969,rocking chair,n03001627,chair,n04161981,seat
+6,n04256520,sofa,n04161981,seat,n03405725,furniture
+8,n04344873,studio couch,n03100346,convertible,no_id,no_abuelo
+6,n04447861,toilet seat,n04161981,seat,n03405725,furniture
+5,n04379243,table,n03405725,furniture,n03405265,furnishing
+6,n03179701,desk,n04379243,table,n03405725,furniture
+6,n03201208,dining table,n04379964,table,no_id,no_abuelo
+5,n04549122,wall unit,n03405725,furniture,n03405265,furnishing
+6,n03290653,entertainment center,n04549122,wall unit,n03405725,furniture
+5,n04550184,wardrobe,n03405725,furniture,n03405265,furnishing
+4,n04118021,rug,n03405265,furnishing,n03575240,instrumentality
+5,n03998194,prayer rug,n04118021,rug,n03405265,furnishing
+4,n03151077,curtain,n03405265,furnishing,n03575240,instrumentality
+5,n04209239,shower curtain,n03151077,curtain,n03405265,furnishing
+5,n04418357,theater curtain,n03151077,curtain,n03405265,furnishing
+3,n04377057,system,n03575240,instrumentality,n00021939,artifact
+4,n03078287,communication system,n04377057,system,n03575240,instrumentality
+5,n04041544,radio,n03078287,communication system,n04377057,system
+5,n04400289,telecommunication system,n03078287,communication system,n04377057,system
+6,n04404412,television,n04400289,telecommunication system,n03078287,communication system
+4,n03733281,maze,n04377057,system,n03575240,instrumentality
+2,n04341686,structure,n00021939,artifact,fall11,root_name
+3,n02699494,altar,n04341686,structure,n00021939,artifact
+3,n02735688,area,n04341686,structure,n00021939,artifact
+4,n03899768,patio,n02735688,area,n04341686,structure
+3,n02898711,bridge,n04341686,structure,n00021939,artifact
+4,n04311004,steel arch bridge,n02898711,bridge,n04341686,structure
+4,n04366367,suspension bridge,n02898711,bridge,n04341686,structure
+4,n04532670,viaduct,n02898711,bridge,n04341686,structure
+3,n02913152,building,n04341686,structure,n00021939,artifact
+4,n03322570,farm building,n02913152,building,n04341686,structure
+5,n02793495,barn,n03322570,farm building,n02913152,building
+4,n03457902,greenhouse,n02913152,building,n04341686,structure
+4,n03544360,house,n02913152,building,n04341686,structure
+5,n04079244,residence,n03544360,house,n02913152,building
+6,n03877845,palace,n04079244,residence,n03544360,house
+6,n04073948,religious residence,n04079244,residence,n03544360,house
+7,n03781244,monastery,n04073948,religious residence,n04079244,residence
+4,n03661043,library,n02913152,building,n04341686,structure
+4,n03859280,outbuilding,n02913152,building,n04341686,structure
+5,n04187547,shed,n03859280,outbuilding,n02913152,building
+6,n02727426,apiary,n04187547,shed,n03859280,outbuilding
+6,n02859443,boathouse,n04187547,shed,n03859280,outbuilding
+4,n03953416,place of worship,n02913152,building,n04341686,structure
+5,n03028079,church,n03953416,place of worship,n02913152,building
+5,n03788195,mosque,n03953416,place of worship,n02913152,building
+5,n04210390,shrine,n03953416,place of worship,n02913152,building
+6,n04346328,stupa,n04210390,shrine,n03953416,place of worship
+4,n03956157,planetarium,n02913152,building,n04341686,structure
+4,n04081281,restaurant,n02913152,building,n04341686,structure
+4,n04417809,theater,n02913152,building,n04341686,structure
+5,n03032252,cinema,n04417809,theater,n02913152,building
+5,n03529860,home theater,n04417809,theater,n02913152,building
+3,n02914991,building complex,n04341686,structure,n00021939,artifact
+4,n03956922,plant,n02914991,building complex,n04341686,structure
+5,n03316406,factory,n03956922,plant,n02914991,building complex
+6,n03697007,lumbermill,n03316406,factory,n03956922,plant
+3,n03065424,coil,n04341686,structure,n00021939,artifact
+3,n03074380,column,n04341686,structure,n00021939,artifact
+4,n04458633,totem pole,n03074380,column,n04341686,structure
+4,n03837869,obelisk,n03074380,column,n04341686,structure
+3,n03171356,defensive structure,n04341686,structure,n00021939,artifact
+4,n03385557,fortification,n03171356,defensive structure,n04341686,structure
+5,n02980441,castle,n03385557,fortification,n03171356,defensive structure
+3,n03297735,establishment,n04341686,structure,n00021939,artifact
+4,n03574555,institution,n03297735,establishment,n04341686,structure
+5,n03907654,penal institution,n03574555,institution,n03297735,establishment
+6,n03111690,correctional institution,n03907654,penal institution,n03574555,institution
+7,n04005630,prison,n03111690,correctional institution,n03907654,penal institution
+4,n03953020,place of business,n03297735,establishment,n04341686,structure
+5,n03748162,mercantile establishment,n03953020,place of business,n03297735,establishment
+6,n03722288,marketplace,n03748162,mercantile establishment,n03953020,place of business
+7,n03461385,grocery store,n03722288,marketplace,n03748162,mercantile establishment
+6,n04202417,shop,n03748162,mercantile establishment,n03953020,place of business
+7,n02776631,bakery,n04202417,shop,n03748162,mercantile establishment
+7,n02791270,barbershop,n04202417,shop,n03748162,mercantile establishment
+7,n02871525,bookshop,n04202417,shop,n03748162,mercantile establishment
+7,n02927161,butcher shop,n04202417,shop,n03748162,mercantile establishment
+7,n03089624,confectionery,n04202417,shop,n03748162,mercantile establishment
+7,n04200800,shoe shop,n04202417,shop,n03748162,mercantile establishment
+7,n04443257,tobacco shop,n04202417,shop,n03748162,mercantile establishment
+7,n04462240,toyshop,n04202417,shop,n03748162,mercantile establishment
+3,n03388043,fountain,n04341686,structure,n00021939,artifact
+3,n03546340,housing,n04341686,structure,n00021939,artifact
+4,n03776460,mobile home,n03546340,housing,n04341686,structure
+4,n03259505,dwelling,n03546340,housing,n04341686,structure
+5,n03042490,cliff dwelling,n03259505,dwelling,n03546340,housing
+5,n04613696,yurt,n03259505,dwelling,n03546340,housing
+3,n03638321,landing,n04341686,structure,n00021939,artifact
+4,n03216828,dock,n03638321,landing,n04341686,structure
+3,n03743902,memorial,n04341686,structure,n00021939,artifact
+4,n04486054,triumphal arch,n03743902,memorial,n04341686,structure
+4,n03743016,megalith,n03743902,memorial,n04341686,structure
+3,n03839993,obstruction,n04341686,structure,n00021939,artifact
+5,n02788148,bannister,n02796623,barrier,no_id,no_abuelo
+5,n02894605,breakwater,n02796623,barrier,no_id,no_abuelo
+5,n03160309,dam,n02796623,barrier,no_id,no_abuelo
+5,n03327234,fence,n02796623,barrier,no_id,no_abuelo
+6,n03000134,chainlink fence,n03327234,fence,n02796623,barrier
+6,n03930313,picket fence,n03327234,fence,n02796623,barrier
+6,n04046974,rail fence,n03327234,fence,n02796623,barrier
+7,n04604644,worm fence,n04046974,rail fence,n03327234,fence
+6,n04326547,stone wall,n03327234,fence,n02796623,barrier
+5,n03454707,grate,n02796623,barrier,no_id,no_abuelo
+6,n03459775,grille,n03454707,grate,n02796623,barrier
+5,n03795580,movable barrier,n02796623,barrier,no_id,no_abuelo
+6,n03221720,door,n03795580,movable barrier,n02796623,barrier
+7,n04239074,sliding door,n03221720,door,n03795580,movable barrier
+6,n03427296,gate,n03795580,movable barrier,n02796623,barrier
+7,n04501370,turnstile,n03427296,gate,n03795580,movable barrier
+3,n04191595,shelter,n04341686,structure,n00021939,artifact
+4,n04411264,tent,n04191595,shelter,n04341686,structure
+5,n03792972,mountain tent,n04411264,tent,n04191595,shelter
+3,n04361095,supporting structure,n04341686,structure,n00021939,artifact
+4,n03391770,framework,n04361095,supporting structure,n04341686,structure
+5,n03530642,honeycomb,n03391770,framework,n04361095,supporting structure
+6,n03961711,plate rack,n04038727,rack,no_id,no_abuelo
+5,n03903868,pedestal,n04360501,support,no_id,no_abuelo
+3,n04460130,tower,n04341686,structure,n00021939,artifact
+4,n02814860,beacon,n04460130,tower,n04341686,structure
+2,n03129123,creation,n00021939,artifact,fall11,root_name
+3,n04007894,product,n03129123,creation,n00021939,artifact
+4,n04599396,work,n04007894,product,n03129123,creation
+5,n06589574,publication,n04599396,work,n04007894,product
+6,n06595351,magazine,n06589574,publication,n04599396,work
+7,n06596364,comic book,n06595351,magazine,n06589574,publication
+2,n04188643,sheet,n00021939,artifact,fall11,root_name
+3,n02856463,board,n04188643,sheet,n00021939,artifact
+4,n04149813,scoreboard,n02856463,board,n04188643,sheet
+4,n03208556,disk,n03959936,plate,no_id,no_abuelo
+5,n04019541,puck,n03208556,disk,n03959936,plate
+2,n03309808,fabric,n00021939,artifact,fall11,root_name
+3,n04599235,wool,n03309808,fabric,n00021939,artifact
+3,n03932670,piece of cloth,n03309808,fabric,n00021939,artifact
+4,n03485794,handkerchief,n03932670,piece of cloth,n03309808,fabric
+4,n03207743,dishrag,n03932670,piece of cloth,n03309808,fabric
+4,n04459362,towel,n03932670,piece of cloth,n03309808,fabric
+5,n03887697,paper towel,n04459362,towel,n03932670,piece of cloth
+5,n02808304,bath towel,n04459362,towel,n03932670,piece of cloth
+4,n02834397,bib,n03932670,piece of cloth,n03309808,fabric
+3,n04525038,velvet,n03309808,fabric,n00021939,artifact
+2,n03122748,covering,n00021939,artifact,fall11,root_name
+3,n03724870,mask,n03122748,covering,n00021939,artifact
+3,n03045698,cloak,n03122748,covering,n00021939,artifact
+3,n04605726,wrapping,n03122748,covering,n00021939,artifact
+4,n03590306,jacket,n04605726,wrapping,n03122748,covering
+5,n07248320,book jacket,n03590306,jacket,n04605726,wrapping
+4,n04201297,shoji,n04151940,screen,no_id,no_abuelo
+3,n03380867,footwear,n03122748,covering,n00021939,artifact
+4,n04199027,shoe,n03380867,footwear,n03122748,covering
+5,n04133789,sandal,n04199027,shoe,n03380867,footwear
+5,n04120489,running shoe,n04199027,shoe,n03380867,footwear
+5,n03680355,loafer,n04199027,shoe,n03380867,footwear
+4,n02872752,boot,n03380867,footwear,n03122748,covering
+5,n03124043,cowboy boot,n02872752,boot,n03380867,footwear
+4,n03047690,clog,n03380867,footwear,n03122748,covering
+3,n03050026,cloth covering,n03122748,covering,n00021939,artifact
+4,n03237639,dressing,n03050026,cloth covering,n03122748,covering
+5,n02785648,bandage,n03237639,dressing,n03050026,cloth covering
+6,n02680110,adhesive bandage,n02785648,bandage,n03237639,dressing
+7,n02786058,band aid,n02680110,adhesive bandage,n02785648,bandage
+4,n02820210,bedclothes,n03050026,cloth covering,n03122748,covering
+5,n04033995,quilt,n02820210,bedclothes,n03050026,cloth covering
+3,n03366823,floor cover,n03122748,covering,n00021939,artifact
+4,n03727837,mat,n03366823,floor cover,n03122748,covering
+5,n03223299,doormat,n03727837,mat,n03366823,floor cover
+3,n03051540,clothing,n03122748,covering,n00021939,artifact
+4,n02756098,attire,n03051540,clothing,n03122748,covering
+5,n03206718,disguise,n02756098,attire,n03051540,clothing
+5,n03476083,hairpiece,n02756098,attire,n03051540,clothing
+6,n04584207,wig,n03476083,hairpiece,n02756098,attire
+4,n04015204,protective garment,n03051540,clothing,n03122748,covering
+5,n03623198,knee pad,n04015204,protective garment,n03051540,clothing
+5,n02730930,apron,n04015204,protective garment,n03051540,clothing
+4,n02671780,accessory,n03051540,clothing,n03122748,covering
+5,n02827606,belt,n02671780,accessory,n03051540,clothing
+4,n03859495,outerwear,n03051540,clothing,n03122748,covering
+5,n03450516,gown,n03859495,outerwear,n03051540,clothing
+6,n02669723,academic gown,n03450516,gown,n03859495,outerwear
+6,n04532106,vestment,n03450516,gown,n03859495,outerwear
+4,n03419014,garment,n03051540,clothing,n03122748,covering
+5,n04531873,vest,n03419014,garment,n03051540,clothing
+6,n02916936,bulletproof vest,n04531873,vest,n03419014,garment
+5,n04371563,swimsuit,n03419014,garment,n03051540,clothing
+6,n04371430,swimming trunks,n04371563,swimsuit,n03419014,garment
+6,n03710721,maillot,n04371563,swimsuit,n03419014,garment
+6,n02837789,bikini,n04371563,swimsuit,n03419014,garment
+5,n04350905,suit,n03419014,garment,n03051540,clothing
+5,n04143897,scarf,n03419014,garment,n03051540,clothing
+6,n03325584,feather boa,n04143897,scarf,n03419014,garment
+6,n04325704,stole,n04143897,scarf,n03419014,garment
+5,n03816005,neckwear,n03419014,garment,n03051540,clothing
+6,n03815615,necktie,n03816005,neckwear,n03419014,garment
+7,n02883205,bow tie,n03815615,necktie,n03816005,neckwear
+7,n04591157,windsor tie,n03815615,necktie,n03816005,neckwear
+7,n02865351,bolo tie,n03815615,necktie,n03816005,neckwear
+5,n04230808,skirt,n03419014,garment,n03051540,clothing
+6,n03534580,hoopskirt,n04230808,skirt,n03419014,garment
+6,n03770439,miniskirt,n04230808,skirt,n03419014,garment
+6,n03866082,overskirt,n04230808,skirt,n03419014,garment
+6,n04136333,sarong,n04230808,skirt,n03419014,garment
+5,n03863923,overgarment,n03419014,garment,n03051540,clothing
+7,n03980874,poncho,n03045337,cloak,no_id,no_abuelo
+6,n03057021,coat,n03863923,overgarment,n03419014,garment
+7,n03404251,fur coat,n03057021,coat,n03863923,overgarment
+7,n04049405,raincoat,n03057021,coat,n03863923,overgarment
+8,n04479046,trench coat,n04049405,raincoat,n03057021,coat
+7,n03630383,lab coat,n03057021,coat,n03863923,overgarment
+5,n04370048,sweater,n03419014,garment,n03051540,clothing
+6,n04021028,pullover,n04370048,sweater,n03419014,garment
+7,n04370456,sweatshirt,n04021028,pullover,n04370048,sweater
+6,n02963159,cardigan,n04370048,sweater,n03419014,garment
+5,n04097866,robe,n03419014,garment,n03051540,clothing
+6,n03617480,kimono,n04097866,robe,n03419014,garment
+6,n02667093,abaya,n04097866,robe,n03419014,garment
+5,n04197391,shirt,n03419014,garment,n03051540,clothing
+6,n03595614,jersey,n04197391,shirt,n03419014,garment
+5,n03188531,diaper,n03419014,garment,n03051540,clothing
+4,n03490324,handwear,n03051540,clothing,n03122748,covering
+5,n03441112,glove,n03490324,handwear,n03051540,clothing
+6,n03775071,mitten,n03441112,glove,n03490324,handwear
+4,n03502509,headdress,n03051540,clothing,n03122748,covering
+5,n03513137,helmet,n03502509,headdress,n03051540,clothing
+6,n03127747,crash helmet,n03513137,helmet,n03502509,headdress
+6,n03379051,football helmet,n03513137,helmet,n03502509,headdress
+5,n02954340,cap,n03502509,headdress,n03051540,clothing
+6,n02807133,bathing cap,n02954340,cap,n03502509,headdress
+6,n03787032,mortarboard,n02954340,cap,n03502509,headdress
+6,n04209133,shower cap,n02954340,cap,n03502509,headdress
+5,n03497657,hat,n03502509,headdress,n03051540,clothing
+6,n02869837,bonnet,n03497657,hat,n03502509,headdress
+6,n02817516,bearskin,n03497657,hat,n03502509,headdress
+6,n03124170,cowboy hat,n03497657,hat,n03502509,headdress
+6,n04259630,sombrero,n03497657,hat,n03502509,headdress
+5,n03540267,hosiery,n03381126,footwear,no_id,no_abuelo
+6,n04434932,tights,n03540267,hosiery,n03381126,footwear
+6,n04254777,sock,n03540267,hosiery,n03381126,footwear
+6,n04323819,stocking,n03540267,hosiery,n03381126,footwear
+7,n03026506,christmas stocking,n04323819,stocking,n03540267,hosiery
+4,n04509592,uniform,n03051540,clothing,n03122748,covering
+5,n03763968,military uniform,n04509592,uniform,n03051540,clothing
+4,n03825080,nightwear,n03051540,clothing,n03122748,covering
+5,n03877472,pajama,n03825080,nightwear,n03051540,clothing
+4,n02728440,apparel,n03051540,clothing,n03122748,covering
+5,n04603872,workwear,n02728440,apparel,n03051540,clothing
+6,n03594734,jean,n04603872,workwear,n02728440,apparel
+4,n04596852,woman's clothing,n03051540,clothing,n03122748,covering
+5,n03236735,dress,n04596852,woman's clothing,n03051540,clothing
+5,n02892767,brassiere,n04596852,woman's clothing,n03051540,clothing
+3,n04014297,protective covering,n03122748,covering,n00021939,artifact
+4,n04192858,shield,n04014297,protective covering,n03122748,covering
+6,n02740764,armor plate,n03959701,plate,no_id,no_abuelo
+8,n03929855,pickelhaube,n03513376,helmet,no_id,no_abuelo
+7,n02895154,breastplate,n02740764,armor plate,n03959701,plate
+5,n03657121,lens cap,n02955065,cap,no_id,no_abuelo
+4,n04105068,roof,n04014297,protective covering,n03122748,covering
+5,n04435653,tile roof,n04105068,roof,n04014297,protective covering
+5,n03220513,dome,n04105068,roof,n04014297,protective covering
+5,n04417672,thatch,n04105068,roof,n04014297,protective covering
+5,n04523525,vault,n04105068,roof,n04014297,protective covering
+4,n02851099,blind,n04014297,protective covering,n03122748,covering
+5,n04589190,window blind,n02851099,blind,n04014297,protective covering
+6,n04590129,window shade,n04589190,window blind,n02851099,blind
+4,n02840245,binder,n04014297,protective covering,n03122748,covering
+4,n04181718,shade,n04014297,protective covering,n03122748,covering
+5,n03637318,lampshade,n04181718,shade,n04014297,protective covering
+5,n03788365,mosquito net,n04151581,screen,no_id,no_abuelo
+5,n04589890,window screen,n04151581,screen,no_id,no_abuelo
+5,n03347037,fire screen,n04151581,screen,no_id,no_abuelo
+4,n02739668,armor,n04014297,protective covering,n03122748,covering
+5,n02862048,body armor,n02739668,armor,n04014297,protective covering
+6,n03146219,cuirass,n02862048,body armor,n02739668,armor
+6,n03000247,chain mail,n02862048,body armor,n02739668,armor
+5,n03424325,gasmask,n03725035,mask,no_id,no_abuelo
+5,n03314378,face mask,n03725035,mask,no_id,no_abuelo
+6,n04229816,ski mask,n03314378,face mask,n03725035,mask
+4,n04187061,sheath,n04014297,protective covering,n03122748,covering
+5,n03527444,holster,n04187061,sheath,n04014297,protective covering
+5,n04141327,scabbard,n04187061,sheath,n04014297,protective covering
+5,n02843684,birdhouse,n04191943,shelter,no_id,no_abuelo
+5,n02825657,bell cote,n04191943,shelter,no_id,no_abuelo
+5,n02951843,canopy,n04191943,shelter,no_id,no_abuelo
+6,n04507155,umbrella,n02951843,canopy,n04191943,shelter
+3,n04453910,top,n03122748,covering,n00021939,artifact
+4,n03717622,manhole cover,n04453910,top,n03122748,covering
+5,n02877765,bottlecap,n02954938,cap,no_id,no_abuelo
+5,n03825788,nipple,n02954938,cap,no_id,no_abuelo
+2,n03873064,padding,n00021939,artifact,fall11,root_name
+3,n03151500,cushion,n03873064,padding,n00021939,artifact
+4,n03938244,pillow,n03151500,cushion,n03873064,padding
+2,n03076708,commodity,n00021939,artifact,fall11,root_name
+3,n03093574,consumer goods,n03076708,commodity,n00021939,artifact
+4,n03257877,durables,n03093574,consumer goods,n03076708,commodity
+5,n02729837,appliance,n03257877,durables,n03093574,consumer goods
+6,n03251766,dryer,n02729837,appliance,n03257877,durables
+7,n03483316,hand blower,n03251766,dryer,n02729837,appliance
+6,n03528263,home appliance,n02729837,appliance,n03257877,durables
+7,n04179913,sewing machine,n03528263,home appliance,n02729837,appliance
+7,n03584829,iron,n03528263,home appliance,n02729837,appliance
+7,n03620052,kitchen appliance,n03528263,home appliance,n02729837,appliance
+8,n03063338,coffee maker,n03620052,kitchen appliance,n03528263,home appliance
+9,n03297495,espresso maker,n03063338,coffee maker,n03620052,kitchen appliance
+8,n03761084,microwave,n03620052,kitchen appliance,n03528263,home appliance
+8,n03862676,oven,n03620052,kitchen appliance,n03528263,home appliance
+9,n03259280,dutch oven,n03862676,oven,n03620052,kitchen appliance
+9,n04111531,rotisserie,n03862676,oven,n03620052,kitchen appliance
+8,n04442312,toaster,n03620052,kitchen appliance,n03528263,home appliance
+8,n04542943,waffle iron,n03620052,kitchen appliance,n03528263,home appliance
+7,n04517823,vacuum,n03528263,home appliance,n02729837,appliance
+7,n04580493,white goods,n03528263,home appliance,n02729837,appliance
+8,n03207941,dishwasher,n04580493,white goods,n03528263,home appliance
+8,n04070727,refrigerator,n04580493,white goods,n03528263,home appliance
+8,n04554684,washer,n04580493,white goods,n03528263,home appliance
+3,n03252064,drygoods,n03076708,commodity,n00021939,artifact
+5,n03672352,linen,n04580298,white goods,no_id,no_abuelo
+6,n02807260,bath linen,n03672352,linen,n04580298,white goods
+2,n03302121,excavation,n00021939,artifact,fall11,root_name
+3,n03982060,pool,n03302121,excavation,n00021939,artifact
+2,n03169390,decoration,n00021939,artifact,fall11,root_name
+3,n02681518,adornment,n03169390,decoration,n00021939,artifact
+4,n03597469,jewelry,n02681518,adornment,n03169390,decoration
+5,n03814906,necklace,n03597469,jewelry,n02681518,adornment
+3,n03178782,design,n03169390,decoration,n00021939,artifact
+4,n03282591,emblem,n03178782,design,n03169390,decoration
+2,n03964744,plaything,n00021939,artifact,fall11,root_name
+3,n04399382,teddy,n03964744,plaything,n00021939,artifact
+2,n00022903,article,n00021939,artifact,fall11,root_name
+3,n04550840,ware,n00022903,article,n00021939,artifact
+4,n04381994,tableware,n04550840,ware,n00022903,article
+5,n03153375,cutlery,n04381994,tableware,n04550840,ware
+5,n03133538,crockery,n04381994,tableware,n04550840,ware
+2,n04362025,surface,n00021939,artifact,fall11,root_name
+3,n03536348,horizontal surface,n04362025,surface,n00021939,artifact
+4,n03961939,platform,n03536348,horizontal surface,n04362025,surface
+5,n04296562,stage,n03961939,platform,n03536348,horizontal surface
+1,n00004475,organism,fall11,root_name,no_id,no_abuelo
+3,n13083586,vascular plant,n00017222,plant,no_id,no_abuelo
+4,n11552386,spermatophyte,n13083586,vascular plant,n00017222,plant
+5,n11665372,angiosperm,n11552386,spermatophyte,n13083586,vascular plant
+6,n11669921,flower,n11665372,angiosperm,n11552386,spermatophyte
+7,n11939491,daisy,n11669921,flower,n11665372,angiosperm
+7,n12041446,orchid,n11669921,flower,n11665372,angiosperm
+8,n12056217,lady's slipper,n12041446,orchid,n11669921,flower
+9,n12057211,yellow lady's slipper,n12056217,lady's slipper,n12041446,orchid
+2,n12992868,fungus,n00004475,organism,fall11,root_name
+3,n13052670,hen-of-the-woods,n12992868,fungus,n00004475,organism
+3,n13044778,earthstar,n12992868,fungus,n00004475,organism
+3,n12985857,coral fungus,n12992868,fungus,n00004475,organism
+3,n13040303,stinkhorn,n12992868,fungus,n00004475,organism
+3,n13037406,gyromitra,n12992868,fungus,n00004475,organism
+3,n13054560,bolete,n12992868,fungus,n00004475,organism
+3,n12997654,basidiomycete,n12992868,fungus,n00004475,organism
+4,n12998815,agaric,n12997654,basidiomycete,n12992868,fungus
+2,n00007846,person,n00004475,organism,fall11,root_name
+3,n09613191,contestant,n00007846,person,n00004475,organism
+4,n09820263,athlete,n09613191,contestant,n00007846,person
+5,n09835506,ballplayer,n09820263,athlete,n09613191,contestant
+3,n10072708,explorer,n00007846,person,n00004475,organism
+4,n10019552,diver,n10072708,explorer,n00007846,person
+5,n10565667,scuba diver,n10019552,diver,n10072708,explorer
+3,n09626238,peer,n00007846,person,n00004475,organism
+4,n09816771,associate,n09626238,peer,n00007846,person
+5,n10401829,participant,n09816771,associate,n09626238,peer
+6,n10148035,groom,n10401829,participant,n09816771,associate
+2,n00015388,animal,n00004475,organism,fall11,root_name
+3,n01905661,invertebrate,n00015388,animal,n00004475,organism
+4,n01767661,arthropod,n01905661,invertebrate,n00015388,animal
+5,n01768244,trilobite,n01767661,arthropod,n01905661,invertebrate
+5,n01769347,arachnid,n01767661,arthropod,n01905661,invertebrate
+6,n01770081,harvestman,n01769347,arachnid,n01767661,arthropod
+6,n01770393,scorpion,n01769347,arachnid,n01767661,arthropod
+6,n01772222,spider,n01769347,arachnid,n01767661,arthropod
+7,n01773157,black and gold garden spider,n01772222,spider,n01769347,arachnid
+7,n01773549,barn spider,n01772222,spider,n01769347,arachnid
+7,n01773797,garden spider,n01772222,spider,n01769347,arachnid
+7,n01774384,black widow,n01772222,spider,n01769347,arachnid
+7,n01774750,tarantula,n01772222,spider,n01769347,arachnid
+7,n01775062,wolf spider,n01772222,spider,n01769347,arachnid
+6,n01776192,acarine,n01769347,arachnid,n01767661,arthropod
+7,n01776313,tick,n01776192,acarine,n01769347,arachnid
+5,n01784675,centipede,n01767661,arthropod,n01905661,invertebrate
+5,n01974773,crustacean,n01767661,arthropod,n01905661,invertebrate
+6,n01975687,malacostracan crustacean,n01974773,crustacean,n01767661,arthropod
+7,n01990800,isopod,n01975687,malacostracan crustacean,n01974773,crustacean
+6,n01976146,decapod crustacean,n01974773,crustacean,n01767661,arthropod
+7,n01976957,crab,n01976146,decapod crustacean,n01974773,crustacean
+8,n01978287,dungeness crab,n01976957,crab,n01976146,decapod crustacean
+8,n01978455,rock crab,n01976957,crab,n01976146,decapod crustacean
+8,n01980166,fiddler crab,n01976957,crab,n01976146,decapod crustacean
+8,n01981276,king crab,n01976957,crab,n01976146,decapod crustacean
+7,n01982650,lobster,n01976146,decapod crustacean,n01974773,crustacean
+8,n01983048,true lobster,n01982650,lobster,n01976146,decapod crustacean
+9,n01983481,american lobster,n01983048,true lobster,n01982650,lobster
+8,n01984695,spiny lobster,n01982650,lobster,n01976146,decapod crustacean
+7,n01985128,crayfish,n01976146,decapod crustacean,n01974773,crustacean
+7,n01986214,hermit crab,n01976146,decapod crustacean,n01974773,crustacean
+5,n02159955,insect,n01767661,arthropod,n01905661,invertebrate
+6,n02164464,beetle,n02159955,insect,n01767661,arthropod
+7,n02165105,tiger beetle,n02164464,beetle,n02159955,insect
+7,n02165456,ladybug,n02164464,beetle,n02159955,insect
+7,n02167151,ground beetle,n02164464,beetle,n02159955,insect
+7,n02168699,long-horned beetle,n02164464,beetle,n02159955,insect
+7,n02169497,leaf beetle,n02164464,beetle,n02159955,insect
+7,n02171453,lamellicorn beetle,n02164464,beetle,n02159955,insect
+8,n02171869,scarabaeid beetle,n02171453,lamellicorn beetle,n02164464,beetle
+9,n02172182,dung beetle,n02171869,scarabaeid beetle,n02171453,lamellicorn beetle
+9,n02174001,rhinoceros beetle,n02171869,scarabaeid beetle,n02171453,lamellicorn beetle
+7,n02177972,weevil,n02164464,beetle,n02159955,insect
+6,n02188699,dipterous insect,n02159955,insect,n01767661,arthropod
+7,n02190166,fly,n02188699,dipterous insect,n02159955,insect
+6,n02206270,hymenopterous insect,n02159955,insect,n01767661,arthropod
+7,n02219486,ant,n02206270,hymenopterous insect,n02159955,insect
+7,n02206856,bee,n02206270,hymenopterous insect,n02159955,insect
+6,n02226183,orthopterous insect,n02159955,insect,n01767661,arthropod
+7,n02226429,grasshopper,n02226183,orthopterous insect,n02159955,insect
+7,n02229544,cricket,n02226183,orthopterous insect,n02159955,insect
+6,n02231052,phasmid,n02159955,insect,n01767661,arthropod
+7,n02231487,walking stick,n02231052,phasmid,n02159955,insect
+6,n02232951,dictyopterous insect,n02159955,insect,n01767661,arthropod
+7,n02233338,cockroach,n02232951,dictyopterous insect,n02159955,insect
+7,n02236044,mantis,n02232951,dictyopterous insect,n02159955,insect
+6,n02246011,homopterous insect,n02159955,insect,n01767661,arthropod
+7,n02256656,cicada,n02246011,homopterous insect,n02159955,insect
+7,n02259212,leafhopper,n02246011,homopterous insect,n02159955,insect
+6,n02263378,neuropteron,n02159955,insect,n01767661,arthropod
+7,n02264363,lacewing,n02263378,neuropteron,n02159955,insect
+6,n02268148,odonate,n02159955,insect,n01767661,arthropod
+7,n02268443,dragonfly,n02268148,odonate,n02159955,insect
+7,n02268853,damselfly,n02268148,odonate,n02159955,insect
+6,n02274024,lepidopterous insect,n02159955,insect,n01767661,arthropod
+7,n02274259,butterfly,n02274024,lepidopterous insect,n02159955,insect
+8,n02274822,nymphalid,n02274259,butterfly,n02274024,lepidopterous insect
+9,n02276258,admiral,n02274822,nymphalid,n02274259,butterfly
+8,n02277742,ringlet,n02274259,butterfly,n02274024,lepidopterous insect
+8,n02279637,danaid,n02274259,butterfly,n02274024,lepidopterous insect
+9,n02279972,monarch,n02279637,danaid,n02274259,butterfly
+8,n02280458,pierid,n02274259,butterfly,n02274024,lepidopterous insect
+9,n02280649,cabbage butterfly,n02280458,pierid,n02274259,butterfly
+8,n02281406,sulphur butterfly,n02274259,butterfly,n02274024,lepidopterous insect
+8,n02281787,lycaenid,n02274259,butterfly,n02274024,lepidopterous insect
+4,n01909422,coelenterate,n01905661,invertebrate,n00015388,animal
+5,n01910747,jellyfish,n01909422,coelenterate,n01905661,invertebrate
+5,n01914163,anthozoan,n01909422,coelenterate,n01905661,invertebrate
+6,n01914609,sea anemone,n01914163,anthozoan,n01909422,coelenterate
+6,n01915811,coral,n01914163,anthozoan,n01909422,coelenterate
+7,n01916925,stony coral,n01915811,coral,n01914163,anthozoan
+8,n01917289,brain coral,n01916925,stony coral,n01915811,coral
+4,n01922303,worm,n01905661,invertebrate,n00015388,animal
+5,n01924916,flatworm,n01922303,worm,n01905661,invertebrate
+5,n01930112,nematode,n01922303,worm,n01905661,invertebrate
+4,n01940736,mollusk,n01905661,invertebrate,n00015388,animal
+5,n01942177,gastropod,n01940736,mollusk,n01905661,invertebrate
+6,n01943899,conch,n01942177,gastropod,n01940736,mollusk
+6,n01944390,snail,n01942177,gastropod,n01940736,mollusk
+6,n01945685,slug,n01942177,gastropod,n01940736,mollusk
+6,n01950731,sea slug,n01942177,gastropod,n01940736,mollusk
+5,n01955084,chiton,n01940736,mollusk,n01905661,invertebrate
+5,n01968315,cephalopod,n01940736,mollusk,n01905661,invertebrate
+6,n01968897,chambered nautilus,n01968315,cephalopod,n01940736,mollusk
+4,n02316707,echinoderm,n01905661,invertebrate,n00015388,animal
+5,n02317335,starfish,n02316707,echinoderm,n01905661,invertebrate
+5,n02319095,sea urchin,n02316707,echinoderm,n01905661,invertebrate
+5,n02321529,sea cucumber,n02316707,echinoderm,n01905661,invertebrate
+3,n01317541,domestic animal,n00015388,animal,n00004475,organism
+4,n02121808,domestic cat,n01317541,domestic animal,n00015388,animal
+5,n02124075,egyptian cat,n02121808,domestic cat,n01317541,domestic animal
+5,n02123394,persian cat,n02121808,domestic cat,n01317541,domestic animal
+5,n02123159,tiger cat,n02121808,domestic cat,n01317541,domestic animal
+5,n02123597,siamese cat,n02121808,domestic cat,n01317541,domestic animal
+5,n02123045,tabby,n02121808,domestic cat,n01317541,domestic animal
+4,n02084071,dog,n01317541,domestic animal,n00015388,animal
+5,n02087122,hunting dog,n02084071,dog,n01317541,domestic animal
+6,n02098550,sporting dog,n02087122,hunting dog,n02084071,dog
+7,n02099997,pointer,n02098550,sporting dog,n02087122,hunting dog
+8,n02100583,vizsla,n02099997,pointer,n02098550,sporting dog
+8,n02100236,german short-haired pointer,n02099997,pointer,n02098550,sporting dog
+7,n02100399,setter,n02098550,sporting dog,n02087122,hunting dog
+8,n02100735,english setter,n02100399,setter,n02098550,sporting dog
+8,n02101006,gordon setter,n02100399,setter,n02098550,sporting dog
+8,n02100877,irish setter,n02100399,setter,n02098550,sporting dog
+7,n02101108,spaniel,n02098550,sporting dog,n02087122,hunting dog
+8,n02102605,water spaniel,n02101108,spaniel,n02098550,sporting dog
+9,n02102973,irish water spaniel,n02102605,water spaniel,n02101108,spaniel
+8,n02101861,springer spaniel,n02101108,spaniel,n02098550,sporting dog
+9,n02102177,welsh springer spaniel,n02101861,springer spaniel,n02101108,spaniel
+9,n02102040,english springer,n02101861,springer spaniel,n02101108,spaniel
+8,n02101556,clumber,n02101108,spaniel,n02098550,sporting dog
+8,n02101388,brittany spaniel,n02101108,spaniel,n02098550,sporting dog
+8,n02102318,cocker spaniel,n02101108,spaniel,n02098550,sporting dog
+8,n02102480,sussex spaniel,n02101108,spaniel,n02098550,sporting dog
+7,n02099029,retriever,n02098550,sporting dog,n02087122,hunting dog
+8,n02099601,golden retriever,n02099029,retriever,n02098550,sporting dog
+8,n02099849,chesapeake bay retriever,n02099029,retriever,n02098550,sporting dog
+8,n02099429,curly-coated retriever,n02099029,retriever,n02098550,sporting dog
+8,n02099267,flat-coated retriever,n02099029,retriever,n02098550,sporting dog
+8,n02099712,labrador retriever,n02099029,retriever,n02098550,sporting dog
+6,n02092468,terrier,n02087122,hunting dog,n02084071,dog
+7,n02096294,australian terrier,n02092468,terrier,n02087122,hunting dog
+7,n02095050,fox terrier,n02092468,terrier,n02087122,hunting dog
+8,n02095314,wire-haired fox terrier,n02095050,fox terrier,n02092468,terrier
+7,n02098105,soft-coated wheaten terrier,n02092468,terrier,n02087122,hunting dog
+7,n02095412,wirehair,n02092468,terrier,n02087122,hunting dog
+8,n02095727,welsh terrier,n02095412,wirehair,n02092468,terrier
+9,n02095889,sealyham terrier,n02095727,welsh terrier,n02095412,wirehair
+8,n02095570,lakeland terrier,n02095412,wirehair,n02092468,terrier
+7,n02096437,dandie dinmont,n02092468,terrier,n02087122,hunting dog
+7,n02096051,airedale,n02092468,terrier,n02087122,hunting dog
+7,n02098413,lhasa,n02092468,terrier,n02087122,hunting dog
+7,n02094433,yorkshire terrier,n02092468,terrier,n02087122,hunting dog
+7,n02098286,west highland white terrier,n02092468,terrier,n02087122,hunting dog
+7,n02096756,schnauzer,n02092468,terrier,n02087122,hunting dog
+8,n02097130,giant schnauzer,n02096756,schnauzer,n02092468,terrier
+8,n02097047,miniature schnauzer,n02096756,schnauzer,n02092468,terrier
+8,n02097209,standard schnauzer,n02096756,schnauzer,n02092468,terrier
+7,n02093056,bullterrier,n02092468,terrier,n02087122,hunting dog
+8,n02093256,staffordshire bullterrier,n02093056,bullterrier,n02092468,terrier
+8,n02093428,american staffordshire terrier,n02093056,bullterrier,n02092468,terrier
+7,n02094114,norfolk terrier,n02092468,terrier,n02087122,hunting dog
+7,n02096177,cairn,n02092468,terrier,n02087122,hunting dog
+7,n02093859,kerry blue terrier,n02092468,terrier,n02087122,hunting dog
+7,n02097298,scotch terrier,n02092468,terrier,n02087122,hunting dog
+7,n02096585,boston bull,n02092468,terrier,n02087122,hunting dog
+7,n02093647,bedlington terrier,n02092468,terrier,n02087122,hunting dog
+7,n02093991,irish terrier,n02092468,terrier,n02087122,hunting dog
+7,n02097658,silky terrier,n02092468,terrier,n02087122,hunting dog
+7,n02094258,norwich terrier,n02092468,terrier,n02087122,hunting dog
+7,n02097474,tibetan terrier,n02092468,terrier,n02087122,hunting dog
+7,n02093754,border terrier,n02092468,terrier,n02087122,hunting dog
+6,n02087551,hound,n02087122,hunting dog,n02084071,dog
+7,n02090475,wolfhound,n02087551,hound,n02087122,hunting dog
+8,n02090622,borzoi,n02090475,wolfhound,n02087551,hound
+8,n02090721,irish wolfhound,n02090475,wolfhound,n02087551,hound
+7,n02092002,scottish deerhound,n02087551,hound,n02087122,hunting dog
+7,n02088839,coonhound,n02087551,hound,n02087122,hunting dog
+8,n02089078,black-and-tan coonhound,n02088839,coonhound,n02087551,hound
+7,n02089555,foxhound,n02087551,hound,n02087122,hunting dog
+8,n02089867,walker hound,n02089555,foxhound,n02087551,hound
+8,n02089973,english foxhound,n02089555,foxhound,n02087551,hound
+7,n02092339,weimaraner,n02087551,hound,n02087122,hunting dog
+7,n02091635,otterhound,n02087551,hound,n02087122,hunting dog
+7,n02088466,bloodhound,n02087551,hound,n02087122,hunting dog
+7,n02091467,norwegian elkhound,n02087551,hound,n02087122,hunting dog
+7,n02091831,saluki,n02087551,hound,n02087122,hunting dog
+7,n02088094,afghan hound,n02087551,hound,n02087122,hunting dog
+7,n02090827,greyhound,n02087551,hound,n02087122,hunting dog
+8,n02091134,whippet,n02090827,greyhound,n02087551,hound
+8,n02091032,italian greyhound,n02090827,greyhound,n02087551,hound
+7,n02088364,beagle,n02087551,hound,n02087122,hunting dog
+7,n02088238,basset,n02087551,hound,n02087122,hunting dog
+7,n02088632,bluetick,n02087551,hound,n02087122,hunting dog
+7,n02090379,redbone,n02087551,hound,n02087122,hunting dog
+7,n02091244,ibizan hound,n02087551,hound,n02087122,hunting dog
+6,n02087394,rhodesian ridgeback,n02087122,hunting dog,n02084071,dog
+5,n02110341,dalmatian,n02084071,dog,n01317541,domestic animal
+5,n02112826,corgi,n02084071,dog,n01317541,domestic animal
+6,n02113023,pembroke,n02112826,corgi,n02084071,dog
+5,n02113978,mexican hairless,n02084071,dog,n01317541,domestic animal
+5,n02111277,newfoundland,n02084071,dog,n01317541,domestic animal
+5,n02113335,poodle,n02084071,dog,n01317541,domestic animal
+6,n02113712,miniature poodle,n02113335,poodle,n02084071,dog
+6,n02113624,toy poodle,n02113335,poodle,n02084071,dog
+6,n02113799,standard poodle,n02113335,poodle,n02084071,dog
+5,n02110806,basenji,n02084071,dog,n01317541,domestic animal
+5,n02111129,leonberg,n02084071,dog,n01317541,domestic animal
+5,n02112497,griffon,n02084071,dog,n01317541,domestic animal
+6,n02112706,brabancon griffon,n02112497,griffon,n02084071,dog
+5,n02110958,pug,n02084071,dog,n01317541,domestic animal
+5,n02103406,working dog,n02084071,dog,n01317541,domestic animal
+6,n02109047,great dane,n02103406,working dog,n02084071,dog
+6,n02104523,shepherd dog,n02103406,working dog,n02084071,dog
+7,n02105641,old english sheepdog,n02104523,shepherd dog,n02103406,working dog
+7,n02106382,bouvier des flandres,n02104523,shepherd dog,n02103406,working dog
+7,n02106550,rottweiler,n02104523,shepherd dog,n02103406,working dog
+7,n02105505,komondor,n02104523,shepherd dog,n02103406,working dog
+7,n02106030,collie,n02104523,shepherd dog,n02103406,working dog
+7,n02106166,border collie,n02104523,shepherd dog,n02103406,working dog
+7,n02104882,belgian sheepdog,n02104523,shepherd dog,n02103406,working dog
+8,n02105162,malinois,n02104882,belgian sheepdog,n02104523,shepherd dog
+8,n02105056,groenendael,n02104882,belgian sheepdog,n02104523,shepherd dog
+7,n02105855,shetland sheepdog,n02104523,shepherd dog,n02103406,working dog
+7,n02105412,kelpie,n02104523,shepherd dog,n02103406,working dog
+7,n02105251,briard,n02104523,shepherd dog,n02103406,working dog
+7,n02106662,german shepherd,n02104523,shepherd dog,n02103406,working dog
+6,n02103841,watchdog,n02103406,working dog,n02084071,dog
+7,n02104365,schipperke,n02103841,watchdog,n02103406,working dog
+7,n02106966,pinscher,n02103841,watchdog,n02103406,working dog
+8,n02107142,doberman,n02106966,pinscher,n02103841,watchdog
+8,n02110627,affenpinscher,n02106966,pinscher,n02103841,watchdog
+8,n02107312,miniature pinscher,n02106966,pinscher,n02103841,watchdog
+7,n02104029,kuvasz,n02103841,watchdog,n02103406,working dog
+6,n02109811,sled dog,n02103406,working dog,n02084071,dog
+7,n02110185,siberian husky,n02109811,sled dog,n02103406,working dog
+7,n02110063,malamute,n02109811,sled dog,n02103406,working dog
+6,n02108089,boxer,n02103406,working dog,n02084071,dog
+6,n02108422,bull mastiff,n02103406,working dog,n02084071,dog
+6,n02109961,eskimo dog,n02103406,working dog,n02084071,dog
+6,n02107420,sennenhunde,n02103406,working dog,n02084071,dog
+7,n02108000,entlebucher,n02107420,sennenhunde,n02103406,working dog
+7,n02107683,bernese mountain dog,n02107420,sennenhunde,n02103406,working dog
+7,n02107574,greater swiss mountain dog,n02107420,sennenhunde,n02103406,working dog
+7,n02107908,appenzeller,n02107420,sennenhunde,n02103406,working dog
+6,n02109525,saint bernard,n02103406,working dog,n02084071,dog
+6,n02108254,mastiff,n02103406,working dog,n02084071,dog
+7,n02108551,tibetan mastiff,n02108254,mastiff,n02103406,working dog
+6,n02108672,bulldog,n02103406,working dog,n02084071,dog
+7,n02108915,french bulldog,n02108672,bulldog,n02103406,working dog
+5,n02111626,spitz,n02084071,dog,n01317541,domestic animal
+6,n02112018,pomeranian,n02111626,spitz,n02084071,dog
+6,n02112350,keeshond,n02111626,spitz,n02084071,dog
+6,n02112137,chow,n02111626,spitz,n02084071,dog
+6,n02111889,samoyed,n02111626,spitz,n02084071,dog
+5,n02111500,great pyrenees,n02084071,dog,n01317541,domestic animal
+5,n02085374,toy dog,n02084071,dog,n01317541,domestic animal
+6,n02086346,toy spaniel,n02085374,toy dog,n02084071,dog
+7,n02086910,papillon,n02086346,toy spaniel,n02085374,toy dog
+7,n02086478,english toy spaniel,n02086346,toy spaniel,n02085374,toy dog
+8,n02086646,blenheim spaniel,n02086478,english toy spaniel,n02086346,toy spaniel
+6,n02086079,pekinese,n02085374,toy dog,n02084071,dog
+6,n02085936,maltese dog,n02085374,toy dog,n02084071,dog
+6,n02087046,toy terrier,n02085374,toy dog,n02084071,dog
+6,n02085782,japanese spaniel,n02085374,toy dog,n02084071,dog
+6,n02086240,shih-tzu,n02085374,toy dog,n02084071,dog
+6,n02085620,chihuahua,n02085374,toy dog,n02084071,dog
+3,n01466257,chordate,n00015388,animal,n00004475,organism
+4,n01471682,vertebrate,n01466257,chordate,n00015388,animal
+5,n01861778,mammal,n01471682,vertebrate,n01466257,chordate
+6,n01886756,placental,n01861778,mammal,n01471682,vertebrate
+7,n02323449,lagomorph,n01886756,placental,n01861778,mammal
+8,n02323902,leporid,n02323449,lagomorph,n01886756,placental
+9,n02326432,hare,n02323902,leporid,n02323449,lagomorph
+9,n02324045,rabbit,n02323902,leporid,n02323449,lagomorph
+10,n02328150,angora,n02324045,rabbit,n02323902,leporid
+10,n02325366,wood rabbit,n02324045,rabbit,n02323902,leporid
+7,n02469914,primate,n01886756,placental,n01861778,mammal
+8,n02496913,lemur,n02469914,primate,n01886756,placental
+9,n02500267,indri,n02496913,lemur,n02469914,primate
+9,n02497673,madagascar cat,n02496913,lemur,n02469914,primate
+8,n02470325,ape,n02469914,primate,n01886756,placental
+9,n02470899,anthropoid ape,n02470325,ape,n02469914,primate
+10,n02483092,lesser ape,n02470899,anthropoid ape,n02470325,ape
+11,n02483708,siamang,n02483092,lesser ape,n02470899,anthropoid ape
+11,n02483362,gibbon,n02483092,lesser ape,n02470899,anthropoid ape
+10,n02480153,great ape,n02470899,anthropoid ape,n02470325,ape
+11,n02480495,orangutan,n02480153,great ape,n02470899,anthropoid ape
+11,n02481823,chimpanzee,n02480153,great ape,n02470899,anthropoid ape
+11,n02480855,gorilla,n02480153,great ape,n02470899,anthropoid ape
+8,n02484322,monkey,n02469914,primate,n01886756,placental
+9,n02484473,old world monkey,n02484322,monkey,n02469914,primate
+10,n02488702,colobus,n02484473,old world monkey,n02484322,monkey
+10,n02484975,guenon,n02484473,old world monkey,n02484322,monkey
+10,n02489166,proboscis monkey,n02484473,old world monkey,n02484322,monkey
+10,n02486261,patas,n02484473,old world monkey,n02484322,monkey
+10,n02486410,baboon,n02484473,old world monkey,n02484322,monkey
+10,n02487347,macaque,n02484473,old world monkey,n02484322,monkey
+10,n02488291,langur,n02484473,old world monkey,n02484322,monkey
+9,n02489589,new world monkey,n02484322,monkey,n02469914,primate
+10,n02493509,titi,n02489589,new world monkey,n02484322,monkey
+10,n02494079,squirrel monkey,n02489589,new world monkey,n02484322,monkey
+10,n02493793,spider monkey,n02489589,new world monkey,n02484322,monkey
+10,n02492035,capuchin,n02489589,new world monkey,n02484322,monkey
+10,n02492660,howler monkey,n02489589,new world monkey,n02484322,monkey
+10,n02490219,marmoset,n02489589,new world monkey,n02484322,monkey
+7,n02075296,carnivore,n01886756,placental,n01861778,mammal
+8,n02131653,bear,n02075296,carnivore,n01886756,placental
+9,n02132136,brown bear,n02131653,bear,n02075296,carnivore
+9,n02134084,ice bear,n02131653,bear,n02075296,carnivore
+9,n02133161,american black bear,n02131653,bear,n02075296,carnivore
+9,n02134418,sloth bear,n02131653,bear,n02075296,carnivore
+8,n02441326,musteline mammal,n02075296,carnivore,n01886756,placental
+9,n02447366,badger,n02441326,musteline mammal,n02075296,carnivore
+9,n02442845,mink,n02441326,musteline mammal,n02075296,carnivore
+9,n02443484,black-footed ferret,n02441326,musteline mammal,n02075296,carnivore
+9,n02445715,skunk,n02441326,musteline mammal,n02075296,carnivore
+9,n02441942,weasel,n02441326,musteline mammal,n02075296,carnivore
+9,n02443114,polecat,n02441326,musteline mammal,n02075296,carnivore
+9,n02444819,otter,n02441326,musteline mammal,n02075296,carnivore
+8,n02507649,procyonid,n02075296,carnivore,n01886756,placental
+9,n02509815,lesser panda,n02507649,procyonid,n02075296,carnivore
+9,n02510455,giant panda,n02507649,procyonid,n02075296,carnivore
+8,n02134971,viverrine,n02075296,carnivore,n01886756,placental
+9,n02138441,meerkat,n02134971,viverrine,n02075296,carnivore
+9,n02137549,mongoose,n02134971,viverrine,n02075296,carnivore
+8,n02083346,canine,n02075296,carnivore,n01886756,placental
+9,n02115335,wild dog,n02083346,canine,n02075296,carnivore
+10,n02115913,dhole,n02115335,wild dog,n02083346,canine
+10,n02115641,dingo,n02115335,wild dog,n02083346,canine
+10,n02116738,african hunting dog,n02115335,wild dog,n02083346,canine
+9,n02117135,hyena,n02083346,canine,n02075296,carnivore
+9,n02118333,fox,n02083346,canine,n02075296,carnivore
+10,n02119789,kit fox,n02118333,fox,n02083346,canine
+10,n02119022,red fox,n02118333,fox,n02083346,canine
+10,n02120505,grey fox,n02118333,fox,n02083346,canine
+10,n02120079,arctic fox,n02118333,fox,n02083346,canine
+9,n02114100,wolf,n02083346,canine,n02075296,carnivore
+10,n02114712,red wolf,n02114100,wolf,n02083346,canine
+10,n02114855,coyote,n02114100,wolf,n02083346,canine
+10,n02114548,white wolf,n02114100,wolf,n02083346,canine
+10,n02114367,timber wolf,n02114100,wolf,n02083346,canine
+8,n02120997,feline,n02075296,carnivore,n01886756,placental
+9,n02127808,big cat,n02120997,feline,n02075296,carnivore
+10,n02128925,jaguar,n02127808,big cat,n02120997,feline
+10,n02129604,tiger,n02127808,big cat,n02120997,feline
+10,n02128385,leopard,n02127808,big cat,n02120997,feline
+10,n02128757,snow leopard,n02127808,big cat,n02120997,feline
+10,n02129165,lion,n02127808,big cat,n02120997,feline
+10,n02130308,cheetah,n02127808,big cat,n02120997,feline
+9,n02121620,cat,n02120997,feline,n02075296,carnivore
+10,n02124623,wildcat,n02121620,cat,n02120997,feline
+11,n02125311,cougar,n02124623,wildcat,n02121620,cat
+11,n02127052,lynx,n02124623,wildcat,n02121620,cat
+7,n02062017,aquatic mammal,n01886756,placental,n01861778,mammal
+8,n02073250,sea cow,n02062017,aquatic mammal,n01886756,placental
+9,n02074367,dugong,n02073250,sea cow,n02062017,aquatic mammal
+8,n02075927,pinniped mammal,n02062017,aquatic mammal,n01886756,placental
+9,n02076196,seal,n02075927,pinniped mammal,n02062017,aquatic mammal
+10,n02076779,eared seal,n02076196,seal,n02075927,pinniped mammal
+11,n02077923,sea lion,n02076779,eared seal,n02076196,seal
+8,n02062430,cetacean,n02062017,aquatic mammal,n01886756,placental
+9,n02062744,whale,n02062430,cetacean,n02062017,aquatic mammal
+10,n02066707,toothed whale,n02062744,whale,n02062430,cetacean
+11,n02068974,dolphin,n02066707,toothed whale,n02062744,whale
+12,n02071294,killer whale,n02068974,dolphin,n02066707,toothed whale
+10,n02063224,baleen whale,n02062744,whale,n02062430,cetacean
+11,n02066245,grey whale,n02063224,baleen whale,n02062744,whale
+7,n02370806,ungulate,n01886756,placental,n01861778,mammal
+8,n02373336,odd-toed ungulate,n02370806,ungulate,n01886756,placental
+9,n02374149,equine,n02373336,odd-toed ungulate,n02370806,ungulate
+10,n02391049,zebra,n02374149,equine,n02373336,odd-toed ungulate
+10,n02374451,horse,n02374149,equine,n02373336,odd-toed ungulate
+11,n02389026,sorrel,n02374451,horse,n02374149,equine
+8,n02394477,even-toed ungulate,n02370806,ungulate,n01886756,placental
+9,n02437136,camel,n02394477,even-toed ungulate,n02370806,ungulate
+10,n02437312,arabian camel,n02437136,camel,n02394477,even-toed ungulate
+9,n02399000,ruminant,n02394477,even-toed ungulate,n02370806,ungulate
+10,n02401031,bovid,n02399000,ruminant,n02394477,even-toed ungulate
+11,n02411705,sheep,n02401031,bovid,n02399000,ruminant
+12,n02412080,ram,n02411705,sheep,n02401031,bovid
+11,n02419796,antelope,n02401031,bovid,n02399000,ruminant
+12,n02423022,gazelle,n02419796,antelope,n02401031,bovid
+12,n02422699,impala,n02419796,antelope,n02401031,bovid
+12,n02422106,hartebeest,n02419796,antelope,n02401031,bovid
+11,n02414578,wild sheep,n02401031,bovid,n02399000,ruminant
+12,n02415435,mountain sheep,n02414578,wild sheep,n02401031,bovid
+13,n02415577,bighorn,n02415435,mountain sheep,n02414578,wild sheep
+11,n02416519,goat,n02401031,bovid,n02399000,ruminant
+12,n02417534,wild goat,n02416519,goat,n02401031,bovid
+13,n02417914,ibex,n02417534,wild goat,n02416519,goat
+11,n02410509,bison,n02401031,bovid,n02399000,ruminant
+11,n02407959,old world buffalo,n02401031,bovid,n02399000,ruminant
+12,n02408429,water buffalo,n02407959,old world buffalo,n02401031,bovid
+11,n02402010,bovine,n02401031,bovid,n02399000,ruminant
+12,n02402425,cattle,n02402010,bovine,n02401031,bovid
+13,n02403003,ox,n02402425,cattle,n02402010,bovine
+9,n02398521,hippopotamus,n02394477,even-toed ungulate,n02370806,ungulate
+9,n02437616,llama,n02394477,even-toed ungulate,n02370806,ungulate
+9,n02395003,swine,n02394477,even-toed ungulate,n02370806,ungulate
+10,n02396427,wild boar,n02395003,swine,n02394477,even-toed ungulate
+10,n02397096,warthog,n02395003,swine,n02394477,even-toed ungulate
+10,n02395406,hog,n02395003,swine,n02394477,even-toed ungulate
+7,n02453611,edentate,n01886756,placental,n01861778,mammal
+8,n02456962,sloth,n02453611,edentate,n01886756,placental
+9,n02457408,three-toed sloth,n02456962,sloth,n02453611,edentate
+8,n02454379,armadillo,n02453611,edentate,n01886756,placental
+7,n02453108,pachyderm,n01886756,placental,n01861778,mammal
+8,n02503517,elephant,n02453108,pachyderm,n01886756,placental
+9,n02504458,african elephant,n02503517,elephant,n02453108,pachyderm
+9,n02504013,indian elephant,n02503517,elephant,n02453108,pachyderm
+7,n02329401,rodent,n01886756,placental,n01861778,mammal
+8,n02346627,porcupine,n02329401,rodent,n01886756,placental
+8,n02364520,cavy,n02329401,rodent,n01886756,placental
+9,n02364673,guinea pig,n02364520,cavy,n02329401,rodent
+8,n02342885,hamster,n02329401,rodent,n01886756,placental
+8,n02355227,squirrel,n02329401,rodent,n01886756,placental
+9,n02355477,tree squirrel,n02355227,squirrel,n02329401,rodent
+10,n02356798,fox squirrel,n02355477,tree squirrel,n02355227,squirrel
+8,n02361337,marmot,n02329401,rodent,n01886756,placental
+8,n02363005,beaver,n02329401,rodent,n01886756,placental
+6,n01871265,tusker,n01861778,mammal,n01471682,vertebrate
+6,n01871543,prototherian,n01861778,mammal,n01471682,vertebrate
+7,n01871875,monotreme,n01871543,prototherian,n01861778,mammal
+8,n01872401,echidna,n01871875,monotreme,n01871543,prototherian
+8,n01873310,platypus,n01871875,monotreme,n01871543,prototherian
+6,n01873982,metatherian,n01861778,mammal,n01471682,vertebrate
+7,n01874434,marsupial,n01873982,metatherian,n01861778,mammal
+8,n01881171,phalanger,n01874434,marsupial,n01873982,metatherian
+9,n01882714,koala,n01881171,phalanger,n01874434,marsupial
+8,n01877134,kangaroo,n01874434,marsupial,n01873982,metatherian
+9,n01877812,wallaby,n01877134,kangaroo,n01874434,marsupial
+8,n01883070,wombat,n01874434,marsupial,n01873982,metatherian
+5,n01503061,bird,n01471682,vertebrate,n01466257,chordate
+6,n01514668,cock,n01503061,bird,n01471682,vertebrate
+6,n01514859,hen,n01503061,bird,n01471682,vertebrate
+6,n01517565,ratite,n01503061,bird,n01471682,vertebrate
+7,n01518878,ostrich,n01517565,ratite,n01503061,bird
+6,n01524359,passerine,n01503061,bird,n01471682,vertebrate
+7,n01525720,oscine,n01524359,passerine,n01503061,bird
+8,n01529672,finch,n01525720,oscine,n01524359,passerine
+9,n01530575,brambling,n01529672,finch,n01525720,oscine
+9,n01531178,goldfinch,n01529672,finch,n01525720,oscine
+9,n01532829,house finch,n01529672,finch,n01525720,oscine
+9,n01534433,junco,n01529672,finch,n01525720,oscine
+9,n01537134,bunting,n01529672,finch,n01525720,oscine
+10,n01537544,indigo bunting,n01537134,bunting,n01529672,finch
+8,n01557185,thrush,n01525720,oscine,n01524359,passerine
+9,n01558993,robin,n01557185,thrush,n01525720,oscine
+9,n01560105,nightingale,n01557185,thrush,n01525720,oscine
+10,n01560419,bulbul,n01560105,nightingale,n01557185,thrush
+8,n01578575,corvine bird,n01525720,oscine,n01524359,passerine
+9,n01580077,jay,n01578575,corvine bird,n01525720,oscine
+9,n01582220,magpie,n01578575,corvine bird,n01525720,oscine
+8,n01591697,titmouse,n01525720,oscine,n01524359,passerine
+9,n01592084,chickadee,n01591697,titmouse,n01525720,oscine
+8,n01601694,water ouzel,n01525720,oscine,n01524359,passerine
+6,n01604330,bird of prey,n01503061,bird,n01471682,vertebrate
+7,n01605630,hawk,n01604330,bird of prey,n01503061,bird
+8,n01608432,kite,n01605630,hawk,n01604330,bird of prey
+7,n01613294,eagle,n01604330,bird of prey,n01503061,bird
+8,n01614925,bald eagle,n01613294,eagle,n01604330,bird of prey
+7,n01616318,vulture,n01604330,bird of prey,n01503061,bird
+7,n01621127,owl,n01604330,bird of prey,n01503061,bird
+8,n01622779,great grey owl,n01621127,owl,n01604330,bird of prey
+6,n01789386,gallinaceous bird,n01503061,bird,n01471682,vertebrate
+7,n02153203,game bird,n01789386,gallinaceous bird,n01503061,bird
+8,n01795088,grouse,n02153203,game bird,n01789386,gallinaceous bird
+9,n01795545,black grouse,n01795088,grouse,n02153203,game bird
+9,n01796340,ptarmigan,n01795088,grouse,n02153203,game bird
+9,n01797886,ruffed grouse,n01795088,grouse,n02153203,game bird
+9,n01798484,prairie chicken,n01795088,grouse,n02153203,game bird
+8,n01802721,phasianid,n02153203,game bird,n01789386,gallinaceous bird
+9,n01803078,pheasant,n01802721,phasianid,n02153203,game bird
+10,n01805801,peafowl,n01803078,pheasant,n01802721,phasianid
+11,n01806143,peacock,n01805801,peafowl,n01803078,pheasant
+9,n01806567,quail,n01802721,phasianid,n02153203,game bird
+9,n01807496,partridge,n01802721,phasianid,n02153203,game bird
+6,n01816887,parrot,n01503061,bird,n01471682,vertebrate
+7,n01817953,african grey,n01816887,parrot,n01503061,bird
+7,n01818515,macaw,n01816887,parrot,n01503061,bird
+7,n01819115,cockatoo,n01816887,parrot,n01503061,bird
+8,n01819313,sulphur-crested cockatoo,n01819115,cockatoo,n01816887,parrot
+7,n01820348,lory,n01816887,parrot,n01503061,bird
+8,n01820546,lorikeet,n01820348,lory,n01816887,parrot
+6,n01822602,cuculiform bird,n01503061,bird,n01471682,vertebrate
+7,n01823013,cuckoo,n01822602,cuculiform bird,n01503061,bird
+8,n01824575,coucal,n01823013,cuckoo,n01822602,cuculiform bird
+6,n01825930,coraciiform bird,n01503061,bird,n01471682,vertebrate
+7,n01828970,bee eater,n01825930,coraciiform bird,n01503061,bird
+7,n01829413,hornbill,n01825930,coraciiform bird,n01503061,bird
+6,n01831712,apodiform bird,n01503061,bird,n01471682,vertebrate
+7,n01833805,hummingbird,n01831712,apodiform bird,n01503061,bird
+6,n01838038,piciform bird,n01503061,bird,n01471682,vertebrate
+7,n01843065,jacamar,n01838038,piciform bird,n01503061,bird
+7,n01843383,toucan,n01838038,piciform bird,n01503061,bird
+6,n01844917,aquatic bird,n01503061,bird,n01471682,vertebrate
+7,n01845132,waterfowl,n01844917,aquatic bird,n01503061,bird
+8,n01845477,anseriform bird,n01845132,waterfowl,n01844917,aquatic bird
+9,n01855672,goose,n01845477,anseriform bird,n01845132,waterfowl
+9,n01846331,duck,n01845477,anseriform bird,n01845132,waterfowl
+10,n01847000,drake,n01846331,duck,n01845477,anseriform bird
+10,n01852861,sea duck,n01846331,duck,n01845477,anseriform bird
+11,n01854415,merganser,n01852861,sea duck,n01846331,duck
+12,n01855032,red-breasted merganser,n01854415,merganser,n01852861,sea duck
+7,n01858441,swan,n01844917,aquatic bird,n01503061,bird
+8,n01860187,black swan,n01858441,swan,n01844917,aquatic bird
+7,n02000954,wading bird,n01844917,aquatic bird,n01503061,bird
+8,n02002075,stork,n02000954,wading bird,n01844917,aquatic bird
+9,n02002556,white stork,n02002075,stork,n02000954,wading bird
+9,n02002724,black stork,n02002075,stork,n02000954,wading bird
+8,n02006656,spoonbill,n02000954,wading bird,n01844917,aquatic bird
+8,n02007558,flamingo,n02000954,wading bird,n01844917,aquatic bird
+8,n02008041,heron,n02000954,wading bird,n01844917,aquatic bird
+9,n02008796,egret,n02008041,heron,n02000954,wading bird
+10,n02009912,american egret,n02008796,egret,n02008041,heron
+9,n02009229,little blue heron,n02008041,heron,n02000954,wading bird
+9,n02011460,bittern,n02008041,heron,n02000954,wading bird
+8,n02013706,limpkin,n02000954,wading bird,n01844917,aquatic bird
+8,n02014941,rail,n02000954,wading bird,n01844917,aquatic bird
+9,n02018027,coot,n02014941,rail,n02000954,wading bird
+10,n02018207,american coot,n02018027,coot,n02014941,rail
+8,n02018795,bustard,n02000954,wading bird,n01844917,aquatic bird
+8,n02022684,shorebird,n02000954,wading bird,n01844917,aquatic bird
+9,n02023341,plover,n02022684,shorebird,n02000954,wading bird
+10,n02025043,turnstone,n02023341,plover,n02022684,shorebird
+11,n02025239,ruddy turnstone,n02025043,turnstone,n02023341,plover
+9,n02026059,sandpiper,n02022684,shorebird,n02000954,wading bird
+10,n02027492,red-backed sandpiper,n02026059,sandpiper,n02022684,shorebird
+10,n02028035,redshank,n02026059,sandpiper,n02022684,shorebird
+9,n02031934,snipe,n02022684,shorebird,n02000954,wading bird
+10,n02033041,dowitcher,n02031934,snipe,n02022684,shorebird
+9,n02037110,oystercatcher,n02022684,shorebird,n02000954,wading bird
+7,n02016358,gallinule,n01844917,aquatic bird,n01503061,bird
+8,n02016956,purple gallinule,n02016358,gallinule,n01844917,aquatic bird
+9,n02017213,european gallinule,n02016956,purple gallinule,n02016358,gallinule
+7,n02021795,seabird,n01844917,aquatic bird,n01503061,bird
+8,n02051474,pelecaniform seabird,n02021795,seabird,n01844917,aquatic bird
+9,n02051845,pelican,n02051474,pelecaniform seabird,n02021795,seabird
+8,n02055658,sphenisciform seabird,n02021795,seabird,n01844917,aquatic bird
+9,n02055803,penguin,n02055658,sphenisciform seabird,n02021795,seabird
+10,n02056570,king penguin,n02055803,penguin,n02055658,sphenisciform seabird
+8,n02057731,pelagic bird,n02021795,seabird,n01844917,aquatic bird
+9,n02058221,albatross,n02057731,pelagic bird,n02021795,seabird
+5,n01661091,reptile,n01471682,vertebrate,n01466257,chordate
+6,n01661592,anapsid,n01661091,reptile,n01471682,vertebrate
+7,n01662622,chelonian,n01661592,anapsid,n01661091,reptile
+8,n01662784,turtle,n01662622,chelonian,n01661592,anapsid
+9,n01663401,sea turtle,n01662784,turtle,n01662622,chelonian
+10,n01664065,loggerhead,n01663401,sea turtle,n01662784,turtle
+10,n01665541,leatherback turtle,n01663401,sea turtle,n01662784,turtle
+9,n01667114,mud turtle,n01662784,turtle,n01662622,chelonian
+9,n01667778,terrapin,n01662784,turtle,n01662622,chelonian
+9,n01669191,box turtle,n01662784,turtle,n01662622,chelonian
+6,n01661818,diapsid,n01661091,reptile,n01471682,vertebrate
+7,n01674216,saurian,n01661818,diapsid,n01661091,reptile
+8,n01674464,lizard,n01674216,saurian,n01661818,diapsid
+9,n01674990,gecko,n01674464,lizard,n01674216,saurian
+10,n01675722,banded gecko,n01674990,gecko,n01674464,lizard
+9,n01676755,iguanid,n01674464,lizard,n01674216,saurian
+10,n01677366,common iguana,n01676755,iguanid,n01674464,lizard
+10,n01682714,american chameleon,n01676755,iguanid,n01674464,lizard
+9,n01685439,teiid lizard,n01674464,lizard,n01674216,saurian
+10,n01685808,whiptail,n01685439,teiid lizard,n01674464,lizard
+9,n01687665,agamid,n01674464,lizard,n01674216,saurian
+10,n01687978,agama,n01687665,agamid,n01674464,lizard
+10,n01688243,frilled lizard,n01687665,agamid,n01674464,lizard
+9,n01689411,anguid lizard,n01674464,lizard,n01674216,saurian
+10,n01689811,alligator lizard,n01689411,anguid lizard,n01674464,lizard
+9,n01691951,venomous lizard,n01674464,lizard,n01674216,saurian
+10,n01692333,gila monster,n01691951,venomous lizard,n01674464,lizard
+9,n01692864,lacertid lizard,n01674464,lizard,n01674216,saurian
+10,n01693334,green lizard,n01692864,lacertid lizard,n01674464,lizard
+9,n01693783,chameleon,n01674464,lizard,n01674216,saurian
+10,n01694178,african chameleon,n01693783,chameleon,n01674464,lizard
+10,n01695060,komodo dragon,n01694709,monitor,no_id,no_abuelo
+7,n01695681,archosaur,n01661818,diapsid,n01661091,reptile
+8,n01699831,dinosaur,n01695681,archosaur,n01661818,diapsid
+9,n01700470,ornithischian,n01699831,dinosaur,n01695681,archosaur
+10,n01703569,ceratopsian,n01700470,ornithischian,n01699831,dinosaur
+11,n01704323,triceratops,n01703569,ceratopsian,n01700470,ornithischian
+7,n01696633,crocodilian reptile,n01661818,diapsid,n01661091,reptile
+8,n01698434,alligator,n01696633,crocodilian reptile,n01661818,diapsid
+9,n01698640,american alligator,n01698434,alligator,n01696633,crocodilian reptile
+8,n01697178,crocodile,n01696633,crocodilian reptile,n01661818,diapsid
+9,n01697457,african crocodile,n01697178,crocodile,n01696633,crocodilian reptile
+7,n01726692,snake,n01661818,diapsid,n01661091,reptile
+8,n01727646,colubrid snake,n01726692,snake,n01661818,diapsid
+9,n01728572,thunder snake,n01727646,colubrid snake,n01726692,snake
+9,n01728920,ringneck snake,n01727646,colubrid snake,n01726692,snake
+9,n01729322,hognose snake,n01727646,colubrid snake,n01726692,snake
+9,n01729977,green snake,n01727646,colubrid snake,n01726692,snake
+9,n01734418,king snake,n01727646,colubrid snake,n01726692,snake
+9,n01735189,garter snake,n01727646,colubrid snake,n01726692,snake
+9,n01737021,water snake,n01727646,colubrid snake,n01726692,snake
+9,n01739381,vine snake,n01727646,colubrid snake,n01726692,snake
+9,n01740131,night snake,n01727646,colubrid snake,n01726692,snake
+8,n01741562,constrictor,n01726692,snake,n01661818,diapsid
+9,n01741943,boa,n01741562,constrictor,n01726692,snake
+10,n01742172,boa constrictor,n01741943,boa,n01741562,constrictor
+10,n01743605,python,n01741943,boa,n01741562,constrictor
+11,n01744401,rock python,n01743605,python,n01741943,boa
+8,n01745125,elapid,n01726692,snake,n01661818,diapsid
+9,n01747885,cobra,n01745125,elapid,n01726692,snake
+10,n01748264,indian cobra,n01747885,cobra,n01745125,elapid
+9,n01749582,mamba,n01745125,elapid,n01726692,snake
+10,n01749742,black mamba,n01749582,mamba,n01745125,elapid
+11,n01749939,green mamba,n01749742,black mamba,n01749582,mamba
+8,n01751748,sea snake,n01726692,snake,n01661818,diapsid
+8,n01752165,viper,n01726692,snake,n01661818,diapsid
+9,n01753488,horned viper,n01752165,viper,n01726692,snake
+9,n01753959,pit viper,n01752165,viper,n01726692,snake
+10,n01754876,rattlesnake,n01753959,pit viper,n01752165,viper
+11,n01755581,diamondback,n01754876,rattlesnake,n01753959,pit viper
+11,n01756291,sidewinder,n01754876,rattlesnake,n01753959,pit viper
+6,n01639765,frog,n01627424,amphibian,no_id,no_abuelo
+7,n01640846,true frog,n01639765,frog,n01627424,amphibian
+8,n01641577,bullfrog,n01640846,true frog,n01639765,frog
+7,n01644373,tree frog,n01639765,frog,n01627424,amphibian
+7,n01644900,tailed frog,n01639765,frog,n01627424,amphibian
+6,n01629276,salamander,n01627424,amphibian,no_id,no_abuelo
+7,n01629819,european fire salamander,n01629276,salamander,n01627424,amphibian
+7,n01630284,newt,n01629276,salamander,n01627424,amphibian
+8,n01630670,common newt,n01630284,newt,n01629276,salamander
+8,n01631663,eft,n01630284,newt,n01629276,salamander
+7,n01632047,ambystomid,n01629276,salamander,n01627424,amphibian
+8,n01632458,spotted salamander,n01632047,ambystomid,n01629276,salamander
+8,n01632777,axolotl,n01632047,ambystomid,n01629276,salamander
+5,n01473806,aquatic vertebrate,n01471682,vertebrate,n01466257,chordate
+6,n02512053,fish,n01473806,aquatic vertebrate,n01471682,vertebrate
+7,n01480516,cartilaginous fish,n02512053,fish,n01473806,aquatic vertebrate
+8,n01482071,elasmobranch,n01480516,cartilaginous fish,n02512053,fish
+9,n01495701,ray,n01482071,elasmobranch,n01480516,cartilaginous fish
+10,n01496331,electric ray,n01495701,ray,n01482071,elasmobranch
+10,n01498041,stingray,n01495701,ray,n01482071,elasmobranch
+9,n01482330,shark,n01482071,elasmobranch,n01480516,cartilaginous fish
+10,n01483522,mackerel shark,n01482330,shark,n01482071,elasmobranch
+11,n01484850,great white shark,n01483522,mackerel shark,n01482330,shark
+10,n01488918,requiem shark,n01482330,shark,n01482071,elasmobranch
+11,n01491361,tiger shark,n01488918,requiem shark,n01482330,shark
+10,n01494475,hammerhead,n01482330,shark,n01482071,elasmobranch
+7,n02512938,food fish,n02512053,fish,n01473806,aquatic vertebrate
+8,n02514041,barracouta,n02512938,food fish,n02512053,fish
+8,n02534734,salmon,n02512938,food fish,n02512053,fish
+9,n02536864,coho,n02534734,salmon,n02512938,food fish
+7,n02514825,bony fish,n02512053,fish,n01473806,aquatic vertebrate
+8,n02528163,teleost fish,n02514825,bony fish,n02512053,fish
+9,n01428580,soft-finned fish,n02528163,teleost fish,n02514825,bony fish
+10,n01438208,cypriniform fish,n01428580,soft-finned fish,n02528163,teleost fish
+11,n01439121,cyprinid,n01438208,cypriniform fish,n01428580,soft-finned fish
+12,n01440764,tench,n01439121,cyprinid,n01438208,cypriniform fish
+12,n01443537,goldfish,n01439121,cyprinid,n01438208,cypriniform fish
+10,n02526121,eel,n01428580,soft-finned fish,n02528163,teleost fish
+9,n02552171,spiny-finned fish,n02528163,teleost fish,n02514825,bony fish
+10,n02554730,percoid fish,n02552171,spiny-finned fish,n02528163,teleost fish
+11,n02605316,butterfly fish,n02554730,percoid fish,n02552171,spiny-finned fish
+12,n02606052,rock beauty,n02605316,butterfly fish,n02554730,percoid fish
+11,n02606384,damselfish,n02554730,percoid fish,n02552171,spiny-finned fish
+12,n02607072,anemone fish,n02606384,damselfish,n02554730,percoid fish
+10,n02642107,scorpaenoid,n02552171,spiny-finned fish,n02528163,teleost fish
+11,n02642644,scorpaenid,n02642107,scorpaenoid,n02552171,spiny-finned fish
+12,n02643566,lionfish,n02642644,scorpaenid,n02642107,scorpaenoid
+10,n02652668,plectognath,n02552171,spiny-finned fish,n02528163,teleost fish
+11,n02655020,puffer,n02652668,plectognath,n02552171,spiny-finned fish
+9,n02638596,ganoid,n02528163,teleost fish,n02514825,bony fish
+10,n02640242,sturgeon,n02638596,ganoid,n02528163,teleost fish
+10,n02641379,gar,n02638596,ganoid,n02528163,teleost fish

@@ -68,8 +68,13 @@ df_flat['ClasePadre'] = df_flat['ClasePadre'].str.lower()
 # HAY QUE QUITAR DUPLICADOS!!!! -> antes de nada porque sino al buscar los padres o abuelos se puede volver loco y aun asi se puede liar bastante
 df_flat = df_flat.drop_duplicates(subset=['ClaseReal'],keep='first')
 
-# Inicializamos la columna 'ClaseAbuelo' con None
+
+print("################################################################################################################")
+# Funcion para establecer los abuelos
+
+# Inicializamos la columna 'ClaseAbuelo'
 df_flat['ClaseAbuelo'] = "no_abuelo"
+df_flat['grandparent_id'] = 'no_id'
 
 # Iterar sobre cada fila del DataFrame
 for idx, row in df_flat.iterrows():
@@ -85,12 +90,32 @@ for idx, row in df_flat.iterrows():
 
         if grandparent_name.size > 0:
             df_flat.at[idx, 'ClaseAbuelo'] = grandparent_name
+            df_flat.at[idx, 'grandparent_id'] = grandparent_id
 
+print("################################################################################################################")
 
-#df_flat.to_csv('Jerarquia_Clases.csv', index=False)
+nuevo_orden = ['Nivel', 'id', 'ClaseReal', 'parent_id', 'ClasePadre', 'grandparent_id', 'ClaseAbuelo']
+df_flat = df_flat[nuevo_orden]
 
-print(df_flat.head(30))
+# df_flat.to_csv('Jerarquia_Clases.csv', index=False)
+
+print(df_flat.head(10))
 #print(df_flat.tail(10))
+
+# Quiero duplicar el df pero ahora en lugar de ClaseReal sea ClasePredPrime (para hacer el merge) ClasePadre -> ClasePredPadre, ClaseAbuelo -> ClasePredAbuelo
+# Diccionario para renombrar las columnas
+nuevos_nombres = {
+    'ClaseReal': 'ClasePredPrime',
+    'ClasePadre': 'ClasePredPadre',
+    'ClaseAbuelo': 'ClasePredAbuelo'
+}
+
+# Renombrar las columnas del DataFrame
+df_renombrado = df_flat.rename(columns=nuevos_nombres)
+df_renombrado = df_renombrado.drop(['Nivel', 'id', 'parent_id', 'grandparent_id'], axis=1)
+# df_renombrado.to_csv('Jerarquia_Clases_Pred.csv', index=False)
+
+print(df_renombrado.head(15))
 
 '''
 # Contar la frecuencia de cada valor en la columna 'id'

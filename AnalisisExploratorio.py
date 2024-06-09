@@ -5,12 +5,13 @@ import seaborn as sns
 import pandas as pd
 import matplotlib.patches as mpatches
 from wordcloud import WordCloud
-pd.set_option('display.max_columns', 15)
+pd.set_option('display.max_columns', 30)
 pd.set_option('display.width', 350)
 
 # Importar el dataframe
 df = pd.read_csv('Conjunto_Entrenamiento_10000.csv')
 jerarquia = pd.read_csv('Jerarquia_Clases.csv')
+jerarquiaPred = pd.read_csv('Jerarquia_Clases_Pred.csv')
 
 # Eliminar primera columna y la r porque no nos sirven
 df.drop(df.columns[0], axis=1, inplace=True)
@@ -71,6 +72,11 @@ df['ClasePred'] = df['ClasePred'].str.lower()
 df['ClasePredPrime'] = df['ClasePredPrime'].str.lower()
 df = pd.merge(df, jerarquia, on='ClaseReal', how='left')
 df['Nivel'] = df['Nivel'].astype('Int64')
+
+# Merge de los Pred
+df = pd.merge(df, jerarquiaPred, on='ClasePredPrime', how='left')
+
+print(df.head(15))
 
 '''
 # Ejemplo mostrar todos los persian cat
@@ -551,7 +557,7 @@ def comparacion_niveles(algoritmo):
     # print(top_clases_nivel)
 
 
-niveles_mejora_EH = comparacion_niveles('EH')
+# niveles_mejora_EH = comparacion_niveles('EH')
 
 '''
 # Grafico que compara la mejora por niveles, es decir, los 13 niveles y la mejora en cada uno de ellos
