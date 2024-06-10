@@ -6,7 +6,7 @@ import pandas as pd
 import matplotlib.patches as mpatches
 from wordcloud import WordCloud
 pd.set_option('display.max_columns', 30)
-pd.set_option('display.width', 350)
+pd.set_option('display.width', 400)
 
 # Importar el dataframe
 df = pd.read_csv('Conjunto_Entrenamiento_10000.csv')
@@ -76,6 +76,13 @@ df['Nivel'] = df['Nivel'].astype('Int64')
 # Merge de los Pred
 df = pd.merge(df, jerarquiaPred, on='ClasePredPrime', how='left')
 
+# Funcion de aciertos Real Padre y Abuelo
+# Añadimos las columnas de Aciertos
+df['Aciertos_Real'] = (df['ClaseReal'] == df['ClasePredPrime']).astype(int)
+df['Aciertos_Padre'] = (df['ClasePadre'] == df['ClasePredPadre']).astype(int)
+df['Aciertos_Abuelo'] = (df['ClaseAbuelo'] == df['ClasePredAbuelo']).astype(int)
+
+
 print(df.head(15))
 
 '''
@@ -94,7 +101,7 @@ coincidencias = df[df['ClaseReal'] == df['ClasePredPrime']]
 # print(coincidencias)
 
 # Agrupar las que son iguales y contarlas
-df_1 = coincidencias.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='Hit')
+df_1 = coincidencias.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='Aciertos')
 # print('df1',df_1.head(2))
 
 df_2 = df.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='Total')
@@ -103,7 +110,7 @@ df_2 = df.groupby('ClaseReal')['ClasePredPrime'].count().reset_index(name='Total
 df_clases = pd.merge(df_1, df_2, on='ClaseReal', how='left')
 
 # Crea la columna resultado
-df_clases['Porcentaje'] = ((df_clases['Hit'] / df_clases['Total']) * 100).__round__(3)
+df_clases['Porcentaje'] = ((df_clases['Aciertos'] / df_clases['Total']) * 100).__round__(3)
 df_clases = df_clases.sort_values(by='Porcentaje', ascending=False)
 print(df_clases.head(5))
 
