@@ -82,6 +82,10 @@ df['Aciertos_Real'] = (df['ClaseReal'] == df['ClasePredPrime']).astype(int)
 df['Aciertos_Padre'] = (df['ClasePadre'] == df['ClasePredPadre']).astype(int)
 df['Aciertos_Abuelo'] = (df['ClaseAbuelo'] == df['ClasePredAbuelo']).astype(int)
 
+# La que falta que seria
+# Crear la columna de aciertos totales
+df['Aciertos_Totales'] = ((df['ClaseReal'] != df['ClasePredPrime']) & ((df['ClasePadre'] == df['ClasePredPadre']) | (df['ClaseAbuelo'] == df['ClasePredAbuelo']))).astype(int)
+
 
 print(df.head(15))
 
@@ -599,5 +603,76 @@ plt.show()
 print("################################################################################################################")
 print("################################################################################################################")
 
-# Funcion de aciertos
-# if ClaseReal == ClasePredPrime elif ClasePadre == ClasePredPadre elif ClaseAbuelo == ClasePredAbuelo -> Acierto = 1
+
+def aciertos_jerarquia(algoritmo, nivel):
+
+    df_res = pd.DataFrame
+
+    if algoritmo == 'EH':
+        df_res = mejora_EH
+
+    elif algoritmo == 'EHALC':
+        df_res = mejora_EHALC
+
+    elif algoritmo == 'TL':
+        df_res = mejora_TL
+
+    elif algoritmo == 'CG':
+        df_res = mejora_CG
+
+    # Agrupar por clase
+    df_res = df_res.groupby('ClaseReal')[nivel].sum().reset_index()
+    df_res = df_res.sort_values(by=nivel, ascending=False) # .head(5)
+
+    return df_res
+print("################################################################################################################")
+
+# Grafico de aciertos para ClaseReal
+aciertosEH1 = aciertos_jerarquia('EH', 'Aciertos_Real')
+aciertosEHALC1 = aciertos_jerarquia('EHALC', 'Aciertos_Real')
+aciertosCG1 = aciertos_jerarquia('CG', 'Aciertos_Real')
+aciertosTL1 = aciertos_jerarquia('TL', 'Aciertos_Real')
+
+print(aciertosEH1)
+print(aciertosEHALC1)
+print(aciertosCG1)
+print(aciertosTL1)
+
+print("################################################################################################################")
+
+# Grafico de aciertos para ClasePadre
+aciertosEH2 = aciertos_jerarquia('EH', 'Aciertos_Padre')
+aciertosEHALC2 = aciertos_jerarquia('EHALC', 'Aciertos_Padre')
+aciertosCG2 = aciertos_jerarquia('CG', 'Aciertos_Padre')
+aciertosTL2 = aciertos_jerarquia('TL', 'Aciertos_Padre')
+
+print(aciertosEH2)
+print(aciertosEHALC2)
+print(aciertosCG2)
+print(aciertosTL2)
+
+print("################################################################################################################")
+
+# Grafico de aciertos para ClaseAbuelo
+aciertosEH3 = aciertos_jerarquia('EH', 'Aciertos_Abuelo')
+aciertosEHALC3 = aciertos_jerarquia('EHALC', 'Aciertos_Abuelo')
+aciertosCG3 = aciertos_jerarquia('CG', 'Aciertos_Abuelo')
+aciertosTL3 = aciertos_jerarquia('TL', 'Aciertos_Abuelo')
+
+print(aciertosEH3)
+print(aciertosEHALC3)
+print(aciertosCG3)
+print(aciertosTL3)
+print("################################################################################################################")
+
+# Grafico de aciertos para General
+aciertosEH4 = aciertos_jerarquia('EH', 'Aciertos_Totales')
+aciertosEHALC4 = aciertos_jerarquia('EHALC', 'Aciertos_Totales')
+aciertosCG4 = aciertos_jerarquia('CG', 'Aciertos_Totales')
+aciertosTL4 = aciertos_jerarquia('TL', 'Aciertos_Totales')
+
+print(aciertosEH4)
+print(aciertosEHALC4)
+print(aciertosCG4)
+print(aciertosTL4)
+
