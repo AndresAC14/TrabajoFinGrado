@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 import matplotlib.patches as mpatches
-from wordcloud import WordCloud
 pd.set_option('display.max_columns', 30)
 pd.set_option('display.width', 400)
 
@@ -34,34 +33,31 @@ print(df.head(5))
 # algoritmos = df['Algoritmo'].unique()
 # print("Algoritmos que manejamos: ", algoritmos)
 
-
 '''
 # ClaseReal mas comun grafico
-print(df['ClaseReal'].value_counts())
-df['ClaseReal'].value_counts()[:10].plot(kind='bar')
-plt.title('Clase Real mas comun')
+sns.barplot(df['ClaseReal'].value_counts().head(10))
+plt.title('Clase Real más común')
 plt.xlabel('Clase')
 plt.ylabel('Frecuencia')
+plt.xticks(rotation=45, ha='right')
 plt.show()
-'''
 
-'''
+
 # ClasePred mas comun grafico
-print(df['ClasePred'].value_counts())
-df['ClasePred'].value_counts()[:10].plot(kind='bar')
-plt.title('ClasePred mas comun')
+sns.barplot(df['ClasePred'].value_counts().head(10))
+plt.title('Clase Predicha más común')
 plt.xlabel('Clase')
 plt.ylabel('Frecuencia')
+plt.xticks(rotation=45, ha='right')
 plt.show()
-'''
 
-'''
+
 # ClasePredPrime mas comun grafico
-print(df['ClasePredPrime'].value_counts())
-df['ClasePredPrime'].value_counts()[:10].plot(kind='bar')
-plt.title('ClasePredPrime mas comun')
+sns.barplot(df['ClasePredPrime'].value_counts().head(10))
+plt.title('Clase Predicha Prime más común')
 plt.xlabel('Clase')
 plt.ylabel('Frecuencia')
+plt.xticks(rotation=45, ha='right')
 plt.show()
 '''
 
@@ -118,11 +114,14 @@ df_clases['Porcentaje'] = ((df_clases['Aciertos'] / df_clases['Total']) * 100)._
 df_clases = df_clases.sort_values(by='Porcentaje', ascending=False)
 print(df_clases.head(5))
 
+'''
 # Ahora hacer una grafica que ponga la ClaseReal respecto al Porcentaje
-# sns.barplot(df_clases.head(10), x='ClaseReal', y='Porcentaje')
-# plt.title('Top 10 Clases Más Predichas (GLOBAL)')
-# plt.show()
-
+sns.barplot(df_clases.head(10), x='ClaseReal', y='Porcentaje')
+plt.title('Top 10 Clases Más Predichas (GLOBAL)')
+plt.xlabel('Clase')
+plt.xticks(rotation=45, ha='right')
+plt.show()
+'''
 
 print("################################################################################################################")
 # Algoritmos que manejamos:  ['Ecualización del histograma (EH)'
@@ -151,9 +150,9 @@ plt.xlabel('Clase')
 plt.ylabel('Aciertos')
 plt.xticks(rotation=45, ha='right')
 plt.show()
-'''
 
-'''
+
+
 # TOP 10 por abajo con EH
 sns.barplot(df_EH.tail(10), x='ClaseReal', y='Aciertos')
 plt.title('Top 10 Clases Menos Predichas con EH')
@@ -332,7 +331,7 @@ ax.set_xlabel('Media Original')
 ax.set_ylabel('% Mejora')
 ax.set_title('Mejora Con EH')
 # Crear manualmente las leyendas
-legend_labels = [mpatches.Patch(color='green', label='Si'), mpatches.Patch(color='red', label='No')]
+legend_labels = [mpatches.Patch(color='green', label='No'), mpatches.Patch(color='red', label='Si')]
 ax.legend(handles=legend_labels, title='¿Cambia?')
 # Mostrar el gráfico
 plt.show()
@@ -378,7 +377,7 @@ print(mejora_EHALC['¿Cambia?'].value_counts())
 # Crear una figura y un eje
 fig, ax = plt.subplots()
 # Asignar colores según los valores de '¿Cambia?'
-colores = ['green' if valor == 1 else 'red' for valor in mejora_EHALC['¿Cambia?']]
+colores = ['green' if valor == 0 else 'red' for valor in mejora_EHALC['¿Cambia?']]
 # Crear el gráfico de dispersión
 scatter = ax.scatter(mejora_EHALC['Media'], mejora_EHALC['% Mejora'], c=colores)
 # Etiquetas y título
@@ -386,7 +385,7 @@ ax.set_xlabel('Media Original')
 ax.set_ylabel('% Mejora')
 ax.set_title('Mejora Con EHALC')
 # Crear manualmente las leyendas
-legend_labels = [mpatches.Patch(color='green', label='Si'), mpatches.Patch(color='red', label='No')]
+legend_labels = [mpatches.Patch(color='green', label='No'), mpatches.Patch(color='red', label='Si')]
 ax.legend(handles=legend_labels, title='¿Cambia?')
 # Mostrar el gráfico
 plt.show()
@@ -431,7 +430,7 @@ print(mejora_CG['¿Cambia?'].value_counts())
 # Crear una figura y un eje
 fig, ax = plt.subplots()
 # Asignar colores según los valores de '¿Cambia?'
-colores = ['green' if valor == 1 else 'red' for valor in mejora_CG['¿Cambia?']]
+colores = ['green' if valor == 0 else 'red' for valor in mejora_CG['¿Cambia?']]
 # Crear el gráfico de dispersión
 scatter = ax.scatter(mejora_CG['Media'], mejora_CG['% Mejora'], c=colores)
 # Etiquetas y título
@@ -439,7 +438,7 @@ ax.set_xlabel('Media Original')
 ax.set_ylabel('% Mejora')
 ax.set_title('Mejora Con CG')
 # Crear manualmente las leyendas
-legend_labels = [mpatches.Patch(color='green', label='Si'), mpatches.Patch(color='red', label='No')]
+legend_labels = [mpatches.Patch(color='green', label='No'), mpatches.Patch(color='red', label='Si')]
 ax.legend(handles=legend_labels, title='¿Cambia?')
 # Mostrar el gráfico
 plt.show()
@@ -483,7 +482,7 @@ print(mejora_TL['¿Cambia?'].value_counts())
 # Crear una figura y un eje
 fig, ax = plt.subplots()
 # Asignar colores según los valores de '¿Cambia?'
-colores = ['green' if valor == 1 else 'red' for valor in mejora_TL['¿Cambia?']]
+colores = ['green' if valor == 0 else 'red' for valor in mejora_TL['¿Cambia?']]
 # Crear el gráfico de dispersión
 scatter = ax.scatter(mejora_TL['Media'], mejora_TL['% Mejora'], c=colores)
 # Etiquetas y título
@@ -491,7 +490,7 @@ ax.set_xlabel('Media Original')
 ax.set_ylabel('% Mejora')
 ax.set_title('Mejora Con TL')
 # Crear manualmente las leyendas
-legend_labels = [mpatches.Patch(color='green', label='Si'), mpatches.Patch(color='red', label='No')]
+legend_labels = [mpatches.Patch(color='green', label='No'), mpatches.Patch(color='red', label='Si')]
 ax.legend(handles=legend_labels, title='¿Cambia?')
 # Mostrar el gráfico
 plt.show()
