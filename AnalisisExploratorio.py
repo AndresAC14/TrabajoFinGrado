@@ -436,7 +436,7 @@ def comparacion_niveles(algoritmo):
         top_clases_nivel = pd.concat([top_clases_nivel, clases])
 
         '''
-        # Grafico que muestre el top por nivel, es decir, como las de arriba pero añadiendo el nivel y algoritmo
+        # Grafico que muestre el top por nivel
         sns.barplot(top_clases_nivel[top_clases_nivel['Nivel'] == i], x='ClaseReal', y='% Mejora Por Clase')
         plt.xlabel('Clase Real')
         plt.ylabel('% Mejora Media Por Clase')
@@ -446,24 +446,28 @@ def comparacion_niveles(algoritmo):
         # Mostrar el gráfico
         plt.show()
         '''
+
     niveles_mejora = pd.DataFrame(niveles_mejora, columns=['Nivel', 'Mejora'])
-    return niveles_mejora # top_clases_nivel
-    # print(top_clases_nivel)
 
+    '''
+    # Grafico que compara la mejora por niveles, es decir, los 13 niveles y la mejora en cada uno de ellos
+    plt.figure(figsize=(10, 10))
+    plt.plot(niveles_mejora['Nivel'], niveles_mejora['Mejora'], marker='o', linestyle='-', color='b')
+    plt.title(f'Mejora por Nivel con {algoritmo}')
+    plt.xlabel('Nivel')
+    plt.ylabel('% Mejora')
+    plt.xticks(niveles['Nivel'].values)
+    plt.grid(True)
+    plt.show()
+    '''
 
-# niveles_mejora_EH = comparacion_niveles('EH')
+    return niveles_mejora
 
 '''
-# Claramente las clases mas definidas -> nivel 13 son las que mas % de mejora tienen
-# Grafico que compara la mejora por niveles, es decir, los 13 niveles y la mejora en cada uno de ellos
-plt.figure(figsize=(10, 10))
-plt.plot(niveles_mejora_EH['Nivel'], niveles_mejora_EH['Mejora'], marker='o', linestyle='-', color='b')
-plt.title('Mejora por Nivel con Ecualización del Histograma')
-plt.xlabel('Nivel')
-plt.ylabel('% Mejora')
-plt.xticks(niveles['Nivel'].values)
-plt.grid(True)
-plt.show()
+niveles_mejora_EH = comparacion_niveles('EH')
+niveles_mejora_EHALC = comparacion_niveles('EHALC')
+niveles_mejora_CG = comparacion_niveles('CG')
+niveles_mejora_TL = comparacion_niveles('TL')
 '''
 
 print("################################################################################################################")
