@@ -624,6 +624,8 @@ def aciertos_jerarquia(algoritmo, nivel):
     df_res = df_res.sort_values(by=nivel, ascending=False) # .head(5)
 
     return df_res
+
+'''
 print("################################################################################################################")
 
 # Grafico de aciertos para ClaseReal
@@ -636,6 +638,16 @@ print(aciertosEH1)
 print(aciertosEHALC1)
 print(aciertosCG1)
 print(aciertosTL1)
+
+
+sns.barplot(aciertosEH1.head(10), x='ClaseReal', y='Aciertos_Real')
+plt.xlabel('Clase Real')
+plt.ylabel('Aciertos')
+plt.title('Top 10 Clases Predichas Nivel Real Con EH')
+# Rotar las etiquetas
+plt.xticks(rotation=45, ha='right')
+# Mostrar el gráfico
+plt.show()
 
 print("################################################################################################################")
 
@@ -650,6 +662,18 @@ print(aciertosEHALC2)
 print(aciertosCG2)
 print(aciertosTL2)
 
+
+sns.barplot(aciertosEH2.head(10), x='ClaseReal', y='Aciertos_Padre')
+plt.xlabel('Clase Padre')
+plt.ylabel('Aciertos')
+plt.title('Top 10 Clases Predichas Nivel Padre Con EH')
+# Rotar las etiquetas
+plt.xticks(rotation=45, ha='right')
+# Mostrar el gráfico
+plt.show()
+
+
+
 print("################################################################################################################")
 
 # Grafico de aciertos para ClaseAbuelo
@@ -662,6 +686,16 @@ print(aciertosEH3)
 print(aciertosEHALC3)
 print(aciertosCG3)
 print(aciertosTL3)
+
+sns.barplot(aciertosEH3.head(10), x='ClaseReal', y='Aciertos_Abuelo')
+plt.xlabel('Clase Abuelo')
+plt.ylabel('Aciertos')
+plt.title('Top 10 Clases Predichas Nivel Abuelo Con EH')
+# Rotar las etiquetas
+plt.xticks(rotation=45, ha='right')
+# Mostrar el gráfico
+plt.show()
+
 print("################################################################################################################")
 
 # Grafico de aciertos para General
@@ -675,3 +709,12 @@ print(aciertosEHALC4)
 print(aciertosCG4)
 print(aciertosTL4)
 
+sns.barplot(aciertosEH4.head(10), x='ClaseReal', y='Aciertos_Totales')
+plt.xlabel('Clase')
+plt.ylabel('Aciertos')
+plt.title('Top 10 Clases Predichas Nivel General Con EH')
+# Rotar las etiquetas
+plt.xticks(rotation=45, ha='right')
+# Mostrar el gráfico
+plt.show()
+'''
