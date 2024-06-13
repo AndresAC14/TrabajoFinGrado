@@ -150,31 +150,7 @@ plt.xlabel('Clase')
 plt.ylabel('Aciertos')
 plt.xticks(rotation=45, ha='right')
 plt.show()
-
-
-
-# TOP 10 por abajo con EH
-sns.barplot(df_EH.tail(10), x='ClaseReal', y='Aciertos')
-plt.title('Top 10 Clases Menos Predichas con EH')
-plt.xlabel('Clase')
-plt.ylabel('Aciertos')
-plt.xticks(rotation=45, ha='right')
-plt.show()
 '''
-
-'''
-print("################################ ")
-# Grafico circular ????????????????????????????????????? no es importante -> preguntar en la reunion 
-df_circularEH = df_EH.groupby('Aciertos').count().reset_index()
-df_circularEH.drop(df_circularEH.columns[2], axis=1, inplace=True)
-print(df_circularEH)
-
-fig, ax = plt.subplots()
-ax.pie(df_circularEH['ClaseReal'], labels=df_circularEH['Aciertos'], autopct='%1.1f%%')
-plt.title('Porcentaje de predicciones con EH')
-plt.show()
-'''
-
 
 print("################################################################################################################")
 print("################################################################################################################")
@@ -197,16 +173,6 @@ print('Aciertos totales EHALC', aciertos_EHALC)
 # TOP 10 con EHALC
 sns.barplot(df_EHALC.head(10), x='ClaseReal', y='Aciertos')
 plt.title('Top 10 Clases Más Predichas con EHALC')
-plt.xlabel('Clase')
-plt.ylabel('Aciertos')
-plt.xticks(rotation=45, ha='right')
-plt.show()
-
-
-
-# Top 10 por abajo EHALC
-sns.barplot(df_EHALC.tail(10), x='ClaseReal', y='Aciertos')
-plt.title('Top 10 Clases Menos Predichas con EHALC')
 plt.xlabel('Clase')
 plt.ylabel('Aciertos')
 plt.xticks(rotation=45, ha='right')
@@ -239,15 +205,6 @@ plt.xlabel('Clase')
 plt.ylabel('Aciertos')
 plt.xticks(rotation=45, ha='right')
 plt.show()
-
-
-
-sns.barplot(df_CG.tail(10), x='ClaseReal', y='Aciertos')
-plt.title('Top 10 Clases Menos Predichas con CG')
-plt.xlabel('Clase')
-plt.ylabel('Aciertos')
-plt.xticks(rotation=45, ha='right')
-plt.show()
 '''
 
 
@@ -272,13 +229,6 @@ print('Aciertos totales TL', aciertos_TL)
 # TOP 10 con TL
 sns.barplot(df_TL.head(10), x='ClaseReal', y='Aciertos')
 plt.title('Top 10 Clases Más Predichas con TL')
-plt.xlabel('Clase')
-plt.ylabel('Aciertos')
-plt.xticks(rotation=45, ha='right')
-plt.show()
-
-sns.barplot(df_TL.tail(10), x='ClaseReal', y='Aciertos')
-plt.title('Top 10 Clases Menos Predichas con TL')
 plt.xlabel('Clase')
 plt.ylabel('Aciertos')
 plt.xticks(rotation=45, ha='right')
@@ -313,29 +263,8 @@ mejora_EH = mejora_EH.drop(['MediaPrime', 'Mediana', 'DesvTipica', 'MedianaPrime
 
 # Porcentaje de mejora de probabilidad de ser predicha correctamente = ((nuevo - antiguo) / antiguo) * 100 )
 mejora_EH['% Mejora'] = (((mejora_EH['ProbClasePredPrime'] - mejora_EH['ProbClasePred']) / mejora_EH['ProbClasePred']) * 100).__round__(3)
-mejora_EH['¿Cambia?'] = mejora_EH.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
 print(mejora_EH.head(10))
-print(mejora_EH['¿Cambia?'].value_counts())
 
-
-'''
-# Este grafico compara en una nube de puntos el % de mejora respecto de la iluminacion/brillo (media original de la imagen)
-# Crear una figura y un eje
-fig, ax = plt.subplots()
-# Asignar colores según los valores de '¿Cambia?'
-colores = ['green' if valor == 0 else 'red' for valor in mejora_EH['¿Cambia?']]
-# Crear el gráfico de dispersión
-scatter = ax.scatter(mejora_EH['Media'], mejora_EH['% Mejora'], c=colores)
-# Etiquetas y título
-ax.set_xlabel('Media Original')
-ax.set_ylabel('% Mejora')
-ax.set_title('Mejora Con EH')
-# Crear manualmente las leyendas
-legend_labels = [mpatches.Patch(color='green', label='No'), mpatches.Patch(color='red', label='Si')]
-ax.legend(handles=legend_labels, title='¿Cambia?')
-# Mostrar el gráfico
-plt.show()
-'''
 
 '''
 # ¿Qué clase mejora más? -> Es decir, que sea más probable de ser predicha
@@ -367,29 +296,8 @@ mejora_EHALC = mejora_EHALC.drop(['MediaPrime', 'Mediana', 'DesvTipica', 'Median
 
 # Porcentaje de mejora = ((nuevo - antiguo) / antiguo) * 100 )
 mejora_EHALC['% Mejora'] = (((mejora_EHALC['ProbClasePredPrime'] - mejora_EHALC['ProbClasePred']) / mejora_EHALC['ProbClasePred']) * 100).__round__(3)
-mejora_EHALC['¿Cambia?'] = mejora_EHALC.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
 print(mejora_EHALC.head(10))
-print(mejora_EHALC['¿Cambia?'].value_counts())
 
-
-'''
-# Este grafico compara en una nube de puntos el % de mejora respecto de la iluminacion (media original de la imagen)
-# Crear una figura y un eje
-fig, ax = plt.subplots()
-# Asignar colores según los valores de '¿Cambia?'
-colores = ['green' if valor == 0 else 'red' for valor in mejora_EHALC['¿Cambia?']]
-# Crear el gráfico de dispersión
-scatter = ax.scatter(mejora_EHALC['Media'], mejora_EHALC['% Mejora'], c=colores)
-# Etiquetas y título
-ax.set_xlabel('Media Original')
-ax.set_ylabel('% Mejora')
-ax.set_title('Mejora Con EHALC')
-# Crear manualmente las leyendas
-legend_labels = [mpatches.Patch(color='green', label='No'), mpatches.Patch(color='red', label='Si')]
-ax.legend(handles=legend_labels, title='¿Cambia?')
-# Mostrar el gráfico
-plt.show()
-'''
 
 '''
 # ¿Qué clase mejora más? -> Es decir, que sea más probable de ser predicha
@@ -420,29 +328,8 @@ mejora_CG = mejora_CG.drop(['MediaPrime', 'Mediana', 'DesvTipica', 'MedianaPrime
 
 # Porcentaje de mejora = ((nuevo - antiguo) / antiguo) * 100 )
 mejora_CG['% Mejora'] = (((mejora_CG['ProbClasePredPrime'] - mejora_CG['ProbClasePred']) / mejora_CG['ProbClasePred']) * 100).__round__(3)
-mejora_CG['¿Cambia?'] = mejora_CG.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
 print(mejora_CG.head(10))
-print(mejora_CG['¿Cambia?'].value_counts())
 
-
-'''
-# Este grafico compara en una nube de puntos el % de mejora respecto de la iluminacion (media original de la imagen)
-# Crear una figura y un eje
-fig, ax = plt.subplots()
-# Asignar colores según los valores de '¿Cambia?'
-colores = ['green' if valor == 0 else 'red' for valor in mejora_CG['¿Cambia?']]
-# Crear el gráfico de dispersión
-scatter = ax.scatter(mejora_CG['Media'], mejora_CG['% Mejora'], c=colores)
-# Etiquetas y título
-ax.set_xlabel('Media Original')
-ax.set_ylabel('% Mejora')
-ax.set_title('Mejora Con CG')
-# Crear manualmente las leyendas
-legend_labels = [mpatches.Patch(color='green', label='No'), mpatches.Patch(color='red', label='Si')]
-ax.legend(handles=legend_labels, title='¿Cambia?')
-# Mostrar el gráfico
-plt.show()
-'''
 
 '''
 # ¿Qué clase mejora más? -> Es decir, que sea más probable de ser predicha
@@ -473,28 +360,8 @@ mejora_TL = mejora_TL.drop(['MediaPrime', 'Mediana', 'DesvTipica', 'MedianaPrime
 
 # Porcentaje de mejora = ((nuevo - antiguo) / antiguo) * 100 )
 mejora_TL['% Mejora'] = (((mejora_TL['ProbClasePredPrime'] - mejora_TL['ProbClasePred']) / mejora_TL['ProbClasePred']) * 100).__round__(3)
-mejora_TL['¿Cambia?'] = mejora_TL.apply(lambda fila: 0 if fila['ClaseReal'] == fila['ClasePredPrime'] else 1, axis=1)
 print(mejora_TL.head(10))
-print(mejora_TL['¿Cambia?'].value_counts())
 
-'''
-# Este grafico compara en una nube de puntos el % de mejora respecto de la iluminacion (media original de la imagen)
-# Crear una figura y un eje
-fig, ax = plt.subplots()
-# Asignar colores según los valores de '¿Cambia?'
-colores = ['green' if valor == 0 else 'red' for valor in mejora_TL['¿Cambia?']]
-# Crear el gráfico de dispersión
-scatter = ax.scatter(mejora_TL['Media'], mejora_TL['% Mejora'], c=colores)
-# Etiquetas y título
-ax.set_xlabel('Media Original')
-ax.set_ylabel('% Mejora')
-ax.set_title('Mejora Con TL')
-# Crear manualmente las leyendas
-legend_labels = [mpatches.Patch(color='green', label='No'), mpatches.Patch(color='red', label='Si')]
-ax.legend(handles=legend_labels, title='¿Cambia?')
-# Mostrar el gráfico
-plt.show()
-'''
 
 '''
 # ¿Qué clase mejora más? -> Es decir, que sea más probable de ser predicha
@@ -638,7 +505,6 @@ print(aciertosEH1)
 print(aciertosEHALC1)
 print(aciertosCG1)
 print(aciertosTL1)
-
 
 sns.barplot(aciertosEH1.head(10), x='ClaseReal', y='Aciertos_Real')
 plt.xlabel('Clase Real')
