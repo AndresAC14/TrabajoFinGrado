@@ -496,6 +496,8 @@ def aciertos_jerarquia(algoritmo, nivel):
 
     return df_res
 
+print("################################################################################################################")
+# Ecualización del histograma
 
 aciertosEH1 = aciertos_jerarquia('EH', 'Aciertos_Real')
 aciertosEH2 = aciertos_jerarquia('EH', 'Aciertos_Padre')
@@ -505,7 +507,9 @@ aciertosEH4 = aciertos_jerarquia('EH', 'Aciertos_Totales')
 familiaEH = pd.merge(aciertosEH1, aciertosEH2, on='ClaseReal', how='left')
 familiaEH = pd.merge(familiaEH, aciertosEH3, on='ClaseReal', how='left')
 
-# Filtrar para mostrar solo 10 clases (por ejemplo, las primeras 10)
+
+# FUNCION PARA LA GRÁFICA DE COLUMNAS APILADAS
+# Filtrar para mostrar las primeras 10 clases
 familiaEH = familiaEH.head(10)
 
 # Crear el gráfico de columnas apiladas
@@ -523,22 +527,114 @@ p3 = plt.bar(r, familiaEH['Aciertos_Abuelo'], bottom=familiaEH['Aciertos_Real'] 
 # Añadir etiquetas y título
 plt.xlabel('Clase')
 plt.ylabel('Aciertos')
-plt.title('Variabilidad de Aciertos entre Real, Padre y Abuelo')
+plt.title('Variabilidad de Aciertos entre Real, Padre y Abuelo con EH')
 plt.xticks(r, familiaEH['ClaseReal'], rotation=45, ha='right')
 plt.legend()
+plt.show()
 
-# Mostrar el gráfico
+print("################################################################################################################")
+# Ecualización del histograma Adaptativa Limitada por Contraste
+aciertosEHALC1 = aciertos_jerarquia('EHALC', 'Aciertos_Real')
+aciertosEHALC2 = aciertos_jerarquia('EHALC', 'Aciertos_Padre')
+aciertosEHALC3 = aciertos_jerarquia('EHALC', 'Aciertos_Abuelo')
+
+familiaEHALC = pd.merge(aciertosEHALC1, aciertosEHALC2, on='ClaseReal', how='left')
+familiaEHALC = pd.merge(familiaEHALC, aciertosEHALC3, on='ClaseReal', how='left')
+
+
+# FUNCION PARA LA GRÁFICA DE COLUMNAS APILADAS
+# Filtrar para mostrar las primeras 10 clases
+familiaEHALC = familiaEHALC.head(10)
+
+# Crear el gráfico de columnas apiladas
+fig, ax = plt.subplots(figsize=(12, 6))
+
+# Configurar posiciones y anchura de las barras
+bar_width = 0.5
+r = range(len(familiaEHALC['ClaseReal']))
+
+# Apilar las columnas
+p1 = plt.bar(r, familiaEHALC['Aciertos_Real'], color='b', edgecolor='white', width=bar_width, label='Aciertos_Real')
+p2 = plt.bar(r, familiaEHALC['Aciertos_Padre'], bottom=familiaEHALC['Aciertos_Real'], color='r', edgecolor='white', width=bar_width, label='Aciertos_Padre')
+p3 = plt.bar(r, familiaEHALC['Aciertos_Abuelo'], bottom=familiaEHALC['Aciertos_Real'] + familiaEHALC['Aciertos_Padre'], color='g', edgecolor='white', width=bar_width, label='Aciertos_Abuelo')
+
+# Añadir etiquetas y título
+plt.xlabel('Clase')
+plt.ylabel('Aciertos')
+plt.title('Variabilidad de Aciertos entre Real, Padre y Abuelo con EHALC')
+plt.xticks(r, familiaEHALC['ClaseReal'], rotation=45, ha='right')
+plt.legend()
 plt.show()
 
 
-#familiaEH = pd.merge(familiaEH, aciertosEH4, on='ClaseReal', how='left')
+print("################################################################################################################")
+# Corrección Gamma
+aciertosCG1 = aciertos_jerarquia('CG', 'Aciertos_Real')
+aciertosCG2 = aciertos_jerarquia('CG', 'Aciertos_Padre')
+aciertosCG3 = aciertos_jerarquia('CG', 'Aciertos_Abuelo')
 
-#familiaEH = familiaEH.sort_values(by='Aciertos_Abuelo', ascending=False)
-# familiaEH = familiaEH.sort_values(by='Aciertos_Totales', ascending=False)
+familiaCG = pd.merge(aciertosCG1, aciertosCG2, on='ClaseReal', how='left')
+familiaCG = pd.merge(familiaCG, aciertosCG3, on='ClaseReal', how='left')
 
-print(familiaEH.head(20))
 
-#aciertosEH4 = aciertos_jerarquia('EH', 'Aciertos_Total')
+# FUNCION PARA LA GRÁFICA DE COLUMNAS APILADAS
+# Filtrar para mostrar las primeras 10 clases
+familiaCG = familiaCG.head(10)
+
+# Crear el gráfico de columnas apiladas
+fig, ax = plt.subplots(figsize=(12, 6))
+
+# Configurar posiciones y anchura de las barras
+bar_width = 0.5
+r = range(len(familiaCG['ClaseReal']))
+
+# Apilar las columnas
+p1 = plt.bar(r, familiaCG['Aciertos_Real'], color='b', edgecolor='white', width=bar_width, label='Aciertos_Real')
+p2 = plt.bar(r, familiaCG['Aciertos_Padre'], bottom=familiaCG['Aciertos_Real'], color='r', edgecolor='white', width=bar_width, label='Aciertos_Padre')
+p3 = plt.bar(r, familiaCG['Aciertos_Abuelo'], bottom=familiaCG['Aciertos_Real'] + familiaCG['Aciertos_Padre'], color='g', edgecolor='white', width=bar_width, label='Aciertos_Abuelo')
+
+# Añadir etiquetas y título
+plt.xlabel('Clase')
+plt.ylabel('Aciertos')
+plt.title('Variabilidad de Aciertos entre Real, Padre y Abuelo con CG')
+plt.xticks(r, familiaCG['ClaseReal'], rotation=45, ha='right')
+plt.legend()
+plt.show()
+
+print("################################################################################################################")
+# Transformación Logarítmica
+aciertosTL1 = aciertos_jerarquia('TL', 'Aciertos_Real')
+aciertosTL2 = aciertos_jerarquia('TL', 'Aciertos_Padre')
+aciertosTL3 = aciertos_jerarquia('TL', 'Aciertos_Abuelo')
+
+familiaTL = pd.merge(aciertosTL1, aciertosTL2, on='ClaseReal', how='left')
+familiaTL = pd.merge(familiaTL, aciertosTL3, on='ClaseReal', how='left')
+
+
+# FUNCION PARA LA GRÁFICA DE COLUMNAS APILADAS
+# Filtrar para mostrar las primeras 10 clases
+familiaTL = familiaTL.head(10)
+
+# Crear el gráfico de columnas apiladas
+fig, ax = plt.subplots(figsize=(12, 6))
+
+# Configurar posiciones y anchura de las barras
+bar_width = 0.5
+r = range(len(familiaTL['ClaseReal']))
+
+# Apilar las columnas
+p1 = plt.bar(r, familiaTL['Aciertos_Real'], color='b', edgecolor='white', width=bar_width, label='Aciertos_Real')
+p2 = plt.bar(r, familiaTL['Aciertos_Padre'], bottom=familiaTL['Aciertos_Real'], color='r', edgecolor='white', width=bar_width, label='Aciertos_Padre')
+p3 = plt.bar(r, familiaTL['Aciertos_Abuelo'], bottom=familiaTL['Aciertos_Real'] + familiaTL['Aciertos_Padre'], color='g', edgecolor='white', width=bar_width, label='Aciertos_Abuelo')
+
+# Añadir etiquetas y título
+plt.xlabel('Clase')
+plt.ylabel('Aciertos')
+plt.title('Variabilidad de Aciertos entre Real, Padre y Abuelo con TL')
+plt.xticks(r, familiaTL['ClaseReal'], rotation=45, ha='right')
+plt.legend()
+plt.show()
+
 
 '''
 print("################################################################################################################")
