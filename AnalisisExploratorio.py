@@ -490,19 +490,31 @@ def aciertos_jerarquia(algoritmo, nivel):
     elif algoritmo == 'CG':
         df_res = mejora_CG
 
+    nv = nivel.split('_')[1]
+
     # Agrupar por clase
     df_res = df_res.groupby('ClaseReal')[nivel].sum().reset_index()
     df_res = df_res.sort_values(by=nivel, ascending=False)
 
+    '''
+    sns.barplot(df_res.head(10), x='ClaseReal', y=nivel)
+    plt.xlabel('Clase')
+    plt.ylabel('Aciertos')
+    plt.title(f'Top 10 Clases Predichas Nivel {nv} Con {algoritmo}')
+    # Rotar las etiquetas
+    plt.xticks(rotation=45, ha='right')
+    # Mostrar el gráfico
+    plt.show()
+    '''
     return df_res
 
+'''
 print("################################################################################################################")
 # Ecualización del histograma
 
 aciertosEH1 = aciertos_jerarquia('EH', 'Aciertos_Real')
 aciertosEH2 = aciertos_jerarquia('EH', 'Aciertos_Padre')
 aciertosEH3 = aciertos_jerarquia('EH', 'Aciertos_Abuelo')
-aciertosEH4 = aciertos_jerarquia('EH', 'Aciertos_Totales')
 
 familiaEH = pd.merge(aciertosEH1, aciertosEH2, on='ClaseReal', how='left')
 familiaEH = pd.merge(familiaEH, aciertosEH3, on='ClaseReal', how='left')
@@ -636,78 +648,34 @@ plt.legend()
 plt.show()
 
 
-'''
+
 print("################################################################################################################")
 
-# Grafico de aciertos para ClaseReal
-aciertosEH1 = aciertos_jerarquia('EH', 'Aciertos_Real')
-aciertosEHALC1 = aciertos_jerarquia('EHALC', 'Aciertos_Real')
-aciertosCG1 = aciertos_jerarquia('CG', 'Aciertos_Real')
-aciertosTL1 = aciertos_jerarquia('TL', 'Aciertos_Real')
-
+# Aciertos para ClaseReal
 print(aciertosEH1)
 print(aciertosEHALC1)
 print(aciertosCG1)
 print(aciertosTL1)
 
-sns.barplot(aciertosEH1.head(10), x='ClaseReal', y='Aciertos_Real')
-plt.xlabel('Clase Real')
-plt.ylabel('Aciertos')
-plt.title('Top 10 Clases Predichas Nivel Real Con EH')
-# Rotar las etiquetas
-plt.xticks(rotation=45, ha='right')
-# Mostrar el gráfico
-plt.show()
-
 print("################################################################################################################")
 
-# Grafico de aciertos para ClasePadre
-aciertosEH2 = aciertos_jerarquia('EH', 'Aciertos_Padre')
-aciertosEHALC2 = aciertos_jerarquia('EHALC', 'Aciertos_Padre')
-aciertosCG2 = aciertos_jerarquia('CG', 'Aciertos_Padre')
-aciertosTL2 = aciertos_jerarquia('TL', 'Aciertos_Padre')
-
+# Aciertos para ClasePadre
 print(aciertosEH2)
 print(aciertosEHALC2)
 print(aciertosCG2)
 print(aciertosTL2)
 
 
-sns.barplot(aciertosEH2.head(10), x='ClaseReal', y='Aciertos_Padre')
-plt.xlabel('Clase Padre')
-plt.ylabel('Aciertos')
-plt.title('Top 10 Clases Predichas Nivel Padre Con EH')
-# Rotar las etiquetas
-plt.xticks(rotation=45, ha='right')
-# Mostrar el gráfico
-plt.show()
-
-
-
 print("################################################################################################################")
 
-# Grafico de aciertos para ClaseAbuelo
-aciertosEH3 = aciertos_jerarquia('EH', 'Aciertos_Abuelo')
-aciertosEHALC3 = aciertos_jerarquia('EHALC', 'Aciertos_Abuelo')
-aciertosCG3 = aciertos_jerarquia('CG', 'Aciertos_Abuelo')
-aciertosTL3 = aciertos_jerarquia('TL', 'Aciertos_Abuelo')
-
+# Aciertos para ClaseAbuelo
 print(aciertosEH3)
 print(aciertosEHALC3)
 print(aciertosCG3)
 print(aciertosTL3)
-
-sns.barplot(aciertosEH3.head(10), x='ClaseReal', y='Aciertos_Abuelo')
-plt.xlabel('Clase Abuelo')
-plt.ylabel('Aciertos')
-plt.title('Top 10 Clases Predichas Nivel Abuelo Con EH')
-# Rotar las etiquetas
-plt.xticks(rotation=45, ha='right')
-# Mostrar el gráfico
-plt.show()
+'''
 
 print("################################################################################################################")
-
 # Grafico de aciertos para General
 aciertosEH4 = aciertos_jerarquia('EH', 'Aciertos_Totales')
 aciertosEHALC4 = aciertos_jerarquia('EHALC', 'Aciertos_Totales')
@@ -719,10 +687,38 @@ print(aciertosEHALC4)
 print(aciertosCG4)
 print(aciertosTL4)
 
+'''
 sns.barplot(aciertosEH4.head(10), x='ClaseReal', y='Aciertos_Totales')
 plt.xlabel('Clase')
 plt.ylabel('Aciertos')
 plt.title('Top 10 Clases Predichas Nivel General Con EH')
+# Rotar las etiquetas
+plt.xticks(rotation=45, ha='right')
+# Mostrar el gráfico
+plt.show()
+
+sns.barplot(aciertosEHALC4.head(10), x='ClaseReal', y='Aciertos_Totales')
+plt.xlabel('Clase')
+plt.ylabel('Aciertos')
+plt.title('Top 10 Clases Predichas Nivel General Con EHALC')
+# Rotar las etiquetas
+plt.xticks(rotation=45, ha='right')
+# Mostrar el gráfico
+plt.show()
+
+sns.barplot(aciertosCG4.head(10), x='ClaseReal', y='Aciertos_Totales')
+plt.xlabel('Clase')
+plt.ylabel('Aciertos')
+plt.title('Top 10 Clases Predichas Nivel General Con CG')
+# Rotar las etiquetas
+plt.xticks(rotation=45, ha='right')
+# Mostrar el gráfico
+plt.show()
+
+sns.barplot(aciertosTL4.head(10), x='ClaseReal', y='Aciertos_Totales')
+plt.xlabel('Clase')
+plt.ylabel('Aciertos')
+plt.title('Top 10 Clases Predichas Nivel General Con TL')
 # Rotar las etiquetas
 plt.xticks(rotation=45, ha='right')
 # Mostrar el gráfico
