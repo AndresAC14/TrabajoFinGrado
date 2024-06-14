@@ -492,9 +492,53 @@ def aciertos_jerarquia(algoritmo, nivel):
 
     # Agrupar por clase
     df_res = df_res.groupby('ClaseReal')[nivel].sum().reset_index()
-    df_res = df_res.sort_values(by=nivel, ascending=False) # .head(5)
+    df_res = df_res.sort_values(by=nivel, ascending=False)
 
     return df_res
+
+
+aciertosEH1 = aciertos_jerarquia('EH', 'Aciertos_Real')
+aciertosEH2 = aciertos_jerarquia('EH', 'Aciertos_Padre')
+aciertosEH3 = aciertos_jerarquia('EH', 'Aciertos_Abuelo')
+aciertosEH4 = aciertos_jerarquia('EH', 'Aciertos_Totales')
+
+familiaEH = pd.merge(aciertosEH1, aciertosEH2, on='ClaseReal', how='left')
+familiaEH = pd.merge(familiaEH, aciertosEH3, on='ClaseReal', how='left')
+
+# Filtrar para mostrar solo 10 clases (por ejemplo, las primeras 10)
+familiaEH = familiaEH.head(10)
+
+# Crear el gráfico de columnas apiladas
+fig, ax = plt.subplots(figsize=(12, 6))
+
+# Configurar posiciones y anchura de las barras
+bar_width = 0.5
+r = range(len(familiaEH['ClaseReal']))
+
+# Apilar las columnas
+p1 = plt.bar(r, familiaEH['Aciertos_Real'], color='b', edgecolor='white', width=bar_width, label='Aciertos_Real')
+p2 = plt.bar(r, familiaEH['Aciertos_Padre'], bottom=familiaEH['Aciertos_Real'], color='r', edgecolor='white', width=bar_width, label='Aciertos_Padre')
+p3 = plt.bar(r, familiaEH['Aciertos_Abuelo'], bottom=familiaEH['Aciertos_Real'] + familiaEH['Aciertos_Padre'], color='g', edgecolor='white', width=bar_width, label='Aciertos_Abuelo')
+
+# Añadir etiquetas y título
+plt.xlabel('Clase')
+plt.ylabel('Aciertos')
+plt.title('Variabilidad de Aciertos entre Real, Padre y Abuelo')
+plt.xticks(r, familiaEH['ClaseReal'], rotation=45, ha='right')
+plt.legend()
+
+# Mostrar el gráfico
+plt.show()
+
+
+#familiaEH = pd.merge(familiaEH, aciertosEH4, on='ClaseReal', how='left')
+
+#familiaEH = familiaEH.sort_values(by='Aciertos_Abuelo', ascending=False)
+# familiaEH = familiaEH.sort_values(by='Aciertos_Totales', ascending=False)
+
+print(familiaEH.head(20))
+
+#aciertosEH4 = aciertos_jerarquia('EH', 'Aciertos_Total')
 
 '''
 print("################################################################################################################")
