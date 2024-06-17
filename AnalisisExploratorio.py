@@ -61,6 +61,8 @@ plt.xticks(rotation=45, ha='right')
 plt.show()
 '''
 
+print(df.sample(10))
+
 print("################################################################################################################")
 # JOIN de DF grande con el de las jerarquias por 'ClaseReal'
 df['ClaseReal'] = df['ClaseReal'].str.lower()
@@ -83,7 +85,9 @@ df['Aciertos_Abuelo'] = (df['ClaseAbuelo'] == df['ClasePredAbuelo']).astype(int)
 df['Aciertos_Totales'] = ((df['ClaseReal'] != df['ClasePredPrime']) & ((df['ClasePadre'] == df['ClasePredPadre']) | (df['ClaseAbuelo'] == df['ClasePredAbuelo']))).astype(int)
 
 
-print(df.head(15))
+# print(df.head(15))
+
+print(df.sample(10))
 
 '''
 # Ejemplo mostrar todos los persian cat

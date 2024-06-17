@@ -99,8 +99,8 @@ df_flat = df_flat[nuevo_orden]
 
 # df_flat.to_csv('Jerarquia_Clases.csv', index=False)
 
-print(df_flat.head(10))
-#print(df_flat.tail(10))
+# print(df_flat.head(10))
+# print(df_flat.tail(10))
 
 # Quiero duplicar el df pero ahora en lugar de ClaseReal sea ClasePredPrime (para hacer el merge) ClasePadre -> ClasePredPadre, ClaseAbuelo -> ClasePredAbuelo
 # Diccionario para renombrar las columnas
@@ -115,40 +115,8 @@ df_renombrado = df_flat.rename(columns=nuevos_nombres)
 df_renombrado = df_renombrado.drop(['Nivel', 'id', 'parent_id', 'grandparent_id'], axis=1)
 # df_renombrado.to_csv('Jerarquia_Clases_Pred.csv', index=False)
 
-print(df_renombrado.head(15))
+# print(df_renombrado.head(15))
 
-'''
-# Contar la frecuencia de cada valor en la columna 'id'
-frecuencia_id = df_flat['id'].value_counts()
-print('IDs repetidos')
-print(frecuencia_id.head(10))
+print("################################################################################################################")
 
-# Filtrar las filas donde el valor de 'id' aparezca más de x veces
-filas_repetidas = df_flat[df_flat['id'].isin(frecuencia_id[frecuencia_id > 3].index)]
-print(filas_repetidas)
-
-# 743 cosas hay repetidas -> misma cosa, distinto padre, aunque la que mas se repite son 4 veces
-'''
-
-
-'''
-# Lista nodos raiz (nivel 1) -> OK || cualquier nivel -> OK
-nodos_raiz = df_flat[df_flat['level'] == 1]
-# nodos_raiz = nodos_raiz.drop(['parent_id', 'parent_name'], axis=1)
-print('Clases raiz')
-print(nodos_raiz.head(10))
-
-# Lista nodos hoja (buscar maximo nivel) -> OK
-profundidad_max = df_flat['level'].max()
-print('Nivel maximo', profundidad_max)
-
-nodos_hoja = df_flat[df_flat['level'] == profundidad_max]
-#nodos_hoja = nodos_hoja.drop(['parent_id', 'parent_name'], axis=1)
-print('Clases hoja')
-print(nodos_hoja.head(10))
-
-
-# Empezar por nodos raiz ->  problema hay algunos largos y no se si los pilla bien al cruzarlo con el otro df
-nombres_raiz = nodos_raiz['ClaseReal'].to_list()
-print(nombres_raiz)
-'''
+print(df_flat.sample(10))
