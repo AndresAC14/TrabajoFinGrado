@@ -33,7 +33,7 @@ print(df.head(5))
 # algoritmos = df['Algoritmo'].unique()
 # print("Algoritmos que manejamos: ", algoritmos)
 
-'''
+
 # ClaseReal mas comun grafico
 sns.barplot(df['ClaseReal'].value_counts().head(10))
 plt.title('Clase Real más común')
@@ -59,7 +59,7 @@ plt.xlabel('Clase')
 plt.ylabel('Frecuencia')
 plt.xticks(rotation=45, ha='right')
 plt.show()
-'''
+
 
 print(df.sample(10))
 
@@ -118,14 +118,14 @@ df_clases['Porcentaje'] = ((df_clases['Aciertos'] / df_clases['Total']) * 100)._
 df_clases = df_clases.sort_values(by='Porcentaje', ascending=False)
 print(df_clases.head(5))
 
-'''
+
 # Ahora hacer una grafica que ponga la ClaseReal respecto al Porcentaje
 sns.barplot(df_clases.head(10), x='ClaseReal', y='Porcentaje')
 plt.title('Top 10 Clases Más Predichas (GLOBAL)')
 plt.xlabel('Clase')
 plt.xticks(rotation=45, ha='right')
 plt.show()
-'''
+
 
 print("################################################################################################################")
 # Algoritmos que manejamos:  ['Ecualización del histograma (EH)'
@@ -146,7 +146,7 @@ aciertos_EH = df_EH['Aciertos'].sum()
 print(df_EH.head(5))
 print('Aciertos totales EH', aciertos_EH)
 
-'''
+
 # TOP 10 con EH 
 sns.barplot(df_EH.head(10), x='ClaseReal', y='Aciertos')
 plt.title('Top 10 Clases Más Predichas con EH')
@@ -154,7 +154,7 @@ plt.xlabel('Clase')
 plt.ylabel('Aciertos')
 plt.xticks(rotation=45, ha='right')
 plt.show()
-'''
+
 
 print("################################################################################################################")
 print("################################################################################################################")
@@ -173,7 +173,7 @@ print(df_EHALC.head(5))
 print('Aciertos totales EHALC', aciertos_EHALC)
 
 
-'''
+
 # TOP 10 con EHALC
 sns.barplot(df_EHALC.head(10), x='ClaseReal', y='Aciertos')
 plt.title('Top 10 Clases Más Predichas con EHALC')
@@ -181,7 +181,7 @@ plt.xlabel('Clase')
 plt.ylabel('Aciertos')
 plt.xticks(rotation=45, ha='right')
 plt.show()
-'''
+
 
 
 print("################################################################################################################")
@@ -201,7 +201,6 @@ print(df_CG.head(5))
 print('Aciertos totales CG', aciertos_CG)
 
 
-'''
 # TOP 10 con GC
 sns.barplot(df_CG.head(10), x='ClaseReal', y='Aciertos')
 plt.title('Top 10 Clases Más Predichas con CG')
@@ -209,7 +208,7 @@ plt.xlabel('Clase')
 plt.ylabel('Aciertos')
 plt.xticks(rotation=45, ha='right')
 plt.show()
-'''
+
 
 
 print("################################################################################################################")
@@ -229,7 +228,6 @@ print(df_TL.head(5))
 print('Aciertos totales TL', aciertos_TL)
 
 
-'''
 # TOP 10 con TL
 sns.barplot(df_TL.head(10), x='ClaseReal', y='Aciertos')
 plt.title('Top 10 Clases Más Predichas con TL')
@@ -237,7 +235,7 @@ plt.xlabel('Clase')
 plt.ylabel('Aciertos')
 plt.xticks(rotation=45, ha='right')
 plt.show()
-'''
+
 
 print("################################################################################################################")
 print("################################################################################################################")
@@ -249,13 +247,13 @@ df_aciertos = pd.DataFrame([val_aciertos], columns=col_aciertos, index=['Acierto
 
 print(df_aciertos)
 
-'''
+
 # Gráfico circular que muestra el porcentaje de acierto por algoritmo
 plt.figure(figsize=(8, 8))
 plt.pie(df_aciertos.iloc[0].values, labels=df_aciertos.columns, autopct='%1.1f%%', startangle=90)
 plt.title('Aciertos por Algoritmo')
 plt.show()
-'''
+
 
 print("################################################################################################################")
 print("################################################################################################################")
@@ -270,14 +268,12 @@ mejora_EH['% Mejora'] = (((mejora_EH['ProbClasePredPrime'] - mejora_EH['ProbClas
 print(mejora_EH.head(10))
 
 
-'''
 # ¿Qué clase mejora más? -> Es decir, que sea más probable de ser predicha
 # Se hace la media de todos los elementos que tengan la misma clase
 clase_EH = mejora_EH.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
 clase_EH = clase_EH.sort_values(by='% Mejora Por Clase', ascending=False)
 #print('Top 10 mejores clases')
 #print(clase_EH.head(10))
-
 
 # Grafico 10 clases mas mejoradas con EH
 sns.barplot(clase_EH.head(10), x='ClaseReal', y='% Mejora Por Clase')
@@ -288,7 +284,7 @@ plt.title('Top 10 Clases Más Mejoradas Con EH')
 plt.xticks(rotation=45, ha='right')
 # Mostrar el gráfico
 plt.show()
-'''
+
 
 print("################################################################################################################")
 print("################################################################################################################")
@@ -303,7 +299,6 @@ mejora_EHALC['% Mejora'] = (((mejora_EHALC['ProbClasePredPrime'] - mejora_EHALC[
 print(mejora_EHALC.head(10))
 
 
-'''
 # ¿Qué clase mejora más? -> Es decir, que sea más probable de ser predicha
 # Se hace la media de todos los elementos que tengan la misma clase
 clase_EHALC = mejora_EHALC.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
@@ -320,7 +315,7 @@ plt.title('Top 10 Clases Más Mejoradas Con EHALC')
 plt.xticks(rotation=45, ha='right')
 # Mostrar el gráfico
 plt.show()
-'''
+
 
 print("################################################################################################################")
 print("################################################################################################################")
@@ -335,7 +330,6 @@ mejora_CG['% Mejora'] = (((mejora_CG['ProbClasePredPrime'] - mejora_CG['ProbClas
 print(mejora_CG.head(10))
 
 
-'''
 # ¿Qué clase mejora más? -> Es decir, que sea más probable de ser predicha
 # Se hace la media de todos los elementos que tengan la misma clase
 clase_CG = mejora_CG.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
@@ -352,7 +346,7 @@ plt.title('Top 10 Clases Más Mejoradas Con CG')
 plt.xticks(rotation=45, ha='right')
 # Mostrar el gráfico
 plt.show()
-'''
+
 
 print("################################################################################################################")
 print("################################################################################################################")
@@ -367,7 +361,7 @@ mejora_TL['% Mejora'] = (((mejora_TL['ProbClasePredPrime'] - mejora_TL['ProbClas
 print(mejora_TL.head(10))
 
 
-'''
+
 # ¿Qué clase mejora más? -> Es decir, que sea más probable de ser predicha
 # Se hace la media de todos los elementos que tengan la misma clase
 clase_TL = mejora_TL.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
@@ -384,7 +378,7 @@ plt.title('Top 10 Clases Más Mejoradas Con TL')
 plt.xticks(rotation=45, ha='right')
 # Mostrar el gráfico
 plt.show()
-'''
+
 
 print("################################################################################################################")
 print("################################################################################################################")
@@ -395,13 +389,6 @@ niveles = niveles.sort_values(by='Nivel', ascending=True)
 
 print(niveles)
 
-'''
-# Grafico circular de los niveles y el count por nivel -> REVISAR PARA EL TAM DE LOS %
-fig, ax = plt.subplots(figsize=(10, 10))
-ax.pie(niveles['count'], labels=niveles['Nivel'], autopct='%1.1f%%', startangle=0, textprops={'fontsize': 10}, pctdistance=0.8)
-plt.title('Cantidad de Clases Por Nivel')
-plt.show()
-'''
 
 print("################################################################################################################")
 print("################################################################################################################")
@@ -439,7 +426,7 @@ def comparacion_niveles(algoritmo):
         # Append al DataFrame top_clases_nivel
         top_clases_nivel = pd.concat([top_clases_nivel, clases])
 
-        '''
+
         # Grafico que muestre el top por nivel
         sns.barplot(top_clases_nivel[top_clases_nivel['Nivel'] == i], x='ClaseReal', y='% Mejora Por Clase')
         plt.xlabel('Clase Real')
@@ -449,11 +436,11 @@ def comparacion_niveles(algoritmo):
         plt.xticks(rotation=45, ha='right')
         # Mostrar el gráfico
         plt.show()
-        '''
+
 
     niveles_mejora = pd.DataFrame(niveles_mejora, columns=['Nivel', 'Mejora'])
 
-    '''
+
     # Grafico que compara la mejora por niveles, es decir, los 13 niveles y la mejora en cada uno de ellos
     plt.figure(figsize=(10, 10))
     plt.plot(niveles_mejora['Nivel'], niveles_mejora['Mejora'], marker='o', linestyle='-', color='b')
@@ -463,16 +450,16 @@ def comparacion_niveles(algoritmo):
     plt.xticks(niveles['Nivel'].values)
     plt.grid(True)
     plt.show()
-    '''
+
 
     return niveles_mejora
 
-'''
+
 niveles_mejora_EH = comparacion_niveles('EH')
 niveles_mejora_EHALC = comparacion_niveles('EHALC')
 niveles_mejora_CG = comparacion_niveles('CG')
 niveles_mejora_TL = comparacion_niveles('TL')
-'''
+
 
 print("################################################################################################################")
 print("################################################################################################################")
@@ -500,7 +487,7 @@ def aciertos_jerarquia(algoritmo, nivel):
     df_res = df_res.groupby('ClaseReal')[nivel].sum().reset_index()
     df_res = df_res.sort_values(by=nivel, ascending=False)
 
-    '''
+
     sns.barplot(df_res.head(10), x='ClaseReal', y=nivel)
     plt.xlabel('Clase')
     plt.ylabel('Aciertos')
@@ -509,10 +496,10 @@ def aciertos_jerarquia(algoritmo, nivel):
     plt.xticks(rotation=45, ha='right')
     # Mostrar el gráfico
     plt.show()
-    '''
+
     return df_res
 
-'''
+
 print("################################################################################################################")
 # Ecualización del histograma
 
@@ -652,7 +639,7 @@ plt.legend()
 plt.show()
 
 
-
+'''
 print("################################################################################################################")
 
 # Aciertos para ClaseReal
@@ -691,7 +678,7 @@ print(aciertosEHALC4)
 print(aciertosCG4)
 print(aciertosTL4)
 
-'''
+
 sns.barplot(aciertosEH4.head(10), x='ClaseReal', y='Aciertos_Totales')
 plt.xlabel('Clase')
 plt.ylabel('Aciertos')
@@ -727,4 +714,3 @@ plt.title('Top 10 Clases Predichas Nivel General Con TL')
 plt.xticks(rotation=45, ha='right')
 # Mostrar el gráfico
 plt.show()
-'''

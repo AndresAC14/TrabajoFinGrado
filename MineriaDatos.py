@@ -54,10 +54,10 @@ df_flat = pd.DataFrame(normalized_data)
 
 # Transformaciones basicas
 df_flat.drop(df_flat[df_flat['id'] == 'fall11'].index, inplace=True)
-# df_flat.loc[df_flat['parent_id'] == 'fall11', 'parent_id'] = 'root_id'
 df_flat.loc[df_flat['ClasePadre'] == 'ImageNet 2011 Fall Release', 'ClasePadre'] = 'root_name'
-#df_flat = df_flat.drop(['id', 'sift', 'index', 'parent_id'], axis=1)
 df_flat = df_flat.drop(['sift', 'index'], axis=1)
+
+# Nos quedamos solo con el primer nombre en caso de haber más de uno para la clase y además la pasamos a minuscula
 df_flat['ClaseReal'] = df_flat['ClaseReal'].apply(lambda cadena: cadena.split(',')[0])
 df_flat['ClaseReal'] = df_flat['ClaseReal'].str.lower()
 df_flat['ClasePadre'] = df_flat['ClasePadre'].apply(lambda cadena: cadena.split(',')[0])
@@ -65,7 +65,7 @@ df_flat['ClasePadre'] = df_flat['ClasePadre'].str.lower()
 
 # print(df_flat.head(30))
 
-# HAY QUE QUITAR DUPLICADOS!!!! -> antes de nada porque sino al buscar los padres o abuelos se puede volver loco y aun asi se puede liar bastante
+# QUITAR DUPLICADOS
 df_flat = df_flat.drop_duplicates(subset=['ClaseReal'],keep='first')
 
 
@@ -97,12 +97,14 @@ print("#########################################################################
 nuevo_orden = ['Nivel', 'id', 'ClaseReal', 'parent_id', 'ClasePadre', 'grandparent_id', 'ClaseAbuelo']
 df_flat = df_flat[nuevo_orden]
 
+# Funcion para convertir a .csv
 # df_flat.to_csv('Jerarquia_Clases.csv', index=False)
 
 # print(df_flat.head(10))
-# print(df_flat.tail(10))
 
-# Quiero duplicar el df pero ahora en lugar de ClaseReal sea ClasePredPrime (para hacer el merge) ClasePadre -> ClasePredPadre, ClaseAbuelo -> ClasePredAbuelo
+# Duplicar el df pero ahora en lugar de ClaseReal sea ClasePredPrime (para hacer el join)
+# ClasePadre -> ClasePredPadre, ClaseAbuelo -> ClasePredAbuelo
+
 # Diccionario para renombrar las columnas
 nuevos_nombres = {
     'ClaseReal': 'ClasePredPrime',
@@ -113,6 +115,8 @@ nuevos_nombres = {
 # Renombrar las columnas del DataFrame
 df_renombrado = df_flat.rename(columns=nuevos_nombres)
 df_renombrado = df_renombrado.drop(['Nivel', 'id', 'parent_id', 'grandparent_id'], axis=1)
+
+# Funcion para convertir a .csv
 # df_renombrado.to_csv('Jerarquia_Clases_Pred.csv', index=False)
 
 # print(df_renombrado.head(15))
