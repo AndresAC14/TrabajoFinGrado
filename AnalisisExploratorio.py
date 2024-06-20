@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 import matplotlib.patches as mpatches
+
+# Opciones de configuración
 pd.set_option('display.max_columns', 30)
 pd.set_option('display.width', 400)
 
@@ -20,23 +22,7 @@ jerarquiaPred = pd.read_csv('Jerarquia_Clases_Pred.csv')
 df.drop(df.columns[0], axis=1, inplace=True)
 df.drop(df.columns[12], axis=1, inplace=True)
 
-# Filas y columnas (40000 filas y 13 columnas)
-# print(df.shape)
-
-# Informacion/tipo de las columnas del df
-# print(df.info())
-
-# Primeras filas
-print(df.head(5))
-
-# Columnas
-# columnas = df.columns
-# print(columnas)
-
-# Algoritmos
-# algoritmos = df['Algoritmo'].unique()
-# print("Algoritmos que manejamos: ", algoritmos)
-
+# Gráficos de análisis exploratorio básico
 
 # ClaseReal mas comun grafico
 sns.barplot(df['ClaseReal'].value_counts().head(10))
@@ -136,9 +122,14 @@ plt.show()
 
 
 print("################################################################################################################")
-# Algoritmos que manejamos:  ['Ecualización del histograma (EH)'
+# A partir de este punto comienza el análisis exploratorio avanzado
+
+
+# Algoritmos de mejora que manejamos:
+#  'Ecualización del histograma (EH)'
 #  'Ecualización del histograma adaptativa limitada por contraste (EHALC)'
-#  'Corrección de gamma (CG)' 'Transformación logarítmica (TL)']
+#  'Corrección de gamma (CG)'
+#  'Transformación logarítmica (TL)'
 print("################################################################################################################")
 
 # Aciertos para el algoritmo Ecualizacion del histograma con ClasePredPrime
@@ -181,7 +172,6 @@ print(df_EHALC.head(5))
 print('Aciertos totales EHALC', aciertos_EHALC)
 
 
-
 # TOP 10 con EHALC
 sns.barplot(df_EHALC.head(10), x='ClaseReal', y='Aciertos')
 plt.title('Top 10 Clases Más Predichas con EHALC')
@@ -189,7 +179,6 @@ plt.xlabel('Clase')
 plt.ylabel('Aciertos')
 plt.xticks(rotation=45, ha='right')
 plt.show()
-
 
 
 print("################################################################################################################")
@@ -216,7 +205,6 @@ plt.xlabel('Clase')
 plt.ylabel('Aciertos')
 plt.xticks(rotation=45, ha='right')
 plt.show()
-
 
 
 print("################################################################################################################")
@@ -276,11 +264,11 @@ mejora_EH['% Mejora'] = (((mejora_EH['ProbClasePredPrime'] - mejora_EH['ProbClas
 print(mejora_EH.head(10))
 
 
-# ¿Qué clase mejora más? -> Es decir, que sea más probable de ser predicha
+# ¿Qué clase mejora más?
+
 # Se hace la media de todos los elementos que tengan la misma clase
 clase_EH = mejora_EH.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
 clase_EH = clase_EH.sort_values(by='% Mejora Por Clase', ascending=False)
-#print('Top 10 mejores clases')
 #print(clase_EH.head(10))
 
 # Grafico 10 clases mas mejoradas con EH
@@ -307,7 +295,8 @@ mejora_EHALC['% Mejora'] = (((mejora_EHALC['ProbClasePredPrime'] - mejora_EHALC[
 print(mejora_EHALC.head(10))
 
 
-# ¿Qué clase mejora más? -> Es decir, que sea más probable de ser predicha
+# ¿Qué clase mejora más?
+
 # Se hace la media de todos los elementos que tengan la misma clase
 clase_EHALC = mejora_EHALC.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
 clase_EHALC = clase_EHALC.sort_values(by='% Mejora Por Clase', ascending=False)
@@ -338,7 +327,8 @@ mejora_CG['% Mejora'] = (((mejora_CG['ProbClasePredPrime'] - mejora_CG['ProbClas
 print(mejora_CG.head(10))
 
 
-# ¿Qué clase mejora más? -> Es decir, que sea más probable de ser predicha
+# ¿Qué clase mejora más?
+
 # Se hace la media de todos los elementos que tengan la misma clase
 clase_CG = mejora_CG.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
 clase_CG = clase_CG.sort_values(by='% Mejora Por Clase', ascending=False)
@@ -370,7 +360,8 @@ print(mejora_TL.head(10))
 
 
 
-# ¿Qué clase mejora más? -> Es decir, que sea más probable de ser predicha
+# ¿Qué clase mejora más?
+
 # Se hace la media de todos los elementos que tengan la misma clase
 clase_TL = mejora_TL.groupby('ClaseReal')['% Mejora'].mean().__round__(3).reset_index(name='% Mejora Por Clase')
 clase_TL = clase_TL.sort_values(by='% Mejora Por Clase', ascending=False)
@@ -391,7 +382,7 @@ plt.show()
 print("################################################################################################################")
 print("################################################################################################################")
 
-# Que clase es mas predicha segun el nivel
+# Cantidad de clases por nivel
 niveles = df['Nivel'].value_counts().reset_index('Nivel')
 niveles = niveles.sort_values(by='Nivel', ascending=True)
 
@@ -514,6 +505,7 @@ print("#########################################################################
 aciertosEH1 = aciertos_jerarquia('EH', 'Aciertos_Real')
 aciertosEH2 = aciertos_jerarquia('EH', 'Aciertos_Padre')
 aciertosEH3 = aciertos_jerarquia('EH', 'Aciertos_Abuelo')
+aciertosEH4 = aciertos_jerarquia('EH', 'Aciertos_Totales')
 
 familiaEH = pd.merge(aciertosEH1, aciertosEH2, on='ClaseReal', how='left')
 familiaEH = pd.merge(familiaEH, aciertosEH3, on='ClaseReal', how='left')
@@ -548,6 +540,7 @@ print("#########################################################################
 aciertosEHALC1 = aciertos_jerarquia('EHALC', 'Aciertos_Real')
 aciertosEHALC2 = aciertos_jerarquia('EHALC', 'Aciertos_Padre')
 aciertosEHALC3 = aciertos_jerarquia('EHALC', 'Aciertos_Abuelo')
+aciertosEHALC4 = aciertos_jerarquia('EHALC', 'Aciertos_Totales')
 
 familiaEHALC = pd.merge(aciertosEHALC1, aciertosEHALC2, on='ClaseReal', how='left')
 familiaEHALC = pd.merge(familiaEHALC, aciertosEHALC3, on='ClaseReal', how='left')
@@ -583,6 +576,7 @@ print("#########################################################################
 aciertosCG1 = aciertos_jerarquia('CG', 'Aciertos_Real')
 aciertosCG2 = aciertos_jerarquia('CG', 'Aciertos_Padre')
 aciertosCG3 = aciertos_jerarquia('CG', 'Aciertos_Abuelo')
+aciertosCG4 = aciertos_jerarquia('CG', 'Aciertos_Totales')
 
 familiaCG = pd.merge(aciertosCG1, aciertosCG2, on='ClaseReal', how='left')
 familiaCG = pd.merge(familiaCG, aciertosCG3, on='ClaseReal', how='left')
@@ -617,6 +611,7 @@ print("#########################################################################
 aciertosTL1 = aciertos_jerarquia('TL', 'Aciertos_Real')
 aciertosTL2 = aciertos_jerarquia('TL', 'Aciertos_Padre')
 aciertosTL3 = aciertos_jerarquia('TL', 'Aciertos_Abuelo')
+aciertosTL4 = aciertos_jerarquia('TL', 'Aciertos_Totales')
 
 familiaTL = pd.merge(aciertosTL1, aciertosTL2, on='ClaseReal', how='left')
 familiaTL = pd.merge(familiaTL, aciertosTL3, on='ClaseReal', how='left')
@@ -648,7 +643,9 @@ plt.show()
 
 
 '''
+# Descomentar esta parte del código cuando sea necesario
 print("################################################################################################################")
+
 
 # Aciertos para ClaseReal
 print(aciertosEH1)
@@ -656,7 +653,9 @@ print(aciertosEHALC1)
 print(aciertosCG1)
 print(aciertosTL1)
 
+
 print("################################################################################################################")
+
 
 # Aciertos para ClasePadre
 print(aciertosEH2)
@@ -672,54 +671,14 @@ print(aciertosEH3)
 print(aciertosEHALC3)
 print(aciertosCG3)
 print(aciertosTL3)
-'''
+
 
 print("################################################################################################################")
-# Grafico de aciertos para General
-aciertosEH4 = aciertos_jerarquia('EH', 'Aciertos_Totales')
-aciertosEHALC4 = aciertos_jerarquia('EHALC', 'Aciertos_Totales')
-aciertosCG4 = aciertos_jerarquia('CG', 'Aciertos_Totales')
-aciertosTL4 = aciertos_jerarquia('TL', 'Aciertos_Totales')
+
 
 print(aciertosEH4)
 print(aciertosEHALC4)
 print(aciertosCG4)
 print(aciertosTL4)
 
-'''
-sns.barplot(aciertosEH4.head(10), x='ClaseReal', y='Aciertos_Totales')
-plt.xlabel('Clase')
-plt.ylabel('Aciertos')
-plt.title('Top 10 Clases Predichas Nivel General Con EH')
-# Rotar las etiquetas
-plt.xticks(rotation=45, ha='right')
-# Mostrar el gráfico
-plt.show()
-
-sns.barplot(aciertosEHALC4.head(10), x='ClaseReal', y='Aciertos_Totales')
-plt.xlabel('Clase')
-plt.ylabel('Aciertos')
-plt.title('Top 10 Clases Predichas Nivel General Con EHALC')
-# Rotar las etiquetas
-plt.xticks(rotation=45, ha='right')
-# Mostrar el gráfico
-plt.show()
-
-sns.barplot(aciertosCG4.head(10), x='ClaseReal', y='Aciertos_Totales')
-plt.xlabel('Clase')
-plt.ylabel('Aciertos')
-plt.title('Top 10 Clases Predichas Nivel General Con CG')
-# Rotar las etiquetas
-plt.xticks(rotation=45, ha='right')
-# Mostrar el gráfico
-plt.show()
-
-sns.barplot(aciertosTL4.head(10), x='ClaseReal', y='Aciertos_Totales')
-plt.xlabel('Clase')
-plt.ylabel('Aciertos')
-plt.title('Top 10 Clases Predichas Nivel General Con TL')
-# Rotar las etiquetas
-plt.xticks(rotation=45, ha='right')
-# Mostrar el gráfico
-plt.show()
 '''
