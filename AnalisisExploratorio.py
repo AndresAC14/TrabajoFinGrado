@@ -7,6 +7,10 @@ import matplotlib.patches as mpatches
 pd.set_option('display.max_columns', 30)
 pd.set_option('display.width', 400)
 
+# Configuración global del tamaño de la fuente
+plt.rcParams.update({'font.size': 18})
+
+
 # Importar el dataframe
 df = pd.read_csv('Conjunto_Entrenamiento_10000.csv')
 jerarquia = pd.read_csv('Jerarquia_Clases.csv')
@@ -82,7 +86,11 @@ df['Aciertos_Abuelo'] = (df['ClaseAbuelo'] == df['ClasePredAbuelo']).astype(int)
 
 # La que falta que seria
 # Crear la columna de aciertos totales
-df['Aciertos_Totales'] = ((df['ClaseReal'] != df['ClasePredPrime']) & ((df['ClasePadre'] == df['ClasePredPadre']) | (df['ClaseAbuelo'] == df['ClasePredAbuelo']))).astype(int)
+df['Aciertos_Totales'] = ((df['ClaseReal'] != df['ClasePredPrime']) &
+                          ((df['ClasePadre'] == df['ClasePredPadre']) |
+                           (df['ClaseAbuelo'] == df['ClasePredAbuelo']) |
+                           (df['ClasePadre'] == df['ClasePredAbuelo']) |
+                           (df['ClaseAbuelo'] == df['ClasePredPadre']))).astype(int)
 
 
 # print(df.head(15))
@@ -678,7 +686,7 @@ print(aciertosEHALC4)
 print(aciertosCG4)
 print(aciertosTL4)
 
-
+'''
 sns.barplot(aciertosEH4.head(10), x='ClaseReal', y='Aciertos_Totales')
 plt.xlabel('Clase')
 plt.ylabel('Aciertos')
@@ -714,3 +722,4 @@ plt.title('Top 10 Clases Predichas Nivel General Con TL')
 plt.xticks(rotation=45, ha='right')
 # Mostrar el gráfico
 plt.show()
+'''
