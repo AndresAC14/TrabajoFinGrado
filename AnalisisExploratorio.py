@@ -70,7 +70,7 @@ df['Aciertos_Real'] = (df['ClaseReal'] == df['ClasePredPrime']).astype(int)
 df['Aciertos_Padre'] = (df['ClasePadre'] == df['ClasePredPadre']).astype(int)
 df['Aciertos_Abuelo'] = (df['ClaseAbuelo'] == df['ClasePredAbuelo']).astype(int)
 
-# La que falta que seria
+# Condicion Logica de acierto 2
 # Crear la columna de aciertos totales
 df['Aciertos_Totales'] = ((df['ClaseReal'] != df['ClasePredPrime']) &
                           ((df['ClasePadre'] == df['ClasePredPadre']) |

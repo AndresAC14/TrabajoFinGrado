@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fac4d110-0fee-418c-8059-407301c64fc1" name="Changes" comment="listo para ejecutar pt3">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AndresAC14&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="5feaa2e7-683e-4939-97c1-67964167ea4f" />
+        <option name="url" value="https://github.com/AndresAC14/TrabajoFinGrado.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2bp3Qpvmn5s23DCgZsd6RI5910y" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.AnalisisExploratorio.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MineriaDatos.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/Documents/Curso 23-24/TFG/TrabajoFinGrado&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\Documents\Curso 23-24\TFG\TrabajoFinGrado" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\Documents\Curso 23-24\TFG\TrabajoFinGrado" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="AnalisisExploratorio" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="TrabajoFinGrado" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AnalisisExploratorio.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-50da183f06c8-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13135.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fac4d110-0fee-418c-8059-407301c64fc1" name="Changes" comment="" />
+      <created>1706898179468</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706898179468</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Diferentes formas de enfrentar ClaseReal y ClasePred">
+      <option name="closed" value="true" />
+      <created>1706963955231</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706963955231</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ClaseReal vs ClasePred">
+      <option name="closed" value="true" />
+      <created>1706984629793</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706984629793</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ClaseReal vs ClasePred pequeño arreglo">
+      <option name="closed" value="true" />
+      <created>1707076718934</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707076718935</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Avance algoritmos">
+      <option name="closed" value="true" />
+      <created>1707771772329</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707771772329</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Algoritmo EH v1">
+      <option name="closed" value="true" />
+      <created>1707850809762</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707850809762</updated>
+    </task>
+    <task id="LOCAL-00008" summary="sale todo igual?">
+      <option name="closed" value="true" />
+      <created>1707852504248</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707852504248</updated>
+    </task>
+    <task id="LOCAL-00009" summary="circular EH">
+      <option name="closed" value="true" />
+      <created>1708019146071</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708019146071</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fallo arreglado, usaba Pred en lugar de PredPrime">
+      <option name="closed" value="true" />
+      <created>1708022483157</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708022483157</updated>
+    </task>
+    <task id="LOCAL-00011" summary="prueba">
+      <option name="closed" value="true" />
+      <created>1708109463224</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708109463224</updated>
+    </task>
+    <task id="LOCAL-00012" summary="algoritmo mas aciertos y arreglo en clase mas predicha">
+      <option name="closed" value="true" />
+      <created>1708197633120</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1708197633120</updated>
+    </task>
+    <task id="LOCAL-00013" summary="empezado la mejora de clases con EH">
+      <option name="closed" value="true" />
+      <created>1708282641617</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708282641617</updated>
+    </task>
+    <task id="LOCAL-00014" summary="clase mas mejorada con EC y algun grafico mas">
+      <option name="closed" value="true" />
+      <created>1708604140177</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1708604140177</updated>
+    </task>
+    <task id="LOCAL-00015" summary="influencia de la iluminacion en la mejora a traves de la media en todos los algoritmos + top 10 clases mas mejoradas">
+      <option name="closed" value="true" />
+      <created>1708684164598</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1708684164598</updated>
+    </task>
+    <task id="LOCAL-00016" summary="hotfix">
+      <option name="closed" value="true" />
+      <created>1709545867140</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1709545867140</updated>
+    </task>
+    <task id="LOCAL-00017" summary="cambiar lo del json y lo de la mejora">
+      <option name="closed" value="true" />
+      <created>1709560522677</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1709560522677</updated>
+    </task>
+    <task id="LOCAL-00018" summary="funcion para convertir los datos del fichero .json a dataframe">
+      <option name="closed" value="true" />
+      <created>1709731431476</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1709731431476</updated>
+    </task>
+    <task id="LOCAL-00019" summary="arreglos en analisis exploratorio y comienzo mineria">
+      <option name="closed" value="true" />
+      <created>1710784901128</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1710784901128</updated>
+    </task>
+    <task id="LOCAL-00020" summary="elementos repetidos?">
+      <option name="closed" value="true" />
+      <created>1710936310511</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1710936310511</updated>
+    </task>
+    <task id="LOCAL-00021" summary="?">
+      <option name="closed" value="true" />
+      <created>1713174458932</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1713174458932</updated>
+    </task>
+    <task id="LOCAL-00022" summary="?">
+      <option name="closed" value="true" />
+      <created>1714664102221</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1714664102221</updated>
+    </task>
+    <task id="LOCAL-00023" summary="arreglillos basicos + grafico de dispersion se podria quitar">
+      <option name="closed" value="true" />
+      <created>1714665884197</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1714665884197</updated>
+    </task>
+    <task id="LOCAL-00024" summary="arreglillos basicos + grafico de dispersion se podria quitar">
+      <option name="closed" value="true" />
+      <created>1714665941286</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1714665941286</updated>
+    </task>
+    <task id="LOCAL-00025" summary="arreglos y comienzo de planteamiento">
+      <option name="closed" value="true" />
+      <created>1714670803419</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1714670803419</updated>
+    </task>
+    <task id="LOCAL-00026" summary="niveles de clases y lista de nombre raiz">
+      <option name="closed" value="true" />
+      <created>1714763682549</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1714763682549</updated>
+    </task>
+    <task id="LOCAL-00027" summary="nombres simplificados">
+      <option name="closed" value="true" />
+      <created>1714817880021</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1714817880021</updated>
+    </task>
+    <task id="LOCAL-00028" summary="creacion csv y merge, aunque hay que arreglar algo que falla">
+      <option name="closed" value="true" />
+      <created>1714822547895</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1714822547895</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Arreglo duplicidad">
+      <option name="closed" value="true" />
+      <created>1716141771841</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1716141771841</updated>
+    </task>
+    <task id="LOCAL-00030" summary="planteamiento niveles?">
+      <option name="closed" value="true" />
+      <created>1716143859725</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1716143859725</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Comparacion mejora por nivel con EH">
+      <option name="closed" value="true" />
+      <created>1716221778017</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1716221778017</updated>
+    </task>
+    <task id="LOCAL-00032" summary="funcion para niveles de mejora, posibilidad de elegir el algoritmo">
+      <option name="closed" value="true" />
+      <created>1716225696074</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1716225696074</updated>
+    </task>
+    <task id="LOCAL-00033" summary="mas o menos grafica">
+      <option name="closed" value="true" />
+      <created>1716401772482</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1716401772482</updated>
+    </task>
+    <task id="LOCAL-00034" summary="hot fix before change">
+      <option name="closed" value="true" />
+      <created>1717869045093</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1717869045093</updated>
+    </task>
+    <task id="LOCAL-00035" summary="grafica top por nivel y algoritmo">
+      <option name="closed" value="true" />
+      <created>1717872778584</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1717872778584</updated>
+    </task>
+    <task id="LOCAL-00036" summary="hay abuelo">
+      <option name="closed" value="true" />
+      <created>1717884874273</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1717884874273</updated>
+    </task>
+    <task id="LOCAL-00037" summary="merge de abuelos ya perfecto">
+      <option name="closed" value="true" />
+      <created>1717927743335</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1717927743335</updated>
+    </task>
+    <task id="LOCAL-00038" summary="ajustes varios en graficas">
+      <option name="closed" value="true" />
+      <created>1717959846817</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1717959846817</updated>
+    </task>
+    <task id="LOCAL-00039" summary="columnas de aciertos">
+      <option name="closed" value="true" />
+      <created>1718011265719</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1718011265719</updated>
+    </task>
+    <task id="LOCAL-00040" summary="faltan los graficos">
+      <option name="closed" value="true" />
+      <created>1718016202543</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1718016202543</updated>
+    </task>
+    <task id="LOCAL-00041" summary="hotfixes">
+      <option name="closed" value="true" />
+      <created>1718226923344</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1718226923344</updated>
+    </task>
+    <task id="LOCAL-00042" summary="graficas ejemplo finales">
+      <option name="closed" value="true" />
+      <created>1718270518494</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1718270518495</updated>
+    </task>
+    <task id="LOCAL-00043" summary="arreglos varios y eliminar cambia">
+      <option name="closed" value="true" />
+      <created>1718292834376</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1718292834376</updated>
+    </task>
+    <task id="LOCAL-00044" summary="hasta iteracion 5">
+      <option name="closed" value="true" />
+      <created>1718299818095</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1718299818095</updated>
+    </task>
+    <task id="LOCAL-00045" summary="stacked column chart">
+      <option name="closed" value="true" />
+      <created>1718356337370</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1718356337370</updated>
+    </task>
+    <task id="LOCAL-00046" summary="stacked column chart de cada algoritmo">
+      <option name="closed" value="true" />
+      <created>1718366112017</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1718366112017</updated>
+    </task>
+    <task id="LOCAL-00047" summary="me atreveria a decir que esta completo 100% real no fake">
+      <option name="closed" value="true" />
+      <created>1718384468342</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1718384468342</updated>
+    </task>
+    <task id="LOCAL-00048" summary="ejemplos">
+      <option name="closed" value="true" />
+      <created>1718624837077</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1718624837077</updated>
+    </task>
+    <task id="LOCAL-00049" summary="listo para ejecutar">
+      <option name="closed" value="true" />
+      <created>1718792090946</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1718792090946</updated>
+    </task>
+    <task id="LOCAL-00050" summary="listo para ejecutar pt2">
+      <option name="closed" value="true" />
+      <created>1718874825737</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1718874825737</updated>
+    </task>
+    <task id="LOCAL-00051" summary="listo para ejecutar pt3">
+      <option name="closed" value="true" />
+      <created>1718898641392</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1718898641393</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="nombres simplificados" />
+    <MESSAGE value="creacion csv y merge, aunque hay que arreglar algo que falla" />
+    <MESSAGE value="Arreglo duplicidad" />
+    <MESSAGE value="planteamiento niveles?" />
+    <MESSAGE value="Comparacion mejora por nivel con EH" />
+    <MESSAGE value="funcion para niveles de mejora, posibilidad de elegir el algoritmo" />
+    <MESSAGE value="mas o menos grafica" />
+    <MESSAGE value="hot fix before change" />
+    <MESSAGE value="grafica top por nivel y algoritmo" />
+    <MESSAGE value="hay abuelo" />
+    <MESSAGE value="merge de abuelos ya perfecto" />
+    <MESSAGE value="ajustes varios en graficas" />
+    <MESSAGE value="columnas de aciertos" />
+    <MESSAGE value="faltan los graficos" />
+    <MESSAGE value="hotfixes" />
+    <MESSAGE value="graficas ejemplo finales" />
+    <MESSAGE value="arreglos varios y eliminar cambia" />
+    <MESSAGE value="hasta iteracion 5" />
+    <MESSAGE value="stacked column chart" />
+    <MESSAGE value="stacked column chart de cada algoritmo" />
+    <MESSAGE value="me atreveria a decir que esta completo 100% real no fake" />
+    <MESSAGE value="ejemplos" />
+    <MESSAGE value="listo para ejecutar" />
+    <MESSAGE value="listo para ejecutar pt2" />
+    <MESSAGE value="listo para ejecutar pt3" />
+    <option name="LAST_COMMIT_MESSAGE" value="listo para ejecutar pt3" />
+  </component>
+</project>
