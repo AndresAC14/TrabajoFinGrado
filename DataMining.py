@@ -96,7 +96,7 @@ new_order = ['Level', 'id', 'RealClass', 'parent_id', 'ParentClass', 'grandparen
 df_flat = df_flat[new_order]
 
 # Function to convert to .csv
-# df_flat.to_csv('Class_Hierarchy.csv', index=False)
+#df_flat.to_csv('Class_Hierarchy.csv', index=False)
 
 # print(df_flat.head(10))
 
@@ -105,9 +105,9 @@ df_flat = df_flat[new_order]
 
 # Dictionary to rename the columns
 new_names = {
-    'RealClass': 'PredictedPrimeClass',
-    'ParentClass': 'PredictedParentClass',
-    'GrandparentClass': 'PredictedGrandparentClass'
+    'RealClass': 'PredPrimeClass',
+    'ParentClass': 'PredParentClass',
+    'GrandparentClass': 'PredGrandparentClass'
 }
 
 # Rename the DataFrame columns
@@ -115,7 +115,7 @@ df_renamed = df_flat.rename(columns=new_names)
 df_renamed = df_renamed.drop(['Level', 'id', 'parent_id', 'grandparent_id'], axis=1)
 
 # Function to convert to .csv
-# df_renamed.to_csv('Predicted_Class_Hierarchy.csv', index=False)
+#df_renamed.to_csv('Predicted_Class_Hierarchy.csv', index=False)
 
 # print(df_renamed.head(15))
 

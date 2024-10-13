@@ -14,9 +14,9 @@ plt.rcParams.update({'font.size': 18})
 
 
 # Importar el dataframe
-df = pd.read_csv('Conjunto_Entrenamiento_10000.csv')
-hierarchy = pd.read_csv('Jerarquia_Clases.csv')
-predictedHierarchy = pd.read_csv('Jerarquia_Clases_Pred.csv')
+df = pd.read_csv('Training_Set.csv')
+hierarchy = pd.read_csv('Class_Hierarchy.csv')
+predictedHierarchy = pd.read_csv('Predicted_Class_Hierarchy.csv')
 
 # Remove the first column and the 'r' column because they are not needed
 df.drop(df.columns[0], axis=1, inplace=True)
@@ -32,16 +32,16 @@ plt.ylabel('Frequency')
 plt.xticks(rotation=45, ha='right')
 plt.show()
 
-# Most common PredictedClass plot
-sns.barplot(df['PredictedClass'].value_counts().head(10))
+# Most common PredClass plot
+sns.barplot(df['PredClass'].value_counts().head(10))
 plt.title('Most Common Predicted Class')
 plt.xlabel('Class')
 plt.ylabel('Frequency')
 plt.xticks(rotation=45, ha='right')
 plt.show()
 
-# Most common PredictedPrimeClass plot
-sns.barplot(df['PredictedPrimeClass'].value_counts().head(10))
+# Most common PredPrimeClass plot
+sns.barplot(df['PredPrimeClass'].value_counts().head(10))
 plt.title('Most Common Predicted Prime Class')
 plt.xlabel('Class')
 plt.ylabel('Frequency')
@@ -53,27 +53,27 @@ print(df.sample(10))
 print("################################################################################################################")
 # JOIN the large dataframe with the hierarchy dataframe on 'RealClass'
 df['RealClass'] = df['RealClass'].str.lower()
-df['PredictedClass'] = df['PredictedClass'].str.lower()
-df['PredictedPrimeClass'] = df['PredictedPrimeClass'].str.lower()
+df['PredClass'] = df['PredClass'].str.lower()
+df['PredPrimeClass'] = df['PredPrimeClass'].str.lower()
 df = pd.merge(df, hierarchy, on='RealClass', how='left')
 df['Level'] = df['Level'].astype('Int64')
 
 # Merge the Predicted hierarchies
-df = pd.merge(df, predictedHierarchy, on='PredictedPrimeClass', how='left')
+df = pd.merge(df, predictedHierarchy, on='PredPrimeClass', how='left')
 
 # Function for Real Parent and Grandparent accuracies
 # Add accuracy columns
-df['Real_Accuracies'] = (df['RealClass'] == df['PredictedPrimeClass']).astype(int)
-df['Parent_Accuracies'] = (df['ParentClass'] == df['PredictedParentClass']).astype(int)
-df['Grandparent_Accuracies'] = (df['GrandparentClass'] == df['PredictedGrandparentClass']).astype(int)
+df['Real_Accuracies'] = (df['RealClass'] == df['PredPrimeClass']).astype(int)
+df['Parent_Accuracies'] = (df['ParentClass'] == df['PredParentClass']).astype(int)
+df['Grandparent_Accuracies'] = (df['GrandparentClass'] == df['PredGrandparentClass']).astype(int)
 
 # Logical condition for accuracy 2
 # Create the total accuracies column
-df['Total_Accuracies'] = ((df['RealClass'] != df['PredictedPrimeClass']) &
-                           ((df['ParentClass'] == df['PredictedParentClass']) |
-                            (df['GrandparentClass'] == df['PredictedGrandparentClass']) |
-                            (df['ParentClass'] == df['PredictedGrandparentClass']) |
-                            (df['GrandparentClass'] == df['PredictedParentClass']))).astype(int)
+df['Total_Accuracies'] = ((df['RealClass'] != df['PredPrimeClass']) &
+                           ((df['ParentClass'] == df['PredParentClass']) |
+                            (df['GrandparentClass'] == df['PredGrandparentClass']) |
+                            (df['ParentClass'] == df['PredGrandparentClass']) |
+                            (df['GrandparentClass'] == df['PredParentClass']))).astype(int)
 
 # print(df.head(15))
 
@@ -90,15 +90,15 @@ print("#########################################################################
 print('Total accuracy percentage (All algorithms)')
 # REAL CLASS REGARDING PREDICTED PRIME CLASS since it is the one involved in image improvement
 
-# Filter rows where RealClass and PredictedPrimeClass are equal
-matches = df[df['RealClass'] == df['PredictedPrimeClass']]
+# Filter rows where RealClass and PredPrimeClass are equal
+matches = df[df['RealClass'] == df['PredPrimeClass']]
 # print(matches)
 
 # Group the equal ones and count them
-df_1 = matches.groupby('RealClass')['PredictedPrimeClass'].count().reset_index(name='Accuracies')
+df_1 = matches.groupby('RealClass')['PredPrimeClass'].count().reset_index(name='Accuracies')
 # print('df1', df_1.head(2))
 
-df_2 = df.groupby('RealClass')['PredictedPrimeClass'].count().reset_index(name='Total')
+df_2 = df.groupby('RealClass')['PredPrimeClass'].count().reset_index(name='Total')
 # print('df2', df_2.head(2))
 
 df_classes = pd.merge(df_1, df_2, on='RealClass', how='left')
@@ -125,9 +125,9 @@ print("#########################################################################
 #  'Log Transformation (LT)'
 print("################################################################################################################")
 
-# Accuracies for Histogram Equalization algorithm with PredictedPrimeClass
+# Accuracies for Histogram Equalization algorithm with PredPrimeClass
 df_HE = matches[matches['Algorithm'] == 'Histogram Equalization']
-df_HE = df_HE.groupby('RealClass')['PredictedPrimeClass'].count().reset_index(name='Accuracies')
+df_HE = df_HE.groupby('RealClass')['PredPrimeClass'].count().reset_index(name='Accuracies')
 
 # Represents how important each class is regarding this algorithm
 df_HE['Percentage'] = ((df_HE['Accuracies'] / df_HE['Accuracies'].sum()) * 100).__round__(3)
@@ -151,7 +151,7 @@ print("#########################################################################
 
 # Accuracies for Adaptive Histogram Equalization Limited by Contrast algorithm
 df_AHELC = matches[matches['Algorithm'] == 'Adaptive Histogram Equalization Limited by Contrast']
-df_AHELC = df_AHELC.groupby('RealClass')['PredictedPrimeClass'].count().reset_index(name='Accuracies')
+df_AHELC = df_AHELC.groupby('RealClass')['PredPrimeClass'].count().reset_index(name='Accuracies')
 
 # Represents how important each class is regarding this algorithm
 df_AHELC['Percentage'] = ((df_AHELC['Accuracies'] / df_AHELC['Accuracies'].sum()) * 100).__round__(3)
@@ -175,7 +175,7 @@ print("#########################################################################
 
 # 'Gamma Correction (GC)'
 df_GC = matches[matches['Algorithm'] == 'Gamma Correction']
-df_GC = df_GC.groupby('RealClass')['PredictedPrimeClass'].count().reset_index(name='Accuracies')
+df_GC = df_GC.groupby('RealClass')['PredPrimeClass'].count().reset_index(name='Accuracies')
 
 # Represents how important each class is regarding this algorithm
 df_GC['Percentage'] = ((df_GC['Accuracies'] / df_GC['Accuracies'].sum()) * 100).__round__(3)
@@ -199,7 +199,7 @@ print("#########################################################################
 
 # 'Log Transformation (LT)'
 df_LT = matches[matches['Algorithm'] == 'Log Transformation']
-df_LT = df_LT.groupby('RealClass')['PredictedPrimeClass'].count().reset_index(name='Accuracies')
+df_LT = df_LT.groupby('RealClass')['PredPrimeClass'].count().reset_index(name='Accuracies')
 
 # Represents how important each class is regarding this algorithm
 df_LT['Percentage'] = ((df_LT['Accuracies'] / df_LT['Accuracies'].sum()) * 100).__round__(3)
@@ -240,10 +240,10 @@ print("#########################################################################
 print('Histogram Equalization (HE)')
 # See how much the image/class improves with Histogram Equalization
 improvement_HE = df[df['Algorithm'] == 'Histogram Equalization']
-improvement_HE = improvement_HE.drop(['MeanPrime', 'Median', 'StdDev', 'MedianPrime', 'StdDevPrime', 'Algorithm', 'PredictedClass'], axis=1)
+improvement_HE = improvement_HE.drop(['MeanPrime', 'Median', 'StdDev', 'MedianPrime', 'StdDevPrime', 'Algorithm', 'PredClass'], axis=1)
 
 # Percentage improvement in probability of being correctly predicted = ((new - old) / old) * 100 )
-improvement_HE['% Improvement'] = (((improvement_HE['ProbPredictedPrimeClass'] - improvement_HE['ProbPredictedClass']) / improvement_HE['ProbPredictedClass']) * 100).__round__(3)
+improvement_HE['% Improvement'] = (((improvement_HE['PredPrimeClassProb'] - improvement_HE['PredClassProb']) / improvement_HE['PredClassProb']) * 100).__round__(3)
 print(improvement_HE.head(10))
 
 # Which class improves the most?
@@ -269,10 +269,10 @@ print("#########################################################################
 print('Adaptive Histogram Equalization Limited by Contrast (AHELC)')
 # See how much the image/class improves with Adaptive Histogram Equalization Limited by Contrast
 improvement_AHELC = df[df['Algorithm'] == 'Adaptive Histogram Equalization Limited by Contrast']
-improvement_AHELC = improvement_AHELC.drop(['MeanPrime', 'Median', 'StdDev', 'MedianPrime', 'StdDevPrime', 'Algorithm', 'PredictedClass'], axis=1)
+improvement_AHELC = improvement_AHELC.drop(['MeanPrime', 'Median', 'StdDev', 'MedianPrime', 'StdDevPrime', 'Algorithm', 'PredClass'], axis=1)
 
 # Percentage improvement = ((new - old) / old) * 100 )
-improvement_AHELC['% Improvement'] = (((improvement_AHELC['ProbPredictedPrimeClass'] - improvement_AHELC['ProbPredictedClass']) / improvement_AHELC['ProbPredictedClass']) * 100).__round__(3)
+improvement_AHELC['% Improvement'] = (((improvement_AHELC['PredPrimeClassProb'] - improvement_AHELC['PredClassProb']) / improvement_AHELC['PredClassProb']) * 100).__round__(3)
 print(improvement_AHELC.head(10))
 
 # Which class improves the most?
@@ -299,10 +299,10 @@ print("#########################################################################
 print('Gamma Correction (GC)')
 # See how much the image/class improves with Gamma Correction
 improvement_GC = df[df['Algorithm'] == 'Gamma Correction']
-improvement_GC = improvement_GC.drop(['MeanPrime', 'Median', 'StdDev', 'MedianPrime', 'StdDevPrime', 'Algorithm', 'PredictedClass'], axis=1)
+improvement_GC = improvement_GC.drop(['MeanPrime', 'Median', 'StdDev', 'MedianPrime', 'StdDevPrime', 'Algorithm', 'PredClass'], axis=1)
 
 # Percentage improvement = ((new - old) / old) * 100 )
-improvement_GC['% Improvement'] = (((improvement_GC['ProbPredictedPrimeClass'] - improvement_GC['ProbPredictedClass']) / improvement_GC['ProbPredictedClass']) * 100).__round__(3)
+improvement_GC['% Improvement'] = (((improvement_GC['PredPrimeClassProb'] - improvement_GC['PredClassProb']) / improvement_GC['PredClassProb']) * 100).__round__(3)
 print(improvement_GC.head(10))
 
 # Which class improves the most?
@@ -329,10 +329,10 @@ print("#########################################################################
 print('Log Transformation (LT)')
 # See how much the image/class improves with Log Transformation
 improvement_LT = df[df['Algorithm'] == 'Log Transformation']
-improvement_LT = improvement_LT.drop(['MeanPrime', 'Median', 'StdDev', 'MedianPrime', 'StdDevPrime', 'Algorithm', 'PredictedClass'], axis=1)
+improvement_LT = improvement_LT.drop(['MeanPrime', 'Median', 'StdDev', 'MedianPrime', 'StdDevPrime', 'Algorithm', 'PredClass'], axis=1)
 
 # Percentage improvement = ((new - old) / old) * 100 )
-improvement_LT['% Improvement'] = (((improvement_LT['ProbPredictedPrimeClass'] - improvement_LT['ProbPredictedClass']) / improvement_LT['ProbPredictedClass']) * 100).__round__(3)
+improvement_LT['% Improvement'] = (((improvement_LT['PredPrimeClassProb'] - improvement_LT['PredClassProb']) / improvement_LT['PredClassProb']) * 100).__round__(3)
 print(improvement_LT.head(10))
 
 # Which class improves the most?
@@ -422,6 +422,7 @@ def compare_levels(algorithm):
 
     return level_improvement
 
+
 level_improvement_HE = compare_levels('HE')
 level_improvement_AHELC = compare_levels('AHELC')
 level_improvement_GC = compare_levels('GC')
@@ -429,6 +430,7 @@ level_improvement_LT = compare_levels('LT')
 
 print("################################################################################################################")
 print("################################################################################################################")
+
 
 def accuracy_hierarchy(algorithm, level):
 
@@ -462,6 +464,7 @@ def accuracy_hierarchy(algorithm, level):
     plt.show()
 
     return df_result
+
 
 print("################################################################################################################")
 # Histogram Equalization

@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fac4d110-0fee-418c-8059-407301c64fc1" name="Changes" comment="listo para ejecutar pt3">
-      <change afterPath="$PROJECT_DIR$/DataMining.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ExploratoryAnalysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataMining.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataMining.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExploratoryAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExploratoryAnalysis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,18 +49,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.AnalisisExploratorio.executor&quot;: &quot;Run&quot;,
-    &quot;Python.MineriaDatos.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/Documents/Curso 23-24/TFG/TrabajoFinGrado&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.AnalisisExploratorio.executor": "Run",
+    "Python.DataMining.executor": "Run",
+    "Python.ExploratoryAnalysis.executor": "Run",
+    "Python.MineriaDatos.executor": "Run",
+    "Python.TransforColumnNames.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/andre/Documents/Curso 23-24/TFG/TrabajoFinGrado",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\andre\Documents\Curso 23-24\TFG\TrabajoFinGrado" />
